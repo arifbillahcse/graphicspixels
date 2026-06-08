@@ -99,47 +99,104 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(update);
     }
 
-    /* ---------- Testimonial slider ---------- */
-    const cards = document.querySelectorAll('.testimonial-card');
-    const dotsContainer = document.getElementById('slider-dots');
-    let current = 0;
-    let autoplay;
+    /* ---------- Video Testimonial Slider ---------- */
+    (function () {
+        const slides   = document.querySelectorAll('.vt-slide');
+        const avatars  = document.querySelectorAll('.vt-avatar');
+        const prevBtn  = document.getElementById('vtPrev');
+        const nextBtn  = document.getElementById('vtNext');
+        const currEl   = document.getElementById('vtCurrent');
+        const totalEl  = document.getElementById('vtTotal');
+        const playBtns = document.querySelectorAll('.vt-play');
+        const modal    = document.getElementById('vtModal');
+        const backdrop = document.getElementById('vtBackdrop');
+        const closeBtn = document.getElementById('vtClose');
+        const iframe   = document.getElementById('vtIframe');
 
-    if (cards.length && dotsContainer) {
-        // Build dots
-        cards.forEach(function (_, i) {
-            const dot = document.createElement('button');
-            dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', function () { goToSlide(i); });
-            dotsContainer.appendChild(dot);
+        if (!slides.length) return;
+
+        let current = 0;
+        const total = slides.length;
+        let autoTimer = null;
+        let touchStartX = 0;
+
+        if (totalEl) totalEl.textContent = total;
+
+        function goTo(idx) {
+            if (idx < 0) idx = total - 1;
+            if (idx >= total) idx = 0;
+            slides.forEach(function (s) { s.classList.remove('active'); });
+            avatars.forEach(function (a) { a.classList.remove('active'); });
+            slides[idx].classList.add('active');
+            if (avatars[idx]) avatars[idx].classList.add('active');
+            current = idx;
+            if (currEl) currEl.textContent = current + 1;
+        }
+
+        function startAuto() { autoTimer = setInterval(function () { goTo(current + 1); }, 4000); }
+        function stopAuto()  { clearInterval(autoTimer); }
+        function resetAuto() { stopAuto(); startAuto(); }
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { resetAuto(); goTo(current - 1); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { resetAuto(); goTo(current + 1); });
+
+        avatars.forEach(function (av, i) {
+            av.addEventListener('click', function () { resetAuto(); goTo(i); });
         });
 
-        const dots = dotsContainer.querySelectorAll('button');
-
-        function goToSlide(index) {
-            cards[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = index;
-            cards[current].classList.add('active');
-            dots[current].classList.add('active');
+        const leftCol = document.querySelector('.vt-left');
+        if (leftCol) {
+            leftCol.addEventListener('mouseenter', stopAuto);
+            leftCol.addEventListener('mouseleave', startAuto);
         }
 
-        function nextSlide() {
-            goToSlide((current + 1) % cards.length);
+        // Touch swipe
+        const track = document.getElementById('vtTrack');
+        if (track) {
+            track.addEventListener('touchstart', function (e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+            track.addEventListener('touchend', function (e) {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) >= 50) { resetAuto(); goTo(diff > 0 ? current + 1 : current - 1); }
+            }, { passive: true });
         }
 
-        function startAutoplay() {
-            autoplay = setInterval(nextSlide, 5000);
+        // Modal open
+        function openModal(videoId) {
+            if (!videoId || !iframe || !modal) return;
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&color=white';
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
         }
-        function stopAutoplay() { clearInterval(autoplay); }
+        function closeModal() {
+            if (!modal || !iframe) return;
+            modal.classList.remove('open');
+            iframe.src = '';
+            document.body.style.overflow = '';
+        }
 
-        startAutoplay();
+        playBtns.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const slide = btn.closest('.vt-slide');
+                const videoId = slide ? slide.getAttribute('data-video-id') : null;
+                if (videoId) { stopAuto(); openModal(videoId); }
+            });
+        });
 
-        const slider = document.querySelector('.testimonial-slider');
-        slider.addEventListener('mouseenter', stopAutoplay);
-        slider.addEventListener('mouseleave', startAutoplay);
-    }
+        if (backdrop) backdrop.addEventListener('click', function () { closeModal(); startAuto(); });
+        if (closeBtn) closeBtn.addEventListener('click', function () { closeModal(); startAuto(); });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal && modal.classList.contains('open')) { closeModal(); startAuto(); }
+            if (!modal || !modal.classList.contains('open')) {
+                if (e.key === 'ArrowLeft')  { resetAuto(); goTo(current - 1); }
+                if (e.key === 'ArrowRight') { resetAuto(); goTo(current + 1); }
+            }
+        });
+
+        goTo(0);
+        startAuto();
+    }());
 
     /* ---------- File upload filename display ---------- */
     const fileInput = document.getElementById('file-input');
