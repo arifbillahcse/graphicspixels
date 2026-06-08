@@ -544,16 +544,13 @@ img { max-width: 100%; display: block; }
     background: rgba(255,255,255,0.12); border-color: var(--white);
     transform: translateY(-3px); color: var(--white);
 }
-/* 2×2 photo grid in hero */
+/* Hero visual — single image */
 .svc-hero-visual { position: relative; }
-.svc-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.svc-hero-grid img {
-    border-radius: 14px; width: 100%; aspect-ratio: 1;
-    object-fit: cover; box-shadow: 0 10px 34px rgba(0,0,0,0.4);
-    transition: transform 0.4s ease;
+.svc-hero-img {
+    width: 100%; border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    display: block;
 }
-.svc-hero-grid img:nth-child(even) { margin-top: 24px; }
-.svc-hero-grid img:hover { transform: scale(1.04); position: relative; z-index: 2; }
 
 /* To whom band */
 .svc-whom { padding: 60px 0; background: #fff7fc; text-align: center; border-bottom: 1px solid var(--border); }
