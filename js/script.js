@@ -198,6 +198,68 @@ document.addEventListener('DOMContentLoaded', function () {
         startAuto();
     }());
 
+    /* ---------- Service Image Lightbox ---------- */
+    (function () {
+        const serviceImages = document.querySelectorAll('.service-image');
+        const lightbox = document.getElementById('serviceLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        if (!serviceImages.length || !lightbox) return;
+
+        const galleryData = Array.from(serviceImages).map(function (img) {
+            return {
+                src: img.getAttribute('data-image'),
+                title: img.getAttribute('data-title')
+            };
+        });
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            if (index < 0) index = galleryData.length - 1;
+            if (index >= galleryData.length) index = 0;
+            currentIndex = index;
+
+            lightboxImage.src = galleryData[currentIndex].src;
+            lightboxTitle.textContent = galleryData[currentIndex].title;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Click on service image to open
+        serviceImages.forEach(function (img, index) {
+            img.addEventListener('click', function () {
+                openLightbox(index);
+            });
+        });
+
+        // Navigation
+        if (lightboxPrev) lightboxPrev.addEventListener('click', function () { openLightbox(currentIndex - 1); });
+        if (lightboxNext) lightboxNext.addEventListener('click', function () { openLightbox(currentIndex + 1); });
+
+        // Close
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
+
+        // Keyboard
+        document.addEventListener('keydown', function (e) {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
+            if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
+        });
+    }());
+
     /* ---------- File upload filename display ---------- */
     const fileInput = document.getElementById('file-input');
     const fileName = document.querySelector('.file-name');

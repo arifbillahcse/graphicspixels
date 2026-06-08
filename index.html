@@ -313,8 +313,8 @@
             <div class="services-grid">
                 <!-- Clipping Path -->
                 <article class="service-card reveal" data-reveal="up">
-                    <div class="service-image">
-                        <img src="images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Services example" loading="lazy">
+                    <div class="service-image" data-image="images/home/1_Clipping-Path-Services-1-945x1024.png" data-title="Clipping Path Services">
+                        <img src="images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Services example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
                     <h3>Clipping Path Services</h3>
@@ -331,8 +331,8 @@
 
                 <!-- Ghost Mannequin -->
                 <article class="service-card reveal" data-reveal="up" data-delay="100">
-                    <div class="service-image">
-                        <img src="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" alt="Ghost Mannequin & Neck Joint example" loading="lazy">
+                    <div class="service-image" data-image="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" data-title="Ghost Mannequin & Neck Joint Services">
+                        <img src="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" alt="Ghost Mannequin & Neck Joint example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-shirt"></i></div>
                     <h3>Ghost Mannequin &amp; Neck Joint</h3>
@@ -349,8 +349,8 @@
 
                 <!-- Photo Retouching -->
                 <article class="service-card reveal" data-reveal="up" data-delay="200">
-                    <div class="service-image">
-                        <img src="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" alt="Premium Photo Retouching example" loading="lazy">
+                    <div class="service-image" data-image="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" data-title="Premium Photo Retouching Services">
+                        <img src="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" alt="Premium Photo Retouching example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
                     <h3>Premium Photo Retouching</h3>
@@ -367,8 +367,8 @@
 
                 <!-- Background Removal -->
                 <article class="service-card reveal" data-reveal="up" data-delay="300">
-                    <div class="service-image">
-                        <img src="images/home/4_Background-Removal-Services-1-945x1024.png" alt="High-End Background Removal example" loading="lazy">
+                    <div class="service-image" data-image="images/home/4_Background-Removal-Services-1-945x1024.png" data-title="High-End Background Removal Services">
+                        <img src="images/home/4_Background-Removal-Services-1-945x1024.png" alt="High-End Background Removal example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-eraser"></i></div>
                     <h3>High-End Background Removal</h3>
@@ -386,6 +386,26 @@
 
             <div class="services-cta reveal" data-reveal="up">
                 <a href="#services" class="btn btn-outline">See all Services</a>
+            </div>
+        </div>
+
+        <!-- Service Image Lightbox -->
+        <div class="lightbox" id="serviceLightbox">
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-container">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="lightbox-content">
+                    <img id="lightboxImage" src="" alt="Service image" class="lightbox-image">
+                    <h3 id="lightboxTitle" class="lightbox-title"></h3>
+                </div>
+                <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
