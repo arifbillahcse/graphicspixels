@@ -561,7 +561,10 @@ img { max-width: 100%; display: block; }
     transform: translateY(-3px); color: var(--white);
 }
 /* Hero visual — single image */
-.svc-hero-visual { position: relative; }
+.svc-hero-visual {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    min-height: 300px;
+}
 .svc-hero-img {
     width: 100%; border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.45);
@@ -668,9 +671,13 @@ img { max-width: 100%; display: block; }
 /* ── Video editing hero SVG scene ── */
 .ve-svg-scene {
     width: 100%; max-width: 480px; margin: 0 auto;
+    display: block; overflow: visible;
     filter: drop-shadow(0 24px 64px rgba(195,0,157,0.22));
 }
-.ve-svg { width: 100%; height: auto; overflow: visible; }
+.ve-svg {
+    width: 100%; height: auto; display: block;
+    max-height: 400px; overflow: visible;
+}
 
 /* Monitor screen pulse */
 @keyframes vePulse {

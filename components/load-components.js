@@ -1,9 +1,12 @@
 // Load header and footer from components folder
 (function () {
     const basePath = document.currentScript.src.split('/').slice(0, -1).join('/') + '/';
+    let contentFadedIn = false;
 
     // Create a container for the page content to fade in after components load
     function setupPageContent() {
+        if (contentFadedIn) return; // Only fade in once
+        contentFadedIn = true;
         const main = document.querySelector('main') || document.body;
         main.style.opacity = '0';
         main.style.transition = 'opacity 0.4s ease';
@@ -92,15 +95,15 @@
         }
     }
 
+    // Setup page content fade-in after footer is loaded
+    // If page is already ready and footer somehow doesn't load, fade in anyway after 2s
+    const contentTimeout = setTimeout(() => {
+        setupPageContent();
+    }, 2000);
+
     // Initialize footer functionality
     function initializeFooter() {
-        setupPageContent();
-    }
-
-    // Also initialize on page load in case DOM was already ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', setupPageContent);
-    } else {
+        clearTimeout(contentTimeout);
         setupPageContent();
     }
 })();
