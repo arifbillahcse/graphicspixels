@@ -361,32 +361,61 @@ document.addEventListener('DOMContentLoaded', function () {
         const lbxCap   = document.getElementById('svcLightboxCaption');
         const lbxClose = document.getElementById('svcLightboxClose');
         const lbxBack  = document.getElementById('svcLightboxBackdrop');
+        const lbxPrev  = document.getElementById('svcLightboxPrev');
+        const lbxNext  = document.getElementById('svcLightboxNext');
 
         if (!svcImgs.length || !lbx) return;
 
-        function openLbx(img) {
-            lbxImg.src = img.src;
-            lbxImg.alt = img.alt;
-            if (lbxCap) lbxCap.textContent = img.alt;
+        const gallery = Array.from(svcImgs);
+        let current = 0;
+        let touchStartX = 0;
+
+        function goTo(idx) {
+            if (idx < 0) idx = gallery.length - 1;
+            if (idx >= gallery.length) idx = 0;
+            current = idx;
+            lbxImg.src = gallery[current].src;
+            lbxImg.alt = gallery[current].alt;
+            if (lbxCap) lbxCap.textContent = gallery[current].alt;
+        }
+
+        function openLbx(idx) {
+            goTo(idx);
             lbx.classList.add('open');
             document.body.style.overflow = 'hidden';
         }
+
         function closeLbx() {
             lbx.classList.remove('open');
             lbxImg.src = '';
             document.body.style.overflow = '';
         }
 
-        svcImgs.forEach(function (img) {
-            img.addEventListener('click', function () { openLbx(img); });
+        gallery.forEach(function (img, idx) {
+            img.addEventListener('click', function () { openLbx(idx); });
         });
 
+        if (lbxPrev)  lbxPrev.addEventListener('click', function () { goTo(current - 1); });
+        if (lbxNext)  lbxNext.addEventListener('click', function () { goTo(current + 1); });
         if (lbxClose) lbxClose.addEventListener('click', closeLbx);
         if (lbxBack)  lbxBack.addEventListener('click', closeLbx);
 
+        // Keyboard navigation
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && lbx.classList.contains('open')) closeLbx();
+            if (!lbx.classList.contains('open')) return;
+            if (e.key === 'Escape')      closeLbx();
+            if (e.key === 'ArrowLeft')   goTo(current - 1);
+            if (e.key === 'ArrowRight')  goTo(current + 1);
         });
+
+        // Touch swipe
+        lbx.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        lbx.addEventListener('touchend', function (e) {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) >= 50) goTo(diff > 0 ? current + 1 : current - 1);
+        }, { passive: true });
     }());
 
 });
