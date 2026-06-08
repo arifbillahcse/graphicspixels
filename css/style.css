@@ -502,20 +502,36 @@ img { max-width: 100%; display: block; }
    SERVICES PAGE (services.html)
    ========================================================= */
 
-/* Page hero — navy gradient, two-column */
+/* Page hero — navy gradient + dot pattern + floating icons */
 .svc-hero {
     position: relative; padding: 140px 0 80px; overflow: hidden;
-    background: linear-gradient(135deg, #01015E 0%, #0d0d7a 55%, #01015E 100%);
+    background:
+        radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px),
+        linear-gradient(155deg, #01015E 0%, #16006e 45%, #0a0050 75%, #01015E 100%);
+    background-size: 28px 28px, 100% 100%;
 }
 .svc-hero::before {
-    content: ''; position: absolute; top: -20%; right: -8%; width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(195,0,157,0.2) 0%, transparent 65%);
+    content: ''; position: absolute; top: -15%; right: -5%; width: 650px; height: 650px;
+    background: radial-gradient(circle, rgba(195,0,157,0.22) 0%, transparent 62%);
     border-radius: 50%;
 }
 .svc-hero::after {
-    content: ''; position: absolute; bottom: -30%; left: -5%; width: 450px; height: 450px;
-    background: radial-gradient(circle, rgba(195,0,157,0.1) 0%, transparent 65%);
+    content: ''; position: absolute; bottom: -25%; left: -3%; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(195,0,157,0.13) 0%, transparent 60%);
     border-radius: 50%;
+}
+/* Floating photoshop-style icon pattern */
+.svc-hero-pattern {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden;
+}
+.svc-hero-pattern i {
+    position: absolute; color: rgba(255,255,255,0.065);
+    animation: iconDrift var(--dur, 9s) ease-in-out infinite;
+    animation-delay: var(--dl, 0s);
+}
+@keyframes iconDrift {
+    0%, 100% { transform: translateY(0px)   rotate(var(--rot, 0deg)); }
+    50%       { transform: translateY(-18px) rotate(var(--rot, 0deg)); }
 }
 .svc-hero-inner {
     position: relative; z-index: 2;
@@ -548,8 +564,9 @@ img { max-width: 100%; display: block; }
 .svc-hero-visual { position: relative; }
 .svc-hero-img {
     width: 100%; border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     display: block;
+    animation: float 7s ease-in-out infinite;
 }
 
 /* To whom band */
