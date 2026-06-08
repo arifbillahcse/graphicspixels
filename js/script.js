@@ -296,36 +296,44 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!sliders.length) return;
 
         sliders.forEach(function (slider) {
-            let dragging = false;
+            const wrap   = slider.querySelector('.ba-before-wrap');
+            const handle = slider.querySelector('.ba-handle');
+            if (!wrap || !handle) return;
 
-            function setPos(clientX) {
+            let dragging = false;
+            let pct = parseFloat(slider.getAttribute('data-pos') || 50);
+
+            function applyPos() {
+                wrap.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+                handle.style.left   = pct + '%';
+            }
+
+            function computePos(clientX) {
                 const rect = slider.getBoundingClientRect();
-                let pct = ((clientX - rect.left) / rect.width) * 100;
-                pct = Math.max(3, Math.min(97, pct));
-                slider.style.setProperty('--pos', pct + '%');
+                pct = ((clientX - rect.left) / rect.width) * 100;
+                pct = Math.max(2, Math.min(98, pct));
+                applyPos();
             }
 
             function start(e) {
                 dragging = true;
-                setPos(e.touches ? e.touches[0].clientX : e.clientX);
+                e.preventDefault();
+                computePos(e.touches ? e.touches[0].clientX : e.clientX);
             }
             function move(e) {
                 if (!dragging) return;
-                setPos(e.touches ? e.touches[0].clientX : e.clientX);
+                computePos(e.touches ? e.touches[0].clientX : e.clientX);
             }
             function end() { dragging = false; }
 
             slider.addEventListener('mousedown', start);
-            slider.addEventListener('touchstart', start, { passive: true });
+            slider.addEventListener('touchstart', start, { passive: false });
             window.addEventListener('mousemove', move);
-            window.addEventListener('touchmove', move, { passive: true });
+            window.addEventListener('touchmove', move, { passive: false });
             window.addEventListener('mouseup', end);
             window.addEventListener('touchend', end);
 
-            // Click anywhere on slider jumps handle there
-            slider.addEventListener('click', function (e) {
-                setPos(e.clientX);
-            });
+            applyPos();
         });
     }());
 
@@ -336,11 +344,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
         items.forEach(function (item) {
             const q = item.querySelector('.faq-q');
+            if (!q) return;
             q.addEventListener('click', function () {
                 const isOpen = item.classList.contains('open');
                 items.forEach(function (other) { other.classList.remove('open'); });
                 if (!isOpen) item.classList.add('open');
             });
+        });
+    }());
+
+    /* ---------- Services Page Image Lightbox ---------- */
+    (function () {
+        const svcImgs  = document.querySelectorAll('.svc-img img');
+        const lbx      = document.getElementById('svcLightbox');
+        const lbxImg   = document.getElementById('svcLightboxImg');
+        const lbxCap   = document.getElementById('svcLightboxCaption');
+        const lbxClose = document.getElementById('svcLightboxClose');
+        const lbxBack  = document.getElementById('svcLightboxBackdrop');
+
+        if (!svcImgs.length || !lbx) return;
+
+        function openLbx(img) {
+            lbxImg.src = img.src;
+            lbxImg.alt = img.alt;
+            if (lbxCap) lbxCap.textContent = img.alt;
+            lbx.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLbx() {
+            lbx.classList.remove('open');
+            lbxImg.src = '';
+            document.body.style.overflow = '';
+        }
+
+        svcImgs.forEach(function (img) {
+            img.addEventListener('click', function () { openLbx(img); });
+        });
+
+        if (lbxClose) lbxClose.addEventListener('click', closeLbx);
+        if (lbxBack)  lbxBack.addEventListener('click', closeLbx);
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && lbx.classList.contains('open')) closeLbx();
         });
     }());
 
