@@ -63,7 +63,7 @@
                         <defs>
                             <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
                                 <stop offset="0%" stop-color="#C3009D" stop-opacity="0.35"/>
-                                <stop offset="100%" stop-color="#01015E" stop-opacity="0"/>
+                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
                             </radialGradient>
                             <filter id="softGlow">
                                 <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -83,20 +83,20 @@
 
                         <!-- ── MONITOR ── -->
                         <!-- Stand -->
-                        <rect x="178" y="215" width="44" height="12" rx="4" fill="#1a1a6e"/>
-                        <rect x="162" y="225" width="76" height="7" rx="3" fill="#1a1a6e"/>
+                        <rect x="178" y="215" width="44" height="12" rx="4" fill="#6666ee"/>
+                        <rect x="162" y="225" width="76" height="7" rx="3" fill="#6666ee"/>
                         <!-- Monitor body -->
-                        <rect x="52" y="24" width="296" height="188" rx="14" fill="#0d0d50" stroke="#3a3aaa" stroke-width="2"/>
+                        <rect x="52" y="24" width="296" height="188" rx="14" fill="#4a4acf" stroke="#7a7add" stroke-width="2"/>
                         <!-- Screen -->
-                        <rect x="60" y="30" width="280" height="175" rx="10" fill="#06063a"/>
+                        <rect x="60" y="30" width="280" height="175" rx="10" fill="#1a1a99"/>
                         <!-- Screen content: fake video frame lines -->
                         <g clip-path="url(#screenClip)">
-                            <rect x="60" y="30" width="280" height="175" fill="#08083e"/>
+                            <rect x="60" y="30" width="280" height="175" fill="#2a2aaa"/>
                             <!-- Sky gradient band -->
-                            <rect x="60" y="30" width="280" height="80" fill="#0f0f60" opacity="0.7"/>
+                            <rect x="60" y="30" width="280" height="80" fill="#3a3acc" opacity="0.7"/>
                             <!-- Fake scene shapes -->
-                            <ellipse cx="200" cy="95" rx="60" ry="40" fill="#1a1a7a" opacity="0.5"/>
-                            <rect x="90" y="130" width="200" height="75" fill="#06062e" opacity="0.8"/>
+                            <ellipse cx="200" cy="95" rx="60" ry="40" fill="#5a5add" opacity="0.5"/>
+                            <rect x="90" y="130" width="200" height="75" fill="#1a1a88" opacity="0.8"/>
                             <!-- Scan line animation -->
                             <rect x="60" y="30" width="280" height="4" fill="rgba(195,0,157,0.18)" class="ve-scanline"/>
                         </g>
@@ -109,11 +109,11 @@
                         <polygon points="195,109 195,125 212,117" fill="white"/>
 
                         <!-- ── TIMELINE BAR ── -->
-                        <rect x="52" y="240" width="296" height="60" rx="10" fill="#0d0d50" stroke="#2a2a8a" stroke-width="1.5"/>
+                        <rect x="52" y="240" width="296" height="60" rx="10" fill="#4a4acf" stroke="#6a6add" stroke-width="1.5"/>
                         <!-- Track label -->
-                        <rect x="60" y="248" width="52" height="10" rx="3" fill="#1e1e7a"/>
-                        <rect x="60" y="263" width="52" height="10" rx="3" fill="#1e1e7a"/>
-                        <rect x="60" y="278" width="52" height="10" rx="3" fill="#1e1e7a"/>
+                        <rect x="60" y="248" width="52" height="10" rx="3" fill="#5555dd"/>
+                        <rect x="60" y="263" width="52" height="10" rx="3" fill="#5555dd"/>
+                        <rect x="60" y="278" width="52" height="10" rx="3" fill="#5555dd"/>
                         <!-- Track 1 clips -->
                         <rect x="118" y="247" width="68" height="12" rx="3" fill="#C3009D" opacity="0.85" class="ve-clip1"/>
                         <rect x="192" y="247" width="44" height="12" rx="3" fill="#8800c3" opacity="0.75"/>
@@ -147,9 +147,9 @@
 
                         <!-- ── CLAPPERBOARD (floating top-right) ── -->
                         <g class="ve-clap" transform="translate(355,15)">
-                            <rect width="80" height="66" rx="6" fill="#1a1a6e" stroke="#4040c0" stroke-width="1.5"/>
+                            <rect width="80" height="66" rx="6" fill="#6666ee" stroke="#7a7aff" stroke-width="1.5"/>
                             <!-- Clap stripe board -->
-                            <rect y="0" width="80" height="20" rx="6" fill="#222"/>
+                            <rect y="0" width="80" height="20" rx="6" fill="#555"/>
                             <rect y="0" width="80" height="20" rx="0" fill="none"/>
                             <!-- Stripes -->
                             <polygon points="0,0 14,0 0,20" fill="white"/>
@@ -159,9 +159,9 @@
                             <polygon points="56,0 70,0 56,20 42,20" fill="white"/>
                             <polygon points="70,0 80,0 70,20 56,20" fill="#C3009D"/>
                             <!-- Board lines -->
-                            <line x1="8" y1="30" x2="72" y2="30" stroke="#3a3aaa" stroke-width="1"/>
-                            <line x1="8" y1="42" x2="72" y2="42" stroke="#3a3aaa" stroke-width="1"/>
-                            <line x1="8" y1="54" x2="72" y2="54" stroke="#3a3aaa" stroke-width="1"/>
+                            <line x1="8" y1="30" x2="72" y2="30" stroke="#7a7add" stroke-width="1"/>
+                            <line x1="8" y1="42" x2="72" y2="42" stroke="#7a7add" stroke-width="1"/>
+                            <line x1="8" y1="54" x2="72" y2="54" stroke="#7a7add" stroke-width="1"/>
                             <!-- Text rects -->
                             <rect x="10" y="26" width="30" height="7" rx="2" fill="#2a2a8a"/>
                             <rect x="44" y="26" width="26" height="7" rx="2" fill="#2a2a8a"/>
@@ -169,29 +169,29 @@
 
                         <!-- ── FILM STRIP (left side, vertical) ── -->
                         <g class="ve-film" transform="translate(10,40)">
-                            <rect width="36" height="180" rx="4" fill="#111140" stroke="#3030a0" stroke-width="1.5"/>
+                            <rect width="36" height="180" rx="4" fill="#3a3aaa" stroke="#6a6aee" stroke-width="1.5"/>
                             <!-- Sprocket holes left -->
-                            <rect x="3" y="8" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="26" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="44" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="62" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="80" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="98" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="116" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="134" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="152" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="3" y="170" width="8" height="10" rx="2" fill="#060630"/>
+                            <rect x="3" y="8" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="26" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="44" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="62" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="80" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="98" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="116" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="134" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="152" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="3" y="170" width="8" height="10" rx="2" fill="#2a2a99"/>
                             <!-- Sprocket holes right -->
-                            <rect x="25" y="8" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="26" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="44" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="62" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="80" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="98" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="116" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="134" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="152" width="8" height="10" rx="2" fill="#060630"/>
-                            <rect x="25" y="170" width="8" height="10" rx="2" fill="#060630"/>
+                            <rect x="25" y="8" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="26" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="44" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="62" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="80" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="98" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="116" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="134" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="152" width="8" height="10" rx="2" fill="#2a2a99"/>
+                            <rect x="25" y="170" width="8" height="10" rx="2" fill="#2a2a99"/>
                             <!-- Frame thumbnails -->
                             <rect x="13" y="8" width="10" height="10" rx="1" fill="#C3009D" opacity="0.6"/>
                             <rect x="13" y="26" width="10" height="10" rx="1" fill="#4a90e2" opacity="0.6"/>
@@ -207,15 +207,15 @@
 
                         <!-- ── COLOR WHEEL (bottom-right) ── -->
                         <g class="ve-wheel" transform="translate(390,295)">
-                            <circle r="36" fill="#0d0d50" stroke="#2a2a8a" stroke-width="1.5"/>
+                            <circle r="36" fill="#4a4acf" stroke="#6a6add" stroke-width="1.5"/>
                             <path d="M0,-36 A36,36 0 0,1 31.2,-18 L0,0 Z" fill="#ff4444" opacity="0.85"/>
                             <path d="M31.2,-18 A36,36 0 0,1 31.2,18 L0,0 Z" fill="#ffaa00" opacity="0.85"/>
                             <path d="M31.2,18 A36,36 0 0,1 0,36 L0,0 Z" fill="#44dd44" opacity="0.85"/>
                             <path d="M0,36 A36,36 0 0,1 -31.2,18 L0,0 Z" fill="#00aaff" opacity="0.85"/>
                             <path d="M-31.2,18 A36,36 0 0,1 -31.2,-18 L0,0 Z" fill="#C3009D" opacity="0.85"/>
                             <path d="M-31.2,-18 A36,36 0 0,1 0,-36 L0,0 Z" fill="#8800ff" opacity="0.85"/>
-                            <circle r="14" fill="#0d0d50"/>
-                            <circle r="8" fill="#1a1a7a"/>
+                            <circle r="14" fill="#4a4acf"/>
+                            <circle r="8" fill="#5a5add"/>
                         </g>
 
                         <!-- ── FLOATING PARTICLES ── -->
