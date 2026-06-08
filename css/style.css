@@ -571,6 +571,20 @@ img { max-width: 100%; display: block; }
 
 /* To whom band */
 .svc-whom { padding: 60px 0; background: #fff7fc; text-align: center; border-bottom: 1px solid var(--border); }
+
+/* Clipping Path intro (two-column info section) */
+.cp-intro { padding: 90px 0; background: var(--white); }
+.cp-intro-inner {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;
+}
+.cp-intro-text .section-tag { margin-bottom: 12px; }
+.cp-intro-text .section-title { margin-bottom: 20px; }
+.cp-intro-text p { color: var(--text-light); font-size: 15.5px; margin-bottom: 16px; }
+.cp-intro-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.cp-intro-image .svc-img { box-shadow: var(--shadow-lg); }
+@media (max-width: 900px) {
+    .cp-intro-inner { grid-template-columns: 1fr; gap: 36px; }
+}
 .svc-whom .section-title { margin-bottom: 16px; }
 .svc-whom p { max-width: 850px; margin: 0 auto; color: var(--text-light); font-size: 16px; }
 .svc-whom a { color: var(--magenta); font-weight: 600; }
