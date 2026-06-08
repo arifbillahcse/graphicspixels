@@ -665,6 +665,93 @@ img { max-width: 100%; display: block; }
 .faq-item.open .faq-a { max-height: 300px; }
 .faq-a p { padding: 0 24px 22px; color: var(--text-light); font-size: 15px; margin: 0; }
 
+/* ── Video editing hero SVG scene ── */
+.ve-svg-scene {
+    width: 100%; max-width: 480px; margin: 0 auto;
+    filter: drop-shadow(0 24px 64px rgba(195,0,157,0.22));
+}
+.ve-svg { width: 100%; height: auto; overflow: visible; }
+
+/* Monitor screen pulse */
+@keyframes vePulse {
+    0%,100% { opacity: 0.7; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(1.06); }
+}
+.ve-pulse { animation: vePulse 4s ease-in-out infinite; transform-origin: 200px 120px; }
+
+/* Scan line sweeping down the screen */
+@keyframes veScan {
+    0%   { transform: translateY(0); opacity: 0.18; }
+    80%  { opacity: 0.18; }
+    100% { transform: translateY(171px); opacity: 0; }
+}
+.ve-scanline { animation: veScan 3s linear infinite; }
+
+/* Play button pulse ring */
+@keyframes veRing {
+    0%,100% { r: 28; opacity: 0.4; }
+    50%     { r: 34; opacity: 0.1; }
+}
+.ve-play-ring { animation: veRing 2s ease-in-out infinite; }
+
+/* Play button glow */
+@keyframes vePlayGlow {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50%     { opacity: 0.8; transform: scale(1.08); }
+}
+.ve-play-pulse { animation: vePlayGlow 2s ease-in-out infinite; transform-origin: 200px 117px; }
+
+/* Timeline playhead sliding */
+@keyframes vePlayhead {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(138px); }
+}
+.ve-playhead { animation: vePlayhead 4s linear infinite; }
+
+/* Clapperboard bob */
+@keyframes veClap {
+    0%,100% { transform: translate(355px,15px) rotate(0deg); }
+    20%     { transform: translate(355px,12px) rotate(-6deg); }
+    40%     { transform: translate(355px,15px) rotate(0deg); }
+}
+.ve-clap { animation: veClap 5s ease-in-out infinite; transform-origin: 355px 35px; }
+
+/* Film strip scroll */
+@keyframes veFilm {
+    0%   { transform: translate(10px,40px); }
+    100% { transform: translate(10px,0px); }
+}
+.ve-film { animation: veFilm 6s linear infinite; }
+
+/* Color wheel spin */
+@keyframes veWheelSpin {
+    from { transform: translate(390px,295px) rotate(0deg); }
+    to   { transform: translate(390px,295px) rotate(360deg); }
+}
+.ve-wheel { animation: veWheelSpin 12s linear infinite; }
+
+/* First clip highlight blink */
+@keyframes veClip {
+    0%,100% { opacity: 0.85; }
+    50%     { opacity: 0.5; }
+}
+.ve-clip1 { animation: veClip 2.5s ease-in-out infinite; }
+
+/* Waveform shimmer */
+@keyframes veWave {
+    0%,100% { opacity: 1; }
+    50%     { opacity: 0.5; }
+}
+.ve-wave { animation: veWave 1.8s ease-in-out infinite; }
+
+/* Floating dots */
+@keyframes veDot1 { 0%,100% { transform: translateY(0);    } 50% { transform: translateY(-10px); } }
+@keyframes veDot2 { 0%,100% { transform: translateY(0);    } 50% { transform: translateY(-14px); } }
+@keyframes veDot3 { 0%,100% { transform: translateY(-6px); } 50% { transform: translateY(6px);  } }
+.ve-dot1 { animation: veDot1 3s ease-in-out infinite; }
+.ve-dot2 { animation: veDot2 3.8s ease-in-out infinite 0.6s; }
+.ve-dot3 { animation: veDot3 2.8s ease-in-out infinite 1.2s; }
+
 /* Video elements */
 .video-hero-thumb {
     position: relative; width: 100%; aspect-ratio: 16/9;
