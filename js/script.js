@@ -290,4 +290,58 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    /* ---------- Before / After Sliders ---------- */
+    (function () {
+        const sliders = document.querySelectorAll('.ba-slider');
+        if (!sliders.length) return;
+
+        sliders.forEach(function (slider) {
+            let dragging = false;
+
+            function setPos(clientX) {
+                const rect = slider.getBoundingClientRect();
+                let pct = ((clientX - rect.left) / rect.width) * 100;
+                pct = Math.max(3, Math.min(97, pct));
+                slider.style.setProperty('--pos', pct + '%');
+            }
+
+            function start(e) {
+                dragging = true;
+                setPos(e.touches ? e.touches[0].clientX : e.clientX);
+            }
+            function move(e) {
+                if (!dragging) return;
+                setPos(e.touches ? e.touches[0].clientX : e.clientX);
+            }
+            function end() { dragging = false; }
+
+            slider.addEventListener('mousedown', start);
+            slider.addEventListener('touchstart', start, { passive: true });
+            window.addEventListener('mousemove', move);
+            window.addEventListener('touchmove', move, { passive: true });
+            window.addEventListener('mouseup', end);
+            window.addEventListener('touchend', end);
+
+            // Click anywhere on slider jumps handle there
+            slider.addEventListener('click', function (e) {
+                setPos(e.clientX);
+            });
+        });
+    }());
+
+    /* ---------- FAQ Accordion ---------- */
+    (function () {
+        const items = document.querySelectorAll('.faq-item');
+        if (!items.length) return;
+
+        items.forEach(function (item) {
+            const q = item.querySelector('.faq-q');
+            q.addEventListener('click', function () {
+                const isOpen = item.classList.contains('open');
+                items.forEach(function (other) { other.classList.remove('open'); });
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    }());
+
 });
