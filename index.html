@@ -110,6 +110,10 @@
                                 <feGaussianBlur stdDeviation="3" result="blur"/>
                                 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                             </filter>
+                            <filter id="homeMagentaGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
                             <linearGradient id="home3dGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#C3009D"/>
                                 <stop offset="100%" stop-color="#4a90e2"/>
@@ -129,6 +133,12 @@
                             <!-- Central circle (all-in-one hub) -->
                             <circle cx="260" cy="160" r="40" fill="#C3009D" opacity="0.7" filter="url(#homeSoftGlow)" class="home-hub"/>
                             <text x="260" y="165" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">✦</text>
+                        </g>
+
+                        <!-- ── GRAPHICS PIXELS LOGO (center-left, larger) ── -->
+                        <g class="home-logo-icon" transform="translate(90, 160)">
+                            <circle r="26" fill="#1a1a88" stroke="#C3009D" stroke-width="3" filter="url(#homeMagentaGlow)"/>
+                            <image href="images/gp-logo.png" x="-18" y="-18" width="36" height="36" class="home-logo-img"/>
                         </g>
 
                         <!-- ── PHOTO ICON (top-left corner) ── -->

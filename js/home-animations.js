@@ -288,4 +288,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }, delayStart);
     });
 
+    /* ── Graphics Pixels Logo Animation ── */
+    const logoIcon = document.querySelector('.home-logo-icon');
+    const logoImg = document.querySelector('.home-logo-img');
+    if (logoIcon) {
+        let glowOpacity = 1;
+        let glowDir = 1;
+        let logoRotation = 0;
+
+        // Glow pulse
+        setInterval(function () {
+            glowOpacity += glowDir * 0.035;
+            if (glowOpacity >= 1.4) glowDir = -1;
+            if (glowOpacity <= 0.6) glowDir = 1;
+            const circle = logoIcon.querySelector('circle');
+            if (circle) {
+                circle.setAttribute('stroke-width', 3 * (glowOpacity / 1));
+                circle.setAttribute('opacity', (0.5 + glowOpacity * 0.25));
+            }
+        }, 60);
+
+        // Logo image rotation
+        if (logoImg) {
+            setInterval(function () {
+                logoRotation += 2;
+                if (logoRotation >= 360) logoRotation = 0;
+                logoImg.setAttribute('transform', `rotate(${logoRotation})`);
+            }, 40);
+        }
+    }
+
 });
