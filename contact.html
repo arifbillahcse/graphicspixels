@@ -36,12 +36,6 @@
                     Have questions about our services? Need a custom quote? We're here to help!
                     Reach out to our team and we'll get back to you as soon as possible.
                 </p>
-                <ul class="svc-hero-icons">
-                    <li><i class="fas fa-clock"></i> 2 hrs Response Time</li>
-                    <li><i class="fas fa-globe"></i> 2 Global Offices</li>
-                    <li><i class="fas fa-headset"></i> 24/7 Support</li>
-                    <li><i class="fas fa-award"></i> 14+ Years Experience</li>
-                </ul>
                 <div class="hero-actions">
                     <a href="#contact-form" class="btn btn-primary">Send Message</a>
                     <a href="tel:+447576228915" class="btn btn-outline-white">Call Us Now</a>
@@ -49,34 +43,74 @@
             </div>
             <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
                 <div class="contact-svg-scene" aria-hidden="true">
-                    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="contact-svg-small">
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="contact-svg-main">
                         <defs>
-                            <filter id="contactSmallGlow">
-                                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                            <filter id="contactGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
                                 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                             </filter>
                         </defs>
 
-                        <!-- Outer Circle -->
-                        <circle cx="150" cy="150" r="90" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.4" class="contact-outer-ring"/>
+                        <!-- Main Monitor Frame (Cyan) -->
+                        <rect x="100" y="60" width="300" height="220" rx="8" fill="none" stroke="#00d4ff" stroke-width="3" class="contact-frame"/>
 
-                        <!-- Middle Circle -->
-                        <circle cx="150" cy="150" r="60" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.5" class="contact-middle-ring"/>
+                        <!-- Frame Inner Lines -->
+                        <line x1="105" y1="85" x2="395" y2="85" stroke="#00d4ff" stroke-width="1" opacity="0.4" class="contact-frame-line"/>
+                        <line x1="100" y1="100" x2="400" y2="100" stroke="#00d4ff" stroke-width="1" opacity="0.3" class="contact-frame-line"/>
 
-                        <!-- Center Circle with Glow -->
-                        <circle cx="150" cy="150" r="38" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#contactSmallGlow)" class="contact-small-center"/>
+                        <!-- Center Spiral (Magenta) -->
+                        <circle cx="250" cy="170" r="35" fill="none" stroke="#C3009D" stroke-width="2.5" opacity="0.8" class="contact-spiral-1"/>
+                        <circle cx="250" cy="170" r="25" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.6" class="contact-spiral-2"/>
+                        <circle cx="250" cy="170" r="15" fill="none" stroke="#C3009D" stroke-width="1.5" opacity="0.4" class="contact-spiral-3"/>
 
-                        <!-- Center Icon -->
-                        <text x="150" y="158" text-anchor="middle" font-size="28" font-weight="700" fill="#C3009D">✉</text>
+                        <!-- Left Side Icons -->
+                        <!-- Yellow Icon (Monitor) -->
+                        <rect x="125" y="125" width="20" height="14" rx="1" fill="none" stroke="#ffff00" stroke-width="1.5" class="contact-icon-1"/>
+                        <!-- Cyan Icon (Square) -->
+                        <rect x="130" y="160" width="16" height="16" rx="1" fill="none" stroke="#00d4ff" stroke-width="1.5" class="contact-icon-2"/>
+                        <!-- Orange Circle -->
+                        <circle cx="120" cy="225" r="12" fill="none" stroke="#ff6b35" stroke-width="1.5" class="contact-icon-3"/>
+                        <!-- Cyan Circle -->
+                        <circle cx="125" cy="245" r="8" fill="none" stroke="#00d4ff" stroke-width="1.5" class="contact-icon-4"/>
 
-                        <!-- Orbiting Dots -->
-                        <circle cx="210" cy="100" r="5" fill="#C3009D" class="contact-small-dot-1"/>
-                        <circle cx="230" cy="150" r="4" fill="#00d4ff" class="contact-small-dot-2"/>
-                        <circle cx="210" cy="200" r="5" fill="#ffff00" class="contact-small-dot-3"/>
-                        <circle cx="150" cy="240" r="4" fill="#00ff88" class="contact-small-dot-4"/>
-                        <circle cx="90" cy="200" r="5" fill="#ff6b35" class="contact-small-dot-5"/>
-                        <circle cx="70" cy="150" r="4" fill="#C3009D" class="contact-small-dot-6"/>
-                        <circle cx="90" cy="100" r="5" fill="#00d4ff" class="contact-small-dot-7"/>
+                        <!-- Left Large Rotating Circle -->
+                        <circle cx="90" cy="180" r="25" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.7" class="contact-left-circle"/>
+                        <circle cx="90" cy="180" r="20" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.4" class="contact-left-circle-inner"/>
+
+                        <!-- Right Side Icons -->
+                        <!-- Magenta Circle (Small) -->
+                        <circle cx="335" cy="105" r="8" fill="none" stroke="#C3009D" stroke-width="1.5" class="contact-icon-5"/>
+                        <!-- Green Circle -->
+                        <circle cx="350" cy="120" r="10" fill="none" stroke="#00ff88" stroke-width="1.5" class="contact-icon-6"/>
+                        <!-- Magenta Circle (Medium) -->
+                        <circle cx="335" cy="155" r="12" fill="none" stroke="#C3009D" stroke-width="1.5" class="contact-icon-7"/>
+                        <!-- Green Circle (Large) -->
+                        <circle cx="350" cy="190" r="14" fill="none" stroke="#00ff88" stroke-width="1.5" class="contact-icon-8"/>
+
+                        <!-- Right Panels -->
+                        <!-- Left Panel -->
+                        <rect x="115" y="65" width="22" height="80" rx="2" fill="none" stroke="#ffff00" stroke-width="1.5" class="contact-panel-left"/>
+                        <!-- Right Panel -->
+                        <rect x="363" y="65" width="22" height="80" rx="2" fill="none" stroke="#C3009D" stroke-width="1.5" class="contact-panel-right"/>
+
+                        <!-- Bottom Icons -->
+                        <!-- Orange Icon -->
+                        <rect x="220" y="305" width="12" height="12" rx="1" fill="none" stroke="#ff6b35" stroke-width="1" class="contact-icon-9"/>
+                        <!-- Dashed Box (Bottom Right) -->
+                        <rect x="380" y="300" width="40" height="40" rx="2" fill="none" stroke="#C3009D" stroke-width="1.5" stroke-dasharray="4,4" class="contact-dashed-box"/>
+                        <!-- Plus Icon -->
+                        <line x1="398" y1="310" x2="402" y2="310" stroke="#C3009D" stroke-width="1.5" class="contact-plus-h"/>
+                        <line x1="400" y1="308" x2="400" y2="312" stroke="#C3009D" stroke-width="1.5" class="contact-plus-v"/>
+
+                        <!-- Top Center Element -->
+                        <circle cx="250" cy="45" r="10" fill="#00d4ff" opacity="0.8" class="contact-top-dot"/>
+                        <line x1="230" y1="45" x2="270" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.6" class="contact-top-line-h"/>
+                        <line x1="250" y1="25" x2="250" y2="50" stroke="#00d4ff" stroke-width="1.5" opacity="0.6" class="contact-top-line-v"/>
+
+                        <!-- Floating Dots -->
+                        <circle cx="75" cy="120" r="3" fill="#ffff00" opacity="0.7" class="contact-float-dot-1"/>
+                        <circle cx="410" cy="240" r="3" fill="#C3009D" opacity="0.6" class="contact-float-dot-2"/>
+                        <circle cx="180" cy="320" r="2" fill="#00d4ff" opacity="0.5" class="contact-float-dot-3"/>
                     </svg>
                 </div>
             </div>

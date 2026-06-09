@@ -1061,6 +1061,61 @@ img { max-width: 100%; display: block; }
 .home-dot2 { animation: homeDot2 4s ease-in-out infinite 0.5s; }
 .home-dot3 { animation: homeDot3 3s ease-in-out infinite 1s; }
 
+/* ── Contact Page SVG Scene ── */
+.contact-svg-scene {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-svg-main {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(195, 0, 157, 0.3));
+}
+
+@keyframes contactFramePulse {
+    0%,100% { opacity: 0.8; }
+    50%     { opacity: 1.2; }
+}
+
+@keyframes contactSpiralRotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes contactIconPulse {
+    0%,100% { opacity: 0.5; }
+    50%     { opacity: 1; }
+}
+
+@keyframes contactTopDotPulse {
+    0%,100% { r: 8px; }
+    50%     { r: 14px; }
+}
+
+@keyframes contactFloatDot {
+    0%,100% { transform: translate(0, 0); }
+    25%     { transform: translate(8px, -8px); }
+    50%     { transform: translate(0, -15px); }
+    75%     { transform: translate(-8px, -8px); }
+}
+
+.contact-frame { animation: contactFramePulse 3s ease-in-out infinite; }
+.contact-spiral-1 { animation: contactSpiralRotate 8s linear infinite; }
+.contact-spiral-2 { animation: contactSpiralRotate 10s linear infinite reverse; }
+.contact-spiral-3 { animation: contactSpiralRotate 6s linear infinite; }
+
+.contact-left-circle { animation: contactIconPulse 2.5s ease-in-out infinite; }
+.contact-top-dot { animation: contactTopDotPulse 2s ease-in-out infinite; }
+
+.contact-float-dot-1 { animation: contactFloatDot 4s ease-in-out infinite; }
+.contact-float-dot-2 { animation: contactFloatDot 5s ease-in-out infinite 0.5s; }
+.contact-float-dot-3 { animation: contactFloatDot 4.5s ease-in-out infinite 1s; }
+
 @media (max-width: 480px) {
     .stats-grid { grid-template-columns: 1fr; }
     .stat-number { font-size: 40px; }
