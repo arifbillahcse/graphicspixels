@@ -15,6 +15,7 @@
 <body>
 
     <script src="components/load-components.js"></script>
+    <script src="js/video-animations.js"></script>
 
     <!-- ============ PAGE HERO ============ -->
     <section class="svc-hero">
@@ -71,6 +72,10 @@
                             </filter>
                             <filter id="strongGlow">
                                 <feGaussianBlur stdDeviation="5" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="veMagentaGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
                                 <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                             </filter>
                             <clipPath id="screenClip">
@@ -224,6 +229,12 @@
                         <circle cx="345" cy="210" r="2.5" fill="#C3009D" opacity="0.5" class="ve-dot3"/>
                         <circle cx="65"  cy="240" r="2" fill="#00d4ff" opacity="0.5" class="ve-dot1"/>
                         <circle cx="440" cy="260" r="3" fill="#ffd700" opacity="0.5" class="ve-dot2"/>
+
+                        <!-- ── GRAPHICS PIXELS LOGO (bottom-left corner) ── -->
+                        <g class="ve-logo-icon" transform="translate(70, 330)">
+                            <circle r="22" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#veMagentaGlow)"/>
+                            <image href="images/gp-logo.png" x="-16" y="-16" width="32" height="32" class="ve-logo-img"/>
+                        </g>
 
                     </svg>
                 </div>
