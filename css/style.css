@@ -594,7 +594,7 @@ img { max-width: 100%; display: block; }
 
 /* Services list */
 /* Photo editing video section */
-.pe-video-section { padding: 100px 0; background: var(--white); }
+.pe-video-section { padding: 100px 0; background: var(--bg-light); }
 .pe-video-wrap { max-width: 900px; margin: 0 auto; }
 .pe-video-container {
     position: relative; width: 100%; padding-bottom: 56.25%;
