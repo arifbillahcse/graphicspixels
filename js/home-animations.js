@@ -290,6 +290,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ── Graphics Pixels Logo Animation (sidebar) ── */
     const logoIcon = document.querySelector('.home-logo-icon');
+    const logoText1 = document.querySelector('.home-logo-text-1');
+    const logoText2 = document.querySelector('.home-logo-text-2');
     if (logoIcon) {
         let glowOpacity = 1;
         let glowDir = 1;
@@ -305,6 +307,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 circle.setAttribute('opacity', (0.5 + glowOpacity * 0.25));
             }
         }, 60);
+
+        // Text pulsing animations
+        if (logoText1) {
+            let text1Opacity = 0.8;
+            let text1Dir = 1;
+            setInterval(function () {
+                text1Opacity += text1Dir * 0.04;
+                if (text1Opacity >= 1) text1Dir = -1;
+                if (text1Opacity <= 0.6) text1Dir = 1;
+                logoText1.setAttribute('opacity', text1Opacity);
+            }, 80);
+        }
+
+        if (logoText2) {
+            let text2Opacity = 0.8;
+            let text2Dir = 1;
+            setInterval(function () {
+                text2Opacity += text2Dir * 0.04;
+                if (text2Opacity >= 1) text2Dir = -1;
+                if (text2Opacity <= 0.6) text2Dir = 1;
+                logoText2.setAttribute('opacity', text2Opacity);
+            }, 90);
+        }
     }
 
     /* ── Central Logo Animation (monitor center) ── */
