@@ -130,9 +130,21 @@
                             <!-- Screen content: gradient background -->
                             <defs><linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a2aaa"/><stop offset="100%" stop-color="#3a3acc"/></linearGradient></defs>
                             <rect x="92" y="75" width="336" height="170" fill="url(#screenGrad)" opacity="0.8"/>
-                            <!-- Central circle (all-in-one hub) -->
-                            <circle cx="260" cy="160" r="40" fill="#C3009D" opacity="0.7" filter="url(#homeSoftGlow)" class="home-hub"/>
-                            <text x="260" y="165" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">✦</text>
+
+                            <!-- ── CENTRAL LOGO WITH DIAMOND & RED CIRCLE ── -->
+                            <!-- Red circle (outer) -->
+                            <circle cx="260" cy="160" r="48" fill="none" stroke="#ff3366" stroke-width="2.5" opacity="0.8" class="home-center-red-circle"/>
+
+                            <!-- Diamond shape (rotating) -->
+                            <g class="home-center-diamond" transform="translate(260, 160)">
+                                <polygon points="0,-35 25,-10 0,15 -25,-10" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.7"/>
+                            </g>
+
+                            <!-- Central logo -->
+                            <g class="home-center-logo" transform="translate(260, 160)">
+                                <circle r="32" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#homeMagentaGlow)"/>
+                                <image href="images/gp-logo.png" x="-22" y="-22" width="44" height="44" class="home-center-logo-img"/>
+                            </g>
                         </g>
 
                         <!-- ── GRAPHICS PIXELS LOGO (center-left, larger) ── -->

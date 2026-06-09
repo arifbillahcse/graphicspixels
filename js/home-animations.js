@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, delayStart);
     });
 
-    /* ── Graphics Pixels Logo Animation ── */
+    /* ── Graphics Pixels Logo Animation (sidebar) ── */
     const logoIcon = document.querySelector('.home-logo-icon');
     const logoImg = document.querySelector('.home-logo-img');
     if (logoIcon) {
@@ -316,6 +316,60 @@ document.addEventListener('DOMContentLoaded', function () {
                 logoImg.setAttribute('transform', `rotate(${logoRotation})`);
             }, 40);
         }
+    }
+
+    /* ── Central Logo Animation (monitor center) ── */
+    const centerLogo = document.querySelector('.home-center-logo');
+    const centerLogoImg = document.querySelector('.home-center-logo-img');
+    if (centerLogo) {
+        let glowOpacity = 1;
+        let glowDir = 1;
+        let logoRot = 0;
+
+        // Glow pulse
+        setInterval(function () {
+            glowOpacity += glowDir * 0.04;
+            if (glowOpacity >= 1.5) glowDir = -1;
+            if (glowOpacity <= 0.7) glowDir = 1;
+            const centerCircle = centerLogo.querySelector('circle');
+            if (centerCircle) {
+                centerCircle.setAttribute('stroke-width', 2.5 * (glowOpacity / 1));
+                centerCircle.setAttribute('opacity', (0.6 + glowOpacity * 0.2));
+            }
+        }, 50);
+
+        // Logo image rotation
+        if (centerLogoImg) {
+            setInterval(function () {
+                logoRot += 2.5;
+                if (logoRot >= 360) logoRot = 0;
+                centerLogoImg.setAttribute('transform', `rotate(${logoRot})`);
+            }, 40);
+        }
+    }
+
+    /* ── Diamond Shape Rotation ── */
+    const diamond = document.querySelector('.home-center-diamond');
+    if (diamond) {
+        let diamondRotation = 0;
+        setInterval(function () {
+            diamondRotation += 1.8;
+            if (diamondRotation >= 360) diamondRotation = 0;
+            diamond.setAttribute('transform', `translate(260, 160) rotate(${diamondRotation})`);
+        }, 40);
+    }
+
+    /* ── Red Circle Pulse ── */
+    const redCircle = document.querySelector('.home-center-red-circle');
+    if (redCircle) {
+        let circleRadius = 48;
+        let circleDir = 1;
+        setInterval(function () {
+            circleRadius += circleDir * 0.6;
+            if (circleRadius >= 58) circleDir = -1;
+            if (circleRadius <= 42) circleDir = 1;
+            redCircle.setAttribute('r', circleRadius);
+        }, 40);
     }
 
 });
