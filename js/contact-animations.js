@@ -115,6 +115,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 30);
     });
 
+    /* ── Center Logo Animation ── */
+    const logoImg = document.querySelector('.contact-logo-img');
+    const logoBg = document.querySelector('.contact-logo-bg');
+    const logoRing = document.querySelector('.contact-logo-ring');
+
+    if (logoImg) {
+        let logoRotation = 0;
+        setInterval(function () {
+            logoRotation += 1.5;
+            if (logoRotation >= 360) logoRotation = 0;
+            logoImg.setAttribute('transform', `rotate(${logoRotation} 250 170)`);
+        }, 40);
+    }
+
+    if (logoBg) {
+        let glowOpacity = 0.9;
+        let glowDir = 1;
+        setInterval(function () {
+            glowOpacity += glowDir * 0.03;
+            if (glowOpacity >= 1) glowDir = -1;
+            if (glowOpacity <= 0.6) glowDir = 1;
+            logoBg.setAttribute('stroke-width', 2 + glowOpacity * 1.5);
+            logoBg.setAttribute('opacity', glowOpacity);
+        }, 60);
+    }
+
+    if (logoRing) {
+        let ringRotation = 0;
+        setInterval(function () {
+            ringRotation -= 0.5;
+            if (ringRotation <= -360) ringRotation = 0;
+            logoRing.setAttribute('transform', `rotate(${ringRotation} 250 170)`);
+        }, 50);
+    }
+
     /* ── Right Circles Pulsing ── */
     const rightCircles = ['.contact-icon-5', '.contact-icon-6', '.contact-icon-7', '.contact-icon-8'];
     rightCircles.forEach(function (selector, index) {
