@@ -209,12 +209,98 @@
                             <circle cx="28" cy="36" r="2" fill="#ffd700"/>
                         </g>
 
+                        <!-- ── ORBITING SERVICE ELEMENTS ── -->
+
+                        <!-- 1. Clipping Path Tool (top-left orbit) -->
+                        <g class="home-orbit home-orbit-1" transform="translate(150, 60)">
+                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
+                            <path d="M2,-6 L6,0 L2,6 L-2,0 Z" fill="#C3009D"/>
+                        </g>
+
+                        <!-- 2. Retouching Brush (top orbit) -->
+                        <g class="home-orbit home-orbit-2" transform="translate(260, 35)">
+                            <circle r="12" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <line x1="0" y1="-6" x2="0" y2="2" stroke="#00d4ff" stroke-width="2"/>
+                            <ellipse cx="0" cy="-8" rx="3" ry="4" fill="#00d4ff" opacity="0.7"/>
+                        </g>
+
+                        <!-- 3. Color Swatches (top-right orbit) -->
+                        <g class="home-orbit home-orbit-3" transform="translate(370, 60)">
+                            <circle r="12" fill="#1a1a88" stroke="#ffd700" stroke-width="1.5"/>
+                            <rect x="-5" y="-5" width="4" height="4" fill="#ff4444"/>
+                            <rect x="1" y="-5" width="4" height="4" fill="#ffaa00"/>
+                            <rect x="-5" y="1" width="4" height="4" fill="#00d4ff"/>
+                            <rect x="1" y="1" width="4" height="4" fill="#C3009D"/>
+                        </g>
+
+                        <!-- 4. Background Removal (right-top orbit) -->
+                        <g class="home-orbit home-orbit-4" transform="translate(410, 130)">
+                            <circle r="12" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="5" fill="none" stroke="#00ff88" stroke-width="1.5"/>
+                            <path d="M-3,-3 L3,3 M3,-3 L-3,3" stroke="#00ff88" stroke-width="1"/>
+                        </g>
+
+                        <!-- 5. Image Masking (right-bottom orbit) -->
+                        <g class="home-orbit home-orbit-5" transform="translate(400, 240)">
+                            <circle r="12" fill="#1a1a88" stroke="#ff6b35" stroke-width="1.5"/>
+                            <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#ff6b35" stroke-width="1.5"/>
+                            <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#ff6b35" stroke-width="1"/>
+                        </g>
+
+                        <!-- 6. Video Effects (bottom-right orbit) -->
+                        <g class="home-orbit home-orbit-6" transform="translate(330, 310)">
+                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
+                            <polygon points="0,-4 4,2 -4,2" fill="#C3009D"/>
+                            <circle cx="-4" cy="0" r="1.5" fill="#C3009D"/>
+                            <circle cx="4" cy="0" r="1.5" fill="#C3009D"/>
+                        </g>
+
+                        <!-- 7. 3D Rendering (bottom orbit) -->
+                        <g class="home-orbit home-orbit-7" transform="translate(260, 335)">
+                            <circle r="12" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <polygon points="-4,-3 0,-5 4,-3 2,3 -2,3" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                        </g>
+
+                        <!-- 8. Photo Enhancement (bottom-left orbit) -->
+                        <g class="home-orbit home-orbit-8" transform="translate(190, 310)">
+                            <circle r="12" fill="#1a1a88" stroke="#ffd700" stroke-width="1.5"/>
+                            <circle cx="-3" cy="-2" r="2" fill="#ffd700"/>
+                            <path d="M-5,3 L5,3" stroke="#ffd700" stroke-width="1.5"/>
+                            <path d="M-2,-4 L2,-4 L2,-1 L-2,-1 Z" fill="none" stroke="#ffd700" stroke-width="1"/>
+                        </g>
+
+                        <!-- 9. Quality Check (left orbit) -->
+                        <g class="home-orbit home-orbit-9" transform="translate(120, 240)">
+                            <circle r="12" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="6" fill="none" stroke="#00ff88" stroke-width="1.5"/>
+                            <path d="M-2,-1 L1,2 L3,-2" stroke="#00ff88" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- 10. Color Grading (left-top orbit) -->
+                        <g class="home-orbit home-orbit-10" transform="translate(130, 130)">
+                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
+                            <circle cx="-2" cy="-2" r="1.5" fill="#C3009D"/>
+                            <circle cx="2" cy="-2" r="1.5" fill="#C3009D"/>
+                            <circle cx="-2" cy="2" r="1.5" fill="#C3009D"/>
+                            <circle cx="2" cy="2" r="1.5" fill="#C3009D"/>
+                        </g>
+
                         <!-- ── FLOATING DOTS ── -->
                         <circle cx="90" cy="100" r="2.5" fill="#C3009D" opacity="0.6" class="home-dot1"/>
                         <circle cx="450" cy="220" r="2" fill="#00d4ff" opacity="0.5" class="home-dot2"/>
                         <circle cx="150" cy="350" r="2" fill="#C3009D" opacity="0.5" class="home-dot3"/>
                         <circle cx="420" cy="200" r="2" fill="#ffd700" opacity="0.5" class="home-dot1"/>
                         <circle cx="80" cy="280" r="1.5" fill="#00d4ff" opacity="0.4" class="home-dot2"/>
+
+                        <!-- ── ANIMATED SPARKLES ── -->
+                        <g class="home-sparkles">
+                            <circle cx="100" cy="80" r="1.5" fill="#ffd700" opacity="0.8" class="home-sparkle"/>
+                            <circle cx="420" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="home-sparkle"/>
+                            <circle cx="480" cy="160" r="1" fill="#C3009D" opacity="0.6" class="home-sparkle"/>
+                            <circle cx="450" cy="280" r="1.5" fill="#00d4ff" opacity="0.7" class="home-sparkle"/>
+                            <circle cx="50" cy="200" r="1" fill="#ffd700" opacity="0.6" class="home-sparkle"/>
+                            <circle cx="80" cy="320" r="1.5" fill="#00ff88" opacity="0.7" class="home-sparkle"/>
+                        </g>
 
                     </svg>
                 </div>

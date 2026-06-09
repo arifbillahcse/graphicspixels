@@ -240,4 +240,52 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, 30);
 
+    /* ── Orbiting Service Icons (around monitor) ── */
+    const orbitingIcons = {
+        'home-orbit-1': { angle: 0, radius: 140, speed: 0.7 },
+        'home-orbit-2': { angle: 45, radius: 150, speed: 0.8 },
+        'home-orbit-3': { angle: 90, radius: 145, speed: 0.75 },
+        'home-orbit-4': { angle: 135, radius: 135, speed: 0.85 },
+        'home-orbit-5': { angle: 180, radius: 140, speed: 0.9 },
+        'home-orbit-6': { angle: 225, radius: 150, speed: 0.72 },
+        'home-orbit-7': { angle: 270, radius: 135, speed: 0.88 },
+        'home-orbit-8': { angle: 315, radius: 145, speed: 0.82 },
+        'home-orbit-9': { angle: 30, radius: 130, speed: 0.78 },
+        'home-orbit-10': { angle: 150, radius: 140, speed: 0.86 }
+    };
+
+    const monitorCenter = { x: 260, y: 160 };
+
+    Object.keys(orbitingIcons).forEach(function (className) {
+        const icon = document.querySelector('.' + className);
+        if (icon) {
+            const config = orbitingIcons[className];
+            setInterval(function () {
+                const time = Date.now() / 1000;
+                const angle = (config.angle + time * config.speed * 18) * Math.PI / 180;
+                const x = monitorCenter.x + Math.cos(angle) * config.radius;
+                const y = monitorCenter.y + Math.sin(angle) * config.radius;
+                icon.setAttribute('transform', `translate(${x}, ${y})`);
+            }, 30);
+        }
+    });
+
+    /* ── Sparkle Twinkling (home page) ── */
+    document.querySelectorAll('.home-sparkle').forEach(function (sparkle, index) {
+        const initialOpacity = parseFloat(sparkle.getAttribute('opacity')) || 0.7;
+        let opacity = initialOpacity;
+        let direction = 1;
+        const speed = 0.05 + (index * 0.01);
+        const delayStart = Math.random() * 1200;
+
+        setTimeout(function () {
+            setInterval(function () {
+                opacity += direction * speed;
+                if (opacity >= initialOpacity * 1.3) direction = -1;
+                if (opacity <= initialOpacity * 0.2) direction = 1;
+                sparkle.setAttribute('opacity', opacity);
+            }, 60 + (index * 20));
+        }, delayStart);
+    });
+
 });
