@@ -920,64 +920,71 @@ img { max-width: 100%; display: block; }
 .pe-svg-scene {
     width: 100%; max-width: 480px; margin: 0 auto;
     display: block; overflow: visible;
-    filter: drop-shadow(0 20px 50px rgba(195,0,157,0.2));
+    filter: drop-shadow(0 20px 50px rgba(0,255,255,0.15));
 }
 .pe-svg {
     width: 100%; height: auto; display: block;
     max-height: 400px; overflow: visible;
 }
 
-/* Pulse animations */
-@keyframes pePulse {
+/* Canvas glow frame pulse */
+@keyframes peCanvasGlow {
+    0%,100% { stroke-width: 2; opacity: 0.8; }
+    50%     { stroke-width: 3.5; opacity: 1; }
+}
+.pe-canvas-glow { animation: peCanvasGlow 2.5s ease-in-out infinite; }
+
+/* Brightness slider animation */
+@keyframes peBrightnessSlide {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(30px); }
+}
+.pe-brightness-slider { animation: peBrightnessSlide 3s ease-in-out infinite; }
+
+/* Saturation slider animation */
+@keyframes peSaturationSlide {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-30px); }
+}
+.pe-saturation-slider { animation: peSaturationSlide 3.2s ease-in-out infinite; }
+
+/* Hue wheel rotation */
+@keyframes peHueWheel {
+    from { transform: translate(60px, 280px) rotateZ(0deg); }
+    to   { transform: translate(60px, 280px) rotateZ(360deg); }
+}
+.pe-hue-wheel { animation: peHueWheel 6s linear infinite; }
+
+/* Hue dot pulse */
+@keyframes peHuePulse {
+    0%,100% { r: 4; filter: drop-shadow(0 0 2px #00ffff); }
+    50%     { r: 7; filter: drop-shadow(0 0 8px #00ffff); }
+}
+.pe-hue-dot { animation: peHuePulse 2s ease-in-out infinite; }
+
+/* Crop tool pulse */
+@keyframes peCropPulse {
     0%,100% { opacity: 0.7; }
     50%     { opacity: 1; }
 }
-.pe-pulse { animation: pePulse 3s ease-in-out infinite; }
+.pe-crop { animation: peCropPulse 2.2s ease-in-out infinite; }
 
-/* Histogram bars shimmer */
-@keyframes peBarShimmer {
-    0%,100% { opacity: 0.8; }
-    50%     { opacity: 1; }
+/* Floating particles with organic motion */
+@keyframes peDot1Float {
+    0%,100% { transform: translateY(0) translateX(0); }
+    50%     { transform: translateY(-15px) translateX(8px); }
 }
-.pe-bars rect { animation: peBarShimmer 2s ease-in-out infinite; animation-delay: calc(var(--bar-index, 0) * 0.1s); }
-
-/* Color swatch pulse */
-@keyframes peColorPulse {
-    0%,100% { filter: drop-shadow(0 0 4px rgba(195,0,157,0.4)); }
-    50%     { filter: drop-shadow(0 0 12px rgba(195,0,157,0.8)); }
+@keyframes peDot2Float {
+    0%,100% { transform: translateY(0) translateX(0); }
+    50%     { transform: translateY(-12px) translateX(-10px); }
 }
-.pe-color-primary { animation: peColorPulse 2s ease-in-out infinite; }
-
-/* Layer active pulse */
-@keyframes peLayerPulse {
-    0%,100% { opacity: 0.8; }
-    50%     { opacity: 1; }
+@keyframes peDot3Float {
+    0%,100% { transform: translateY(0) translateX(0); }
+    50%     { transform: translateY(8px) translateX(12px); }
 }
-.pe-layer-active { animation: peLayerPulse 2.5s ease-in-out infinite; }
-
-/* Tool rotation */
-@keyframes peToolSpin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-.pe-tool { animation: peToolSpin 8s linear infinite; }
-
-/* Floating particles */
-@keyframes peBob1 {
-    0%,100% { transform: translateY(0); }
-    50%     { transform: translateY(-12px); }
-}
-@keyframes peBob2 {
-    0%,100% { transform: translateY(0); }
-    50%     { transform: translateY(-14px); }
-}
-@keyframes peBob3 {
-    0%,100% { transform: translateY(-6px); }
-    50%     { transform: translateY(8px); }
-}
-.pe-dot1 { animation: peBob1 3s ease-in-out infinite; }
-.pe-dot2 { animation: peBob2 3.6s ease-in-out infinite 0.4s; }
-.pe-dot3 { animation: peBob3 2.8s ease-in-out infinite 0.8s; }
+.pe-dot1 { animation: peDot1Float 3.5s ease-in-out infinite; }
+.pe-dot2 { animation: peDot2Float 4s ease-in-out infinite 0.3s; }
+.pe-dot3 { animation: peDot3Float 3.2s ease-in-out infinite 0.8s; }
 
 /* ── Home Page SVG Scene ── */
 .home-svg-scene {

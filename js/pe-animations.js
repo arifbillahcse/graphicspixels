@@ -1,5 +1,5 @@
 /* ========================================================
-   Photo Editing Page — SVG Scene Animations
+   Photo Editing Page — Vibrant SVG Scene Animations
    ======================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -9,78 +9,117 @@ document.addEventListener('DOMContentLoaded', function () {
     const svg = document.querySelector('.pe-svg');
     if (!svg) return;
 
-    /* ── Layer Panel Active Animation ── */
-    const layerActive = document.querySelector('.pe-layer-active');
-    if (layerActive) {
-        let opacity = 0.8;
-        let increasing = false;
-        setInterval(function () {
-            if (increasing) {
-                opacity += 0.03;
-                if (opacity >= 1) increasing = false;
-            } else {
-                opacity -= 0.03;
-                if (opacity <= 0.5) increasing = true;
-            }
-            layerActive.setAttribute('opacity', opacity);
-        }, 50);
-    }
-
-    /* ── Color Primary Glow Pulse ── */
-    const colorPrimary = document.querySelector('.pe-color-primary');
-    if (colorPrimary) {
-        let scale = 1;
+    /* ── Canvas Glow Frame Animation ── */
+    const canvasGlow = document.querySelector('.pe-canvas-glow');
+    if (canvasGlow) {
+        let strokeWidth = 2;
         let direction = 1;
         setInterval(function () {
-            scale += direction * 0.015;
-            if (scale >= 1.2) direction = -1;
-            if (scale <= 0.95) direction = 1;
-            colorPrimary.setAttribute('transform', `scale(${scale})`);
-            colorPrimary.setAttribute('transform-origin', '50% 50%');
+            strokeWidth += direction * 0.05;
+            if (strokeWidth >= 4) direction = -1;
+            if (strokeWidth <= 1) direction = 1;
+            canvasGlow.setAttribute('stroke-width', strokeWidth);
         }, 40);
     }
 
-    /* ── Opacity Slider Movement ── */
-    const opacitySlider = document.querySelector('.pe-opacity-slider');
-    if (opacitySlider) {
-        let sliderPos = 125;
-        let sliderDir = 1;
+    /* ── Brightness Slider Movement ── */
+    const brightnessSlider = document.querySelector('.pe-brightness-slider');
+    if (brightnessSlider) {
+        let sliderY = 100;
+        let direction = 1;
         setInterval(function () {
-            sliderPos += sliderDir * 0.8;
-            if (sliderPos >= 145) sliderDir = -1;
-            if (sliderPos <= 35) sliderDir = 1;
-            opacitySlider.setAttribute('cx', sliderPos);
+            sliderY += direction * 0.8;
+            if (sliderY >= 130) direction = -1;
+            if (sliderY <= 80) direction = 1;
+            brightnessSlider.setAttribute('cy', sliderY);
+        }, 35);
+    }
+
+    /* ── Saturation Slider Movement ── */
+    const saturationSlider = document.querySelector('.pe-saturation-slider');
+    if (saturationSlider) {
+        let sliderY = 120;
+        let direction = 1;
+        setInterval(function () {
+            sliderY += direction * 0.7;
+            if (sliderY >= 150) direction = -1;
+            if (sliderY <= 90) direction = 1;
+            saturationSlider.setAttribute('cy', sliderY);
+        }, 40);
+    }
+
+    /* ── Hue Wheel Rotation ── */
+    const hueWheel = document.querySelector('.pe-hue-wheel');
+    if (hueWheel) {
+        let rotation = 0;
+        setInterval(function () {
+            rotation += 1;
+            if (rotation >= 360) rotation = 0;
+            hueWheel.setAttribute('transform', `translate(60, 280) rotateZ(${rotation}deg)`);
         }, 30);
     }
 
-    /* ── Histogram Bars Animation (shimmer) ── */
-    const histoBars = document.querySelectorAll('.pe-bars rect');
-    if (histoBars.length) {
-        histoBars.forEach(function (bar, index) {
-            const originalHeight = bar.getAttribute('height');
-            const originalY = bar.getAttribute('y');
-            setInterval(function () {
-                const variance = Math.sin((Date.now() / 500) + (index * 0.3)) * 4;
-                const newHeight = parseFloat(originalHeight) + variance;
-                const newY = parseFloat(originalY) - (variance / 2);
-                bar.setAttribute('height', newHeight);
-                bar.setAttribute('y', newY);
-            }, 30);
-        });
+    /* ── Hue Dot Pulsing ── */
+    const hueDot = document.querySelector('.pe-hue-dot');
+    if (hueDot) {
+        let radius = 4;
+        let direction = 1;
+        setInterval(function () {
+            radius += direction * 0.08;
+            if (radius >= 7) direction = -1;
+            if (radius <= 3) direction = 1;
+            hueDot.setAttribute('r', radius);
+        }, 50);
     }
 
-    /* ── Selection Tool Rotation ── */
-    const selectionTool = document.querySelector('.pe-tool');
-    if (selectionTool) {
+    /* ── Crop Tool Pulsing ── */
+    const cropTool = document.querySelector('.pe-crop');
+    if (cropTool) {
+        let opacity = 0.7;
+        let direction = 1;
+        setInterval(function () {
+            opacity += direction * 0.06;
+            if (opacity >= 1) direction = -1;
+            if (opacity <= 0.4) direction = 1;
+            cropTool.setAttribute('opacity', opacity);
+        }, 60);
+    }
+
+    /* ── Transform Tools Rotation ── */
+    const transforms = document.querySelector('.pe-transforms');
+    if (transforms) {
+        let rotation = 0;
+        const rotateButton = transforms.querySelector('path');
+        if (rotateButton) {
+            setInterval(function () {
+                rotation += 1.2;
+                if (rotation >= 360) rotation = 0;
+                rotateButton.setAttribute('transform', `rotate(${rotation} 30 200)`);
+            }, 40);
+        }
+    }
+
+    /* ── Vibrance Dial Rotation ── */
+    const vibranceHand = document.querySelector('.pe-vibrance-hand');
+    if (vibranceHand) {
         let rotation = 0;
         setInterval(function () {
-            rotation += 1.5;
-            if (rotation >= 360) rotation = 0;
-            selectionTool.setAttribute('transform', `translate(370,100) rotate(${rotation} 0 0)`);
-        }, 40);
+            rotation = (Math.sin(Date.now() / 2000) * 45);
+            vibranceHand.setAttribute('transform', `rotate(${rotation} 440 200)`);
+        }, 30);
     }
 
-    /* ── Floating Particles (bobbing) ── */
+    /* ── Clarity Dial Rotation ── */
+    const clarityHand = document.querySelector('.pe-clarity-hand');
+    if (clarityHand) {
+        let rotation = 0;
+        setInterval(function () {
+            rotation = (Math.cos(Date.now() / 2500) * 40) - 20;
+            clarityHand.setAttribute('transform', `rotate(${rotation} 440 235)`);
+        }, 30);
+    }
+
+    /* ── Floating Particles with Smooth Motion ── */
     const dots = {
         dot1: [],
         dot2: [],
@@ -88,71 +127,57 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     document.querySelectorAll('.pe-dot1').forEach(function (dot) {
-        dots.dot1.push({ el: dot, originalY: parseFloat(dot.getAttribute('cy')), offset: Math.random() * Math.PI * 2 });
+        dots.dot1.push({
+            el: dot,
+            originalY: parseFloat(dot.getAttribute('cy')),
+            originalX: parseFloat(dot.getAttribute('cx')),
+            offset: Math.random() * Math.PI * 2
+        });
     });
+
     document.querySelectorAll('.pe-dot2').forEach(function (dot) {
-        dots.dot2.push({ el: dot, originalY: parseFloat(dot.getAttribute('cy')), offset: Math.random() * Math.PI * 2 });
+        dots.dot2.push({
+            el: dot,
+            originalY: parseFloat(dot.getAttribute('cy')),
+            originalX: parseFloat(dot.getAttribute('cx')),
+            offset: Math.random() * Math.PI * 2
+        });
     });
+
     document.querySelectorAll('.pe-dot3').forEach(function (dot) {
-        dots.dot3.push({ el: dot, originalY: parseFloat(dot.getAttribute('cy')), offset: Math.random() * Math.PI * 2 });
+        dots.dot3.push({
+            el: dot,
+            originalY: parseFloat(dot.getAttribute('cy')),
+            originalX: parseFloat(dot.getAttribute('cx')),
+            offset: Math.random() * Math.PI * 2
+        });
     });
 
     setInterval(function () {
         const time = Date.now() / 1000;
+
         Object.keys(dots).forEach(function (dotType) {
-            dots[dotType].forEach(function (dot) {
-                const newY = dot.originalY + Math.sin(time * 1.2 + dot.offset) * 12;
+            dots[dotType].forEach(function (dot, index) {
+                const speed = dotType === 'dot1' ? 1.3 : dotType === 'dot2' ? 0.9 : 1.1;
+                const newY = dot.originalY + Math.sin(time * speed + dot.offset) * 16;
+                const newX = dot.originalX + Math.cos(time * (speed - 0.3) + dot.offset) * 12;
                 dot.el.setAttribute('cy', newY);
+                dot.el.setAttribute('cx', newX);
             });
         });
     }, 30);
 
-    /* ── Background Glow Pulse ── */
-    const bgGlow = document.querySelector('.pe-pulse');
-    if (bgGlow) {
-        let rx = 190;
-        let ry = 130;
+    /* ── Light Rays Pulsing ── */
+    const rays = document.querySelector('.pe-rays');
+    if (rays) {
+        let opacity = 0.4;
         let direction = 1;
         setInterval(function () {
-            rx += direction * 2;
-            ry += direction * 1.5;
-            if (rx >= 210) direction = -1;
-            if (rx <= 170) direction = 1;
-            bgGlow.setAttribute('rx', rx);
-            bgGlow.setAttribute('ry', ry);
-        }, 50);
-    }
-
-    /* ── Layers Panel Slide In (reveal animation) ── */
-    const layersGroup = document.querySelector('.pe-layers');
-    if (layersGroup) {
-        let xOffset = -140;
-        let slideDirection = 1;
-        let inActive = false;
-
-        const slideInterval = setInterval(function () {
-            if (!inActive) {
-                xOffset += slideDirection * 0.8;
-                if (xOffset >= 0) {
-                    xOffset = 0;
-                    inActive = true;
-                }
-                layersGroup.setAttribute('transform', `translateX(${xOffset})`);
-            }
-        }, 40);
-
-        // Subtle continuous breathing effect once visible
-        let breathScale = 1;
-        let breathDir = 1;
-        setInterval(function () {
-            if (inActive) {
-                breathScale += breathDir * 0.008;
-                if (breathScale >= 1.04) breathDir = -1;
-                if (breathScale <= 0.98) breathDir = 1;
-                layersGroup.setAttribute('transform', `translateX(0) scale(${breathScale})`);
-                layersGroup.setAttribute('transform-origin', '80px 180px');
-            }
-        }, 50);
+            opacity += direction * 0.04;
+            if (opacity >= 0.8) direction = -1;
+            if (opacity <= 0.2) direction = 1;
+            rays.setAttribute('opacity', opacity);
+        }, 70);
     }
 
 });
