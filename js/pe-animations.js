@@ -259,4 +259,48 @@ document.addEventListener('DOMContentLoaded', function () {
         }, delayStart);
     });
 
+    /* ── Center Graphics Pixels Logo Animation ── */
+    const centerLogo = document.querySelector('.pe-center-logo');
+    const centerLogoImg = document.querySelector('.pe-center-logo-img');
+    const centerLogoRing = document.querySelector('.pe-center-logo-ring');
+
+    if (centerLogo) {
+        let glowOpacity = 0.4;
+        let glowDir = 1;
+        let logoRotation = 0;
+
+        // Logo circle glow pulse
+        setInterval(function () {
+            glowOpacity += glowDir * 0.04;
+            if (glowOpacity >= 1) glowDir = -1;
+            if (glowOpacity <= 0.3) glowDir = 1;
+            const circle = centerLogo.querySelector('circle:nth-of-type(2)');
+            if (circle) {
+                circle.setAttribute('stroke-width', 2.5 * (glowOpacity / 0.6));
+                circle.setAttribute('opacity', (0.5 + glowOpacity * 0.3));
+            }
+        }, 60);
+
+        // Outer ring expansion and contraction
+        if (centerLogoRing) {
+            let ringRadius = 40;
+            let ringDir = 1;
+            setInterval(function () {
+                ringRadius += ringDir * 0.8;
+                if (ringRadius >= 50) ringDir = -1;
+                if (ringRadius <= 35) ringDir = 1;
+                centerLogoRing.setAttribute('r', ringRadius);
+            }, 40);
+        }
+
+        // Logo image rotation
+        if (centerLogoImg) {
+            setInterval(function () {
+                logoRotation += 1.5;
+                if (logoRotation >= 360) logoRotation = 0;
+                centerLogoImg.setAttribute('transform', `rotate(${logoRotation})`);
+            }, 40);
+        }
+    }
+
 });
