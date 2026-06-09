@@ -855,7 +855,7 @@ img { max-width: 100%; display: block; }
         position: absolute !important; top: auto !important; bottom: 10px; width: 40px; height: 40px;
         left: auto !important; right: auto !important;
     }
-    .lightbox-prev { right: 60px; }
+    .lightbox-prev { left: 10px; }
     .lightbox-next { right: 10px; }
     .lightbox-container { width: 95%; }
     .lightbox-close { top: 10px; right: 10px; width: 40px; height: 40px; font-size: 20px; }
