@@ -1,192 +1,173 @@
 /* ========================================================
-   About Us Page — SVG Scene Animations
+   About Us Page — Hero SVG Animations
    ======================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const aboutScene = document.querySelector('.about-svg-main');
-    if (!aboutScene) return;
+    if (!document.querySelector('.about-svg-main')) return;
 
-    /* ── Main Frame Glow Pulse ── */
-    const frame = document.querySelector('.about-frame');
+    /* ── Frame Glow ── */
+    var frame = document.querySelector('.au-frame');
     if (frame) {
-        let opacity = 0.8;
-        let dir = 1;
+        var fOp = 0.8, fDir = 1;
         setInterval(function () {
-            opacity += dir * 0.03;
-            if (opacity >= 1.2) dir = -1;
-            if (opacity <= 0.6) dir = 1;
-            frame.setAttribute('stroke-width', 3 * (opacity / 0.9));
-            frame.setAttribute('opacity', opacity);
+            fOp += fDir * 0.03;
+            if (fOp >= 1.2) fDir = -1;
+            if (fOp <= 0.6) fDir = 1;
+            frame.setAttribute('stroke-width', String(3 * (fOp / 0.9)));
+            frame.setAttribute('opacity', String(fOp));
         }, 50);
     }
 
-    /* ── Center Spirals Rotation ── */
-    const spiral1 = document.querySelector('.about-spiral-1');
-    const spiral2 = document.querySelector('.about-spiral-2');
-    const spiral3 = document.querySelector('.about-spiral-3');
-
-    if (spiral1 || spiral2 || spiral3) {
-        let rotation = 0;
+    /* ── Center Spirals ── */
+    var s1 = document.querySelector('.au-spiral-1');
+    var s2 = document.querySelector('.au-spiral-2');
+    var s3 = document.querySelector('.au-spiral-3');
+    if (s1 || s2 || s3) {
+        var sRot = 0;
         setInterval(function () {
-            rotation += 0.8;
-            if (rotation >= 360) rotation = 0;
-            if (spiral1) spiral1.setAttribute('transform', `rotate(${rotation} 250 170)`);
-            if (spiral2) spiral2.setAttribute('transform', `rotate(${-rotation * 1.3} 250 170)`);
-            if (spiral3) spiral3.setAttribute('transform', `rotate(${rotation * 1.5} 250 170)`);
+            sRot += 0.8;
+            if (sRot >= 360) sRot = 0;
+            if (s1) s1.setAttribute('transform', 'rotate(' + sRot + ' 250 170)');
+            if (s2) s2.setAttribute('transform', 'rotate(' + (-sRot * 1.3) + ' 250 170)');
+            if (s3) s3.setAttribute('transform', 'rotate(' + (sRot * 1.5) + ' 250 170)');
         }, 35);
     }
 
     /* ── Logo Rotation ── */
-    const logoImg = document.querySelector('.about-logo-img');
+    var logoImg = document.querySelector('.au-logo-img');
     if (logoImg) {
-        let rotation = 0;
+        var lRot = 0;
         setInterval(function () {
-            rotation += 1.5;
-            if (rotation >= 360) rotation = 0;
-            logoImg.setAttribute('transform', `rotate(${rotation} 250 170)`);
+            lRot += 1.5;
+            if (lRot >= 360) lRot = 0;
+            logoImg.setAttribute('transform', 'rotate(' + lRot + ' 250 170)');
         }, 40);
     }
 
     /* ── Logo Background Glow ── */
-    const logoBg = document.querySelector('.about-logo-bg');
+    var logoBg = document.querySelector('.au-logo-bg');
     if (logoBg) {
-        let opacity = 0.9;
-        let dir = 1;
+        var bgOp = 0.9, bgDir = 1;
         setInterval(function () {
-            opacity += dir * 0.03;
-            if (opacity >= 1) dir = -1;
-            if (opacity <= 0.6) dir = 1;
-            logoBg.setAttribute('stroke-width', 2 + opacity * 1.5);
-            logoBg.setAttribute('opacity', opacity);
+            bgOp += bgDir * 0.03;
+            if (bgOp >= 1) bgDir = -1;
+            if (bgOp <= 0.6) bgDir = 1;
+            logoBg.setAttribute('stroke-width', String(2 + bgOp * 1.5));
+            logoBg.setAttribute('opacity', String(bgOp));
         }, 60);
     }
 
-    /* ── Logo Ring Counter-Rotation ── */
-    const logoRing = document.querySelector('.about-logo-ring');
+    /* ── Logo Ring Counter-Rotate ── */
+    var logoRing = document.querySelector('.au-logo-ring');
     if (logoRing) {
-        let rotation = 0;
+        var rRot = 0;
         setInterval(function () {
-            rotation -= 0.5;
-            if (rotation <= -360) rotation = 0;
-            logoRing.setAttribute('transform', `rotate(${rotation} 250 170)`);
+            rRot -= 0.5;
+            if (rRot <= -360) rRot = 0;
+            logoRing.setAttribute('transform', 'rotate(' + rRot + ' 250 170)');
         }, 50);
     }
 
     /* ── Company Name Text Pulse ── */
-    const textGraphics = document.querySelector('.about-text-graphics');
-    const textPixels = document.querySelector('.about-text-pixels');
-
-    if (textGraphics) {
-        let opacity = 0.8;
-        let dir = 1;
+    var tg = document.querySelector('.au-text-g');
+    var tp = document.querySelector('.au-text-p');
+    if (tg) {
+        var tgOp = 0.8, tgDir = 1;
         setInterval(function () {
-            opacity += dir * 0.04;
-            if (opacity >= 1) dir = -1;
-            if (opacity <= 0.5) dir = 1;
-            textGraphics.setAttribute('opacity', opacity);
+            tgOp += tgDir * 0.04;
+            if (tgOp >= 1) tgDir = -1;
+            if (tgOp <= 0.5) tgDir = 1;
+            tg.setAttribute('opacity', String(tgOp));
+        }, 80);
+    }
+    if (tp) {
+        var tpOp = 0.5, tpDir = 1;
+        setInterval(function () {
+            tpOp += tpDir * 0.04;
+            if (tpOp >= 1) tpDir = -1;
+            if (tpOp <= 0.5) tpDir = 1;
+            tp.setAttribute('opacity', String(tpOp));
         }, 80);
     }
 
-    if (textPixels) {
-        let opacity = 0.7;
-        let dir = -1;
+    /* ── Orbiting Person Icons ── */
+    var orbits = [
+        { cls: 'au-orbit-1', angle: 0,   r: 95,  spd: 0.7  },
+        { cls: 'au-orbit-2', angle: 72,  r: 100, spd: 0.85 },
+        { cls: 'au-orbit-3', angle: 144, r: 90,  spd: 0.75 },
+        { cls: 'au-orbit-4', angle: 216, r: 100, spd: 0.9  },
+        { cls: 'au-orbit-5', angle: 288, r: 95,  spd: 0.8  }
+    ];
+    orbits.forEach(function (cfg) {
+        var el = document.querySelector('.' + cfg.cls);
+        if (!el) return;
         setInterval(function () {
-            opacity += dir * 0.04;
-            if (opacity >= 1) dir = -1;
-            if (opacity <= 0.5) dir = 1;
-            textPixels.setAttribute('opacity', opacity);
-        }, 80);
-    }
-
-    /* ── Orbiting Team Member Icons ── */
-    const orbitConfig = {
-        'about-orbit-1': { angle: 0,   radius: 95, speed: 0.7  },
-        'about-orbit-2': { angle: 72,  radius: 100, speed: 0.85 },
-        'about-orbit-3': { angle: 144, radius: 90,  speed: 0.75 },
-        'about-orbit-4': { angle: 216, radius: 100, speed: 0.9  },
-        'about-orbit-5': { angle: 288, radius: 95,  speed: 0.8  }
-    };
-
-    const center = { x: 250, y: 170 };
-
-    Object.keys(orbitConfig).forEach(function (cls) {
-        const el = document.querySelector('.' + cls);
-        if (el) {
-            const cfg = orbitConfig[cls];
-            setInterval(function () {
-                const time = Date.now() / 1000;
-                const angle = (cfg.angle + time * cfg.speed * 20) * Math.PI / 180;
-                const x = center.x + Math.cos(angle) * cfg.radius;
-                const y = center.y + Math.sin(angle) * cfg.radius;
-                el.setAttribute('transform', `translate(${x}, ${y})`);
-            }, 30);
-        }
+            var t = Date.now() / 1000;
+            var a = (cfg.angle + t * cfg.spd * 20) * Math.PI / 180;
+            var x = 250 + Math.cos(a) * cfg.r;
+            var y = 170 + Math.sin(a) * cfg.r;
+            el.setAttribute('transform', 'translate(' + x + ',' + y + ')');
+        }, 30);
     });
 
     /* ── Left Circle Pulse ── */
-    const leftCircle = document.querySelector('.about-left-circle');
-    if (leftCircle) {
-        let radius = 25;
-        let dir = 1;
+    var lc = document.querySelector('.au-left-circle');
+    if (lc) {
+        var lcR = 25, lcDir = 1;
         setInterval(function () {
-            radius += dir * 0.5;
-            if (radius >= 30) dir = -1;
-            if (radius <= 20) dir = 1;
-            leftCircle.setAttribute('r', radius);
+            lcR += lcDir * 0.5;
+            if (lcR >= 30) lcDir = -1;
+            if (lcR <= 20) lcDir = 1;
+            lc.setAttribute('r', String(lcR));
         }, 40);
     }
 
     /* ── Top Dot Pulse ── */
-    const topDot = document.querySelector('.about-top-dot');
-    if (topDot) {
-        let r = 10;
-        let dir = 1;
+    var td = document.querySelector('.au-top-dot');
+    if (td) {
+        var tdR = 10, tdDir = 1;
         setInterval(function () {
-            r += dir * 0.06;
-            if (r >= 14) dir = -1;
-            if (r <= 7) dir = 1;
-            topDot.setAttribute('r', r);
+            tdR += tdDir * 0.06;
+            if (tdR >= 14) tdDir = -1;
+            if (tdR <= 7) tdDir = 1;
+            td.setAttribute('r', String(tdR));
         }, 50);
     }
 
-    /* ── Side Icons Pulse ── */
-    ['.about-icon-1','.about-icon-2','.about-icon-3','.about-icon-4',
-     '.about-icon-5','.about-icon-6','.about-icon-7','.about-icon-8','.about-icon-9'].forEach(function (sel, i) {
-        const el = document.querySelector(sel);
-        if (!el) return;
-        let opacity = 0.6;
-        let dir = 1;
+    /* ── Side Icons Fade ── */
+    document.querySelectorAll('.au-icon').forEach(function (el, i) {
+        var op = 0.6 + Math.random() * 0.3, dir = 1;
         setTimeout(function () {
             setInterval(function () {
-                opacity += dir * (0.04 + i * 0.005);
-                if (opacity >= 1) dir = -1;
-                if (opacity <= 0.3) dir = 1;
-                el.setAttribute('opacity', opacity);
-            }, 65 + i * 15);
-        }, Math.random() * 600);
+                op += dir * 0.04;
+                if (op >= 1)   dir = -1;
+                if (op <= 0.3) dir = 1;
+                el.setAttribute('opacity', String(op));
+            }, 70 + i * 12);
+        }, i * 80);
     });
 
-    /* ── Dashed Box Rotation ── */
-    const dashedBox = document.querySelector('.about-dashed-box');
-    if (dashedBox) {
-        let rotation = 0;
+    /* ── Dashed Box Spin ── */
+    var db = document.querySelector('.au-dashed-box');
+    if (db) {
+        var dbRot = 0;
         setInterval(function () {
-            rotation += 1;
-            if (rotation >= 360) rotation = 0;
-            dashedBox.setAttribute('transform', `rotate(${rotation} 400 320)`);
+            dbRot += 1;
+            if (dbRot >= 360) dbRot = 0;
+            db.setAttribute('transform', 'rotate(' + dbRot + ' 400 320)');
         }, 40);
     }
 
     /* ── Floating Dots ── */
-    document.querySelectorAll('[class^="about-float-dot-"]').forEach(function (dot, i) {
-        const ox = parseFloat(dot.getAttribute('cx'));
-        const oy = parseFloat(dot.getAttribute('cy'));
-        const speed = 0.6 + i * 0.15;
-        const offset = Math.random() * Math.PI * 2;
+    document.querySelectorAll('.au-fdot').forEach(function (dot, i) {
+        var ox = parseFloat(dot.getAttribute('cx'));
+        var oy = parseFloat(dot.getAttribute('cy'));
+        var spd = 0.6 + i * 0.15;
+        var off = Math.random() * Math.PI * 2;
         setInterval(function () {
-            const t = Date.now() / 1000;
-            dot.setAttribute('cx', ox + Math.sin(t * speed + offset) * 15);
-            dot.setAttribute('cy', oy + Math.cos(t * (speed - 0.2) + offset) * 15);
+            var t = Date.now() / 1000;
+            dot.setAttribute('cx', String(ox + Math.sin(t * spd + off) * 15));
+            dot.setAttribute('cy', String(oy + Math.cos(t * (spd - 0.2) + off) * 15));
         }, 30);
     });
 
