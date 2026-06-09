@@ -826,6 +826,7 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 992px) {
     .svc-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .svc-hero-visual { order: -1; }
     .svc-hero-title { font-size: 36px; }
     .svc-row { grid-template-columns: 1fr; gap: 30px; }
     .svc-row.reverse .svc-media { order: 0; }
