@@ -15,17 +15,60 @@
 <body>
 
     <script src="components/load-components.js"></script>
+    <script src="js/contact-animations.js"></script>
 
     <!-- ============ PAGE HERO ============ -->
-    <section class="contact-hero" style="padding: 120px 0 80px; text-align: center;">
+    <section class="contact-hero" style="padding: 80px 0;">
         <div class="container">
-            <div class="contact-hero-content reveal" data-reveal="up">
-                <span class="hero-eyebrow">Get In Touch</span>
-                <h1 class="contact-hero-title" style="font-size: 48px; margin-bottom: 20px;">Contact Graphics Pixels</h1>
-                <p class="contact-hero-text" style="font-size: 18px; max-width: 600px; margin: 0 auto; color: rgba(255,255,255,0.8);">
-                    Have questions about our services? Need a custom quote? We're here to help!
-                    Reach out to our team and we'll get back to you as soon as possible.
-                </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div class="contact-hero-content reveal" data-reveal="left">
+                    <h1 class="contact-hero-title" style="font-size: 48px; margin-bottom: 20px; color: var(--navy);">Contact Graphics Pixels</h1>
+                    <p class="contact-hero-text" style="font-size: 18px; color: var(--text); line-height: 1.8;">
+                        Reach out to us for <strong>professional photo retouching</strong> and <strong>3D modeling & rendering services</strong>. We are ready to collaborate and bring your vision to life.
+                    </p>
+                </div>
+                <div class="contact-hero-visual reveal" data-reveal="right">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="contact-svg" style="max-width: 100%; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));">
+                        <defs>
+                            <radialGradient id="contactGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
+                            </radialGradient>
+                            <filter id="contactSoftGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="contactMagentaGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Background glow -->
+                        <ellipse cx="200" cy="200" rx="180" ry="150" fill="url(#contactGlow)" class="contact-pulse"/>
+
+                        <!-- Outer ring -->
+                        <circle cx="200" cy="200" r="140" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.3" class="contact-ring-1"/>
+                        <circle cx="200" cy="200" r="100" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.3" class="contact-ring-2"/>
+
+                        <!-- Central circle -->
+                        <circle cx="200" cy="200" r="50" fill="#1a1a88" stroke="#C3009D" stroke-width="3" filter="url(#contactMagentaGlow)" class="contact-center-circle"/>
+
+                        <!-- Center icon -->
+                        <g transform="translate(200, 200)">
+                            <text x="0" y="8" text-anchor="middle" font-size="32" font-weight="700" fill="#C3009D" font-family="Poppins, sans-serif">✦</text>
+                        </g>
+
+                        <!-- Orbiting elements -->
+                        <circle cx="280" cy="140" r="8" fill="#C3009D" class="contact-dot-1"/>
+                        <circle cx="320" cy="200" r="6" fill="#00d4ff" class="contact-dot-2"/>
+                        <circle cx="280" cy="260" r="7" fill="#ffff00" class="contact-dot-3"/>
+                        <circle cx="200" cy="340" r="6" fill="#00ff88" class="contact-dot-4"/>
+                        <circle cx="120" cy="260" r="8" fill="#ff6b35" class="contact-dot-5"/>
+                        <circle cx="80" cy="200" r="7" fill="#C3009D" class="contact-dot-6"/>
+                        <circle cx="120" cy="140" r="6" fill="#00d4ff" class="contact-dot-7"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -36,78 +79,52 @@
             <div class="contact-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
                 <!-- Left: Contact Information -->
                 <div class="contact-info reveal" data-reveal="left">
-                    <h2 class="contact-info-title" style="font-size: 32px; margin-bottom: 15px; color: var(--navy);">Contact Information</h2>
-                    <p class="contact-info-desc" style="color: var(--text-light); margin-bottom: 30px;">Prefer to reach out directly? Here's how you can contact us:</p>
+                    <h2 class="contact-info-title" style="font-size: 32px; margin-bottom: 15px; color: var(--navy);">Get In Touch</h2>
+                    <p class="contact-info-desc" style="color: var(--text-light); margin-bottom: 30px;">Have a question or ready to start your project? <strong style="color: var(--navy);">Our team</strong> is available and eager to assist you.</p>
 
-                    <div style="margin-bottom: 25px; display: flex; gap: 20px;">
-                        <div style="flex-shrink: 0;">
-                            <div style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                    <!-- UK Office -->
+                    <div style="margin-bottom: 30px; padding: 20px; border: 2px solid var(--border); border-radius: 12px;">
+                        <h3 style="font-size: 18px; margin-bottom: 15px; color: var(--navy); font-weight: 700;">UK OFFICE ADDRESS - CORPORATE OFFICE</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0; line-height: 1.6; color: var(--text);">Unit 4, Storm 12 Plaza Shopping<br>Centre, 56 St Marys Road,<br>Southampton, United Kingdom</p>
                         </div>
-                        <div>
-                            <h3 style="font-size: 18px; margin-bottom: 5px; color: var(--navy);">Email</h3>
-                            <p style="margin: 0 0 5px 0;"><a href="mailto:info@graphicspixels.com" style="color: var(--magenta); text-decoration: none; font-weight: 600;">info@graphicspixels.com</a></p>
-                            <small style="color: var(--text-light);">Response time: Within 2 hours</small>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-phone" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0;"><a href="tel:+447576228915" style="color: var(--magenta); text-decoration: none; font-weight: 600;">+44 7576-228-915</a></p>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <i class="fas fa-envelope" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0;"><a href="mailto:info@graphicspixels.com" style="color: var(--magenta); text-decoration: none; font-weight: 600;">info@graphicspixels.com</a></p>
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 25px; display: flex; gap: 20px;">
-                        <div style="flex-shrink: 0;">
-                            <div style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                    <!-- Bangladesh Office -->
+                    <div style="margin-bottom: 30px; padding: 20px; border: 2px solid var(--border); border-radius: 12px;">
+                        <h3 style="font-size: 18px; margin-bottom: 15px; color: var(--navy); font-weight: 700;">BANGLADESH OFFICE - POST-PRODUCTION HOUSE</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0; line-height: 1.6; color: var(--text);">House # 31, Road # 3 (New),<br>Dhanmondi, Dhaka-1209<br>Bangladesh</p>
                         </div>
-                        <div>
-                            <h3 style="font-size: 18px; margin-bottom: 5px; color: var(--navy);">Phone</h3>
-                            <p style="margin: 0 0 5px 0;"><a href="tel:+1234567890" style="color: var(--magenta); text-decoration: none; font-weight: 600;">+1 (234) 567-8900</a></p>
-                            <small style="color: var(--text-light);">Mon-Fri: 9AM - 6PM EST</small>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-phone" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0;"><a href="tel:+8801980326731" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Phone number: +8801980326731</a></p>
                         </div>
-                    </div>
-
-                    <div style="margin-bottom: 25px; display: flex; gap: 20px;">
-                        <div style="flex-shrink: 0;">
-                            <div style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-envelope" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0;"><a href="mailto:info@graphicspixels.com" style="color: var(--magenta); text-decoration: none; font-weight: 600;">info@graphicspixels.com</a></p>
                         </div>
-                        <div>
-                            <h3 style="font-size: 18px; margin-bottom: 5px; color: var(--navy);">Address</h3>
-                            <p style="margin: 0; line-height: 1.6; color: var(--text);">123 Creative Street<br>New York, NY 10001<br>United States</p>
+                        <div style="display: flex; gap: 10px;">
+                            <i class="fab fa-skype" style="color: var(--magenta); margin-top: 2px;"></i>
+                            <p style="margin: 0;"><a href="skype:live:csd.rafy23?chat" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Skype: live:csd.rafy23</a></p>
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 25px; display: flex; gap: 20px;">
-                        <div style="flex-shrink: 0;">
-                            <div style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 style="font-size: 18px; margin-bottom: 5px; color: var(--navy);">Business Hours</h3>
-                            <p style="margin: 0; line-height: 1.6; color: var(--text);">Monday - Friday: 9:00 AM - 6:00 PM EST<br>Saturday - Sunday: Closed</p>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 40px; padding-top: 40px; border-top: 2px solid var(--border);">
-                        <h3 style="font-size: 18px; margin-bottom: 15px; color: var(--navy);">Follow Us</h3>
-                        <div style="display: flex; gap: 15px;">
-                            <a href="#" style="width: 44px; height: 44px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" class="social-link-hover">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" style="width: 44px; height: 44px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" class="social-link-hover">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" style="width: 44px; height: 44px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" class="social-link-hover">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" style="width: 44px; height: 44px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" class="social-link-hover">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" style="width: 44px; height: 44px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" class="social-link-hover">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
+                    <!-- Business Hours -->
+                    <div style="padding: 20px; border: 2px solid var(--border); border-radius: 12px; background: var(--bg-light);">
+                        <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--navy); font-weight: 700;">Business Hours</h3>
+                        <p style="margin: 0 0 8px 0; color: var(--text);"><strong>Monday to Saturday</strong> 9 AM - 7 PM (GMT+6)</p>
+                        <p style="margin: 0; color: var(--text);">Available 24/7 via email and Skype</p>
                     </div>
                 </div>
 
