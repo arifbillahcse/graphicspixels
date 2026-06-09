@@ -150,6 +150,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 50);
     }
 
+    /* ── Company Name Text Pulse ── */
+    const textGraphics = document.querySelector('.contact-text-graphics');
+    const textPixels = document.querySelector('.contact-text-pixels');
+
+    if (textGraphics) {
+        let opacity = 0.8;
+        let dir = 1;
+        setInterval(function () {
+            opacity += dir * 0.04;
+            if (opacity >= 1) dir = -1;
+            if (opacity <= 0.5) dir = 1;
+            textGraphics.setAttribute('opacity', opacity);
+        }, 80);
+    }
+
+    if (textPixels) {
+        let opacity = 0.7;
+        let dir = -1;
+        setInterval(function () {
+            opacity += dir * 0.04;
+            if (opacity >= 1) dir = -1;
+            if (opacity <= 0.5) dir = 1;
+            textPixels.setAttribute('opacity', opacity);
+        }, 80);
+    }
+
     /* ── Right Circles Pulsing ── */
     const rightCircles = ['.contact-icon-5', '.contact-icon-6', '.contact-icon-7', '.contact-icon-8'];
     rightCircles.forEach(function (selector, index) {
