@@ -290,11 +290,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ── Graphics Pixels Logo Animation (sidebar) ── */
     const logoIcon = document.querySelector('.home-logo-icon');
-    const logoImg = document.querySelector('.home-logo-img');
     if (logoIcon) {
         let glowOpacity = 1;
         let glowDir = 1;
-        let logoRotation = 0;
 
         // Glow pulse
         setInterval(function () {
@@ -307,15 +305,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 circle.setAttribute('opacity', (0.5 + glowOpacity * 0.25));
             }
         }, 60);
-
-        // Logo image rotation
-        if (logoImg) {
-            setInterval(function () {
-                logoRotation += 2;
-                if (logoRotation >= 360) logoRotation = 0;
-                logoImg.setAttribute('transform', `rotate(${logoRotation})`);
-            }, 40);
-        }
     }
 
     /* ── Central Logo Animation (monitor center) ── */
