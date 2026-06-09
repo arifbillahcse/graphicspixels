@@ -15,59 +15,43 @@
 <body>
 
     <script src="components/load-components.js"></script>
-    <script src="js/contact-animations.js"></script>
 
     <!-- ============ PAGE HERO ============ -->
-    <section class="contact-hero" style="padding: 80px 0;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div class="contact-hero-content reveal" data-reveal="left">
-                    <h1 class="contact-hero-title" style="font-size: 48px; margin-bottom: 20px; color: var(--navy);">Contact Graphics Pixels</h1>
-                    <p class="contact-hero-text" style="font-size: 18px; color: var(--text); line-height: 1.8;">
-                        Reach out to us for <strong>professional photo retouching</strong> and <strong>3D modeling & rendering services</strong>. We are ready to collaborate and bring your vision to life.
-                    </p>
+    <section class="contact-hero" style="padding: 100px 0; background: linear-gradient(135deg, #01015E 0%, #1a1a99 50%, #4a4acf 100%); position: relative; overflow: hidden;">
+        <!-- Background dots pattern -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1;">
+            <div style="width: 100%; height: 100%; background-image: radial-gradient(circle, #C3009D 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1 class="contact-hero-title" style="font-size: 56px; margin-bottom: 20px; color: white; font-weight: 800; line-height: 1.2;">Contact Us Today</h1>
+                <p class="contact-hero-subtitle" style="font-size: 20px; color: rgba(255,255,255,0.9); margin-bottom: 30px; line-height: 1.6;">
+                    Have a question or ready to start your project? Get in touch with our team at our UK or Bangladesh offices. We're here to help!
+                </p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact-form" style="padding: 14px 32px; background: white; color: #01015E; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; border: 2px solid white; cursor: pointer;">Send Message</a>
+                    <a href="tel:+447576228915" style="padding: 14px 32px; background: transparent; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; border: 2px solid white;">Call Us Now</a>
                 </div>
-                <div class="contact-hero-visual reveal" data-reveal="right">
-                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="contact-svg" style="max-width: 100%; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));">
-                        <defs>
-                            <radialGradient id="contactGlow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.25"/>
-                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
-                            </radialGradient>
-                            <filter id="contactSoftGlow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="contactMagentaGlow">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
+            </div>
 
-                        <!-- Background glow -->
-                        <ellipse cx="200" cy="200" rx="180" ry="150" fill="url(#contactGlow)" class="contact-pulse"/>
-
-                        <!-- Outer ring -->
-                        <circle cx="200" cy="200" r="140" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.3" class="contact-ring-1"/>
-                        <circle cx="200" cy="200" r="100" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.3" class="contact-ring-2"/>
-
-                        <!-- Central circle -->
-                        <circle cx="200" cy="200" r="50" fill="#1a1a88" stroke="#C3009D" stroke-width="3" filter="url(#contactMagentaGlow)" class="contact-center-circle"/>
-
-                        <!-- Center icon -->
-                        <g transform="translate(200, 200)">
-                            <text x="0" y="8" text-anchor="middle" font-size="32" font-weight="700" fill="#C3009D" font-family="Poppins, sans-serif">✦</text>
-                        </g>
-
-                        <!-- Orbiting elements -->
-                        <circle cx="280" cy="140" r="8" fill="#C3009D" class="contact-dot-1"/>
-                        <circle cx="320" cy="200" r="6" fill="#00d4ff" class="contact-dot-2"/>
-                        <circle cx="280" cy="260" r="7" fill="#ffff00" class="contact-dot-3"/>
-                        <circle cx="200" cy="340" r="6" fill="#00ff88" class="contact-dot-4"/>
-                        <circle cx="120" cy="260" r="8" fill="#ff6b35" class="contact-dot-5"/>
-                        <circle cx="80" cy="200" r="7" fill="#C3009D" class="contact-dot-6"/>
-                        <circle cx="120" cy="140" r="6" fill="#00d4ff" class="contact-dot-7"/>
-                    </svg>
+            <!-- Quick Stats -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 80px; padding-top: 60px; border-top: 2px solid rgba(255,255,255,0.2);">
+                <div style="text-align: center; color: white;">
+                    <div style="font-size: 36px; font-weight: 700; margin-bottom: 10px;">2</div>
+                    <div style="font-size: 16px; opacity: 0.9;">Global Offices</div>
+                </div>
+                <div style="text-align: center; color: white;">
+                    <div style="font-size: 36px; font-weight: 700; margin-bottom: 10px;">24/7</div>
+                    <div style="font-size: 16px; opacity: 0.9;">Email & Skype Support</div>
+                </div>
+                <div style="text-align: center; color: white;">
+                    <div style="font-size: 36px; font-weight: 700; margin-bottom: 10px;">2 hrs</div>
+                    <div style="font-size: 16px; opacity: 0.9;">Response Time</div>
+                </div>
+                <div style="text-align: center; color: white;">
+                    <div style="font-size: 36px; font-weight: 700; margin-bottom: 10px;">14+</div>
+                    <div style="font-size: 16px; opacity: 0.9;">Years Experience</div>
                 </div>
             </div>
         </div>
