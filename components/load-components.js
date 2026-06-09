@@ -1,37 +1,6 @@
 // Load header and footer from components folder
 (function () {
     const basePath = document.currentScript.src.split('/').slice(0, -1).join('/') + '/';
-    let contentFadedIn = false;
-
-    // Create a container for the page content to fade in after components load
-    function setupPageContent() {
-        if (contentFadedIn) return; // Only fade in once
-        contentFadedIn = true;
-        const main = document.querySelector('main') || document.body;
-        // Only apply fade if opacity is already 0
-        if (main.style.opacity === '0' || !main.style.opacity) {
-            main.style.transition = 'opacity 0.4s ease';
-            setTimeout(() => {
-                main.style.opacity = '1';
-            }, 50);
-        } else {
-            // Already visible, ensure opacity is set to 1
-            main.style.opacity = '1';
-        }
-    }
-
-    // Set initial opacity to 0 only once at start
-    function initPageFade() {
-        const main = document.querySelector('main') || document.body;
-        main.style.opacity = '0';
-    }
-
-    // Initialize fade-out at script start or when DOM is ready
-    if (document.readyState !== 'loading') {
-        initPageFade();
-    } else {
-        document.addEventListener('DOMContentLoaded', initPageFade, { once: true });
-    }
 
     // Load header
     fetch(basePath + 'header.html')
@@ -43,13 +12,9 @@
             const headerContainer = document.createElement('div');
             headerContainer.innerHTML = html;
             document.body.insertBefore(headerContainer, document.body.firstChild);
-
-            // Re-initialize header functionality
             initializeHeader();
         })
-        .catch(error => {
-            console.warn('Could not load header:', error);
-        });
+        .catch(error => console.warn('Could not load header:', error));
 
     // Load footer
     fetch(basePath + 'footer.html')
@@ -61,14 +26,9 @@
             const footerContainer = document.createElement('div');
             footerContainer.innerHTML = html;
             document.body.appendChild(footerContainer);
-
-            // Re-initialize footer functionality (back-to-top button, etc.)
             initializeFooter();
         })
-        .catch(error => {
-            console.warn('Could not load footer:', error);
-            initializeFooter(); // Still fade in content even if footer fails
-        });
+        .catch(error => console.warn('Could not load footer:', error));
 
     // Initialize header functionality (from script.js)
     function initializeHeader() {
@@ -117,15 +77,9 @@
         }
     }
 
-    // Setup page content fade-in after footer is loaded
-    // If page is already ready and footer somehow doesn't load, fade in anyway after 2s
-    const contentTimeout = setTimeout(() => {
-        setupPageContent();
-    }, 2000);
-
     // Initialize footer functionality
     function initializeFooter() {
-        clearTimeout(contentTimeout);
-        setupPageContent();
+        // Footer initialized
     }
 })();
+
