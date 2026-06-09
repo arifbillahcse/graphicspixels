@@ -15,7 +15,6 @@
 <body>
 
     <script src="components/load-components.js"></script>
-    <script src="js/contact-animations.js"></script>
 
     <!-- ============ PAGE HERO ============ -->
     <section class="svc-hero">
@@ -382,6 +381,7 @@
     </section>
 
     <script src="js/script.js"></script>
+    <script src="js/contact-animations.js"></script>
     <script>
         // Contact form submission
         const contactForm = document.getElementById('contactForm');
@@ -422,79 +422,6 @@
             });
         });
 
-        // Video testimonials
-        const vtTrack = document.getElementById('vtTrack');
-        const vtPrev = document.getElementById('vtPrev');
-        const vtNext = document.getElementById('vtNext');
-        const vtCurrent = document.getElementById('vtCurrent');
-        const vtAvatars = document.getElementById('vtAvatars');
-        const vtModal = document.getElementById('vtModal');
-        const vtIframe = document.getElementById('vtIframe');
-        const vtBackdrop = document.getElementById('vtBackdrop');
-        const vtClose = document.getElementById('vtClose');
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.vt-slide');
-        const totalSlides = slides.length;
-
-        function updateSlide() {
-            vtTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-            vtCurrent.textContent = currentSlide + 1;
-
-            document.querySelectorAll('.vt-avatar').forEach((btn, idx) => {
-                btn.classList.toggle('active', idx === currentSlide);
-            });
-        }
-
-        vtPrev?.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlide();
-        });
-
-        vtNext?.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlide();
-        });
-
-        document.querySelectorAll('.vt-avatar').forEach((btn, idx) => {
-            btn.addEventListener('click', () => {
-                currentSlide = idx;
-                updateSlide();
-            });
-        });
-
-        document.querySelectorAll('.vt-play').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const videoId = button.closest('.vt-slide').dataset.videoId;
-                vtModal.classList.add('open');
-                vtIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-            });
-        });
-
-        function closeVideoModal() {
-            vtModal.classList.remove('open');
-            vtIframe.src = '';
-            document.body.style.overflow = '';
-        }
-
-        vtBackdrop?.addEventListener('click', closeVideoModal);
-        vtClose?.addEventListener('click', closeVideoModal);
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && vtModal.classList.contains('open')) {
-                closeVideoModal();
-            }
-        });
-
-        // Social link hover effect
-        document.querySelectorAll('.social-link-hover').forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.1)';
-            });
-            link.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
-        });
     </script>
 
 </body>
