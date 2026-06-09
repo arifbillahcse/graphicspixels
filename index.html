@@ -97,7 +97,127 @@
             </div>
             <div class="hero-image reveal" data-reveal="right">
                 <div class="hero-image-glow"></div>
-                <img src="images/home/1__main-page.png" alt="Professional photographer with editing tools">
+                <div class="home-svg-scene" aria-hidden="true">
+                    <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" class="home-svg">
+
+                        <!-- Defs: Gradients & Filters -->
+                        <defs>
+                            <radialGradient id="homeGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
+                            </radialGradient>
+                            <filter id="homeSoftGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="home3dGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#C3009D"/>
+                                <stop offset="100%" stop-color="#4a90e2"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background Glow -->
+                        <ellipse cx="260" cy="140" rx="220" ry="150" fill="url(#homeGlow)" class="home-pulse"/>
+
+                        <!-- ── CENTRAL WORKSPACE (monitor) ── -->
+                        <g class="home-monitor">
+                            <rect x="80" y="60" width="360" height="200" rx="16" fill="#4a4acf" stroke="#7a7add" stroke-width="2.5"/>
+                            <rect x="92" y="75" width="336" height="170" rx="12" fill="#1a1a99"/>
+                            <!-- Screen content: gradient background -->
+                            <defs><linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a2aaa"/><stop offset="100%" stop-color="#3a3acc"/></linearGradient></defs>
+                            <rect x="92" y="75" width="336" height="170" fill="url(#screenGrad)" opacity="0.8"/>
+                            <!-- Central circle (all-in-one hub) -->
+                            <circle cx="260" cy="160" r="40" fill="#C3009D" opacity="0.7" filter="url(#homeSoftGlow)" class="home-hub"/>
+                            <text x="260" y="165" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">✦</text>
+                        </g>
+
+                        <!-- ── PHOTO ICON (top-left corner) ── -->
+                        <g class="home-photo" transform="translate(120, 90)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <circle cx="15" cy="12" r="5" fill="#00d4ff"/>
+                            <path d="M8,25 L20,18 L32,28 L42,20" stroke="#fff" stroke-width="2" fill="none"/>
+                            <rect y="35" width="50" height="2" fill="#C3009D"/>
+                        </g>
+
+                        <!-- ── VIDEO ICON (top-right corner) ── -->
+                        <g class="home-video" transform="translate(360, 90)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <circle cx="25" cy="20" r="12" fill="none" stroke="#fff" stroke-width="1.5"/>
+                            <polygon points="23,17 23,23 29,20" fill="#C3009D"/>
+                            <path d="M12,32 L38,32" stroke="#00d4ff" stroke-width="2"/>
+                        </g>
+
+                        <!-- ── 3D ICON (middle-left) ── -->
+                        <g class="home-3d" transform="translate(100, 160)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- 3D cube -->
+                            <polygon points="18,15 32,15 32,29 18,29" fill="#00d4ff" opacity="0.6"/>
+                            <polygon points="18,15 25,8 39,8 32,15" fill="#4a90e2" opacity="0.8"/>
+                            <polygon points="32,15 39,8 39,22 32,29" fill="#C3009D" opacity="0.7"/>
+                        </g>
+
+                        <!-- ── RETOUCHING ICON (middle-right) ── -->
+                        <g class="home-retouch" transform="translate(380, 160)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- Brush strokes -->
+                            <path d="M15,18 Q22,15 28,20" stroke="#00d4ff" stroke-width="2" fill="none"/>
+                            <path d="M18,26 Q25,23 32,28" stroke="#C3009D" stroke-width="2" fill="none"/>
+                            <circle cx="20" cy="35" r="3" fill="#ffd700"/>
+                            <circle cx="30" cy="32" r="3" fill="#ff6b35"/>
+                        </g>
+
+                        <!-- ── CLIPPING PATH ICON (bottom-left) ── -->
+                        <g class="home-clipping" transform="translate(130, 280)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- Bezier path -->
+                            <path d="M15,20 Q18,15 25,18 T35,25" stroke="#00d4ff" stroke-width="2" fill="none"/>
+                            <circle cx="15" cy="20" r="2" fill="#C3009D"/>
+                            <circle cx="35" cy="25" r="2" fill="#C3009D"/>
+                            <circle cx="25" cy="32" r="2" fill="#ffd700"/>
+                        </g>
+
+                        <!-- ── COLOR GRADING ICON (bottom-right) ── -->
+                        <g class="home-color" transform="translate(370, 280)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- Color swatches -->
+                            <rect x="10" y="10" width="10" height="10" rx="2" fill="#ff4444"/>
+                            <rect x="22" y="10" width="10" height="10" rx="2" fill="#ffaa00"/>
+                            <rect x="34" y="10" width="10" height="10" rx="2" fill="#44dd44"/>
+                            <rect x="10" y="25" width="10" height="10" rx="2" fill="#00aaff"/>
+                            <rect x="22" y="25" width="10" height="10" rx="2" fill="#C3009D"/>
+                            <rect x="34" y="25" width="10" height="10" rx="2" fill="#aa44ff"/>
+                        </g>
+
+                        <!-- ── FLOATING ELEMENT: LAYERS ── -->
+                        <g class="home-layers" transform="translate(50, 320)">
+                            <rect width="45" height="50" rx="4" fill="#4a4acf" stroke="#7a7add" stroke-width="1"/>
+                            <rect y="2" width="45" height="8" fill="#5a5add"/>
+                            <text x="22.5" y="11" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">Layers</text>
+                            <rect x="4" y="16" width="37" height="6" rx="1" fill="#6666ee" opacity="0.8"/>
+                            <rect x="4" y="24" width="37" height="6" rx="1" fill="#555" opacity="0.5"/>
+                            <rect x="4" y="32" width="37" height="6" rx="1" fill="#555" opacity="0.5"/>
+                        </g>
+
+                        <!-- ── FLOATING ELEMENT: ADJUSTMENTS ── -->
+                        <g class="home-adjustments" transform="translate(450, 320)">
+                            <rect width="45" height="50" rx="4" fill="#4a4acf" stroke="#7a7add" stroke-width="1"/>
+                            <rect y="2" width="45" height="8" fill="#5a5add"/>
+                            <text x="22.5" y="11" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">FX</text>
+                            <line x1="8" y1="24" x2="37" y2="24" stroke="#7a7add" stroke-width="1"/>
+                            <circle cx="22" cy="24" r="3" fill="#C3009D"/>
+                            <circle cx="20" cy="38" r="2" fill="#00d4ff"/>
+                            <circle cx="28" cy="36" r="2" fill="#ffd700"/>
+                        </g>
+
+                        <!-- ── FLOATING DOTS ── -->
+                        <circle cx="90" cy="100" r="2.5" fill="#C3009D" opacity="0.6" class="home-dot1"/>
+                        <circle cx="450" cy="220" r="2" fill="#00d4ff" opacity="0.5" class="home-dot2"/>
+                        <circle cx="150" cy="350" r="2" fill="#C3009D" opacity="0.5" class="home-dot3"/>
+                        <circle cx="420" cy="200" r="2" fill="#ffd700" opacity="0.5" class="home-dot1"/>
+                        <circle cx="80" cy="280" r="1.5" fill="#00d4ff" opacity="0.4" class="home-dot2"/>
+
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -583,5 +703,6 @@
     <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="js/script.js"></script>
+    <script src="js/home-animations.js"></script>
 </body>
 </html>
