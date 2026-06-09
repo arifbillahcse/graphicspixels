@@ -207,6 +207,103 @@
                             <line x1="280" y1="10" x2="260" y2="45" stroke="#00ff88" stroke-width="1"/>
                         </g>
 
+                        <!-- ── ORBITING TOOL ICONS (around canvas) ── -->
+
+                        <!-- 1. Rectangle Select Tool (top-left orbit) -->
+                        <g class="pe-orbit pe-orbit-1">
+                            <rect width="28" height="28" rx="4" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/>
+                            <rect x="6" y="6" width="16" height="16" fill="none" stroke="#00ffff" stroke-width="1.5"/>
+                        </g>
+
+                        <!-- 2. Magic Wand (top orbit) -->
+                        <g class="pe-orbit pe-orbit-2">
+                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
+                            <path d="M0,-8 L2,-4 L5,-6 L7,-2" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="5" cy="-6" r="1.5" fill="#ff00ff"/>
+                        </g>
+
+                        <!-- 3. Eraser Tool (top-right orbit) -->
+                        <g class="pe-orbit pe-orbit-3">
+                            <rect width="24" height="20" rx="2" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
+                            <rect x="2" y="2" width="20" height="12" fill="#ffff00" opacity="0.6" rx="1"/>
+                            <line x1="2" y1="16" x2="22" y2="16" stroke="#ffff00" stroke-width="1.5"/>
+                        </g>
+
+                        <!-- 4. Brush Tool (right orbit) -->
+                        <g class="pe-orbit pe-orbit-4">
+                            <circle r="14" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <ellipse cx="0" cy="-8" rx="4" ry="6" fill="#00ff88"/>
+                            <line x1="0" y1="-2" x2="0" y2="6" stroke="#00ff88" stroke-width="2"/>
+                            <circle cx="0" cy="8" r="2" fill="#00ff88"/>
+                        </g>
+
+                        <!-- 5. Clone Stamp (bottom-right orbit) -->
+                        <g class="pe-orbit pe-orbit-5">
+                            <rect width="24" height="24" rx="3" fill="#1a1a88" stroke="#ff6b00" stroke-width="1.5"/>
+                            <circle cx="8" cy="8" r="5" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
+                            <circle cx="14" cy="14" r="5" fill="none" stroke="#ff6b00" stroke-width="1.5" opacity="0.6"/>
+                        </g>
+
+                        <!-- 6. Color Picker/Eyedropper (bottom orbit) -->
+                        <g class="pe-orbit pe-orbit-6">
+                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <path d="M2,-8 L6,-2 L2,2 L-2,-2 Z" fill="#00d4ff"/>
+                            <circle cx="0" cy="6" r="3" fill="none" stroke="#00d4ff" stroke-width="1"/>
+                        </g>
+
+                        <!-- 7. Zoom/Magnifying Glass (bottom-left orbit) -->
+                        <g class="pe-orbit pe-orbit-7">
+                            <circle r="6" fill="none" stroke="#ffff00" stroke-width="2"/>
+                            <line x1="6" y1="6" x2="11" y2="11" stroke="#ffff00" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- 8. Healing Brush (left orbit) -->
+                        <g class="pe-orbit pe-orbit-8">
+                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
+                            <circle cx="0" cy="-4" r="4" fill="none" stroke="#ff00ff" stroke-width="1.5"/>
+                            <circle cx="0" cy="4" r="4" fill="none" stroke="#ff00ff" stroke-width="1.5"/>
+                            <line x1="0" y1="-8" x2="0" y2="8" stroke="#ff00ff" stroke-width="1"/>
+                        </g>
+
+                        <!-- 9. Curves Adjustment (top-left area) -->
+                        <g class="pe-orbit pe-orbit-9">
+                            <rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <path d="M4,20 Q12,8 20,4" fill="none" stroke="#00ff88" stroke-width="2"/>
+                        </g>
+
+                        <!-- 10. Blur Tool (right-top area) -->
+                        <g class="pe-orbit pe-orbit-10">
+                            <circle r="14" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
+                            <ellipse cx="-4" cy="0" rx="3" ry="5" fill="#ffff00" opacity="0.7"/>
+                            <ellipse cx="0" cy="0" rx="3" ry="5" fill="#ffff00" opacity="0.8"/>
+                            <ellipse cx="4" cy="0" rx="3" ry="5" fill="#ffff00" opacity="0.7"/>
+                        </g>
+
+                        <!-- 11. Dodge/Burn Tool (right-bottom area) -->
+                        <g class="pe-orbit pe-orbit-11">
+                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="8" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                            <line x1="-6" y1="-6" x2="6" y2="6" stroke="#00d4ff" stroke-width="1.5"/>
+                        </g>
+
+                        <!-- 12. GRAPHICS PIXELS LOGO (center-left, larger) -->
+                        <g class="pe-logo-icon" transform="translate(70, 140)">
+                            <circle r="22" fill="#1a1a88" stroke="#00ffff" stroke-width="2.5" filter="url(#peCyanGlow)"/>
+                            <image href="images/gp-logo.png" x="-16" y="-16" width="32" height="32" class="pe-logo-img"/>
+                        </g>
+
+                        <!-- ── ANIMATED SPARKLE EFFECTS ── -->
+                        <g class="pe-sparkles">
+                            <!-- Sparkle 1 -->
+                            <circle cx="120" cy="70" r="1.5" fill="#ffff00" opacity="0.8" class="pe-sparkle"/>
+                            <!-- Sparkle 2 -->
+                            <circle cx="320" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
+                            <!-- Sparkle 3 -->
+                            <circle cx="100" cy="280" r="1" fill="#00ffff" opacity="0.6" class="pe-sparkle"/>
+                            <!-- Sparkle 4 -->
+                            <circle cx="380" cy="200" r="1.5" fill="#ff00ff" opacity="0.7" class="pe-sparkle"/>
+                        </g>
+
                     </svg>
                 </div>
             </div>

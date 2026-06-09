@@ -180,4 +180,83 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 70);
     }
 
+    /* ── Orbiting Tool Icons (around canvas) ── */
+    const orbitingTools = {
+        'pe-orbit-1': { angle: 0, radius: 120, speed: 0.8 },
+        'pe-orbit-2': { angle: 45, radius: 130, speed: 0.9 },
+        'pe-orbit-3': { angle: 90, radius: 125, speed: 0.7 },
+        'pe-orbit-4': { angle: 135, radius: 115, speed: 0.85 },
+        'pe-orbit-5': { angle: 180, radius: 120, speed: 0.95 },
+        'pe-orbit-6': { angle: 225, radius: 130, speed: 0.75 },
+        'pe-orbit-7': { angle: 270, radius: 115, speed: 0.88 },
+        'pe-orbit-8': { angle: 315, radius: 125, speed: 0.82 },
+        'pe-orbit-9': { angle: 30, radius: 110, speed: 0.92 },
+        'pe-orbit-10': { angle: 150, radius: 120, speed: 0.86 },
+        'pe-orbit-11': { angle: 240, radius: 130, speed: 0.79 }
+    };
+
+    const canvasCenter = { x: 240, y: 160 };
+
+    Object.keys(orbitingTools).forEach(function (className) {
+        const tool = document.querySelector('.' + className);
+        if (tool) {
+            const config = orbitingTools[className];
+            setInterval(function () {
+                const time = Date.now() / 1000;
+                const angle = (config.angle + time * config.speed * 20) * Math.PI / 180;
+                const x = canvasCenter.x + Math.cos(angle) * config.radius;
+                const y = canvasCenter.y + Math.sin(angle) * config.radius;
+                tool.setAttribute('transform', `translate(${x}, ${y})`);
+            }, 30);
+        }
+    });
+
+    /* ── Graphics Pixels Logo Animation ── */
+    const logoIcon = document.querySelector('.pe-logo-icon');
+    const logoImg = document.querySelector('.pe-logo-img');
+    if (logoIcon) {
+        let glowOpacity = 1;
+        let glowDir = 1;
+        let logoRotation = 0;
+
+        // Glow pulse
+        setInterval(function () {
+            glowOpacity += glowDir * 0.03;
+            if (glowOpacity >= 1.3) glowDir = -1;
+            if (glowOpacity <= 0.7) glowDir = 1;
+            const circle = logoIcon.querySelector('circle');
+            if (circle) {
+                circle.setAttribute('stroke-width', 2.5 * (glowOpacity / 1));
+                circle.setAttribute('opacity', (0.6 + glowOpacity * 0.2));
+            }
+        }, 60);
+
+        // Logo image rotation
+        if (logoImg) {
+            setInterval(function () {
+                logoRotation += 1.5;
+                if (logoRotation >= 360) logoRotation = 0;
+                logoImg.setAttribute('transform', `rotate(${logoRotation})`);
+            }, 40);
+        }
+    }
+
+    /* ── Sparkle Twinkling ── */
+    document.querySelectorAll('.pe-sparkle').forEach(function (sparkle, index) {
+        const initialOpacity = parseFloat(sparkle.getAttribute('opacity')) || 0.7;
+        let opacity = initialOpacity;
+        let direction = 1;
+        const speed = 0.04 + (index * 0.01); // Vary speed per sparkle
+        const delayStart = Math.random() * 1000; // Randomize start
+
+        setTimeout(function () {
+            setInterval(function () {
+                opacity += direction * speed;
+                if (opacity >= initialOpacity * 1.2) direction = -1;
+                if (opacity <= initialOpacity * 0.3) direction = 1;
+                sparkle.setAttribute('opacity', opacity);
+            }, 50 + (index * 20));
+        }, delayStart);
+    });
+
 });
