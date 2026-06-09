@@ -916,6 +916,69 @@ img { max-width: 100%; display: block; }
     .footer-bottom-inner { flex-direction: column; text-align: center; }
 }
 
+/* ── Photo Editing Page SVG Scene ── */
+.pe-svg-scene {
+    width: 100%; max-width: 480px; margin: 0 auto;
+    display: block; overflow: visible;
+    filter: drop-shadow(0 20px 50px rgba(195,0,157,0.2));
+}
+.pe-svg {
+    width: 100%; height: auto; display: block;
+    max-height: 400px; overflow: visible;
+}
+
+/* Pulse animations */
+@keyframes pePulse {
+    0%,100% { opacity: 0.7; }
+    50%     { opacity: 1; }
+}
+.pe-pulse { animation: pePulse 3s ease-in-out infinite; }
+
+/* Histogram bars shimmer */
+@keyframes peBarShimmer {
+    0%,100% { opacity: 0.8; }
+    50%     { opacity: 1; }
+}
+.pe-bars rect { animation: peBarShimmer 2s ease-in-out infinite; animation-delay: calc(var(--bar-index, 0) * 0.1s); }
+
+/* Color swatch pulse */
+@keyframes peColorPulse {
+    0%,100% { filter: drop-shadow(0 0 4px rgba(195,0,157,0.4)); }
+    50%     { filter: drop-shadow(0 0 12px rgba(195,0,157,0.8)); }
+}
+.pe-color-primary { animation: peColorPulse 2s ease-in-out infinite; }
+
+/* Layer active pulse */
+@keyframes peLayerPulse {
+    0%,100% { opacity: 0.8; }
+    50%     { opacity: 1; }
+}
+.pe-layer-active { animation: peLayerPulse 2.5s ease-in-out infinite; }
+
+/* Tool rotation */
+@keyframes peToolSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+.pe-tool { animation: peToolSpin 8s linear infinite; }
+
+/* Floating particles */
+@keyframes peBob1 {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-12px); }
+}
+@keyframes peBob2 {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-14px); }
+}
+@keyframes peBob3 {
+    0%,100% { transform: translateY(-6px); }
+    50%     { transform: translateY(8px); }
+}
+.pe-dot1 { animation: peBob1 3s ease-in-out infinite; }
+.pe-dot2 { animation: peBob2 3.6s ease-in-out infinite 0.4s; }
+.pe-dot3 { animation: peBob3 2.8s ease-in-out infinite 0.8s; }
+
 @media (max-width: 480px) {
     .stats-grid { grid-template-columns: 1fr; }
     .stat-number { font-size: 40px; }
