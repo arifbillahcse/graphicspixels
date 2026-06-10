@@ -1207,4 +1207,18 @@ img { max-width: 100%; display: block; }
     .service-icon { left: 28px; top: 210px; }
     .service-image { height: 240px; }
     .testimonial-card p { font-size: 16px; }
+    .how-steps { grid-template-columns: 1fr; }
+}
+
+/* ── How Does It Work ── */
+.how-it-works { padding: 100px 0; background: var(--white); }
+.how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 60px; }
+.how-step { text-align: center; }
+.how-step-icon { position: relative; margin-bottom: 24px; }
+.how-step-icon i { font-size: 48px; color: var(--navy); }
+.how-step-num { display: flex; align-items: center; justify-content: center; position: absolute; top: -8px; right: -8px; width: 36px; height: 36px; border-radius: 50%; background: var(--magenta); color: var(--white); font-weight: 700; font-size: 16px; }
+.how-step-label { font-size: 16px; font-weight: 500; color: var(--navy); line-height: 1.5; }
+
+@media (max-width: 900px) {
+    .how-steps { grid-template-columns: repeat(2, 1fr); gap: 28px; }
 }
