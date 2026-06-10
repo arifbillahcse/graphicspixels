@@ -1210,15 +1210,41 @@ img { max-width: 100%; display: block; }
     .how-steps { grid-template-columns: 1fr; }
 }
 
-/* ── How Does It Work ── */
-.how-it-works { padding: 100px 0; background: var(--white); }
-.how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 60px; }
-.how-step { text-align: center; }
-.how-step-icon { position: relative; margin-bottom: 24px; }
-.how-step-icon i { font-size: 48px; color: var(--navy); }
-.how-step-num { display: flex; align-items: center; justify-content: center; position: absolute; top: -8px; right: -8px; width: 36px; height: 36px; border-radius: 50%; background: var(--magenta); color: var(--white); font-weight: 700; font-size: 16px; }
-.how-step-label { font-size: 16px; font-weight: 500; color: var(--navy); line-height: 1.5; }
+/* ── How It Works Timeline ── */
+.how-works { padding: 100px 0; background: linear-gradient(135deg, #f9f8fd 0%, #fef5ff 100%); position: relative; overflow: hidden; }
+.how-works::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(195, 0, 157, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(1, 1, 94, 0.02) 0%, transparent 50%); pointer-events: none; }
 
-@media (max-width: 900px) {
-    .how-steps { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.how-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 80px; position: relative; z-index: 1; }
+
+/* Connecting line between steps */
+.how-timeline::before { content: ''; position: absolute; top: 60px; left: 12.5%; right: 12.5%; height: 3px; background: linear-gradient(to right, var(--magenta), var(--magenta) 48%, transparent 48%, transparent 52%, var(--magenta) 52%, var(--magenta)); z-index: 0; }
+
+.how-item { position: relative; }
+
+.how-circle { position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; z-index: 2; }
+
+.how-icon-bg { width: 120px; height: 120px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--white); box-shadow: 0 10px 40px rgba(195, 0, 157, 0.25); transition: transform var(--transition), box-shadow var(--transition); }
+
+.how-item:hover .how-icon-bg { transform: scale(1.1); box-shadow: 0 15px 50px rgba(195, 0, 157, 0.35); }
+
+.how-number { position: absolute; bottom: -8px; right: -8px; width: 44px; height: 44px; border-radius: 50%; background: var(--magenta); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; font-family: 'Poppins', sans-serif; box-shadow: 0 4px 20px rgba(195, 0, 157, 0.3); }
+
+.how-content { text-align: center; }
+.how-content h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.how-content p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
+
+@media (max-width: 1024px) {
+    .how-timeline { grid-template-columns: repeat(2, 1fr); gap: 50px; }
+    .how-timeline::before { top: 60px; left: 5%; right: auto; width: 3px; height: auto; bottom: 0; background: linear-gradient(to bottom, var(--magenta), var(--magenta) 48%, transparent 48%, transparent 52%, var(--magenta) 52%, var(--magenta)); }
+}
+
+@media (max-width: 600px) {
+    .how-works { padding: 60px 0; }
+    .how-timeline { grid-template-columns: 1fr; gap: 40px; }
+    .how-timeline::before { left: 59px; width: 3px; top: 60px; height: calc(100% - 60px); background: linear-gradient(to bottom, var(--magenta), var(--magenta)); }
+    .how-circle { margin-left: 40px; }
+    .how-content { text-align: left; }
+    .how-icon-bg { width: 100px; height: 100px; font-size: 40px; }
+    .how-content h3 { font-size: 16px; }
+    .how-content p { font-size: 14px; }
 }
