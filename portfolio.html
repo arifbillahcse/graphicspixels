@@ -14,43 +14,42 @@
 
     <style>
         /* ============ PORTFOLIO PAGE (scoped pf-) ============ */
-        .pf-hero {
+        .svc-hero {
             position: relative; overflow: hidden;
-            background: var(--gradient, linear-gradient(135deg, #01015E 0%, #2a0a6e 55%, #C3009D 130%));
-            padding: 130px 0 90px; text-align: center;
+            background: var(--navy, #01015E); padding: 100px 0;
         }
-        .pf-hero::before {
-            content: ""; position: absolute; inset: 0;
-            background:
-                radial-gradient(circle at 18% 20%, rgba(0,255,255,0.14), transparent 42%),
-                radial-gradient(circle at 84% 78%, rgba(195,0,157,0.30), transparent 46%);
-            pointer-events: none;
+        .svc-hero-pattern {
+            position: absolute; inset: 0; z-index: 0; pointer-events: none;
         }
-        .pf-hero-inner { position: relative; z-index: 2; }
-        .pf-hero .hero-eyebrow {
+        .svc-hero-pattern i {
+            position: absolute; color: rgba(195,0,157,0.2); opacity: 0.6;
+            animation: iconDrift var(--dur, 9s) ease-in-out infinite;
+            animation-delay: var(--dl, 0s);
+        }
+        .svc-hero-inner {
+            position: relative; z-index: 2;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+        }
+        .svc-hero-content { padding-right: 40px; }
+        .svc-hero-visual { display: flex; align-items: center; justify-content: center; }
+        .svc-hero .hero-eyebrow {
             display: inline-block; color: #fff; background: rgba(255,255,255,0.14);
             padding: 7px 18px; border-radius: 100px; font-size: 13px; font-weight: 600;
-            letter-spacing: 1px; text-transform: uppercase; margin-bottom: 22px;
+            letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;
         }
-        .pf-hero h1 {
+        .svc-hero h1 {
             font-family: 'Poppins', sans-serif; color: #fff;
-            font-size: 48px; font-weight: 800; line-height: 1.12; margin-bottom: 18px;
+            font-size: 48px; font-weight: 800; line-height: 1.2; margin-bottom: 22px;
         }
-        .pf-hero p {
-            color: rgba(255,255,255,0.82); font-size: 17px; max-width: 720px;
-            margin: 0 auto 34px;
+        .svc-hero p {
+            color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.7;
+            margin-bottom: 28px;
         }
-        .pf-hero-stats {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 46px;
-            margin-top: 14px;
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+        @keyframes iconDrift {
+            0%, 100% { transform: rotate(var(--rot, 0deg)) translateY(0); }
+            50% { transform: rotate(var(--rot, 0deg)) translateY(-12px); }
         }
-        .pf-hero-stat { color: #fff; }
-        .pf-hero-stat strong {
-            display: block; font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 800;
-            background: linear-gradient(90deg, #00ffff, #fff); -webkit-background-clip: text;
-            background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1;
-        }
-        .pf-hero-stat span { font-size: 13.5px; color: rgba(255,255,255,0.7); }
 
         /* ---- Filter bar ---- */
         .pf-gallery { padding: 70px 0 90px; }
@@ -100,10 +99,9 @@
             background: rgba(1,1,30,0.72); backdrop-filter: blur(6px);
             color: #fff; font-size: 12px; font-weight: 600; letter-spacing: .3px;
             padding: 6px 13px; border-radius: 100px;
-            opacity: 0; transform: translateY(8px); transition: all .3s ease;
+            opacity: 1; transform: translateY(0); transition: all .3s ease;
         }
         .pf-tag i { color: #00e0ff; font-size: 11px; }
-        .pf-item:hover .pf-tag { opacity: 1; transform: translateY(0); }
         .pf-zoom {
             position: absolute; top: 12px; right: 12px; z-index: 3;
             width: 38px; height: 38px; border-radius: 50%;
@@ -147,10 +145,15 @@
         .pf-lb-prev:hover { transform: translateY(-50%) scale(1.1); }
         .pf-lb-next:hover { transform: translateY(-50%) scale(1.1); }
 
+        @media (max-width: 1024px) {
+            .svc-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .svc-hero-content { padding-right: 0; }
+        }
         @media (max-width: 768px) {
-            .pf-hero h1 { font-size: 34px; }
-            .pf-hero-stats { gap: 28px; }
-            .pf-hero-stat strong { font-size: 27px; }
+            .svc-hero h1 { font-size: 36px; }
+            .svc-hero p { font-size: 15px; }
+            .hero-actions { flex-direction: column; }
+            .hero-actions .btn { width: 100%; }
             .pf-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
             .pf-cta h2 { font-size: 26px; }
             .pf-lb-prev { left: 10px; } .pf-lb-next { right: 10px; }
@@ -163,20 +166,44 @@
     <!-- ============ HEADER / NAVIGATION (auto-loaded) ============ -->
 
     <!-- ============ PORTFOLIO HERO ============ -->
-    <section class="pf-hero">
-        <div class="container pf-hero-inner">
-            <span class="hero-eyebrow">Our Work</span>
-            <h1>A Portfolio Built<br>Across Every Service</h1>
-            <p>
-                Real before-and-after results from 13+ years of hand-crafted photo editing. Browse work
-                from every service we offer — clipping path, retouching, ghost mannequin, background removal,
-                color correction, drop shadow, masking, restoration, and full e-commerce production.
-            </p>
-            <div class="pf-hero-stats">
-                <div class="pf-hero-stat"><strong>13+</strong><span>Years Experience</span></div>
-                <div class="pf-hero-stat"><strong>10+</strong><span>Editing Services</span></div>
-                <div class="pf-hero-stat"><strong>1M+</strong><span>Images Delivered</span></div>
-                <div class="pf-hero-stat"><strong>24h</strong><span>Avg. Turnaround</span></div>
+    <section class="svc-hero">
+        <div class="svc-hero-pattern" aria-hidden="true">
+            <i class="fas fa-image" style="top:12%;left:8%;font-size:56px;--rot:-18deg;--dl:0s;--dur:11s"></i>
+            <i class="fas fa-star" style="top:75%;left:12%;font-size:44px;--rot:25deg;--dl:1.4s;--dur:9.5s"></i>
+            <i class="fas fa-sparkles" style="top:20%;left:75%;font-size:52px;--rot:-12deg;--dl:0.8s;--dur:10s"></i>
+            <i class="fas fa-palette" style="top:70%;left:82%;font-size:48px;--rot:32deg;--dl:1.6s;--dur:12s"></i>
+            <i class="fas fa-circle-check" style="top:35%;left:88%;font-size:40px;--rot:-8deg;--dl:0.4s;--dur:8.5s"></i>
+        </div>
+
+        <div class="container svc-hero-inner">
+            <div class="svc-hero-content reveal" data-reveal="up">
+                <span class="hero-eyebrow">Our Work</span>
+                <h1>A Portfolio Built Across Every Service</h1>
+                <p>
+                    Real before-and-after results from 13+ years of hand-crafted photo editing. Browse work from every service we offer — clipping path, retouching, ghost mannequin, background removal, color correction, drop shadow, masking, restoration, and full e-commerce production.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary">View Gallery</a>
+                    <a href="contact.html" class="btn btn-outline-white">Start Free Trial</a>
+                </div>
+            </div>
+
+            <div class="svc-hero-visual reveal" data-reveal="right">
+                <div style="width:100%;max-width:420px;text-align:center;">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;filter:drop-shadow(0 0 30px rgba(195,0,157,0.25))">
+                        <defs><filter id="pfGlow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                        <rect x="80" y="80" width="240" height="240" rx="12" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+                        <circle cx="200" cy="200" r="60" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.7"/>
+                        <circle cx="200" cy="200" r="40" fill="none" stroke="#C3009D" stroke-width="1.5" opacity="0.5"/>
+                        <circle cx="200" cy="200" r="25" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.6"/>
+                        <circle cx="200" cy="200" r="20" fill="#0d0d60" stroke="#C3009D" stroke-width="1.5" opacity="0.9"/>
+                        <image href="images/gp-logo.png" x="186" y="186" width="28" height="28" opacity="0.9"/>
+                        <circle cx="200" cy="80" r="8" fill="#00d4ff" opacity="0.8"/>
+                        <circle cx="320" cy="200" r="6" fill="#C3009D" opacity="0.7"/>
+                        <circle cx="200" cy="320" r="8" fill="#00ff88" opacity="0.8"/>
+                        <circle cx="80" cy="200" r="6" fill="#ffff00" opacity="0.7"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -215,11 +242,6 @@
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="clipping">
-                    <div class="pf-img"><img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Marketplace White Background" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="clipping">
                     <div class="pf-img"><img src="images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Product Placement Into Scenes" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
@@ -247,17 +269,7 @@
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20%282%29.jpg" alt="High-End Portrait Retouching Result" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="retouching">
                     <div class="pf-img"><img src="images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20%281%29.jpg" alt="E-commerce & Product Retouching" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20%282%29.jpg" alt="Product Retouching Result" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
@@ -267,17 +279,7 @@
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20%282%29.jpg" alt="Model Portrait Retouching Result" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="retouching">
                     <div class="pf-img"><img src="images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Commercial & Editorial Retouching" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20%282%29.jpg" alt="Editorial Retouching Result" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
@@ -294,27 +296,12 @@
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20%282%29.jpg" alt="Ghost Mannequin — Neck Joint Result" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="ghost">
                     <div class="pf-img"><img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — True-to-Life Look" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20%282%29.jpg" alt="Ghost Mannequin — Apparel Result" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="ghost">
                     <div class="pf-img"><img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Apparel Display" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20%282%29.jpg" alt="Ghost Mannequin — Garment Result" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
@@ -358,11 +345,6 @@
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%282%29.jpg" alt="Background Removal — Product Isolation" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="background">
                     <div class="pf-img"><img src="images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Retouching Feature" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
@@ -374,11 +356,6 @@
                 </figure>
                 <figure class="pf-item" data-cat="background">
                     <div class="pf-img"><img src="images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Background Merge" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20%282%29.jpg" alt="Background Removal — Merged Scene" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
@@ -395,11 +372,6 @@
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20%282%29.jpg" alt="Color Correction — Tone Adjustment" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="color">
                     <div class="pf-img"><img src="images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Catalog Consistency" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
@@ -410,17 +382,7 @@
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20%282%29.jpg" alt="Color Correction — Hue Adjustment" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="color">
                     <div class="pf-img"><img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Application" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20%282%29.jpg" alt="Color Correction — Fashion Colour Match" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
@@ -433,11 +395,6 @@
                 <!-- ===== DROP SHADOW ===== -->
                 <figure class="pf-item" data-cat="shadow">
                     <div class="pf-img"><img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Shadow Types" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20%282%29.jpg" alt="Drop Shadow — Effect Types" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
@@ -457,17 +414,7 @@
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20%282%29.jpg" alt="Drop Shadow — Natural Shadow Result" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="shadow">
                     <div class="pf-img"><img src="images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Customisation" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20%282%29.jpg" alt="Drop Shadow — Custom Result" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
@@ -485,11 +432,6 @@
                 </figure>
                 <figure class="pf-item" data-cat="masking">
                     <div class="pf-img"><img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Hair & Fur Masking" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-mask"></i> Image Masking</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="masking">
-                    <div class="pf-img"><img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20%282%29.jpg" alt="Image Masking — Fine Detail Mask" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-mask"></i> Image Masking</figcaption>
                 </figure>
@@ -543,17 +485,7 @@
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20%282%29.jpg" alt="Photo Restoration — Tonal Recovery" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="restoration">
                     <div class="pf-img"><img src="images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Missing Section Rebuild" loading="lazy"></div>
-                    <span class="pf-zoom"><i class="fas fa-expand"></i></span>
-                    <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
-                </figure>
-                <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/1%20graphics%20pixels%20%282%29.jpg" alt="Photo Restoration — Reconstruction Result" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
