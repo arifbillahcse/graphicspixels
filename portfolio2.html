@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Image Editing Portfolio | Graphics Pixels</title>
+    <meta name="description" content="Professional image editing portfolio showcasing our work across clipping path, photo retouching, ghost mannequin, background removal, color correction, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+
+    <style>
+        /* ============ PORTFOLIO 2 PAGE (scoped p2-) ============ */
+        .p2-hero {
+            background: var(--navy, #01015E);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .p2-hero::before {
+            content: ""; position: absolute; inset: 0;
+            background: radial-gradient(circle at 85% 20%, rgba(0,255,255,0.1), transparent 50%),
+                        radial-gradient(circle at 10% 80%, rgba(195,0,157,0.1), transparent 50%);
+            pointer-events: none;
+        }
+        .p2-hero-inner {
+            position: relative; z-index: 2;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+        }
+        .p2-hero-content { padding-right: 40px; }
+        .p2-hero-visual { display: flex; align-items: center; justify-content: center; }
+        .p2-hero-visual img {
+            max-width: 100%; height: auto; border-radius: 16px;
+            box-shadow: 0 40px 80px rgba(195,0,157,0.3);
+        }
+        .p2-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px; font-weight: 800; line-height: 1.2;
+            color: #fff; margin-bottom: 18px;
+        }
+        .p2-hero p {
+            color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .p2-hero-stats {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+            margin-bottom: 32px;
+        }
+        .p2-stat {
+            background: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px;
+            border: 1px solid rgba(195,0,157,0.2);
+        }
+        .p2-stat-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px; font-weight: 800;
+            background: linear-gradient(90deg, #00ffff, #C3009D);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .p2-stat-label { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 6px; }
+        .p2-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+        /* ---- Service sections ---- */
+        .p2-content { padding: 80px 0; }
+        .p2-service {
+            margin-bottom: 70px;
+        }
+        .p2-service-head {
+            text-align: center; margin-bottom: 42px;
+        }
+        .p2-service-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px; font-weight: 700; color: var(--navy, #01015E);
+            margin: 0; margin-bottom: 14px;
+        }
+        .p2-service-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+            margin-bottom: 28px;
+        }
+        .p2-service-item {
+            position: relative; border-radius: 12px; overflow: hidden;
+            background: #f4f4f8; box-shadow: 0 10px 30px rgba(1,1,94,0.08);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .p2-service-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(195,0,157,0.15);
+        }
+        .p2-service-item img {
+            width: 100%; height: 280px; object-fit: cover; display: block;
+        }
+        .p2-service-actions {
+            display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+        }
+        .p2-view-btn {
+            background: linear-gradient(135deg, #01015E, #C3009D);
+            color: #fff; padding: 12px 28px; border: none; border-radius: 8px;
+            font-weight: 600; font-size: 14px; cursor: pointer;
+            transition: all .3s ease; box-shadow: 0 8px 20px rgba(195,0,157,0.25);
+        }
+        .p2-view-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(195,0,157,0.35);
+        }
+
+        /* ---- Testimonial section ---- */
+        .p2-testimonial {
+            background: var(--navy, #01015E);
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .p2-testimonial::before {
+            content: ""; position: absolute; inset: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(0,255,255,0.1), transparent 50%);
+            pointer-events: none;
+        }
+        .p2-testimonial-inner {
+            position: relative; z-index: 2;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+        }
+        .p2-testimonial-video {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+        }
+        .p2-testimonial-video img {
+            width: 100%; height: auto; display: block;
+        }
+        .p2-play-btn {
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(0,0,0,0.4); cursor: pointer;
+            transition: background .3s ease;
+        }
+        .p2-testimonial-video:hover .p2-play-btn { background: rgba(0,0,0,0.6); }
+        .p2-play-icon {
+            width: 70px; height: 70px;
+            background: #fff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; color: #C3009D;
+        }
+        .p2-testimonial-content {
+            color: #fff;
+        }
+        .p2-testimonial-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px; font-weight: 700; margin-bottom: 16px;
+        }
+        .p2-testimonial-content p {
+            color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .p2-testimonial-meta {
+            display: flex; gap: 12px; align-items: center;
+        }
+        .p2-testimonial-meta i { color: #C3009D; font-size: 18px; }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 1024px) {
+            .p2-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .p2-hero-content { padding-right: 0; }
+            .p2-testimonial-inner { grid-template-columns: 1fr; gap: 40px; }
+        }
+        @media (max-width: 768px) {
+            .p2-hero h1 { font-size: 36px; }
+            .p2-hero-stats { grid-template-columns: repeat(2, 1fr); }
+            .p2-hero-actions { flex-direction: column; }
+            .p2-hero-actions .btn { width: 100%; }
+            .p2-service-grid { grid-template-columns: 1fr; gap: 20px; }
+            .p2-service-item img { height: 220px; }
+            .p2-service-title { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVIGATION (auto-loaded) ============ -->
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="p2-hero">
+        <div class="container">
+            <div class="p2-hero-inner">
+                <div class="p2-hero-content reveal" data-reveal="up">
+                    <h1>Professional Image Editing Portfolio</h1>
+                    <p>Explore our extensive collection of before-and-after work across 12+ editing services. Real results from 13+ years of expertise.</p>
+
+                    <div class="p2-hero-stats">
+                        <div class="p2-stat">
+                            <div class="p2-stat-num">950+</div>
+                            <div class="p2-stat-label">Projects Completed</div>
+                        </div>
+                        <div class="p2-stat">
+                            <div class="p2-stat-num">35+</div>
+                            <div class="p2-stat-label">Global Clients</div>
+                        </div>
+                        <div class="p2-stat">
+                            <div class="p2-stat-num">1M+</div>
+                            <div class="p2-stat-label">Images Edited</div>
+                        </div>
+                    </div>
+
+                    <div class="p2-hero-actions">
+                        <a href="#services" class="btn btn-primary">Explore Portfolio</a>
+                        <a href="contact.html" class="btn btn-outline-white">Get Free Trial</a>
+                    </div>
+                </div>
+
+                <div class="p2-hero-visual reveal" data-reveal="right">
+                    <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%281%29.jpg" alt="Product editing example">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES PORTFOLIO ============ -->
+    <section class="p2-content" id="services">
+        <div class="container">
+
+            <!-- CLIPPING PATH -->
+            <div class="p2-service reveal" data-reveal="up">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Clipping Path service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path — White Background">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Product Placement">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Visual Appeal">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- PHOTO RETOUCHING -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="80">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Photo Retouching service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Photo Retouching — Beauty">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Photo Retouching — Product">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Photo Retouching — Portrait">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- GHOST MANNEQUIN -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="160">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Ghost Mannequin service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Neck Joint">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Apparel">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Display">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- HEADSHOT PHOTO EDITING -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="240">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Headshot photo editing</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Professional">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Natural">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%284%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Corporate">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- BACKGROUND REMOVAL -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="320">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Background Removal service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Clean Cutout">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Retouching">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Merge">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- COLOR CORRECTION -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="400">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Color Correction Services</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20%281%29.jpg" alt="Color Correction — White Balance">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Consistency">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Process">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- DROP SHADOW -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="480">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Deep Shadow Service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Types">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Realistic">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Reflection">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- IMAGE MASKING -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="560">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Image Masking Service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Layer">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Hair">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Shadow">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- E-COMMERCE IMAGE EDITING -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="640">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">E-commerce Image Editing</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20%281%29.jpg" alt="E-commerce — Clipping">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/9.%20ecommerce-image-editing-services/2.%20Product%20Image%20Background%20Removal/graphics%20pixels%20%281%29.jpg" alt="E-commerce — Background">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/9.%20ecommerce-image-editing-services/3.%20Product%20Image%20Background%20Removal%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="E-commerce — Product">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+            <!-- PHOTO RESTORATION -->
+            <div class="p2-service reveal" data-reveal="up" data-delay="720">
+                <div class="p2-service-head">
+                    <h2 class="p2-service-title">Photo Restoration Service</h2>
+                </div>
+                <div class="p2-service-grid">
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Repair">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Water">
+                    </div>
+                    <div class="p2-service-item">
+                        <img src="images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Fade">
+                    </div>
+                </div>
+                <div class="p2-service-actions">
+                    <button class="p2-view-btn">View More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIAL SECTION ============ -->
+    <section class="p2-testimonial">
+        <div class="container">
+            <div class="p2-testimonial-inner">
+                <div class="p2-testimonial-video reveal" data-reveal="left">
+                    <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Client testimonial">
+                    <div class="p2-play-btn">
+                        <div class="p2-play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p2-testimonial-content reveal" data-reveal="right">
+                    <h3>What Our Clients Say</h3>
+                    <p>Graphics Pixels has been the backbone of our e-commerce image editing for over 2 years. Their attention to detail and fast turnaround is unmatched. We've tried other services, but their quality and professionalism keep us coming back.</p>
+                    <div class="p2-testimonial-meta">
+                        <div>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span style="color: rgba(255,255,255,0.8);">— Tyrell Scott, E-commerce Owner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="components/load-components.js"></script>
+</body>
+</html>
