@@ -11,6 +11,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
+        }
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; bottom: 12px; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px; color: #fff;
+            padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px);
+            pointer-events: none;
+        }
+        .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
+        .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -290,8 +326,16 @@
                 <!-- 1. What Is Color Correction -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="svc-img">
-                            <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="What is Color Correction" loading="lazy">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Before — Color Correction">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="After — Color Correction">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
                     </div>
                     <div class="svc-body">
@@ -338,8 +382,16 @@
                 <!-- 3. How Does the Process of Color Correction Operate -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="svc-img">
-                            <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="Color Correction Process" loading="lazy">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="Before — Hue and Saturation Adjustment">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="After — Hue and Saturation Adjustment">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
                     </div>
                     <div class="svc-body">
@@ -362,8 +414,16 @@
                 <!-- 4. Typical Applications for Color Correction Services -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="svc-img">
-                            <img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="Color Correction Applications" loading="lazy">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="Before — Skin Tone Standardisation">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="After — Skin Tone Standardisation">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
                     </div>
                     <div class="svc-body">
@@ -727,5 +787,24 @@
     <script src="js/script.js"></script>
     <script src="js/pe-animations.js"></script>
     <script src="components/load-components.js"></script>
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
 </body>
 </html>
