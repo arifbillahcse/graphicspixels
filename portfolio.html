@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Image Editing Portfolio | Graphics Pixels</title>
-    <meta name="description" content="Professional image editing portfolio showcasing our work across clipping path, photo retouching, ghost mannequin, background removal, color correction, and more.">
+    <title>Portfolio — Before & After Photo Editing Results | Graphics Pixels</title>
+    <meta name="description" content="Browse our before and after photo editing portfolio. Real results across clipping path, photo retouching, ghost mannequin, background removal, color correction, drop shadow and image masking.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -13,459 +13,627 @@
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
 
     <style>
-        /* ============ PORTFOLIO 2 PAGE (scoped p2-) ============ */
-        .p2-hero {
-            background: var(--navy, #01015E);
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
+        /* ── Before / After slider ── */
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
         }
-        .p2-hero::before {
-            content: ""; position: absolute; inset: 0;
-            background: radial-gradient(circle at 85% 20%, rgba(0,255,255,0.1), transparent 50%),
-                        radial-gradient(circle at 10% 80%, rgba(195,0,157,0.1), transparent 50%);
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; top: 16px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600;
+            color: var(--white); padding: 5px 14px; border-radius: 50px; letter-spacing: 0.5px;
+            text-transform: uppercase; pointer-events: none; backdrop-filter: blur(4px);
+        }
+        .ba-label-before { left: 16px; background: rgba(1,1,94,0.7); }
+        .ba-label-after  { right: 16px; background: rgba(195,0,157,0.8); }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
             pointer-events: none;
         }
-        .p2-hero-inner {
-            position: relative; z-index: 2;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-        }
-        .p2-hero-content { padding-right: 40px; }
-        .p2-hero-visual { display: flex; align-items: center; justify-content: center; }
-        .p2-hero-visual img {
-            max-width: 100%; height: auto; border-radius: 16px;
-            box-shadow: 0 40px 80px rgba(195,0,157,0.3);
-        }
-        .p2-hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 48px; font-weight: 800; line-height: 1.2;
-            color: #fff; margin-bottom: 18px;
-        }
-        .p2-hero p {
-            color: rgba(255,255,255,0.75); font-size: 16px; line-height: 1.7;
-            margin-bottom: 28px;
-        }
-        .p2-hero-stats {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
-            margin-bottom: 32px;
-        }
-        .p2-stat {
-            background: rgba(255,255,255,0.08); padding: 20px; border-radius: 12px;
-            border: 1px solid rgba(195,0,157,0.2);
-        }
-        .p2-stat-num {
-            font-family: 'Poppins', sans-serif;
-            font-size: 32px; font-weight: 800;
-            background: linear-gradient(90deg, #00ffff, #C3009D);
-            -webkit-background-clip: text; background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .p2-stat-label { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 6px; }
-        .p2-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-        /* ---- Service sections ---- */
-        .p2-content { padding: 80px 0; }
-        .p2-service {
-            margin-bottom: 70px;
+        /* ── Portfolio service sections ── */
+        .pf-service {
+            padding: 80px 0;
         }
-        .p2-service-head {
-            text-align: center; margin-bottom: 42px;
+        .pf-service:nth-child(even) {
+            background: var(--bg-light, #f8f8fc);
         }
-        .p2-service-title {
+        .pf-service-head {
+            display: flex; align-items: flex-end; justify-content: space-between;
+            margin-bottom: 40px; flex-wrap: wrap; gap: 16px;
+        }
+        .pf-service-head-text { flex: 1; min-width: 220px; }
+        .pf-service-head-text .section-tag { margin-bottom: 8px; }
+        .pf-service-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 28px; font-weight: 700; color: var(--navy, #01015E);
-            margin: 0; margin-bottom: 14px;
+            font-size: 30px; font-weight: 700; color: var(--navy, #01015E);
+            margin: 0;
         }
-        .p2-service-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
-            margin-bottom: 28px;
+        .pf-service-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600;
+            color: var(--magenta, #C3009D); text-decoration: none;
+            border: 2px solid var(--magenta, #C3009D);
+            padding: 10px 22px; border-radius: 8px;
+            transition: all 0.25s ease; white-space: nowrap;
         }
-        .p2-service-item {
-            position: relative; border-radius: 12px; overflow: hidden;
-            background: #f4f4f8; box-shadow: 0 10px 30px rgba(1,1,94,0.08);
-            transition: transform .3s ease, box-shadow .3s ease;
+        .pf-service-link:hover {
+            background: var(--magenta, #C3009D); color: #fff;
         }
-        .p2-service-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(195,0,157,0.15);
+        .pf-grid {
+            display: grid; gap: 24px;
         }
-        .p2-service-item img {
-            width: 100%; height: 280px; object-fit: cover; display: block;
-        }
-        .p2-service-actions {
-            display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
-        }
-        .p2-view-btn {
-            background: linear-gradient(135deg, #01015E, #C3009D);
-            color: #fff; padding: 12px 28px; border: none; border-radius: 8px;
-            font-weight: 600; font-size: 14px; cursor: pointer;
-            transition: all .3s ease; box-shadow: 0 8px 20px rgba(195,0,157,0.25);
-        }
-        .p2-view-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(195,0,157,0.35);
-        }
+        .pf-grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .pf-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto; }
+        .pf-grid-1 { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
 
-        /* ---- Testimonial section ---- */
-        .p2-testimonial {
+        /* ── Portfolio CTA strip ── */
+        .pf-cta-strip {
             background: var(--navy, #01015E);
             padding: 70px 0;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
         }
-        .p2-testimonial::before {
-            content: ""; position: absolute; inset: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(0,255,255,0.1), transparent 50%);
-            pointer-events: none;
-        }
-        .p2-testimonial-inner {
-            position: relative; z-index: 2;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-        }
-        .p2-testimonial-video {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.3);
-        }
-        .p2-testimonial-video img {
-            width: 100%; height: auto; display: block;
-        }
-        .p2-play-btn {
-            position: absolute; inset: 0;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(0,0,0,0.4); cursor: pointer;
-            transition: background .3s ease;
-        }
-        .p2-testimonial-video:hover .p2-play-btn { background: rgba(0,0,0,0.6); }
-        .p2-play-icon {
-            width: 70px; height: 70px;
-            background: #fff; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 28px; color: #C3009D;
-        }
-        .p2-testimonial-content {
-            color: #fff;
-        }
-        .p2-testimonial-content h3 {
+        .pf-cta-strip h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 24px; font-weight: 700; margin-bottom: 16px;
+            font-size: 36px; font-weight: 800; color: #fff;
+            margin-bottom: 14px;
         }
-        .p2-testimonial-content p {
-            color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.7;
-            margin-bottom: 24px;
+        .pf-cta-strip p {
+            color: rgba(255,255,255,0.75); font-size: 16px;
+            max-width: 540px; margin: 0 auto 32px;
         }
-        .p2-testimonial-meta {
-            display: flex; gap: 12px; align-items: center;
-        }
-        .p2-testimonial-meta i { color: #C3009D; font-size: 18px; }
+        .pf-cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-        /* ---- Responsive ---- */
-        @media (max-width: 1024px) {
-            .p2-hero-inner { grid-template-columns: 1fr; gap: 40px; }
-            .p2-hero-content { padding-right: 0; }
-            .p2-testimonial-inner { grid-template-columns: 1fr; gap: 40px; }
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .pf-grid-3 { grid-template-columns: 1fr 1fr; }
         }
-        @media (max-width: 768px) {
-            .p2-hero h1 { font-size: 36px; }
-            .p2-hero-stats { grid-template-columns: repeat(2, 1fr); }
-            .p2-hero-actions { flex-direction: column; }
-            .p2-hero-actions .btn { width: 100%; }
-            .p2-service-grid { grid-template-columns: 1fr; gap: 20px; }
-            .p2-service-item img { height: 220px; }
-            .p2-service-title { font-size: 22px; }
+        @media (max-width: 600px) {
+            .pf-grid-3, .pf-grid-2 { grid-template-columns: 1fr; max-width: 100%; }
+            .pf-service { padding: 52px 0; }
+            .pf-service-head { flex-direction: column; align-items: flex-start; }
+            .pf-service-title { font-size: 24px; }
+            .pf-cta-strip h2 { font-size: 26px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ============ HEADER / NAVIGATION (auto-loaded) ============ -->
+    <!-- ============ HEADER / NAVIGATION ============ -->
 
-    <!-- ============ HERO SECTION ============ -->
-    <section class="p2-hero">
-        <div class="container">
-            <div class="p2-hero-inner">
-                <div class="p2-hero-content reveal" data-reveal="up">
-                    <h1>Professional Image Editing Portfolio</h1>
-                    <p>Explore our extensive collection of before-and-after work across 12+ editing services. Real results from 13+ years of expertise.</p>
+    <!-- ============ HERO ============ -->
+    <section class="svc-hero">
 
-                    <div class="p2-hero-stats">
-                        <div class="p2-stat">
-                            <div class="p2-stat-num">950+</div>
-                            <div class="p2-stat-label">Projects Completed</div>
-                        </div>
-                        <div class="p2-stat">
-                            <div class="p2-stat-num">35+</div>
-                            <div class="p2-stat-label">Global Clients</div>
-                        </div>
-                        <div class="p2-stat">
-                            <div class="p2-stat-num">1M+</div>
-                            <div class="p2-stat-label">Images Edited</div>
-                        </div>
-                    </div>
+        <div class="svc-hero-pattern" aria-hidden="true">
+            <i class="fas fa-images"               style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
+            <i class="fas fa-wand-magic-sparkles"  style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
+            <i class="fas fa-scissors"             style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
+            <i class="fas fa-palette"              style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
+            <i class="fas fa-layer-group"          style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
+            <i class="fas fa-eraser"               style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
+            <i class="fas fa-eye"                  style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
+            <i class="fas fa-pen-nib"              style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
+            <i class="fas fa-camera"               style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
+            <i class="fas fa-star"                 style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
+            <i class="fas fa-rotate"               style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
+            <i class="fas fa-bezier-curve"         style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
+        </div>
 
-                    <div class="p2-hero-actions">
-                        <a href="#services" class="btn btn-primary">Explore Portfolio</a>
-                        <a href="contact.html" class="btn btn-outline-white">Get Free Trial</a>
-                    </div>
+        <div class="container svc-hero-inner">
+            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
+                <span class="hero-eyebrow">Our Work</span>
+                <h1 class="svc-hero-title">Before &amp; After<br>Portfolio</h1>
+                <p class="svc-hero-text">
+                    Real results from 13+ years of professional photo editing.
+                    Drag any slider to compare the before and after — every image
+                    worked by hand in Photoshop by our specialists.
+                </p>
+                <ul class="svc-hero-icons">
+                    <li><i class="fas fa-scissors"></i> Clipping Path</li>
+                    <li><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</li>
+                    <li><i class="fas fa-shirt"></i> Ghost Mannequin</li>
+                    <li><i class="fas fa-eraser"></i> Background Removal</li>
+                    <li><i class="fas fa-palette"></i> Color Correction</li>
+                    <li><i class="fas fa-clone"></i> Drop Shadow</li>
+                    <li><i class="fas fa-layer-group"></i> Image Masking</li>
+                    <li><i class="fas fa-clock-rotate-left"></i> Photo Restoration</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary">Explore Work</a>
+                    <a href="contact.html" class="btn btn-outline-white">Get Free Trial</a>
                 </div>
+            </div>
 
-                <div class="p2-hero-visual reveal" data-reveal="right">
-                    <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%281%29.jpg" alt="Product editing example">
+            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
+                <div class="pe-svg-scene" aria-hidden="true">
+                    <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="pe-svg">
+                        <defs>
+                            <filter id="pfCyanGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="pfMagentaGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="pfSplitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#888888"/>
+                                <stop offset="50%" stop-color="#888888"/>
+                                <stop offset="50%" stop-color="#C3009D"/>
+                                <stop offset="100%" stop-color="#01015E"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Before half -->
+                        <rect x="90" y="50" width="148" height="220" rx="0" fill="#3a3a5c" stroke="#888" stroke-width="2"/>
+                        <line x1="110" y1="70" x2="210" y2="145" stroke="#fff" stroke-width="1.2" opacity="0.25"/>
+                        <line x1="130" y1="200" x2="195" y2="250" stroke="#fff" stroke-width="0.8" opacity="0.2"/>
+                        <text x="164" y="45" text-anchor="middle" font-size="9" font-weight="700" fill="#888" font-family="Arial" letter-spacing="1">BEFORE</text>
+
+                        <!-- After half -->
+                        <rect x="238" y="50" width="152" height="220" rx="0" fill="#01015E" stroke="#00ffff" stroke-width="2"/>
+                        <rect x="238" y="50" width="152" height="220" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.5" class="pe-canvas-glow"/>
+                        <text x="314" y="45" text-anchor="middle" font-size="9" font-weight="700" fill="#00ffff" font-family="Arial" letter-spacing="1">AFTER</text>
+
+                        <!-- Divider line -->
+                        <line x1="238" y1="50" x2="238" y2="270" stroke="#C3009D" stroke-width="3" stroke-dasharray="5,4"/>
+
+                        <!-- Slider handle -->
+                        <circle cx="238" cy="160" r="18" fill="#fff" stroke="#01015E" stroke-width="3"/>
+                        <line x1="228" y1="160" x2="218" y2="160" stroke="#01015E" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="248" y1="160" x2="258" y2="160" stroke="#01015E" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="218" y1="156" x2="214" y2="160" stroke="#01015E" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="218" y1="164" x2="214" y2="160" stroke="#01015E" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="258" y1="156" x2="262" y2="160" stroke="#01015E" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="258" y1="164" x2="262" y2="160" stroke="#01015E" stroke-width="2" stroke-linecap="round"/>
+
+                        <!-- Center logo -->
+                        <g class="pe-center-logo" transform="translate(240, 160)">
+                            <circle r="40" fill="none" stroke="#00ffff" stroke-width="1.5" opacity="0.3" class="pe-center-logo-ring"/>
+                        </g>
+
+                        <!-- Left panel (before side) -->
+                        <g class="pe-brightness">
+                            <rect x="20" y="60" width="46" height="110" rx="6" fill="#1a1a88" stroke="#888" stroke-width="1.5"/>
+                            <text x="43" y="75" text-anchor="middle" font-size="7" font-weight="700" fill="#888" font-family="Arial">OLD</text>
+                            <rect x="28" y="85" width="4" height="70" fill="#444" rx="2"/>
+                            <circle cx="30" cy="130" r="6" fill="#888" class="pe-brightness-slider"/>
+                        </g>
+
+                        <!-- Right panel (after side) -->
+                        <g class="pe-saturation">
+                            <rect x="414" y="60" width="46" height="110" rx="6" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/>
+                            <text x="437" y="75" text-anchor="middle" font-size="7" font-weight="700" fill="#00ffff" font-family="Arial">NEW</text>
+                            <rect x="422" y="85" width="4" height="70" fill="#333" rx="2"/>
+                            <circle cx="424" cy="120" r="6" fill="#00ffff" filter="url(#pfCyanGlow)" class="pe-saturation-slider"/>
+                        </g>
+
+                        <!-- Bottom tool row -->
+                        <g class="pe-hue-wheel" transform="translate(60, 295)">
+                            <circle r="28" fill="#1a1a88" stroke="#C3009D" stroke-width="2"/>
+                            <circle r="18" fill="none" stroke="#C3009D" stroke-width="1.5" opacity="0.6"/>
+                            <circle r="4" fill="#C3009D" filter="url(#pfMagentaGlow)" class="pe-hue-dot"/>
+                        </g>
+                        <g class="pe-crop" transform="translate(400, 278)">
+                            <rect width="60" height="56" fill="none" stroke="#00ff88" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+                            <line x1="10" y1="28" x2="50" y2="28" stroke="#00ffff" stroke-width="1.5" opacity="0.8"/>
+                            <circle cx="10" cy="28" r="3" fill="#C3009D"/>
+                            <circle cx="50" cy="28" r="3" fill="#C3009D"/>
+                        </g>
+
+                        <!-- Orbiting icons -->
+                        <g class="pe-orbit pe-orbit-1"><rect width="28" height="28" rx="4" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/><path d="M6,14 Q10,8 14,12 Q18,16 22,10" fill="none" stroke="#00ffff" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-2"><circle r="14" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/><path d="M0,-8 L2,-4 L5,-6 L7,-2" fill="none" stroke="#C3009D" stroke-width="1.5" stroke-linecap="round"/><circle cx="5" cy="-6" r="1.5" fill="#C3009D"/></g>
+                        <g class="pe-orbit pe-orbit-3"><rect width="24" height="20" rx="2" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/><rect x="2" y="2" width="20" height="12" fill="#ffff00" opacity="0.5" rx="1"/></g>
+                        <g class="pe-orbit pe-orbit-4"><circle r="14" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/><ellipse cx="0" cy="0" rx="4" ry="8" fill="none" stroke="#00ff88" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-5"><rect width="24" height="24" rx="3" fill="#1a1a88" stroke="#ff6b00" stroke-width="1.5"/><path d="M4,20 Q12,4 20,12" fill="none" stroke="#ff6b00" stroke-width="2"/></g>
+                        <g class="pe-orbit pe-orbit-6"><circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/><circle cx="0" cy="-2" r="4" fill="none" stroke="#00d4ff" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-7"><circle r="8" fill="none" stroke="#ffff00" stroke-width="2"/><line x1="6" y1="6" x2="11" y2="11" stroke="#ffff00" stroke-width="2" stroke-linecap="round"/></g>
+                        <g class="pe-orbit pe-orbit-8"><circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/><path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#ff00ff" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-9"><rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/><path d="M4,20 L8,16 L16,8" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round"/></g>
+                        <g class="pe-orbit pe-orbit-10"><circle r="14" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/><circle cx="0" cy="0" r="6" fill="none" stroke="#ffff00" stroke-width="1.5"/><circle cx="0" cy="0" r="2" fill="#ffff00"/></g>
+                        <g class="pe-orbit pe-orbit-11"><circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/><line x1="-6" y1="0" x2="6" y2="0" stroke="#00d4ff" stroke-width="1.5"/><line x1="0" y1="-6" x2="0" y2="6" stroke="#00d4ff" stroke-width="1.5"/></g>
+
+                        <g class="pe-sparkles">
+                            <circle cx="120" cy="70" r="1.5" fill="#ffff00" opacity="0.8" class="pe-sparkle"/>
+                            <circle cx="320" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
+                            <circle cx="100" cy="280" r="1" fill="#00ffff" opacity="0.6" class="pe-sparkle"/>
+                            <circle cx="380" cy="200" r="1.5" fill="#C3009D" opacity="0.7" class="pe-sparkle"/>
+                        </g>
+
+                        <g class="pe-rays" opacity="0.4">
+                            <line x1="240" y1="0" x2="240" y2="40" stroke="#00ffff" stroke-width="1"/>
+                            <line x1="200" y1="10" x2="220" y2="45" stroke="#C3009D" stroke-width="1"/>
+                            <line x1="280" y1="10" x2="260" y2="45" stroke="#00ff88" stroke-width="1"/>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ SERVICES PORTFOLIO ============ -->
-    <section class="p2-content" id="services">
+    <!-- ============ PORTFOLIO SECTIONS ============ -->
+    <div id="portfolio">
+
+        <!-- ── 1. CLIPPING PATH ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Clipping Path Service</h2>
+                    </div>
+                    <a href="clipping-path-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20(1).jpg" alt="Before — Clipping Path">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20(2).jpg" alt="After — Clipping Path">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20(1).jpg" alt="Clipping Path — White Background" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20(1).jpg" alt="Clipping Path — Product Placement" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 2. PHOTO RETOUCHING ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Photo Retouching Service</h2>
+                    </div>
+                    <a href="photo-retouching-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Beauty Retouching">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Beauty Retouching">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Product Retouching">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Product Retouching">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Portrait Retouching">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Portrait Retouching">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 3. GHOST MANNEQUIN ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Ghost Mannequin Service</h2>
+                    </div>
+                    <a href="ghost-mannequin-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Neck Joint">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(1).jpg" alt="Before — True-to-Life Look">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(2).jpg" alt="After — True-to-Life Look">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="Before — Engage Viewers">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="After — Engage Viewers">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 4. BACKGROUND REMOVAL ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Background Removal Service</h2>
+                    </div>
+                    <a href="background-removal-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-2 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="Before — Background Removal">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(2).jpg" alt="After — Background Removal">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(1).jpg" alt="Before — Background Merging">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(2).jpg" alt="After — Background Merging">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 5. COLOR CORRECTION ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Color Correction Service</h2>
+                    </div>
+                    <a href="color-correction-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Before — Color Correction">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="After — Color Correction">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="Before — Color Grading">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="After — Color Grading">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="Before — Skin Tone Correction">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="After — Skin Tone Correction">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 6. DROP SHADOW ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Drop Shadow Service</h2>
+                    </div>
+                    <a href="drop-shadow-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Before — Drop Shadow">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="After — Drop Shadow">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="Before — Natural Shadow">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="After — Natural Shadow">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="Before — Shadow Customization">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="After — Shadow Customization">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 7. IMAGE MASKING ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Image Masking Service</h2>
+                    </div>
+                    <a href="image-masking-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(1).jpg" alt="Before — Hair & Fur Masking">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(2).jpg" alt="After — Hair & Fur Masking">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Image Masking — Layer" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(1).jpg" alt="Image Masking — Hair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── 8. PHOTO RESTORATION ── -->
+        <section class="pf-service">
+            <div class="container">
+                <div class="pf-service-head">
+                    <div class="pf-service-head-text">
+                        <span class="section-tag">Portfolio</span>
+                        <h2 class="pf-service-title">Photo Restoration Service</h2>
+                    </div>
+                    <a href="photo-restoration-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Before — Photo Restoration">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(2).jpg" alt="After — Photo Restoration">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Scratch Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Water Damage" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /#portfolio -->
+
+    <!-- ============ CTA STRIP ============ -->
+    <section class="pf-cta-strip">
         <div class="container">
-
-            <!-- CLIPPING PATH -->
-            <div class="p2-service reveal" data-reveal="up">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Clipping Path service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path — White Background">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Product Placement">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Visual Appeal">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
+            <h2>Ready to See Your Images Transformed?</h2>
+            <p>Send 1–5 images for a free trial. Results back within 24 hours — no payment required.</p>
+            <div class="pf-cta-actions">
+                <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                <a href="services.html" class="btn btn-outline-white">Explore All Services</a>
             </div>
-
-            <!-- PHOTO RETOUCHING -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="80">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Photo Retouching service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Photo Retouching — Beauty">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Photo Retouching — Product">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Photo Retouching — Portrait">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- GHOST MANNEQUIN -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="160">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Ghost Mannequin service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Neck Joint">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Apparel">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Display">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- HEADSHOT PHOTO EDITING -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="240">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Headshot photo editing</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Professional">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Natural">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%284%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Corporate">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- BACKGROUND REMOVAL -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="320">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Background Removal service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Clean Cutout">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Retouching">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Merge">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- COLOR CORRECTION -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="400">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Color Correction Services</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20%281%29.jpg" alt="Color Correction — White Balance">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Consistency">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Process">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- DROP SHADOW -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="480">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Deep Shadow Service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Types">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Realistic">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Reflection">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- IMAGE MASKING -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="560">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Image Masking Service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Layer">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Hair">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Shadow">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- E-COMMERCE IMAGE EDITING -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="640">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">E-commerce Image Editing</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20%281%29.jpg" alt="E-commerce — Clipping">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/9.%20ecommerce-image-editing-services/2.%20Product%20Image%20Background%20Removal/graphics%20pixels%20%281%29.jpg" alt="E-commerce — Background">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/9.%20ecommerce-image-editing-services/3.%20Product%20Image%20Background%20Removal%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="E-commerce — Product">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
-            <!-- PHOTO RESTORATION -->
-            <div class="p2-service reveal" data-reveal="up" data-delay="720">
-                <div class="p2-service-head">
-                    <h2 class="p2-service-title">Photo Restoration Service</h2>
-                </div>
-                <div class="p2-service-grid">
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Repair">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Water">
-                    </div>
-                    <div class="p2-service-item">
-                        <img src="images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Fade">
-                    </div>
-                </div>
-                <div class="p2-service-actions">
-                    <button class="p2-view-btn">View More</button>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- ============ TESTIMONIAL SECTION ============ -->
-    <section class="p2-testimonial">
-        <div class="container">
-            <div class="p2-testimonial-inner">
-                <div class="p2-testimonial-video reveal" data-reveal="left">
-                    <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Client testimonial">
-                    <div class="p2-play-btn">
-                        <div class="p2-play-icon">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p2-testimonial-content reveal" data-reveal="right">
-                    <h3>What Our Clients Say</h3>
-                    <p>Graphics Pixels has been the backbone of our e-commerce image editing for over 2 years. Their attention to detail and fast turnaround is unmatched. We've tried other services, but their quality and professionalism keep us coming back.</p>
-                    <div class="p2-testimonial-meta">
-                        <div>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <span style="color: rgba(255,255,255,0.8);">— Tyrell Scott, E-commerce Owner</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ============ FOOTER ============ -->
 
     <script src="js/script.js"></script>
+    <script src="js/pe-animations.js"></script>
     <script src="components/load-components.js"></script>
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
 </body>
 </html>
