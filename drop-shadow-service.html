@@ -30,6 +30,64 @@
         }
         .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
         .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 480px;
+        }
+        .ds-showcase-content {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            padding: 60px 56px;
+        }
+        .ds-showcase-inner { max-width: 520px; }
+        .ds-showcase-inner h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px; font-weight: 700;
+            color: var(--navy, #01015E);
+            margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-inner .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: var(--navy, #01015E);
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-inner p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        .ds-showcase-image {
+            background: linear-gradient(135deg, #5b9bde 0%, #a8c8f0 40%, #c5dff8 70%, #e0f0ff 100%);
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; position: relative;
+        }
+        .ds-showcase-image img {
+            width: 85%; height: 100%;
+            object-fit: contain;
+            object-position: center bottom;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                grid-template-columns: 1fr;
+            }
+            .ds-showcase-image {
+                order: -1;
+                min-height: 320px;
+            }
+            .ds-showcase-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            .ds-showcase-content {
+                padding: 40px 24px;
+            }
+            .ds-showcase-inner h2 { font-size: 26px; }
+        }
         .ba-divider {
             position: absolute; top: 0; bottom: 0; left: 50%;
             width: 3px; background: #fff; transform: translateX(-50%);
@@ -281,6 +339,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ============ SHOWCASE BANNER ============ -->
+    <section class="ds-showcase reveal" data-reveal="up">
+        <div class="ds-showcase-content">
+            <div class="ds-showcase-inner">
+                <h2>Drop Shadow Services</h2>
+                <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
+                <p>Drop Shadow Service gives digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement. Our shadows transform flat images into effective assets, whether you're working with promotional visuals or product photography.</p>
+                <div class="ds-showcase-actions">
+                    <a href="free-trial.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="ds-showcase-image">
+            <img src="images/graphics-pixels-9.png" alt="Drop Shadow Service Product Example" loading="lazy">
         </div>
     </section>
 
