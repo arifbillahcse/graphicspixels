@@ -74,14 +74,21 @@
         .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
         @media (max-width: 768px) {
             .ds-showcase {
+                height: auto;
+                flex-direction: column;
                 background-image: url('images/graphics-pixels-9.png');
-                background-size: 100%;
+                background-size: contain;
                 background-position: center top;
-                padding-top: calc(100vw * 0.65);
+                background-repeat: no-repeat;
+                padding-top: 80vw;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 0;
+                padding: 40px 20px;
+                width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
         }
