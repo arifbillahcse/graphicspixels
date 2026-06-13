@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Mannequin Service — Invisible Mannequin for Fashion | Graphics Pixels</title>
+    <meta name="description" content="Professional ghost mannequin & invisible mannequin photo editing for fashion and e-commerce brands. Neck joint, pack-shot, sleeve, and composite mannequin services. 24-hr turnaround.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
+        }
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; bottom: 12px; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px; color: #fff;
+            padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px); pointer-events: none;
+        }
+        .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
+        .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="svc-hero">
+
+        <div class="svc-hero-pattern" aria-hidden="true">
+            <i class="fas fa-shirt"               style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
+            <i class="fas fa-person"              style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
+            <i class="fas fa-wand-magic-sparkles" style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
+            <i class="fas fa-scissors"            style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
+            <i class="fas fa-layer-group"         style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
+            <i class="fas fa-eye-slash"           style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
+            <i class="fas fa-vest"                style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
+            <i class="fas fa-star"                style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
+            <i class="fas fa-palette"             style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
+            <i class="fas fa-eraser"              style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
+            <i class="fas fa-rotate"              style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
+            <i class="fas fa-image"               style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
+        </div>
+
+        <div class="container svc-hero-inner">
+            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
+                <span class="hero-eyebrow">Photo Editing</span>
+                <h1 class="svc-hero-title">Ghost Mannequin<br>Service</h1>
+                <p class="svc-hero-text">
+                    Remove the mannequin, keep the shape. Our invisible mannequin editing gives
+                    your apparel a clean, 3D hollow-form appearance that increases buyer confidence
+                    and drives conversions on every platform.
+                </p>
+                <ul class="svc-hero-icons">
+                    <li><i class="fas fa-eye-slash"></i> Mannequin removed</li>
+                    <li><i class="fas fa-shirt"></i> Shape preserved</li>
+                    <li><i class="fas fa-bolt"></i> 24-hr turnaround</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
+                    <li><i class="fas fa-layer-group"></i> PSD &amp; PNG delivery</li>
+                    <li><i class="fas fa-cart-shopping"></i> E-commerce ready</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
+                </div>
+            </div>
+            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
+                <div class="pe-svg-scene" aria-hidden="true">
+                    <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="pe-svg">
+
+                        <defs>
+                            <filter id="peCyanGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="peMagentaGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <radialGradient id="peCircleGrad" cx="30%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+                                <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+
+                        <g class="pe-canvas">
+                            <rect x="90" y="50" width="300" height="220" rx="12" fill="#1a1a88" stroke="#00ffff" stroke-width="3"/>
+                            <rect x="100" y="60" width="280" height="200" rx="8" fill="#2a2a99" opacity="0.5"/>
+                            <rect x="100" y="60" width="280" height="200" rx="8" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.6" class="pe-canvas-glow"/>
+                            <path d="M190,100 L160,120 L155,160 L195,165 L195,240 L285,240 L285,165 L325,160 L320,120 L290,100 Q240,85 190,100Z" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.5" stroke-dasharray="6,3"/>
+                            <g class="pe-center-logo" transform="translate(240, 160)">
+                                <circle r="40" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.4" class="pe-center-logo-ring"/>
+                                <circle r="28" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#peMagentaGlow)"/>
+                                <image href="images/gp-logo.png" x="-20" y="-20" width="40" height="40" class="pe-center-logo-img"/>
+                            </g>
+                        </g>
+
+                        <g class="pe-brightness">
+                            <rect x="20" y="50" width="50" height="120" rx="6" fill="#1a1a88" stroke="#ffff00" stroke-width="2"/>
+                            <text x="45" y="68" text-anchor="middle" font-size="9" font-weight="700" fill="#ffff00" font-family="Arial">GM</text>
+                            <rect x="28" y="80" width="4" height="80" fill="#333" rx="2"/>
+                            <circle cx="30" cy="100" r="6" fill="#ffff00" filter="url(#peCyanGlow)" class="pe-brightness-slider"/>
+                        </g>
+
+                        <g class="pe-saturation">
+                            <rect x="410" y="50" width="50" height="120" rx="6" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
+                            <text x="435" y="68" text-anchor="middle" font-size="9" font-weight="700" fill="#ff00ff" font-family="Arial">NJ</text>
+                            <rect x="418" y="80" width="4" height="80" fill="#333" rx="2"/>
+                            <circle cx="420" cy="120" r="6" fill="#ff00ff" filter="url(#peMagentaGlow)" class="pe-saturation-slider"/>
+                        </g>
+
+                        <g class="pe-hue-wheel" transform="translate(60, 280)">
+                            <circle r="30" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.8"/>
+                            <circle r="22" fill="none" stroke="#ff00ff" stroke-width="1.5" opacity="0.6"/>
+                            <circle r="14" fill="none" stroke="#ffff00" stroke-width="1" opacity="0.4"/>
+                            <circle r="4" fill="#00ffff" filter="url(#peCyanGlow)" class="pe-hue-dot"/>
+                        </g>
+
+                        <g class="pe-crop" transform="translate(400, 270)">
+                            <rect width="60" height="60" fill="none" stroke="#00ff88" stroke-width="2" stroke-dasharray="5,5" opacity="0.7"/>
+                            <rect x="0" y="0" width="6" height="6" fill="#ff00ff"/>
+                            <rect x="54" y="0" width="6" height="6" fill="#ff00ff"/>
+                            <rect x="0" y="54" width="6" height="6" fill="#ff00ff"/>
+                            <rect x="54" y="54" width="6" height="6" fill="#ff00ff"/>
+                            <line x1="30" y1="24" x2="30" y2="36" stroke="#00ffff" stroke-width="1"/>
+                            <line x1="24" y1="30" x2="36" y2="30" stroke="#00ffff" stroke-width="1"/>
+                        </g>
+
+                        <g class="pe-transforms">
+                            <circle cx="30" cy="200" r="12" fill="#1a1a88" stroke="#ff6b00" stroke-width="2"/>
+                            <path d="M24,195 Q24,191 28,191" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
+                            <circle cx="30" cy="230" r="12" fill="#1a1a88" stroke="#00ffcc" stroke-width="2"/>
+                            <line x1="24" y1="225" x2="24" y2="235" stroke="#00ffcc" stroke-width="1.5"/>
+                            <line x1="36" y1="225" x2="36" y2="235" stroke="#00ffcc" stroke-width="1.5"/>
+                        </g>
+
+                        <g class="pe-dials">
+                            <circle cx="440" cy="200" r="15" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
+                            <line x1="440" y1="186" x2="440" y2="175" stroke="#ff00ff" stroke-width="2" class="pe-vibrance-hand"/>
+                            <circle cx="440" cy="235" r="15" fill="#1a1a88" stroke="#00ff88" stroke-width="2"/>
+                            <line x1="440" y1="221" x2="440" y2="210" stroke="#00ff88" stroke-width="2" class="pe-clarity-hand"/>
+                        </g>
+
+                        <circle cx="150" cy="40" r="2.5" fill="#00ffff" opacity="0.7" class="pe-dot1"/>
+                        <circle cx="350" cy="35" r="2" fill="#ff00ff" opacity="0.6" class="pe-dot2"/>
+                        <circle cx="320" cy="300" r="2" fill="#ffff00" opacity="0.5" class="pe-dot3"/>
+                        <circle cx="100" cy="320" r="1.5" fill="#00ff88" opacity="0.4" class="pe-dot1"/>
+                        <circle cx="380" cy="330" r="2.5" fill="#ff6b00" opacity="0.6" class="pe-dot2"/>
+
+                        <g class="pe-rays" opacity="0.4">
+                            <line x1="240" y1="0" x2="240" y2="40" stroke="#00ffff" stroke-width="1"/>
+                            <line x1="200" y1="10" x2="220" y2="45" stroke="#ff00ff" stroke-width="1"/>
+                            <line x1="280" y1="10" x2="260" y2="45" stroke="#00ff88" stroke-width="1"/>
+                        </g>
+
+                        <g class="pe-orbit pe-orbit-1"><rect width="28" height="28" rx="4" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/><path d="M8,20 L14,6 L20,20" fill="none" stroke="#00ffff" stroke-width="1.5"/><line x1="10" y1="16" x2="18" y2="16" stroke="#00ffff" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-2"><circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/><path d="M-4,-8 Q0,-12 4,-8 Q0,-4 -4,-8Z" fill="#ff00ff" opacity="0.7"/><path d="M-6,-2 Q0,3 6,-2" fill="none" stroke="#ff00ff" stroke-width="1.5"/><line x1="-4" y1="4" x2="4" y2="4" stroke="#ff00ff" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-3"><rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/><line x1="12" y1="2" x2="12" y2="22" stroke="#ffff00" stroke-width="1.5" stroke-dasharray="3,2"/></g>
+                        <g class="pe-orbit pe-orbit-4"><circle r="14" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/><path d="M-5,-8 L5,-8 L8,0 L5,8 L-5,8 L-8,0 Z" fill="none" stroke="#00ff88" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-5"><rect width="24" height="24" rx="3" fill="#1a1a88" stroke="#ff6b00" stroke-width="1.5"/><path d="M4,20 Q12,4 20,12" fill="none" stroke="#ff6b00" stroke-width="2"/></g>
+                        <g class="pe-orbit pe-orbit-6"><circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/><line x1="-8" y1="0" x2="8" y2="0" stroke="#00d4ff" stroke-width="2"/><line x1="0" y1="-8" x2="0" y2="8" stroke="#00d4ff" stroke-width="2"/></g>
+                        <g class="pe-orbit pe-orbit-7"><circle r="8" fill="none" stroke="#ffff00" stroke-width="2"/><line x1="6" y1="6" x2="11" y2="11" stroke="#ffff00" stroke-width="2" stroke-linecap="round"/></g>
+                        <g class="pe-orbit pe-orbit-8"><circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/><circle cx="0" cy="0" r="5" fill="none" stroke="#ff00ff" stroke-width="1.5"/><line x1="0" y1="-5" x2="0" y2="-10" stroke="#ff00ff" stroke-width="1.5"/></g>
+                        <g class="pe-orbit pe-orbit-9"><rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/><path d="M4,20 L8,16 L16,8" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round"/></g>
+                        <g class="pe-orbit pe-orbit-10"><circle r="14" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/><rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#ffff00" stroke-width="1" stroke-dasharray="2,2"/><circle cx="0" cy="0" r="3" fill="#ffff00"/></g>
+                        <g class="pe-orbit pe-orbit-11"><circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/><path d="M-6,-4 L6,-4 L6,4 L-6,4 Z" fill="none" stroke="#00d4ff" stroke-width="1.5"/><path d="M-6,-4 L0,0 L6,-4" fill="none" stroke="#00d4ff" stroke-width="1"/></g>
+
+                        <g class="pe-sparkles">
+                            <circle cx="120" cy="70" r="1.5" fill="#ffff00" opacity="0.8" class="pe-sparkle"/>
+                            <circle cx="320" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
+                            <circle cx="100" cy="280" r="1" fill="#00ffff" opacity="0.6" class="pe-sparkle"/>
+                            <circle cx="380" cy="200" r="1.5" fill="#ff00ff" opacity="0.7" class="pe-sparkle"/>
+                        </g>
+
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IS GHOST MANNEQUIN ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is Ghost Mannequin Editing?</h2>
+                    <p>Ghost mannequin editing removes the mannequin or model from apparel photographs, leaving a clean, hollow 3D shape that shows exactly how the garment fits and falls — without any visual distractions. The result looks natural and three-dimensional, building buyer confidence and reducing returns.</p>
+                    <p>It is the industry standard for fashion e-commerce. Platforms like Amazon, ASOS, and independent Shopify brands use it consistently because it presents apparel in the most accurate, professional way possible. Whether you need neck joint, sleeve, or full composite mannequin work, our editors handle every garment type to the same high standard.</p>
+                    <div class="cp-intro-actions">
+                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="services.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Before and After" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="pe-video-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">Ghost Mannequin Effect in Action</h2>
+                <p class="section-desc">Watch how we transform flat apparel shots into clean, professional ghost mannequin images — removing the form and creating a hollow 3D result your customers can trust.</p>
+            </div>
+            <div class="pe-video-wrap reveal" data-reveal="up" data-delay="100">
+                <div class="pe-video-container">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/dmd5onUkEAk"
+                        title="Ghost Mannequin Editing Process"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES LIST ============ -->
+    <section class="svc-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Ghost Mannequin Services</h2>
+                <p class="section-desc">We handle all garment types and mannequin removal techniques — from basic neck joints to complex multi-layer composite builds. Every image is matched to your brief before delivery.</p>
+            </div>
+
+            <div class="svc-list">
+
+                <!-- 1. 3D Pack-shot -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — 3D Pack-shot Ghost Mannequin">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — 3D Pack-shot Ghost Mannequin">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-cube"></i></span>
+                        <h3>3D &amp; Pack-shot Ghost Mannequin Effect</h3>
+                        <p>We render your 360° or pack-shot apparel photos into a clean, three-dimensional ghost form — top, neck, and body joined seamlessly so the garment appears worn and full. Buyers see the true shape, fit, and structure without any visual interference from a mannequin or model body.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Top, body &amp; bottom joined as one continuous form</li>
+                            <li><i class="fas fa-check"></i> Full 360° pack-shot processing available</li>
+                            <li><i class="fas fa-check"></i> Maintains garment shape, drape &amp; volume</li>
+                            <li><i class="fas fa-check"></i> Suitable for all major fashion e-commerce platforms</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Neck Joint -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint Ghost Mannequin">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(2).jpg" alt="After — Neck Joint Ghost Mannequin">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-person-dress"></i></span>
+                        <h3>Neck Joint &amp; Collar Editing</h3>
+                        <p>The most in-demand ghost mannequin technique for garment catalogues. We remove the mannequin from the neckline and collar area, then reconstruct the interior neckline so the shirt, jacket, or dress looks clean, open, and naturally worn — maximising garment visibility across your product listings.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Interior neckline fully reconstructed</li>
+                            <li><i class="fas fa-check"></i> Works across shirts, jackets, dresses &amp; coats</li>
+                            <li><i class="fas fa-check"></i> Clean collar edges — no halos or fringing</li>
+                            <li><i class="fas fa-check"></i> Batch processing at consistent quality standard</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Sleeve & Side Joint -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="Before — Sleeve and Side Joint Ghost Mannequin">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="After — Sleeve and Side Joint Ghost Mannequin">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-hand-sparkles"></i></span>
+                        <h3>Sleeve &amp; Side Joint Editing</h3>
+                        <p>For jackets, blazers, knitwear, and outerwear requiring mannequin removal at the shoulder, sleeve, and armhole. We photograph the sleeve separately then seamlessly composite it back, producing a full-form apparel image that shows every detail of the garment's cut and construction.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Armhole &amp; shoulder region cleanly removed</li>
+                            <li><i class="fas fa-check"></i> Sleeve composited for accurate shape</li>
+                            <li><i class="fas fa-check"></i> Ideal for jackets, blazers &amp; knitwear</li>
+                            <li><i class="fas fa-check"></i> Delivered as layered PSD or flattened PNG</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Full Composite -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Full Composite Ghost Mannequin">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Full Composite Ghost Mannequin">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-object-group"></i></span>
+                        <h3>Full-Body &amp; Multi-Piece Composite</h3>
+                        <p>Complex garments — dresses, full-body suits, multi-layer outfits — require composite mannequin work across several photographs. We align and blend each piece into a single, seamless garment image that reads as one continuous item and meets the visual standard of high-end fashion catalogues.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Multi-layer compositing across 2–6 source images</li>
+                            <li><i class="fas fa-check"></i> Seamless joins at every transition point</li>
+                            <li><i class="fas fa-check"></i> Suitable for dresses, suits &amp; outerwear</li>
+                            <li><i class="fas fa-check"></i> Meets luxury fashion catalogue standards</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we've streamlined the process to make it effortless for you.</p>
+            </div>
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1"><i class="fas fa-folder-open"></i></div>
+                        <div class="how-number">1</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2"><i class="fas fa-pen-to-square"></i></div>
+                        <div class="how-number">2</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Describe your edits and style preferences. Attach reference images if you have them.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3"><i class="fas fa-magic"></i></div>
+                        <div class="how-number">3</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your edited images are ready within 24 hours. Full quality, platform-ready.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4"><i class="fas fa-check-double"></i></div>
+                        <div class="how-number">4</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request changes anytime. Unlimited revisions until your vision is exactly matched.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide"><span class="vt-chevron vt-chevron-left"></span></button>
+                    <span class="vt-counter"><span id="vtCurrent">1</span><em>/</em><span id="vtTotal">4</span></span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide"><span class="vt-chevron vt-chevron-right"></span></button>
+                </div>
+            </div>
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What Fashion Brands, Photographers, and E-commerce Sellers Say About Our Ghost Mannequin &amp; Apparel Editing Services
+                </h2>
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott"></button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler"></button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri"></button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble"></button>
+                </div>
+                <a href="portfolio.html" class="vt-cta">OUR PORTFOLIO <span class="vt-cta-arrow"></span></a>
+            </div>
+        </div>
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video"><span class="vt-close-icon"></span></button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p><strong>Try Our Service Free — Results Back in 24 Hours</strong><br>Send 1 to 5 images and we return them edited to your brief within 24 hours at no charge. No payment required. No commitment to continue.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-credit-card"></i> No upfront payment — review the work before paying</li>
+                    <li><i class="fas fa-images"></i> 1 to 5 images edited to your exact specification</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders until output matches your brief</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — your files are never shared or repurposed</li>
+                    <li><i class="fas fa-tag"></i> Bulk discounts from 100 images</li>
+                    <li><i class="fas fa-handshake"></i> Dedicated account handling for studios and agencies</li>
+                </ul>
+            </div>
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled selected>Select The Service</option>
+                    <option>Ghost Mannequin</option>
+                    <option>Clipping Path</option>
+                    <option>Photo Retouching</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option>Drop Shadow</option>
+                    <option>Image Masking</option>
+                    <option>E-commerce Image Editing</option>
+                    <option>Photo Restoration</option>
+                    <option>AI-generated Image Fixes</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Commonly Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="up" data-delay="100">
+                <div class="faq-item">
+                    <button class="faq-q">What is ghost mannequin and why do I need it? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Ghost mannequin (also called invisible mannequin) removes the mannequin or model from apparel images, leaving a clean 3D hollow form. It makes garments look more professional and allows buyers to see the true shape and fit — which increases conversion rates and reduces return rates on every platform.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What photographs do I need to send? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>For most garments: a front view on mannequin and an inside or back view showing the inner neckline or hem. For complex garments needing sleeve or full-body compositing, additional angles may be required. If you are unsure, send your images and we will advise on the best approach before starting.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What garment types do you work with? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>All apparel types — t-shirts, shirts, dresses, suits, jackets, coats, knitwear, lingerie, swimwear, and activewear. We handle both woven and knit fabrics, adjusting technique depending on the garment's construction and how it behaves on the mannequin.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does ghost mannequin editing take? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Standard turnaround is 24 hours. For large bulk orders, turnaround is agreed per project. Rush delivery is available — contact us to confirm capacity for urgent deadlines.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What output formats do you deliver? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>PNG with transparent background, layered PSD, or JPEG on white — whichever your platform requires. Specify in your brief and we deliver the correct format. Multi-format delivery is also available at no extra charge.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is there a minimum order size? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>No minimum. You can send a single garment or a full seasonal catalogue of thousands of pieces. We handle both at the same brief-matched quality standard. Bulk discount pricing starts from 100 images.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ IMAGE LIGHTBOX ============ -->
+    <div class="lightbox" id="svcLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-backdrop" id="svcLightboxBackdrop"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="svcLightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="svcLightboxImg" class="lightbox-image" src="" alt="">
+                <p class="lightbox-title" id="svcLightboxCaption"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" id="svcLightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="svcLightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/pe-animations.js"></script>
+    <script src="components/load-components.js"></script>
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
+</body>
+</html>

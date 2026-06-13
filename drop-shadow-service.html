@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Shadow Service — Realistic Shadows for Product & E-commerce Photography | Graphics Pixels</title>
+    <meta name="description" content="Professional drop shadow, reflection shadow, and natural shadow creation for product photography. Hand-crafted in Photoshop, not automated. Makes products look grounded, real, and credible. Free trial available.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
+        }
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; bottom: 12px; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px; color: #fff;
+            padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px); pointer-events: none;
+        }
+        .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
+        .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            background-image: url('images/graphics-pixels-9.png');
+            background-size: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                background-image: url('images/graphics-pixels-9.png');
+                background-size: 100%;
+                background-position: center top;
+                padding-top: calc(100vw * 0.65);
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 40px 0;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="svc-hero">
+
+        <div class="svc-hero-pattern" aria-hidden="true">
+            <i class="fas fa-circle-half-stroke"   style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
+            <i class="fas fa-sun"                  style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
+            <i class="fas fa-droplet"              style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
+            <i class="fas fa-layer-group"          style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
+            <i class="fas fa-wand-magic-sparkles"  style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
+            <i class="fas fa-image"                style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
+            <i class="fas fa-paint-roller"         style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
+            <i class="fas fa-pen-nib"              style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
+            <i class="fas fa-object-group"         style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
+            <i class="fas fa-palette"              style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
+            <i class="fas fa-rotate"               style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
+            <i class="fas fa-camera"               style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
+        </div>
+
+        <div class="container svc-hero-inner">
+            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
+                <span class="hero-eyebrow">Photo Editing</span>
+                <h1 class="svc-hero-title">Drop Shadow<br>Service</h1>
+                <p class="svc-hero-text">
+                    Hand-crafted drop shadows, reflection shadows, and natural shadows for
+                    product photography. Makes products look grounded, credible, and real —
+                    not floating on a blank white background.
+                </p>
+                <ul class="svc-hero-icons">
+                    <li><i class="fas fa-circle-half-stroke"></i> Drop, reflection & natural</li>
+                    <li><i class="fas fa-sliders"></i> Fully customisable angle & opacity</li>
+                    <li><i class="fas fa-bolt"></i> 24-hr turnaround</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
+                    <li><i class="fas fa-cart-shopping"></i> E-commerce ready</li>
+                    <li><i class="fas fa-user-check"></i> 100% hand-crafted in Photoshop</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
+                </div>
+            </div>
+            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
+                <div class="pe-svg-scene" aria-hidden="true">
+                    <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="pe-svg">
+
+                        <defs>
+                            <filter id="peCyanGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="peMagentaGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <radialGradient id="shadowGlow" cx="50%" cy="80%" r="50%">
+                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#01015E" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- ── MAIN PHOTO CANVAS (center) ── -->
+                        <g class="pe-canvas">
+                            <rect x="90" y="50" width="300" height="220" rx="12" fill="#1a1a88" stroke="#00ffff" stroke-width="3"/>
+                            <rect x="100" y="60" width="280" height="200" rx="8" fill="#2a2a99" opacity="0.5"/>
+                            <rect x="100" y="60" width="280" height="200" rx="8" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.6" class="pe-canvas-glow"/>
+                            <!-- Shadow effect under product shape -->
+                            <ellipse cx="240" cy="255" rx="80" ry="14" fill="url(#shadowGlow)" opacity="0.8"/>
+                            <!-- Simple product silhouette (box shape) -->
+                            <rect x="190" y="160" width="100" height="80" rx="4" fill="#2a2a99" stroke="#00ffff" stroke-width="1.5" opacity="0.7"/>
+                            <!-- Drop shadow beneath box -->
+                            <ellipse cx="240" cy="247" rx="52" ry="8" fill="#000" opacity="0.35"/>
+
+                            <!-- ── GRAPHICS PIXELS LOGO CENTER ── -->
+                            <g class="pe-center-logo" transform="translate(240, 160)">
+                                <circle r="40" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.4" class="pe-center-logo-ring"/>
+                                <circle r="28" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#peMagentaGlow)"/>
+                                <image href="images/gp-logo.png" x="-20" y="-20" width="40" height="40" class="pe-center-logo-img"/>
+                            </g>
+                        </g>
+
+                        <!-- ── OPACITY SLIDER (top-left) ── -->
+                        <g class="pe-brightness">
+                            <rect x="20" y="50" width="50" height="120" rx="6" fill="#1a1a88" stroke="#ffff00" stroke-width="2"/>
+                            <text x="45" y="68" text-anchor="middle" font-size="8" font-weight="700" fill="#ffff00" font-family="Arial">OPA</text>
+                            <rect x="28" y="80" width="4" height="80" fill="#333" rx="2"/>
+                            <circle cx="30" cy="108" r="6" fill="#ffff00" filter="url(#peCyanGlow)" class="pe-brightness-slider"/>
+                        </g>
+
+                        <!-- ── BLUR SLIDER (top-right) ── -->
+                        <g class="pe-saturation">
+                            <rect x="410" y="50" width="50" height="120" rx="6" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
+                            <text x="435" y="68" text-anchor="middle" font-size="8" font-weight="700" fill="#ff00ff" font-family="Arial">BLR</text>
+                            <rect x="418" y="80" width="4" height="80" fill="#333" rx="2"/>
+                            <circle cx="420" cy="115" r="6" fill="#ff00ff" filter="url(#peMagentaGlow)" class="pe-saturation-slider"/>
+                        </g>
+
+                        <!-- ── HUE WHEEL (bottom-left) ── -->
+                        <g class="pe-hue-wheel" transform="translate(60, 280)">
+                            <circle r="30" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.8"/>
+                            <circle r="22" fill="none" stroke="#ff00ff" stroke-width="1.5" opacity="0.6"/>
+                            <circle r="14" fill="none" stroke="#ffff00" stroke-width="1" opacity="0.4"/>
+                            <circle r="4" fill="#00ffff" filter="url(#peCyanGlow)" class="pe-hue-dot"/>
+                        </g>
+
+                        <!-- ── ANGLE DIAL (bottom-right) ── -->
+                        <g class="pe-crop" transform="translate(400, 265)">
+                            <circle cx="30" cy="30" r="28" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.7"/>
+                            <line x1="30" y1="30" x2="30" y2="4" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="30" cy="30" r="4" fill="#ff00ff"/>
+                        </g>
+
+                        <!-- ── TOOL BUTTONS (left side) ── -->
+                        <g class="pe-transforms">
+                            <circle cx="30" cy="200" r="12" fill="#1a1a88" stroke="#ff6b00" stroke-width="2"/>
+                            <path d="M24,195 Q24,191 28,191" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
+                            <circle cx="30" cy="230" r="12" fill="#1a1a88" stroke="#00ffcc" stroke-width="2"/>
+                            <line x1="24" y1="225" x2="24" y2="235" stroke="#00ffcc" stroke-width="1.5"/>
+                            <line x1="36" y1="225" x2="36" y2="235" stroke="#00ffcc" stroke-width="1.5"/>
+                        </g>
+
+                        <!-- ── DIALS (right side) ── -->
+                        <g class="pe-dials">
+                            <circle cx="440" cy="200" r="15" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
+                            <line x1="440" y1="186" x2="440" y2="175" stroke="#ff00ff" stroke-width="2" class="pe-vibrance-hand"/>
+                            <circle cx="440" cy="235" r="15" fill="#1a1a88" stroke="#00ff88" stroke-width="2"/>
+                            <line x1="440" y1="221" x2="440" y2="210" stroke="#00ff88" stroke-width="2" class="pe-clarity-hand"/>
+                        </g>
+
+                        <!-- ── DOTS ── -->
+                        <circle cx="150" cy="40" r="2.5" fill="#00ffff" opacity="0.7" class="pe-dot1"/>
+                        <circle cx="350" cy="35" r="2" fill="#ff00ff" opacity="0.6" class="pe-dot2"/>
+                        <circle cx="320" cy="300" r="2" fill="#ffff00" opacity="0.5" class="pe-dot3"/>
+                        <circle cx="100" cy="320" r="1.5" fill="#00ff88" opacity="0.4" class="pe-dot1"/>
+                        <circle cx="380" cy="330" r="2.5" fill="#ff6b00" opacity="0.6" class="pe-dot2"/>
+
+                        <!-- ── RAYS ── -->
+                        <g class="pe-rays" opacity="0.4">
+                            <line x1="240" y1="0" x2="240" y2="40" stroke="#00ffff" stroke-width="1"/>
+                            <line x1="200" y1="10" x2="220" y2="45" stroke="#ff00ff" stroke-width="1"/>
+                            <line x1="280" y1="10" x2="260" y2="45" stroke="#00ff88" stroke-width="1"/>
+                        </g>
+
+                        <!-- ── ORBITING ICONS ── -->
+                        <g class="pe-orbit pe-orbit-1">
+                            <rect width="28" height="28" rx="4" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/>
+                            <ellipse cx="14" cy="22" rx="10" ry="4" fill="#00ffff" opacity="0.5"/>
+                            <rect x="7" y="7" width="14" height="10" rx="2" fill="none" stroke="#00ffff" stroke-width="1.5"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-2">
+                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
+                            <line x1="-6" y1="4" x2="6" y2="4" stroke="#ff00ff" stroke-width="1.5"/>
+                            <ellipse cx="0" cy="7" rx="6" ry="2" fill="#ff00ff" opacity="0.5"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-3">
+                            <rect width="24" height="20" rx="2" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
+                            <line x1="4" y1="16" x2="20" y2="16" stroke="#ffff00" stroke-width="1.5" opacity="0.7"/>
+                            <rect x="6" y="4" width="12" height="8" rx="1" fill="none" stroke="#ffff00" stroke-width="1.2"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-4">
+                            <circle r="14" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <ellipse cx="0" cy="0" rx="4" ry="8" fill="none" stroke="#00ff88" stroke-width="1.5"/>
+                            <ellipse cx="0" cy="8" rx="8" ry="3" fill="#00ff88" opacity="0.4"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-5">
+                            <rect width="24" height="24" rx="3" fill="#1a1a88" stroke="#ff6b00" stroke-width="1.5"/>
+                            <path d="M4,20 Q12,4 20,12" fill="none" stroke="#ff6b00" stroke-width="2"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-6">
+                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <circle cx="0" cy="-2" r="4" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                            <ellipse cx="0" cy="7" rx="7" ry="3" fill="#00d4ff" opacity="0.4"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-7">
+                            <circle r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
+                            <line x1="6" y1="6" x2="11" y2="11" stroke="#ffff00" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-8">
+                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
+                            <path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#ff00ff" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="3" fill="#ff00ff" opacity="0.6"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-9">
+                            <rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <path d="M4,20 L8,16 L16,8" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-10">
+                            <circle r="14" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="6" fill="none" stroke="#ffff00" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="2" fill="#ffff00"/>
+                        </g>
+                        <g class="pe-orbit pe-orbit-11">
+                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <line x1="-6" y1="0" x2="6" y2="0" stroke="#00d4ff" stroke-width="1.5"/>
+                            <line x1="0" y1="-6" x2="0" y2="6" stroke="#00d4ff" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="2" fill="#00d4ff"/>
+                        </g>
+
+                        <g class="pe-sparkles">
+                            <circle cx="120" cy="70" r="1.5" fill="#ffff00" opacity="0.8" class="pe-sparkle"/>
+                            <circle cx="320" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
+                            <circle cx="100" cy="280" r="1" fill="#00ffff" opacity="0.6" class="pe-sparkle"/>
+                            <circle cx="380" cy="200" r="1.5" fill="#ff00ff" opacity="0.7" class="pe-sparkle"/>
+                        </g>
+
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IS DROP SHADOW ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is Drop Shadow Service?</h2>
+                    <p>Drop shadow service adds a realistic shadow beneath or behind your product, making it look grounded in a scene rather than floating on a white background. A well-executed shadow adds depth, dimension, and visual weight — turning a flat product cutout into something that looks like it was photographed in a real environment.</p>
+                    <p>At Graphics Pixels, every shadow is built by hand in Photoshop — not generated by an automated filter. Our editors assess the product's natural light direction, shape, and intended platform, then craft a shadow that matches. The result is a coherent, professional image that increases buyer confidence, improves click-through rates, and elevates your brand's visual credibility.</p>
+                    <div class="cp-intro-actions">
+                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="services.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Drop Shadow Service Example" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SHOWCASE BANNER ============ -->
+    <section class="ds-showcase">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Drop Shadow Services</h2>
+                <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
+                <p>Drop Shadow Service gives digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement.</p>
+                <div class="ds-showcase-actions">
+                    <a href="free-trial.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline-white">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="pe-video-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">See the Transformation in Action</h2>
+                <p class="section-desc">Watch how a flat product cutout is transformed with a hand-crafted shadow — angle adjusted, opacity balanced, and blur calibrated for a result that looks like it was shot in a professional studio.</p>
+            </div>
+            <div class="pe-video-wrap reveal" data-reveal="up" data-delay="100">
+                <div class="pe-video-container">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/auHCRnj5JOc"
+                        title="Professional Drop Shadow Service Process"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES LIST ============ -->
+    <section class="svc-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Drop Shadow Services</h2>
+                <p class="section-desc">Three distinct shadow types — each serving a different visual purpose. From realistic drop shadows for e-commerce listings to mirror reflections for high-end product advertising, we match the shadow style to your product and platform.</p>
+            </div>
+
+            <div class="svc-list">
+
+                <!-- 1. Types of Shadow Effects -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Before — Drop Shadow Effects">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="After — Drop Shadow Effects">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-circle-half-stroke"></i></span>
+                        <h3>Shadow Types &amp; When to Use Each</h3>
+                        <p>Three shadow styles, each for a different product and context. Drop shadow grounds the product with a soft cast shadow behind or below — ideal for e-commerce, catalogs, and white-background listings. Reflection shadow creates a mirror effect beneath the product, used for premium product advertising. Natural shadow preserves an existing shadow from the original photograph, cleaned and retouched to look deliberate.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Drop shadow — e-commerce &amp; catalog standard</li>
+                            <li><i class="fas fa-check"></i> Reflection shadow — premium &amp; advertising imagery</li>
+                            <li><i class="fas fa-check"></i> Natural shadow — preserved &amp; cleaned from original</li>
+                            <li><i class="fas fa-check"></i> We recommend the right type for your product</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Drop Shadow for Realistic Product Photos -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20(1).jpg" alt="Drop Shadow for Realistic Product Photos" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-droplet"></i></span>
+                        <h3>Drop Shadow for Realistic Product Photos</h3>
+                        <p>A correctly built drop shadow makes your product look like it belongs on the surface it's sitting on — not like it was pasted onto a white background. The shadow angle, spread, blur, and opacity are calibrated to match the product's shape and the direction of light in the original photograph. Used by e-commerce sellers, product photographers, and advertising agencies to add depth and realism to product imagery.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Angle matched to original light source</li>
+                            <li><i class="fas fa-check"></i> Blur &amp; opacity tuned per product shape</li>
+                            <li><i class="fas fa-check"></i> Works on any surface or background</li>
+                            <li><i class="fas fa-check"></i> Amazon, Shopify &amp; catalog compliant</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Reflection Shadow -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20(1).jpg" alt="Reflection Shadow Editing" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-clone"></i></span>
+                        <h3>Reflection Shadow for Polished Product Images</h3>
+                        <p>A reflection shadow creates the appearance that the product was photographed on a polished, reflective surface — glass, lacquer, or high-gloss acrylic. The product's underside is mirrored and faded into the surface with precise gradient control. Used for premium cosmetics, perfume, electronics, and high-end lifestyle products where a luxurious visual impression is needed.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Mirror effect on reflective surface</li>
+                            <li><i class="fas fa-check"></i> Gradient fade precisely controlled</li>
+                            <li><i class="fas fa-check"></i> Luxury &amp; high-end product feel</li>
+                            <li><i class="fas fa-check"></i> Used for cosmetics, perfume &amp; electronics</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Natural Shadow Creation -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="Before — Natural Shadow Creation">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="After — Natural Shadow Creation">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-sun"></i></span>
+                        <h3>Natural Shadow Creation</h3>
+                        <p>When a product is cut out and placed on a white or custom background, a natural shadow recreates the subtle shadow the object would cast in real light — not an artificial filter, but a hand-drawn layer that follows the contour of the product. Makes the product look like it was photographed directly on that background rather than composited. Clean, quiet, and convincing — especially effective for fashion, furniture, and lifestyle products.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Contour-matched hand-drawn shadow</li>
+                            <li><i class="fas fa-check"></i> Convincing, non-artificial result</li>
+                            <li><i class="fas fa-check"></i> Ideal for fashion, furniture &amp; lifestyle</li>
+                            <li><i class="fas fa-check"></i> Works with any background colour</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Options for Shadow Customization -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="Before — Shadow Customisation">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="After — Shadow Customisation">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-sliders"></i></span>
+                        <h3>Full Shadow Customisation</h3>
+                        <p>Every shadow attribute is adjustable: angle, distance, spread, blur, opacity, and colour. A hard-edged, dense shadow for electronics reads differently from a soft, diffuse shadow for apparel — and both read differently from the luxurious reflection effect for cosmetics. Send your product images with your brief, reference images if you have them, or a platform specification, and we'll build the shadow to match your intent.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Angle, opacity, blur &amp; distance adjustable</li>
+                            <li><i class="fas fa-check"></i> Matched to product category &amp; platform</li>
+                            <li><i class="fas fa-check"></i> Reference-matched output on request</li>
+                            <li><i class="fas fa-check"></i> Consistent across bulk batches</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Workflow -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="images/individualservicepage/7.%20drop-shadow-service/6.%20Our%20Workflow%20for%20Drop%20Shadow/graphics%20pixels%20(1).jpg" alt="Drop Shadow Workflow" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-diagram-project"></i></span>
+                        <h3>Our Drop Shadow Workflow</h3>
+                        <p>Each image is assessed individually before shadow work begins. We identify the light source direction, the product contours, and the shadow type appropriate for the platform and brief. Shadow is then built by hand in Photoshop — not applied as a layer style — and reviewed against the original before delivery. Quality-checked batch by batch to ensure consistency across every image in the order.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Individual image assessment before editing</li>
+                            <li><i class="fas fa-check"></i> Hand-built in Photoshop, not layer style</li>
+                            <li><i class="fas fa-check"></i> Quality reviewed before every delivery</li>
+                            <li><i class="fas fa-check"></i> Batch consistency guaranteed</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we have streamlined the process to make it effortless for you.</p>
+            </div>
+
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1"><i class="fas fa-folder-open"></i></div>
+                        <div class="how-number">1</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2"><i class="fas fa-pen-to-square"></i></div>
+                        <div class="how-number">2</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Specify shadow type — drop, reflection, or natural. Add angle, opacity, and platform requirements if you have them.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3"><i class="fas fa-magic"></i></div>
+                        <div class="how-number">3</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your edited images are returned within 24 hours with shadows hand-crafted to your brief.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4"><i class="fas fa-check-double"></i></div>
+                        <div class="how-number">4</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request adjustments anytime — angle, opacity, blur. Unlimited revisions until the shadow matches your vision exactly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide">
+                        <span class="vt-chevron vt-chevron-left"></span>
+                    </button>
+                    <span class="vt-counter">
+                        <span id="vtCurrent">1</span>
+                        <em>/</em>
+                        <span id="vtTotal">4</span>
+                    </span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide">
+                        <span class="vt-chevron vt-chevron-right"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What E-commerce Sellers, Product Photographers, and Advertising Agencies Say About Our Drop Shadow Service
+                </h2>
+
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                    </button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                    </button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                    </button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                </div>
+
+                <a href="#portfolio" class="vt-cta">
+                    OUR PORTFOLIO
+                    <span class="vt-cta-arrow"></span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                    <span class="vt-close-icon"></span>
+                </button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p><strong>Try Our Service Free — Results Back in 24 Hours</strong><br>Send 1 to 5 images and we return them with shadows added to your brief within 24 hours at no charge. No payment required. No commitment to continue.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-credit-card"></i> No upfront payment — review the work before paying</li>
+                    <li><i class="fas fa-images"></i> 1 to 5 images edited to your exact specification</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders until output matches your brief</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — your files are never shared or repurposed</li>
+                    <li><i class="fas fa-tag"></i> Bulk discounts from 100 images</li>
+                    <li><i class="fas fa-handshake"></i> Dedicated account handling for studios and agencies</li>
+                </ul>
+            </div>
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Photo Retouching</option>
+                    <option>Ghost Mannequin</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option selected>Drop Shadow</option>
+                    <option>Image Masking</option>
+                    <option>E-commerce Image Editing</option>
+                    <option>Photo Restoration</option>
+                    <option>AI-generated Image Fixes</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Commonly Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="up" data-delay="100">
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between drop shadow, reflection shadow, and natural shadow? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Drop shadow adds a cast shadow beneath or behind the product to ground it on the surface. Reflection shadow mirrors the product on a polished surface — used for premium, high-end imagery. Natural shadow preserves and cleans a shadow that already exists in the original photograph. We'll recommend the right type based on your product and platform.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I customise the shadow angle and opacity? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes — fully. Angle, distance, spread, blur, opacity, and colour can all be specified in your brief. If you have a reference image or brand guidelines showing the shadow style you want, send it and we'll match it exactly.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do you use Photoshop layer styles or build shadows by hand? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Every shadow is built by hand in Photoshop. Automated layer styles produce generic, unconvincing results that don't follow the product's natural contour or light direction. Our editors assess the light source and product shape, then build the shadow as a separate hand-crafted layer.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What products do you add shadows to? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Any product type — footwear, electronics, cosmetics, jewellery, apparel, furniture, packaged goods, sunglasses, bags, and more. Shadow style and attributes are adjusted per category. We've worked across thousands of SKUs for e-commerce brands, photography studios, and advertising agencies.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does drop shadow service take? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Standard turnaround is 24 hours. For large batches or complex shadow work, we agree timing at the start. Rush delivery is available — mention it in your brief.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the free trial really free? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Send 1–5 images with a brief and we'll return them with shadows added within 24 hours — no charge, no obligation. Use the trial to verify quality and shadow style before committing to a paid batch.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ IMAGE LIGHTBOX ============ -->
+    <div class="lightbox" id="svcLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-backdrop" id="svcLightboxBackdrop"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="svcLightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="svcLightboxImg" class="lightbox-image" src="" alt="">
+                <p class="lightbox-title" id="svcLightboxCaption"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" id="svcLightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="svcLightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/pe-animations.js"></script>
+    <script src="components/load-components.js"></script>
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
+</body>
+</html>
