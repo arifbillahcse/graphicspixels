@@ -34,12 +34,15 @@
         .ds-showcase {
             position: relative;
             width: 100%;
+            height: 80vh;
             background-color: #fff;
             background-image: url('images/graphics-pixels-9.png');
             background-size: 48%;
             background-position: right center;
             background-repeat: no-repeat;
             overflow: hidden;
+            display: flex;
+            align-items: center;
         }
         .ds-showcase-content {
             position: relative; z-index: 2;
@@ -104,210 +107,17 @@
 
     <!-- ============ HEADER / NAVIGATION ============ -->
 
-    <!-- ============ PAGE HERO ============ -->
-    <section class="svc-hero">
-
-        <div class="svc-hero-pattern" aria-hidden="true">
-            <i class="fas fa-circle-half-stroke"   style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
-            <i class="fas fa-sun"                  style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
-            <i class="fas fa-droplet"              style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
-            <i class="fas fa-layer-group"          style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
-            <i class="fas fa-wand-magic-sparkles"  style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
-            <i class="fas fa-image"                style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
-            <i class="fas fa-paint-roller"         style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
-            <i class="fas fa-pen-nib"              style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
-            <i class="fas fa-object-group"         style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
-            <i class="fas fa-palette"              style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
-            <i class="fas fa-rotate"               style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
-            <i class="fas fa-camera"               style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
-        </div>
-
-        <div class="container svc-hero-inner">
-            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
-                <span class="hero-eyebrow">Photo Editing</span>
-                <h1 class="svc-hero-title">Drop Shadow<br>Service</h1>
-                <p class="svc-hero-text">
-                    Hand-crafted drop shadows, reflection shadows, and natural shadows for
-                    product photography. Makes products look grounded, credible, and real —
-                    not floating on a blank white background.
-                </p>
-                <ul class="svc-hero-icons">
-                    <li><i class="fas fa-circle-half-stroke"></i> Drop, reflection & natural</li>
-                    <li><i class="fas fa-sliders"></i> Fully customisable angle & opacity</li>
-                    <li><i class="fas fa-bolt"></i> 24-hr turnaround</li>
-                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
-                    <li><i class="fas fa-cart-shopping"></i> E-commerce ready</li>
-                    <li><i class="fas fa-user-check"></i> 100% hand-crafted in Photoshop</li>
-                </ul>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
-                    <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
-                </div>
-            </div>
-            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
-                <div class="pe-svg-scene" aria-hidden="true">
-                    <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="pe-svg">
-
-                        <defs>
-                            <filter id="peCyanGlow">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="peMagentaGlow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <radialGradient id="shadowGlow" cx="50%" cy="80%" r="50%">
-                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.3"/>
-                                <stop offset="100%" stop-color="#01015E" stop-opacity="0"/>
-                            </radialGradient>
-                        </defs>
-
-                        <!-- ── MAIN PHOTO CANVAS (center) ── -->
-                        <g class="pe-canvas">
-                            <rect x="90" y="50" width="300" height="220" rx="12" fill="#1a1a88" stroke="#00ffff" stroke-width="3"/>
-                            <rect x="100" y="60" width="280" height="200" rx="8" fill="#2a2a99" opacity="0.5"/>
-                            <rect x="100" y="60" width="280" height="200" rx="8" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.6" class="pe-canvas-glow"/>
-                            <!-- Shadow effect under product shape -->
-                            <ellipse cx="240" cy="255" rx="80" ry="14" fill="url(#shadowGlow)" opacity="0.8"/>
-                            <!-- Simple product silhouette (box shape) -->
-                            <rect x="190" y="160" width="100" height="80" rx="4" fill="#2a2a99" stroke="#00ffff" stroke-width="1.5" opacity="0.7"/>
-                            <!-- Drop shadow beneath box -->
-                            <ellipse cx="240" cy="247" rx="52" ry="8" fill="#000" opacity="0.35"/>
-
-                            <!-- ── GRAPHICS PIXELS LOGO CENTER ── -->
-                            <g class="pe-center-logo" transform="translate(240, 160)">
-                                <circle r="40" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.4" class="pe-center-logo-ring"/>
-                                <circle r="28" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#peMagentaGlow)"/>
-                                <image href="images/gp-logo.png" x="-20" y="-20" width="40" height="40" class="pe-center-logo-img"/>
-                            </g>
-                        </g>
-
-                        <!-- ── OPACITY SLIDER (top-left) ── -->
-                        <g class="pe-brightness">
-                            <rect x="20" y="50" width="50" height="120" rx="6" fill="#1a1a88" stroke="#ffff00" stroke-width="2"/>
-                            <text x="45" y="68" text-anchor="middle" font-size="8" font-weight="700" fill="#ffff00" font-family="Arial">OPA</text>
-                            <rect x="28" y="80" width="4" height="80" fill="#333" rx="2"/>
-                            <circle cx="30" cy="108" r="6" fill="#ffff00" filter="url(#peCyanGlow)" class="pe-brightness-slider"/>
-                        </g>
-
-                        <!-- ── BLUR SLIDER (top-right) ── -->
-                        <g class="pe-saturation">
-                            <rect x="410" y="50" width="50" height="120" rx="6" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
-                            <text x="435" y="68" text-anchor="middle" font-size="8" font-weight="700" fill="#ff00ff" font-family="Arial">BLR</text>
-                            <rect x="418" y="80" width="4" height="80" fill="#333" rx="2"/>
-                            <circle cx="420" cy="115" r="6" fill="#ff00ff" filter="url(#peMagentaGlow)" class="pe-saturation-slider"/>
-                        </g>
-
-                        <!-- ── HUE WHEEL (bottom-left) ── -->
-                        <g class="pe-hue-wheel" transform="translate(60, 280)">
-                            <circle r="30" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.8"/>
-                            <circle r="22" fill="none" stroke="#ff00ff" stroke-width="1.5" opacity="0.6"/>
-                            <circle r="14" fill="none" stroke="#ffff00" stroke-width="1" opacity="0.4"/>
-                            <circle r="4" fill="#00ffff" filter="url(#peCyanGlow)" class="pe-hue-dot"/>
-                        </g>
-
-                        <!-- ── ANGLE DIAL (bottom-right) ── -->
-                        <g class="pe-crop" transform="translate(400, 265)">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.7"/>
-                            <line x1="30" y1="30" x2="30" y2="4" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round"/>
-                            <circle cx="30" cy="30" r="4" fill="#ff00ff"/>
-                        </g>
-
-                        <!-- ── TOOL BUTTONS (left side) ── -->
-                        <g class="pe-transforms">
-                            <circle cx="30" cy="200" r="12" fill="#1a1a88" stroke="#ff6b00" stroke-width="2"/>
-                            <path d="M24,195 Q24,191 28,191" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
-                            <circle cx="30" cy="230" r="12" fill="#1a1a88" stroke="#00ffcc" stroke-width="2"/>
-                            <line x1="24" y1="225" x2="24" y2="235" stroke="#00ffcc" stroke-width="1.5"/>
-                            <line x1="36" y1="225" x2="36" y2="235" stroke="#00ffcc" stroke-width="1.5"/>
-                        </g>
-
-                        <!-- ── DIALS (right side) ── -->
-                        <g class="pe-dials">
-                            <circle cx="440" cy="200" r="15" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
-                            <line x1="440" y1="186" x2="440" y2="175" stroke="#ff00ff" stroke-width="2" class="pe-vibrance-hand"/>
-                            <circle cx="440" cy="235" r="15" fill="#1a1a88" stroke="#00ff88" stroke-width="2"/>
-                            <line x1="440" y1="221" x2="440" y2="210" stroke="#00ff88" stroke-width="2" class="pe-clarity-hand"/>
-                        </g>
-
-                        <!-- ── DOTS ── -->
-                        <circle cx="150" cy="40" r="2.5" fill="#00ffff" opacity="0.7" class="pe-dot1"/>
-                        <circle cx="350" cy="35" r="2" fill="#ff00ff" opacity="0.6" class="pe-dot2"/>
-                        <circle cx="320" cy="300" r="2" fill="#ffff00" opacity="0.5" class="pe-dot3"/>
-                        <circle cx="100" cy="320" r="1.5" fill="#00ff88" opacity="0.4" class="pe-dot1"/>
-                        <circle cx="380" cy="330" r="2.5" fill="#ff6b00" opacity="0.6" class="pe-dot2"/>
-
-                        <!-- ── RAYS ── -->
-                        <g class="pe-rays" opacity="0.4">
-                            <line x1="240" y1="0" x2="240" y2="40" stroke="#00ffff" stroke-width="1"/>
-                            <line x1="200" y1="10" x2="220" y2="45" stroke="#ff00ff" stroke-width="1"/>
-                            <line x1="280" y1="10" x2="260" y2="45" stroke="#00ff88" stroke-width="1"/>
-                        </g>
-
-                        <!-- ── ORBITING ICONS ── -->
-                        <g class="pe-orbit pe-orbit-1">
-                            <rect width="28" height="28" rx="4" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/>
-                            <ellipse cx="14" cy="22" rx="10" ry="4" fill="#00ffff" opacity="0.5"/>
-                            <rect x="7" y="7" width="14" height="10" rx="2" fill="none" stroke="#00ffff" stroke-width="1.5"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-2">
-                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
-                            <line x1="-6" y1="4" x2="6" y2="4" stroke="#ff00ff" stroke-width="1.5"/>
-                            <ellipse cx="0" cy="7" rx="6" ry="2" fill="#ff00ff" opacity="0.5"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-3">
-                            <rect width="24" height="20" rx="2" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
-                            <line x1="4" y1="16" x2="20" y2="16" stroke="#ffff00" stroke-width="1.5" opacity="0.7"/>
-                            <rect x="6" y="4" width="12" height="8" rx="1" fill="none" stroke="#ffff00" stroke-width="1.2"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-4">
-                            <circle r="14" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <ellipse cx="0" cy="0" rx="4" ry="8" fill="none" stroke="#00ff88" stroke-width="1.5"/>
-                            <ellipse cx="0" cy="8" rx="8" ry="3" fill="#00ff88" opacity="0.4"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-5">
-                            <rect width="24" height="24" rx="3" fill="#1a1a88" stroke="#ff6b00" stroke-width="1.5"/>
-                            <path d="M4,20 Q12,4 20,12" fill="none" stroke="#ff6b00" stroke-width="2"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-6">
-                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="-2" r="4" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
-                            <ellipse cx="0" cy="7" rx="7" ry="3" fill="#00d4ff" opacity="0.4"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-7">
-                            <circle r="8" fill="none" stroke="#ffff00" stroke-width="2"/>
-                            <line x1="6" y1="6" x2="11" y2="11" stroke="#ffff00" stroke-width="2" stroke-linecap="round"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-8">
-                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
-                            <path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#ff00ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="3" fill="#ff00ff" opacity="0.6"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-9">
-                            <rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <path d="M4,20 L8,16 L16,8" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-10">
-                            <circle r="14" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="6" fill="none" stroke="#ffff00" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="2" fill="#ffff00"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-11">
-                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <line x1="-6" y1="0" x2="6" y2="0" stroke="#00d4ff" stroke-width="1.5"/>
-                            <line x1="0" y1="-6" x2="0" y2="6" stroke="#00d4ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="2" fill="#00d4ff"/>
-                        </g>
-
-                        <g class="pe-sparkles">
-                            <circle cx="120" cy="70" r="1.5" fill="#ffff00" opacity="0.8" class="pe-sparkle"/>
-                            <circle cx="320" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
-                            <circle cx="100" cy="280" r="1" fill="#00ffff" opacity="0.6" class="pe-sparkle"/>
-                            <circle cx="380" cy="200" r="1.5" fill="#ff00ff" opacity="0.7" class="pe-sparkle"/>
-                        </g>
-
-                    </svg>
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Drop Shadow Services</h2>
+                <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
+                <p>Drop Shadow Service gives digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement.</p>
+                <div class="ds-showcase-actions">
+                    <a href="free-trial.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline-white">Learn More</a>
                 </div>
             </div>
         </div>
