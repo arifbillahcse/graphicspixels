@@ -16,6 +16,28 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        /* Home Page Hero Image Styling */
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            width: 100%;
+        }
+        .home-svg-scene {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+        }
+        .home-svg-scene img {
+            max-width: none;
+            width: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -41,235 +63,8 @@
             </div>
             <div class="hero-image reveal" data-reveal="right">
                 <div class="hero-image-glow"></div>
-                <div class="home-svg-scene" aria-hidden="true">
-                    <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" class="home-svg">
-
-                        <!-- Defs: Gradients & Filters -->
-                        <defs>
-                            <radialGradient id="homeGlow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.25"/>
-                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
-                            </radialGradient>
-                            <filter id="homeSoftGlow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="homeMagentaGlow">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <linearGradient id="home3dGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#C3009D"/>
-                                <stop offset="100%" stop-color="#4a90e2"/>
-                            </linearGradient>
-                        </defs>
-
-                        <!-- Background Glow -->
-                        <ellipse cx="260" cy="140" rx="220" ry="150" fill="url(#homeGlow)" class="home-pulse"/>
-
-                        <!-- ── CENTRAL WORKSPACE (monitor) ── -->
-                        <g class="home-monitor">
-                            <rect x="80" y="60" width="360" height="200" rx="16" fill="#4a4acf" stroke="#7a7add" stroke-width="2.5"/>
-                            <rect x="92" y="75" width="336" height="170" rx="12" fill="#1a1a99"/>
-                            <!-- Screen content: gradient background -->
-                            <defs><linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a2aaa"/><stop offset="100%" stop-color="#3a3acc"/></linearGradient></defs>
-                            <rect x="92" y="75" width="336" height="170" fill="url(#screenGrad)" opacity="0.8"/>
-
-                            <!-- ── CENTRAL LOGO WITH DIAMOND & RED CIRCLE ── -->
-                            <!-- Red circle (outer) -->
-                            <circle cx="260" cy="160" r="48" fill="none" stroke="#ff3366" stroke-width="2.5" opacity="0.8" class="home-center-red-circle"/>
-
-                            <!-- Diamond shape (rotating) -->
-                            <g class="home-center-diamond" transform="translate(260, 160)">
-                                <polygon points="0,-35 25,-10 0,15 -25,-10" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.7"/>
-                            </g>
-
-                            <!-- Central logo -->
-                            <g class="home-center-logo" transform="translate(260, 160)">
-                                <circle r="32" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#homeMagentaGlow)"/>
-                                <image href="images/gp-logo.png" x="-22" y="-22" width="44" height="44" class="home-center-logo-img"/>
-                            </g>
-                        </g>
-
-                        <!-- ── GRAPHICS PIXELS LOGO (center-left, larger) ── -->
-                        <g class="home-logo-icon" transform="translate(90, 160)">
-                            <circle r="26" fill="#1a1a88" stroke="#C3009D" stroke-width="3" filter="url(#homeMagentaGlow)"/>
-                            <text x="0" y="-6" text-anchor="middle" font-size="11" font-weight="700" fill="#C3009D" font-family="Poppins, sans-serif" class="home-logo-text-1" dominant-baseline="middle">Graphix</text>
-                            <text x="0" y="6" text-anchor="middle" font-size="11" font-weight="700" fill="#00d4ff" font-family="Poppins, sans-serif" class="home-logo-text-2" dominant-baseline="middle">Pixel</text>
-                        </g>
-
-                        <!-- ── PHOTO ICON (top-left corner) ── -->
-                        <g class="home-photo" transform="translate(120, 90)">
-                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
-                            <circle cx="15" cy="12" r="5" fill="#00d4ff"/>
-                            <path d="M8,25 L20,18 L32,28 L42,20" stroke="#fff" stroke-width="2" fill="none"/>
-                            <rect y="35" width="50" height="2" fill="#C3009D"/>
-                        </g>
-
-                        <!-- ── VIDEO ICON (top-right corner) ── -->
-                        <g class="home-video" transform="translate(360, 90)">
-                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
-                            <circle cx="25" cy="20" r="12" fill="none" stroke="#fff" stroke-width="1.5"/>
-                            <polygon points="23,17 23,23 29,20" fill="#C3009D"/>
-                            <path d="M12,32 L38,32" stroke="#00d4ff" stroke-width="2"/>
-                        </g>
-
-                        <!-- ── 3D ICON (middle-left) ── -->
-                        <g class="home-3d" transform="translate(100, 160)">
-                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
-                            <!-- 3D cube -->
-                            <polygon points="18,15 32,15 32,29 18,29" fill="#00d4ff" opacity="0.6"/>
-                            <polygon points="18,15 25,8 39,8 32,15" fill="#4a90e2" opacity="0.8"/>
-                            <polygon points="32,15 39,8 39,22 32,29" fill="#C3009D" opacity="0.7"/>
-                        </g>
-
-                        <!-- ── RETOUCHING ICON (middle-right) ── -->
-                        <g class="home-retouch" transform="translate(380, 160)">
-                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
-                            <!-- Brush strokes -->
-                            <path d="M15,18 Q22,15 28,20" stroke="#00d4ff" stroke-width="2" fill="none"/>
-                            <path d="M18,26 Q25,23 32,28" stroke="#C3009D" stroke-width="2" fill="none"/>
-                            <circle cx="20" cy="35" r="3" fill="#ffd700"/>
-                            <circle cx="30" cy="32" r="3" fill="#ff6b35"/>
-                        </g>
-
-                        <!-- ── CLIPPING PATH ICON (bottom-left) ── -->
-                        <g class="home-clipping" transform="translate(130, 280)">
-                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
-                            <!-- Bezier path -->
-                            <path d="M15,20 Q18,15 25,18 T35,25" stroke="#00d4ff" stroke-width="2" fill="none"/>
-                            <circle cx="15" cy="20" r="2" fill="#C3009D"/>
-                            <circle cx="35" cy="25" r="2" fill="#C3009D"/>
-                            <circle cx="25" cy="32" r="2" fill="#ffd700"/>
-                        </g>
-
-                        <!-- ── COLOR GRADING ICON (bottom-right) ── -->
-                        <g class="home-color" transform="translate(370, 280)">
-                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
-                            <!-- Color swatches -->
-                            <rect x="10" y="10" width="10" height="10" rx="2" fill="#ff4444"/>
-                            <rect x="22" y="10" width="10" height="10" rx="2" fill="#ffaa00"/>
-                            <rect x="34" y="10" width="10" height="10" rx="2" fill="#44dd44"/>
-                            <rect x="10" y="25" width="10" height="10" rx="2" fill="#00aaff"/>
-                            <rect x="22" y="25" width="10" height="10" rx="2" fill="#C3009D"/>
-                            <rect x="34" y="25" width="10" height="10" rx="2" fill="#aa44ff"/>
-                        </g>
-
-                        <!-- ── FLOATING ELEMENT: LAYERS ── -->
-                        <g class="home-layers" transform="translate(50, 320)">
-                            <rect width="45" height="50" rx="4" fill="#4a4acf" stroke="#7a7add" stroke-width="1"/>
-                            <rect y="2" width="45" height="8" fill="#5a5add"/>
-                            <text x="22.5" y="11" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">Layers</text>
-                            <rect x="4" y="16" width="37" height="6" rx="1" fill="#6666ee" opacity="0.8"/>
-                            <rect x="4" y="24" width="37" height="6" rx="1" fill="#555" opacity="0.5"/>
-                            <rect x="4" y="32" width="37" height="6" rx="1" fill="#555" opacity="0.5"/>
-                        </g>
-
-                        <!-- ── FLOATING ELEMENT: ADJUSTMENTS ── -->
-                        <g class="home-adjustments" transform="translate(450, 320)">
-                            <rect width="45" height="50" rx="4" fill="#4a4acf" stroke="#7a7add" stroke-width="1"/>
-                            <rect y="2" width="45" height="8" fill="#5a5add"/>
-                            <text x="22.5" y="11" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">FX</text>
-                            <line x1="8" y1="24" x2="37" y2="24" stroke="#7a7add" stroke-width="1"/>
-                            <circle cx="22" cy="24" r="3" fill="#C3009D"/>
-                            <circle cx="20" cy="38" r="2" fill="#00d4ff"/>
-                            <circle cx="28" cy="36" r="2" fill="#ffd700"/>
-                        </g>
-
-                        <!-- ── ORBITING SERVICE ELEMENTS ── -->
-
-                        <!-- 1. Clipping Path Tool (top-left orbit) -->
-                        <g class="home-orbit home-orbit-1" transform="translate(150, 60)">
-                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
-                            <path d="M2,-6 L6,0 L2,6 L-2,0 Z" fill="#C3009D"/>
-                        </g>
-
-                        <!-- 2. Retouching Brush (top orbit) -->
-                        <g class="home-orbit home-orbit-2" transform="translate(260, 35)">
-                            <circle r="12" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <line x1="0" y1="-6" x2="0" y2="2" stroke="#00d4ff" stroke-width="2"/>
-                            <ellipse cx="0" cy="-8" rx="3" ry="4" fill="#00d4ff" opacity="0.7"/>
-                        </g>
-
-                        <!-- 3. Color Swatches (top-right orbit) -->
-                        <g class="home-orbit home-orbit-3" transform="translate(370, 60)">
-                            <circle r="12" fill="#1a1a88" stroke="#ffd700" stroke-width="1.5"/>
-                            <rect x="-5" y="-5" width="4" height="4" fill="#ff4444"/>
-                            <rect x="1" y="-5" width="4" height="4" fill="#ffaa00"/>
-                            <rect x="-5" y="1" width="4" height="4" fill="#00d4ff"/>
-                            <rect x="1" y="1" width="4" height="4" fill="#C3009D"/>
-                        </g>
-
-                        <!-- 4. Background Removal (right-top orbit) -->
-                        <g class="home-orbit home-orbit-4" transform="translate(410, 130)">
-                            <circle r="12" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="5" fill="none" stroke="#00ff88" stroke-width="1.5"/>
-                            <path d="M-3,-3 L3,3 M3,-3 L-3,3" stroke="#00ff88" stroke-width="1"/>
-                        </g>
-
-                        <!-- 5. Image Masking (right-bottom orbit) -->
-                        <g class="home-orbit home-orbit-5" transform="translate(400, 240)">
-                            <circle r="12" fill="#1a1a88" stroke="#ff6b35" stroke-width="1.5"/>
-                            <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#ff6b35" stroke-width="1.5"/>
-                            <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#ff6b35" stroke-width="1"/>
-                        </g>
-
-                        <!-- 6. Video Effects (bottom-right orbit) -->
-                        <g class="home-orbit home-orbit-6" transform="translate(330, 310)">
-                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
-                            <polygon points="0,-4 4,2 -4,2" fill="#C3009D"/>
-                            <circle cx="-4" cy="0" r="1.5" fill="#C3009D"/>
-                            <circle cx="4" cy="0" r="1.5" fill="#C3009D"/>
-                        </g>
-
-                        <!-- 7. 3D Rendering (bottom orbit) -->
-                        <g class="home-orbit home-orbit-7" transform="translate(260, 335)">
-                            <circle r="12" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <polygon points="-4,-3 0,-5 4,-3 2,3 -2,3" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
-                        </g>
-
-                        <!-- 8. Photo Enhancement (bottom-left orbit) -->
-                        <g class="home-orbit home-orbit-8" transform="translate(190, 310)">
-                            <circle r="12" fill="#1a1a88" stroke="#ffd700" stroke-width="1.5"/>
-                            <circle cx="-3" cy="-2" r="2" fill="#ffd700"/>
-                            <path d="M-5,3 L5,3" stroke="#ffd700" stroke-width="1.5"/>
-                            <path d="M-2,-4 L2,-4 L2,-1 L-2,-1 Z" fill="none" stroke="#ffd700" stroke-width="1"/>
-                        </g>
-
-                        <!-- 9. Quality Check (left orbit) -->
-                        <g class="home-orbit home-orbit-9" transform="translate(120, 240)">
-                            <circle r="12" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="6" fill="none" stroke="#00ff88" stroke-width="1.5"/>
-                            <path d="M-2,-1 L1,2 L3,-2" stroke="#00ff88" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                        </g>
-
-                        <!-- 10. Color Grading (left-top orbit) -->
-                        <g class="home-orbit home-orbit-10" transform="translate(130, 130)">
-                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
-                            <circle cx="-2" cy="-2" r="1.5" fill="#C3009D"/>
-                            <circle cx="2" cy="-2" r="1.5" fill="#C3009D"/>
-                            <circle cx="-2" cy="2" r="1.5" fill="#C3009D"/>
-                            <circle cx="2" cy="2" r="1.5" fill="#C3009D"/>
-                        </g>
-
-                        <!-- ── FLOATING DOTS ── -->
-                        <circle cx="90" cy="100" r="2.5" fill="#C3009D" opacity="0.6" class="home-dot1"/>
-                        <circle cx="450" cy="220" r="2" fill="#00d4ff" opacity="0.5" class="home-dot2"/>
-                        <circle cx="150" cy="350" r="2" fill="#C3009D" opacity="0.5" class="home-dot3"/>
-                        <circle cx="420" cy="200" r="2" fill="#ffd700" opacity="0.5" class="home-dot1"/>
-                        <circle cx="80" cy="280" r="1.5" fill="#00d4ff" opacity="0.4" class="home-dot2"/>
-
-                        <!-- ── ANIMATED SPARKLES ── -->
-                        <g class="home-sparkles">
-                            <circle cx="100" cy="80" r="1.5" fill="#ffd700" opacity="0.8" class="home-sparkle"/>
-                            <circle cx="420" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="home-sparkle"/>
-                            <circle cx="480" cy="160" r="1" fill="#C3009D" opacity="0.6" class="home-sparkle"/>
-                            <circle cx="450" cy="280" r="1.5" fill="#00d4ff" opacity="0.7" class="home-sparkle"/>
-                            <circle cx="50" cy="200" r="1" fill="#ffd700" opacity="0.6" class="home-sparkle"/>
-                            <circle cx="80" cy="320" r="1.5" fill="#00ff88" opacity="0.7" class="home-sparkle"/>
-                        </g>
-
-                    </svg>
+                <div class="home-svg-scene">
+                    <img src="https://arifbillahcse.github.io/graphicspixels/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Service" style="width: 140%; height: 120%; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
                 </div>
             </div>
         </div>
