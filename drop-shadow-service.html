@@ -34,59 +34,53 @@
         .ds-showcase {
             position: relative;
             width: 100%;
+            background-color: #fff;
             background-image: url('images/graphics-pixels-9.png');
-            background-size: cover;
-            background-position: center center;
+            background-size: 48%;
+            background-position: right center;
             background-repeat: no-repeat;
             overflow: hidden;
         }
-        .ds-showcase::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(to right, rgba(1,1,94,0.92) 0%, rgba(1,1,94,0.80) 50%, rgba(1,1,94,0.3) 100%);
-            z-index: 1;
-        }
         .ds-showcase-content {
             position: relative; z-index: 2;
-            max-width: 600px;
-            padding: 100px 0;
+            max-width: 52%;
+            padding: 80px 0;
         }
         .ds-showcase-eyebrow {
             display: inline-block;
-            background: rgba(255,255,255,0.15);
-            color: #fff; font-size: 12px; font-weight: 600;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
             letter-spacing: 1.5px; text-transform: uppercase;
             padding: 6px 16px; border-radius: 50px;
             margin-bottom: 20px;
-            backdrop-filter: blur(4px);
         }
         .ds-showcase-content h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 38px; font-weight: 700;
-            color: #fff; margin-bottom: 16px; line-height: 1.2;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
         }
         .ds-showcase-content .ds-lead {
             font-weight: 600; font-size: 15px;
-            color: rgba(255,255,255,0.9);
+            color: #111;
             margin-bottom: 14px; line-height: 1.6;
         }
         .ds-showcase-content p {
-            font-size: 15px; color: rgba(255,255,255,0.75);
+            font-size: 15px; color: #444;
             line-height: 1.75; margin-bottom: 32px;
         }
         .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
         @media (max-width: 768px) {
             .ds-showcase {
-                background-position: right center;
-            }
-            .ds-showcase::before {
-                background: rgba(1,1,94,0.88);
+                background-image: url('images/graphics-pixels-9.png');
+                background-size: 100%;
+                background-position: center top;
+                padding-top: calc(100vw * 0.65);
             }
             .ds-showcase-content {
-                padding: 60px 0;
                 max-width: 100%;
+                padding: 40px 0;
             }
-            .ds-showcase-content h2 { font-size: 28px; }
+            .ds-showcase-content h2 { font-size: 26px; }
         }
         .ba-divider {
             position: absolute; top: 0; bottom: 0; left: 50%;
