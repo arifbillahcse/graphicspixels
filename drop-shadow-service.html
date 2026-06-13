@@ -32,68 +32,70 @@
         .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
         /* ---- Showcase Banner Section ---- */
         .ds-showcase {
+            position: relative;
+            background: linear-gradient(135deg, #01015E 0%, #1a0a4a 40%, #2d0a6e 70%, #C3009D 100%);
+            overflow: hidden;
+            padding: 80px 0;
+        }
+        .ds-showcase-pattern {
+            position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+        }
+        .ds-showcase-pattern i {
+            position: absolute; opacity: 0.06; color: #fff;
+            animation: svcFloat var(--dur, 10s) ease-in-out var(--dl, 0s) infinite alternate;
+            transform: rotate(var(--rot, 0deg));
+        }
+        .ds-showcase-inner-wrap {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 60px;
             align-items: center;
-            min-height: auto;
         }
-        .ds-showcase-content {
-            background: #fff;
-            display: flex;
-            align-items: center;
-            padding: 60px 56px;
-            min-height: 400px;
+        .ds-showcase-content { position: relative; z-index: 2; }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: #fff; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
         }
-        .ds-showcase-inner { max-width: 520px; }
-        .ds-showcase-inner h2 {
+        .ds-showcase-content h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 32px; font-weight: 700;
-            color: var(--navy, #01015E);
-            margin-bottom: 16px; line-height: 1.2;
+            font-size: 38px; font-weight: 700;
+            color: #fff; margin-bottom: 16px; line-height: 1.2;
         }
-        .ds-showcase-inner .ds-lead {
+        .ds-showcase-content .ds-lead {
             font-weight: 600; font-size: 15px;
-            color: var(--navy, #01015E);
+            color: rgba(255,255,255,0.9);
             margin-bottom: 14px; line-height: 1.6;
         }
-        .ds-showcase-inner p {
-            font-size: 15px; color: #444;
+        .ds-showcase-content p {
+            font-size: 15px; color: rgba(255,255,255,0.75);
             line-height: 1.75; margin-bottom: 32px;
         }
         .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
         .ds-showcase-image {
-            background: linear-gradient(135deg, #5b9bde 0%, #a8c8f0 40%, #c5dff8 70%, #e0f0ff 100%);
+            position: relative; z-index: 2;
             display: flex; align-items: center; justify-content: center;
-            overflow: hidden; position: relative;
-            padding: 40px 20px;
-            min-height: 400px;
         }
         .ds-showcase-image img {
             width: 100%; height: auto;
             object-fit: contain;
             display: block;
-            max-height: 350px;
+            border-radius: 12px;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.4);
         }
-        @media (max-width: 768px) {
-            .ds-showcase {
+        @media (max-width: 900px) {
+            .ds-showcase-inner-wrap {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
-            .ds-showcase-image {
-                order: -1;
-                min-height: auto;
-                padding: 30px 20px;
-            }
-            .ds-showcase-image img {
-                width: 100%;
-                height: auto;
-                max-height: 300px;
-                object-fit: contain;
-            }
-            .ds-showcase-content {
-                padding: 40px 24px;
-                min-height: auto;
-            }
-            .ds-showcase-inner h2 { font-size: 26px; }
+            .ds-showcase-image { order: -1; }
+            .ds-showcase-image img { max-height: 320px; width: auto; max-width: 100%; margin: 0 auto; }
+            .ds-showcase-content h2 { font-size: 28px; }
+            .ds-showcase { padding: 50px 0; }
         }
         .ba-divider {
             position: absolute; top: 0; bottom: 0; left: 50%;
@@ -350,20 +352,35 @@
     </section>
 
     <!-- ============ SHOWCASE BANNER ============ -->
-    <section class="ds-showcase reveal" data-reveal="up">
-        <div class="ds-showcase-content">
-            <div class="ds-showcase-inner">
-                <h2>Drop Shadow Services</h2>
-                <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
-                <p>Drop Shadow Service gives digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement. Our shadows transform flat images into effective assets, whether you're working with promotional visuals or product photography.</p>
-                <div class="ds-showcase-actions">
-                    <a href="free-trial.html" class="btn btn-primary">Get Free Trial</a>
-                    <a href="contact.html" class="btn btn-outline">Learn More</a>
+    <section class="ds-showcase">
+        <div class="ds-showcase-pattern" aria-hidden="true">
+            <i class="fas fa-circle-half-stroke"  style="top:8%;left:2%;font-size:80px;--rot:-14deg;--dl:0s;--dur:9s"></i>
+            <i class="fas fa-sun"                 style="top:70%;left:8%;font-size:50px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
+            <i class="fas fa-droplet"             style="top:15%;left:35%;font-size:60px;--rot:-8deg;--dl:2s;--dur:8s"></i>
+            <i class="fas fa-layer-group"         style="top:55%;left:55%;font-size:70px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
+            <i class="fas fa-wand-magic-sparkles" style="top:5%;left:65%;font-size:54px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
+            <i class="fas fa-image"               style="top:80%;left:70%;font-size:42px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
+            <i class="fas fa-paint-roller"        style="top:40%;left:15%;font-size:44px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
+            <i class="fas fa-pen-nib"             style="top:10%;left:85%;font-size:66px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
+            <i class="fas fa-palette"             style="top:88%;left:45%;font-size:50px;--rot:10deg;--dl:1s;--dur:9s"></i>
+            <i class="fas fa-rotate"              style="top:45%;left:4%;font-size:38px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
+        </div>
+        <div class="container">
+            <div class="ds-showcase-inner-wrap">
+                <div class="ds-showcase-content reveal" data-reveal="left">
+                    <span class="ds-showcase-eyebrow">Photo Editing</span>
+                    <h2>Drop Shadow Services</h2>
+                    <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
+                    <p>Drop Shadow Service gives digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement.</p>
+                    <div class="ds-showcase-actions">
+                        <a href="free-trial.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="contact.html" class="btn btn-outline-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="ds-showcase-image reveal" data-reveal="right" data-delay="150">
+                    <img src="images/graphics-pixels-9.png" alt="Drop Shadow Service Product Example" loading="lazy">
                 </div>
             </div>
-        </div>
-        <div class="ds-showcase-image">
-            <img src="images/graphics-pixels-9.png" alt="Drop Shadow Service Product Example" loading="lazy">
         </div>
     </section>
 
