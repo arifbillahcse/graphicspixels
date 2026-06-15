@@ -38,26 +38,116 @@
             min-height: 400px;
             width: 100%;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
+            padding-right: 40px;
         }
         .home-svg-scene {
-            position: absolute;
-            right: 0;
-            top: 0;
+            position: relative;
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             overflow: visible;
-            padding-right: 0;
         }
         .home-svg-scene img {
-            max-width: none;
+            max-width: 100%;
+            height: auto;
             width: auto;
+            max-height: 100%;
         }
 
-        /* ── Free Trial Modal ── */
+        /* ── Floating Icons (Hero Section) ── */
+        .icon-orbit {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+        }
+        .orbit-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #fff;
+            background: #C3009D;
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 4px 16px rgba(195, 0, 157, 0.4);
+            z-index: 2;
+        }
+
+        /* Position icons on 4 sides */
+        .orbit-1 {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .orbit-2 {
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .orbit-3 {
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .orbit-4 {
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .orbit-1, .orbit-2 {
+            animation: float 3s ease-in-out infinite;
+        }
+        .orbit-3 {
+            left: -20px;
+            animation: floatSide 3s ease-in-out infinite;
+        }
+        .orbit-4 {
+            right: -20px;
+            animation: floatSide 3s ease-in-out infinite;
+        }
+
+        @keyframes floatSide {
+            0%, 100% { transform: translateY(-50%) translateX(0px); }
+            50% { transform: translateY(-50%) translateX(-12px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                padding-right: 20px;
+            }
+            .orbit-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+            .orbit-1 {
+                top: -15px;
+            }
+            .orbit-2 {
+                bottom: -15px;
+            }
+            .orbit-3 {
+                left: -15px;
+            }
+            .orbit-4 {
+                right: -15px;
+            }
+        }
+    </style>
         .trial-modal-overlay {
             position: fixed; inset: 0; z-index: 9999;
             background: rgba(0,0,0,0.65); backdrop-filter: blur(4px);
@@ -127,7 +217,13 @@
             <div class="hero-image reveal" data-reveal="right">
                 <div class="hero-image-glow"></div>
                 <div class="home-svg-scene">
-                    <img src="https://arifbillahcse.github.io/graphicspixels/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Service" style="width: 140%; height: 120%; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                    <div class="icon-orbit">
+                        <div class="orbit-icon orbit-1"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <div class="orbit-icon orbit-2"><i class="fas fa-pen-nib"></i></div>
+                        <div class="orbit-icon orbit-3"><i class="fas fa-paintbrush"></i></div>
+                        <div class="orbit-icon orbit-4"><i class="fas fa-eraser"></i></div>
+                    </div>
+                    <img src="https://arifbillahcse.github.io/graphicspixels/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Service" style="border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); position: relative; z-index: 1;">
                 </div>
             </div>
         </div>
