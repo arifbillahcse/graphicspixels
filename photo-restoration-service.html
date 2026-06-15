@@ -66,7 +66,7 @@
             width: auto;
         }
 
-        /* ── Orbiting Icons Animation (Hero Section Only) ── */
+        /* ── Floating Icons (Hero Section Only) ── */
         .pe-svg-scene {
             position: relative;
         }
@@ -79,46 +79,96 @@
         }
         .orbit-icon {
             position: absolute;
-            width: 44px;
-            height: 44px;
-            left: 50%;
-            top: 50%;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            color: #C3009D;
-            opacity: 0.8;
-            animation: orbit 6s linear infinite;
-            filter: drop-shadow(0 2px 8px rgba(195, 0, 157, 0.4));
+            font-size: 24px;
+            color: #fff;
+            background: #C3009D;
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 4px 16px rgba(195, 0, 157, 0.4);
+            z-index: 2;
         }
-        .orbit-1 { animation-delay: 0s; }
-        .orbit-2 { animation-delay: 1.5s; }
-        .orbit-3 { animation-delay: 3s; }
-        .orbit-4 { animation-delay: 4.5s; }
 
-        @keyframes orbit {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg) translateX(130px) rotate(0deg);
+        /* Position icons on 4 sides */
+        .orbit-1 {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0s;
+        }
+        .orbit-2 {
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0.5s;
+        }
+        .orbit-3 {
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation-delay: 1s;
+        }
+        .orbit-4 {
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
             }
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg) translateX(130px) rotate(-360deg);
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+        .orbit-1 {
+            animation: float 3s ease-in-out infinite;
+        }
+        .orbit-2 {
+            animation: float 3s ease-in-out infinite;
+        }
+        .orbit-3 {
+            top: 50%;
+            animation: floatSide 3s ease-in-out infinite;
+        }
+        .orbit-4 {
+            top: 50%;
+            animation: floatSide 3s ease-in-out infinite;
+        }
+
+        @keyframes floatSide {
+            0%, 100% {
+                transform: translateY(-50%) translateX(0px);
+            }
+            50% {
+                transform: translateY(-50%) translateX(-12px);
             }
         }
 
         @media (max-width: 768px) {
             .orbit-icon {
-                font-size: 16px;
-                width: 36px;
-                height: 36px;
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
             }
-            @keyframes orbit {
-                0% {
-                    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
-                }
-                100% {
-                    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
-                }
+            .orbit-1 {
+                top: -15px;
+            }
+            .orbit-2 {
+                bottom: -15px;
+            }
+            .orbit-3 {
+                left: -15px;
+            }
+            .orbit-4 {
+                right: -15px;
             }
         }
     </style>
