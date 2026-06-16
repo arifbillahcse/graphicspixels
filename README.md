@@ -1,210 +1,109 @@
-# Graphicspixels: Professional Photo Editing & High-End Retouching Experts
+# Graphics Pixels - Professional Photo Editing & Retouching Services
 
-## About Us
+Welcome to Graphics Pixels, a professional photo editing and retouching service provider.
 
-Expert Product Photo Editing & Retouching Services - Graphicspixels
+## About Graphics Pixels
 
-Transform your visuals with Graphicspixels. Specializing in eCommerce photo editing, jewelry retouching, and 3D rendering. Fast turnaround by a team of 120+ experts. Get your free trial now!
-
-### Quick Stats
-
-- **Team Members**: 120+
-- **Years of Experience**: 13+
-- **3D Projects Completed**: 5,000+
-- **Edited Images**: 1,000,000+
-
----
-
-## Our Vision
-
-At Graphicspixels, we believe that every image tells a story. We specialize in transforming ordinary photos into extraordinary visual assets. Our primary expertise lies in Professional Photo Editing, followed by Advanced Retouching, ensuring that every pixel is aligned with your brand's vision.
-
-With a dedicated team of 120+ specialists and over 13 years of experience, we have processed more than 1 million images for global brands, making us a powerhouse in the visual content industry.
-
----
-
-## Core Expertise: From Editing to 3D
-
-### Professional Photo Editing
-
-This is what we do best. We provide high-volume, high-quality photo editing services tailored for e-commerce, photographers, and marketing agencies.
-
-- **Clipping Path & Background Removal**: Precision-driven isolation of products.
-- **Image Masking**: Handling complex edges like hair, fur, or transparent objects.
-- **E-commerce Image Optimization**: Ready-to-use photos for Amazon, eBay, and Shopify.
-- **Ghost Mannequin & Neck Joint**: Creating a 3D effect for apparel photography.
-
----
-
-## Why Choose Graphicspixels?
-
-### Massive Capacity
-Having edited over 1,000,000+ images, we can handle any volume with ease.
-
-### Expert Team
-120+ creative minds working in our Dhaka-based production studio.
-
-### Fast Turnaround
-We understand the speed of business; we deliver high-quality results within your deadlines.
-
-### Global Trust
-Trusted by 1,500+ clients across the USA, UK, Canada, and Europe.
-
----
-
-## Our Story: The Evolution of Graphics Pixels
-
-### 2010 - The Foundation
-Started as a bold two-person vision in a bedroom studio, serving our first international client via referral.
-
-### 2012 - The First Milestone
-Reached 100+ active clients and expanded to 8 team members.
-
-### 2016 - Professional Expansion
-Moved into our Dhaka studio, establishing formal production workflows and quality control.
-
-### 2017 - Video Production
-Launched our video editing service to provide complete content pipelines for brands.
-
-### 2018 - 3D Innovation
-Officially started our 3D modeling division, investing in high-end workstations and software.
-
-### 2023 – Present - Global Powerhouse
-Now a globally recognized visual studio with a 120+ member team serving clients across the US, UK, Canada, and the EU.
-
----
-
-## Our Team
-
-Meet the minds behind the vision. Our team is our strength, made up of creative minds, skilled retouchers, and technical artists motivated by perfection. Every project is approached with care and dedication.
-
-### Administration
-- **Ajijul Haque** - Managing Director
-- **Muhammad Abdullah** - Chief Executive Officer
-- **Muntasir Mahmud Chowdhury** - General Manager
-
-### Marketing Leadership
-- **David Joy** - Head of Marketing
-- **MD. SAHAB UDDIN** - Marketing Manager
-- **MD. Munna Abir Hossan** - Digital Marketing Manager
-- **Mehraj Ome** - Marketing Manager
-
-### Production Excellence
-- **Md Nesar Uddin** - Production Manager
-- **Al-Amin** - Team Leader
-- **Md Sojib Alam** - Team Leader
-- **Tariqul** - Team Leader
-- **Mushlay Uddin Himel** - Quality Control (QC)
-- **Forhad Hossain Fahim** - Quality Control (QC)
-- **Md. Reyaj Hassan** - Quality Control (QC)
-
----
-
-## Work Environment
-
-We foster a culture of teamwork, innovation, and respect. Our workplace encourages creativity, supports growth, and values every voice, creating an environment where people and ideas thrive.
-
----
-
-## Client Testimonials
-
-Our clients from photographers, business owners, and eCommerce brands trust us with their visual content:
-- ⭐⭐⭐⭐⭐ Tyrell Scott
-- ⭐⭐⭐⭐⭐ Seb Chandler
-- ⭐⭐⭐⭐⭐ Andrew Porfyri
-- ⭐⭐⭐⭐⭐ Saville Coble
-
----
-
-## Our Portfolio
-
-Ready to transform your visual identity? Don't wait to give your brand the visual edge it deserves. Let's collaborate and bring your ideas to life with precision and style.
-
-**Start Your Free Trial →**
-
----
-
----
+Graphics Pixels is a dedicated team of photo editing and retouching experts specializing in:
+- Professional photo editing and retouching
+- E-commerce image editing
+- Product photography enhancement
+- Image manipulation and restoration
+- Quality visual content creation
 
 ## Website Features
 
-### 🎨 Modern UI/UX
-- Professional, responsive design with navy blue (#01015E) and magenta (#C3009D) branding
-- Smooth animations and transitions using CSS keyframes
-- Interactive before/after image comparison sliders on service pages
-- Floating icons with custom animations on hero sections
+### 🎨 Service Pages
+The website showcases our expertise across multiple specialized services:
+- Clipping Path Service
+- Photo Retouching Service
+- Ghost Mannequin Service
+- Headshot Photo Editing
+- Background Removal Service
+- Color Correction Service
+- Drop Shadow Service
+- Image Masking Service
+- E-commerce Image Editing
+- Photo Restoration Service
+- AI-generated Image Fixes
 
-### 📱 Mobile Responsive
-- Fully responsive design optimized for all device sizes (320px - 1920px+)
-- Touch-friendly interactive elements
-- Responsive navigation with hamburger menu for mobile
-- Optimized images and typography for mobile viewing
-- Mobile-first CSS approach
+### 📱 Responsive Design
+- Fully mobile-responsive website optimized for all devices
+- Touch-friendly interface for mobile users
+- Adaptive layouts for tablets and desktops
+- Fast loading and optimized images
 
-### 🚀 Key Pages & Features
-- **Home Page (index.html)**: Hero section with animated floating icons and service overview
-- **Service Pages**: 11+ specialized service pages with before/after comparisons
-  - Clipping Path Service
-  - Photo Retouching Service
-  - Ghost Mannequin Service
-  - Headshot Photo Editing
-  - Background Removal Service
-  - Color Correction Service
-  - Drop Shadow Service
-  - Image Masking Service
-  - E-commerce Image Editing
-  - Photo Restoration Service
-  - AI-generated Image Fixes
-- **Portfolio Pages**: Showcase of completed projects with grid layout
-- **About Us Page**: Company history and team information
-- **Contact Page**: Contact form with file upload capability
-- **Pricing Page**: Service pricing information
-- **Free Trial Page**: Free trial registration with modal popup
+### 🎯 Interactive Elements
+- Before/After image comparison sliders on service pages
+- Free trial registration modal
+- Contact form for inquiries
+- Portfolio showcase of completed projects
+- Video testimonials section
 
-### 💬 Customer Engagement
-- **WhatsApp Chat Button**: Fixed position on left side with pulse and ripple animations
-  - Instantly connect customers to WhatsApp
-  - Phone: +880 1890-373731
-  - Visible on all pages with eye-catching animations
-
-### 🎯 Interactive Features
-- Free trial modal popup triggered by "Free Trial" links throughout the site
-- Video testimonials section with carousel navigation
-- Smooth scrolling and page transitions
-- Dropdown menus for service categories
-- Back-to-top button with smooth scroll behavior
-
-### 🎬 Animations & Effects
-- Floating icons with subtle bob animation
-- Pulse and ripple effects on WhatsApp button
-- Hover effects on cards and buttons with transform transitions
-- Timeline animations for process steps
-- Modal fade-in animations with backdrop blur
-
-### 📊 Performance & Accessibility
-- Font Awesome 6.5.1 for consistent iconography
-- Google Fonts (Poppins + Inter) for typography
-- CSS variables for consistent theming and easy maintenance
-- Semantic HTML structure
-- ARIA labels for accessibility
-
----
+### 💬 Customer Support
+- WhatsApp chat button for instant communication
+- Contact page for email inquiries
+- Free trial program
+- Easy-to-use contact forms
 
 ## Technology Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-- **Fonts**: Poppins (headings), Inter (body text)
-- **Icons**: Font Awesome 6.5.1
-- **CSS Features**: CSS Grid, Flexbox, CSS Variables, CSS Animations, Media Queries
-- **Browser Support**: All modern browsers (Chrome, Firefox, Safari, Edge)
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with animations and responsive design
+- **JavaScript** - Interactive features and animations
+- **Font Awesome** - Icon library
+- **Google Fonts** - Typography (Poppins & Inter)
+
+## Project Structure
+
+```
+/
+├── index.html                          # Home page
+├── css/
+│   └── style.css                       # Main stylesheet
+├── js/
+│   ├── script.js                       # Main JavaScript
+│   └── home-animations.js              # Home page animations
+├── components/
+│   ├── header.html                     # Header component
+│   ├── footer.html                     # Footer component
+│   └── load-components.js              # Component loader
+├── images/                             # Images and assets
+└── [service-pages].html                # Individual service pages
+```
+
+## Pages
+
+- **Home** - Main landing page with service overview
+- **Service Pages** - Detailed information for each service with before/after examples
+- **Portfolio** - Showcase of completed projects
+- **About Us** - Company information
+- **Contact** - Get in touch form
+- **Pricing** - Service pricing information
+- **Free Trial** - Free trial registration page
+
+## Contact Information
+
+**Address:** Unit 4, Storm 12 Plaza Shopping Centre, 54 St Marys Road, Southampton, United Kingdom, SO14 0BH
+
+**Email:** info@graphicspixels.com
+
+**Phone:** +44 7462 284915
+
+**WhatsApp:** +880 1890-373731
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## License
+
+All rights reserved © Graphics Pixels 2013-2026
 
 ---
 
-## Contact & Support
-
-- **Email**: info@graphicspixels.com
-- **Phone**: +44 7462 284915
-- **Location**: Unit 4, Storm 12 Plaza Shopping Centre, 54 St Marys Road, Southampton, United Kingdom, SO14 0BH
-- **WhatsApp**: +880 1890-373731
-
-For more information, visit our website or contact us today!
+For more information, visit [graphicspixels.com](https://graphicspixels.com)
