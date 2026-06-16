@@ -124,4 +124,87 @@ Ready to transform your visual identity? Don't wait to give your brand the visua
 
 ---
 
+---
+
+## Website Features
+
+### 🎨 Modern UI/UX
+- Professional, responsive design with navy blue (#01015E) and magenta (#C3009D) branding
+- Smooth animations and transitions using CSS keyframes
+- Interactive before/after image comparison sliders on service pages
+- Floating icons with custom animations on hero sections
+
+### 📱 Mobile Responsive
+- Fully responsive design optimized for all device sizes (320px - 1920px+)
+- Touch-friendly interactive elements
+- Responsive navigation with hamburger menu for mobile
+- Optimized images and typography for mobile viewing
+- Mobile-first CSS approach
+
+### 🚀 Key Pages & Features
+- **Home Page (index.html)**: Hero section with animated floating icons and service overview
+- **Service Pages**: 11+ specialized service pages with before/after comparisons
+  - Clipping Path Service
+  - Photo Retouching Service
+  - Ghost Mannequin Service
+  - Headshot Photo Editing
+  - Background Removal Service
+  - Color Correction Service
+  - Drop Shadow Service
+  - Image Masking Service
+  - E-commerce Image Editing
+  - Photo Restoration Service
+  - AI-generated Image Fixes
+- **Portfolio Pages**: Showcase of completed projects with grid layout
+- **About Us Page**: Company history and team information
+- **Contact Page**: Contact form with file upload capability
+- **Pricing Page**: Service pricing information
+- **Free Trial Page**: Free trial registration with modal popup
+
+### 💬 Customer Engagement
+- **WhatsApp Chat Button**: Fixed position on left side with pulse and ripple animations
+  - Instantly connect customers to WhatsApp
+  - Phone: +880 1890-373731
+  - Visible on all pages with eye-catching animations
+
+### 🎯 Interactive Features
+- Free trial modal popup triggered by "Free Trial" links throughout the site
+- Video testimonials section with carousel navigation
+- Smooth scrolling and page transitions
+- Dropdown menus for service categories
+- Back-to-top button with smooth scroll behavior
+
+### 🎬 Animations & Effects
+- Floating icons with subtle bob animation
+- Pulse and ripple effects on WhatsApp button
+- Hover effects on cards and buttons with transform transitions
+- Timeline animations for process steps
+- Modal fade-in animations with backdrop blur
+
+### 📊 Performance & Accessibility
+- Font Awesome 6.5.1 for consistent iconography
+- Google Fonts (Poppins + Inter) for typography
+- CSS variables for consistent theming and easy maintenance
+- Semantic HTML structure
+- ARIA labels for accessibility
+
+---
+
+## Technology Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
+- **Fonts**: Poppins (headings), Inter (body text)
+- **Icons**: Font Awesome 6.5.1
+- **CSS Features**: CSS Grid, Flexbox, CSS Variables, CSS Animations, Media Queries
+- **Browser Support**: All modern browsers (Chrome, Firefox, Safari, Edge)
+
+---
+
+## Contact & Support
+
+- **Email**: info@graphicspixels.com
+- **Phone**: +44 7462 284915
+- **Location**: Unit 4, Storm 12 Plaza Shopping Centre, 54 St Marys Road, Southampton, United Kingdom, SO14 0BH
+- **WhatsApp**: +880 1890-373731
+
 For more information, visit our website or contact us today!
