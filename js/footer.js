@@ -61,4 +61,46 @@
         }
     });
 
+    /* ── Free Trial Modal (triggered by href="#free-trial" links) ── */
+    var overlay = document.getElementById('trialModalOverlay');
+    var closeBtn = document.getElementById('trialModalClose');
+
+    if (overlay && closeBtn) {
+        function openModal(e) {
+            e.preventDefault();
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Intercept all links pointing to #free-trial
+        document.querySelectorAll('a[href="#free-trial"]').forEach(function (el) {
+            el.addEventListener('click', openModal);
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close on backdrop click
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) closeModal();
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // File input label update
+        var modalFile = document.getElementById('modal-file-input');
+        if (modalFile) {
+            modalFile.addEventListener('change', function () {
+                var label = modalFile.parentElement.querySelector('.file-name');
+                if (label) label.textContent = modalFile.files[0] ? modalFile.files[0].name : 'No file chosen';
+            });
+        }
+    }
+
 })();

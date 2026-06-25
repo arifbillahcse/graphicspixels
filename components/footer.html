@@ -59,3 +59,46 @@
 </footer>
 
 <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ============ FREE TRIAL MODAL (loaded on all pages) ============ -->
+<div class="trial-modal-overlay" id="trialModalOverlay" role="dialog" aria-modal="true" aria-label="Free Trial Form">
+    <div class="trial-modal" id="trialModal">
+        <button class="trial-modal-close" id="trialModalClose" aria-label="Close modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="trial-modal-head">
+            <span class="trial-modal-tag">Get Started</span>
+            <h2 class="trial-modal-title">Get Your Free Trial</h2>
+        </div>
+        <form class="free-trial-form" id="modal-trial-form">
+            <div class="form-row">
+                <input type="text" placeholder="Your Name*" required>
+                <input type="email" placeholder="Add Email*" required>
+            </div>
+            <div class="form-row">
+                <input type="tel" placeholder="Phone*" required>
+                <input type="url" placeholder="Website">
+            </div>
+            <select required>
+                <option value="" disabled selected>Select The Service</option>
+                <option>Clipping Path</option>
+                <option>Ghost Mannequin &amp; Neck Joint</option>
+                <option>Photo Retouching</option>
+                <option>Background Removal</option>
+                <option>Color Correction</option>
+                <option>Image Masking</option>
+                <option>3D Service</option>
+                <option>Video Editing</option>
+            </select>
+            <textarea placeholder="Your message" rows="3"></textarea>
+            <div class="file-upload">
+                <label for="modal-file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                <input type="file" id="modal-file-input">
+                <span class="file-name">No file chosen</span>
+            </div>
+            <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+            <input type="url" placeholder="Paste the link here (URL)">
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+    </div>
+</div>
