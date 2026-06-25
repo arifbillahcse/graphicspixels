@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Pixels | Professional Photo Editing & Retouching Services</title>
+    <meta name="description" content="Complete Image Editing, Video, and 3D Solutions in One Place. Outsource your photo clipping path, retouching and post-production work to Graphics Pixels.">
+
+    <!-- Google Fonts: Poppins + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+</head>
+<body>
+
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shape"></div>
+        <div class="container hero-container">
+            <div class="hero-content reveal" data-reveal="left">
+                <span class="hero-eyebrow">Meet Graphics Pixels</span>
+                <h1 class="hero-title">Your Photo Retouching &amp; Post-Production Service Partner</h1>
+                <p class="hero-subtitle">Complete Image Editing, Video, and 3D Solutions in One Place</p>
+                <p class="hero-text">
+                    No time for post-production? Outsource your photo clipping path, retouching and
+                    post-production work to Graphics Pixels and focus on growing your brand. From simple
+                    white backgrounds to complex ghost mannequins, we deliver pixel-perfect editing that
+                    makes your product photography stand out.
+                </p>
+                <div class="hero-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-outline">Get A Free Quote</a>
+                </div>
+            </div>
+            <div class="hero-image reveal" data-reveal="right">
+                <div class="hero-image-glow"></div>
+                <div class="home-svg-scene" aria-hidden="true">
+                    <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" class="home-svg">
+
+                        <!-- Defs: Gradients & Filters -->
+                        <defs>
+                            <radialGradient id="homeGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
+                            </radialGradient>
+                            <filter id="homeSoftGlow">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="homeMagentaGlow">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="home3dGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#C3009D"/>
+                                <stop offset="100%" stop-color="#4a90e2"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background Glow -->
+                        <ellipse cx="260" cy="140" rx="220" ry="150" fill="url(#homeGlow)" class="home-pulse"/>
+
+                        <!-- ── CENTRAL WORKSPACE (monitor) ── -->
+                        <g class="home-monitor">
+                            <rect x="80" y="60" width="360" height="200" rx="16" fill="#4a4acf" stroke="#7a7add" stroke-width="2.5"/>
+                            <rect x="92" y="75" width="336" height="170" rx="12" fill="#1a1a99"/>
+                            <!-- Screen content: gradient background -->
+                            <defs><linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a2aaa"/><stop offset="100%" stop-color="#3a3acc"/></linearGradient></defs>
+                            <rect x="92" y="75" width="336" height="170" fill="url(#screenGrad)" opacity="0.8"/>
+
+                            <!-- ── CENTRAL LOGO WITH DIAMOND & RED CIRCLE ── -->
+                            <!-- Red circle (outer) -->
+                            <circle cx="260" cy="160" r="48" fill="none" stroke="#ff3366" stroke-width="2.5" opacity="0.8" class="home-center-red-circle"/>
+
+                            <!-- Diamond shape (rotating) -->
+                            <g class="home-center-diamond" transform="translate(260, 160)">
+                                <polygon points="0,-35 25,-10 0,15 -25,-10" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.7"/>
+                            </g>
+
+                            <!-- Central logo -->
+                            <g class="home-center-logo" transform="translate(260, 160)">
+                                <circle r="32" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#homeMagentaGlow)"/>
+                                <image href="images/gp-logo.png" x="-22" y="-22" width="44" height="44" class="home-center-logo-img"/>
+                            </g>
+                        </g>
+
+                        <!-- ── GRAPHICS PIXELS LOGO (center-left, larger) ── -->
+                        <g class="home-logo-icon" transform="translate(90, 160)">
+                            <circle r="26" fill="#1a1a88" stroke="#C3009D" stroke-width="3" filter="url(#homeMagentaGlow)"/>
+                            <text x="0" y="-6" text-anchor="middle" font-size="11" font-weight="700" fill="#C3009D" font-family="Poppins, sans-serif" class="home-logo-text-1" dominant-baseline="middle">Graphix</text>
+                            <text x="0" y="6" text-anchor="middle" font-size="11" font-weight="700" fill="#00d4ff" font-family="Poppins, sans-serif" class="home-logo-text-2" dominant-baseline="middle">Pixel</text>
+                        </g>
+
+                        <!-- ── PHOTO ICON (top-left corner) ── -->
+                        <g class="home-photo" transform="translate(120, 90)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <circle cx="15" cy="12" r="5" fill="#00d4ff"/>
+                            <path d="M8,25 L20,18 L32,28 L42,20" stroke="#fff" stroke-width="2" fill="none"/>
+                            <rect y="35" width="50" height="2" fill="#C3009D"/>
+                        </g>
+
+                        <!-- ── VIDEO ICON (top-right corner) ── -->
+                        <g class="home-video" transform="translate(360, 90)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <circle cx="25" cy="20" r="12" fill="none" stroke="#fff" stroke-width="1.5"/>
+                            <polygon points="23,17 23,23 29,20" fill="#C3009D"/>
+                            <path d="M12,32 L38,32" stroke="#00d4ff" stroke-width="2"/>
+                        </g>
+
+                        <!-- ── 3D ICON (middle-left) ── -->
+                        <g class="home-3d" transform="translate(100, 160)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- 3D cube -->
+                            <polygon points="18,15 32,15 32,29 18,29" fill="#00d4ff" opacity="0.6"/>
+                            <polygon points="18,15 25,8 39,8 32,15" fill="#4a90e2" opacity="0.8"/>
+                            <polygon points="32,15 39,8 39,22 32,29" fill="#C3009D" opacity="0.7"/>
+                        </g>
+
+                        <!-- ── RETOUCHING ICON (middle-right) ── -->
+                        <g class="home-retouch" transform="translate(380, 160)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- Brush strokes -->
+                            <path d="M15,18 Q22,15 28,20" stroke="#00d4ff" stroke-width="2" fill="none"/>
+                            <path d="M18,26 Q25,23 32,28" stroke="#C3009D" stroke-width="2" fill="none"/>
+                            <circle cx="20" cy="35" r="3" fill="#ffd700"/>
+                            <circle cx="30" cy="32" r="3" fill="#ff6b35"/>
+                        </g>
+
+                        <!-- ── CLIPPING PATH ICON (bottom-left) ── -->
+                        <g class="home-clipping" transform="translate(130, 280)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- Bezier path -->
+                            <path d="M15,20 Q18,15 25,18 T35,25" stroke="#00d4ff" stroke-width="2" fill="none"/>
+                            <circle cx="15" cy="20" r="2" fill="#C3009D"/>
+                            <circle cx="35" cy="25" r="2" fill="#C3009D"/>
+                            <circle cx="25" cy="32" r="2" fill="#ffd700"/>
+                        </g>
+
+                        <!-- ── COLOR GRADING ICON (bottom-right) ── -->
+                        <g class="home-color" transform="translate(370, 280)">
+                            <rect width="50" height="50" rx="6" fill="#6666ee" stroke="#7a7add" stroke-width="1.5"/>
+                            <!-- Color swatches -->
+                            <rect x="10" y="10" width="10" height="10" rx="2" fill="#ff4444"/>
+                            <rect x="22" y="10" width="10" height="10" rx="2" fill="#ffaa00"/>
+                            <rect x="34" y="10" width="10" height="10" rx="2" fill="#44dd44"/>
+                            <rect x="10" y="25" width="10" height="10" rx="2" fill="#00aaff"/>
+                            <rect x="22" y="25" width="10" height="10" rx="2" fill="#C3009D"/>
+                            <rect x="34" y="25" width="10" height="10" rx="2" fill="#aa44ff"/>
+                        </g>
+
+                        <!-- ── FLOATING ELEMENT: LAYERS ── -->
+                        <g class="home-layers" transform="translate(50, 320)">
+                            <rect width="45" height="50" rx="4" fill="#4a4acf" stroke="#7a7add" stroke-width="1"/>
+                            <rect y="2" width="45" height="8" fill="#5a5add"/>
+                            <text x="22.5" y="11" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">Layers</text>
+                            <rect x="4" y="16" width="37" height="6" rx="1" fill="#6666ee" opacity="0.8"/>
+                            <rect x="4" y="24" width="37" height="6" rx="1" fill="#555" opacity="0.5"/>
+                            <rect x="4" y="32" width="37" height="6" rx="1" fill="#555" opacity="0.5"/>
+                        </g>
+
+                        <!-- ── FLOATING ELEMENT: ADJUSTMENTS ── -->
+                        <g class="home-adjustments" transform="translate(450, 320)">
+                            <rect width="45" height="50" rx="4" fill="#4a4acf" stroke="#7a7add" stroke-width="1"/>
+                            <rect y="2" width="45" height="8" fill="#5a5add"/>
+                            <text x="22.5" y="11" text-anchor="middle" font-size="7" font-weight="600" fill="#fff">FX</text>
+                            <line x1="8" y1="24" x2="37" y2="24" stroke="#7a7add" stroke-width="1"/>
+                            <circle cx="22" cy="24" r="3" fill="#C3009D"/>
+                            <circle cx="20" cy="38" r="2" fill="#00d4ff"/>
+                            <circle cx="28" cy="36" r="2" fill="#ffd700"/>
+                        </g>
+
+                        <!-- ── ORBITING SERVICE ELEMENTS ── -->
+
+                        <!-- 1. Clipping Path Tool (top-left orbit) -->
+                        <g class="home-orbit home-orbit-1" transform="translate(150, 60)">
+                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
+                            <path d="M2,-6 L6,0 L2,6 L-2,0 Z" fill="#C3009D"/>
+                        </g>
+
+                        <!-- 2. Retouching Brush (top orbit) -->
+                        <g class="home-orbit home-orbit-2" transform="translate(260, 35)">
+                            <circle r="12" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <line x1="0" y1="-6" x2="0" y2="2" stroke="#00d4ff" stroke-width="2"/>
+                            <ellipse cx="0" cy="-8" rx="3" ry="4" fill="#00d4ff" opacity="0.7"/>
+                        </g>
+
+                        <!-- 3. Color Swatches (top-right orbit) -->
+                        <g class="home-orbit home-orbit-3" transform="translate(370, 60)">
+                            <circle r="12" fill="#1a1a88" stroke="#ffd700" stroke-width="1.5"/>
+                            <rect x="-5" y="-5" width="4" height="4" fill="#ff4444"/>
+                            <rect x="1" y="-5" width="4" height="4" fill="#ffaa00"/>
+                            <rect x="-5" y="1" width="4" height="4" fill="#00d4ff"/>
+                            <rect x="1" y="1" width="4" height="4" fill="#C3009D"/>
+                        </g>
+
+                        <!-- 4. Background Removal (right-top orbit) -->
+                        <g class="home-orbit home-orbit-4" transform="translate(410, 130)">
+                            <circle r="12" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="5" fill="none" stroke="#00ff88" stroke-width="1.5"/>
+                            <path d="M-3,-3 L3,3 M3,-3 L-3,3" stroke="#00ff88" stroke-width="1"/>
+                        </g>
+
+                        <!-- 5. Image Masking (right-bottom orbit) -->
+                        <g class="home-orbit home-orbit-5" transform="translate(400, 240)">
+                            <circle r="12" fill="#1a1a88" stroke="#ff6b35" stroke-width="1.5"/>
+                            <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#ff6b35" stroke-width="1.5"/>
+                            <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#ff6b35" stroke-width="1"/>
+                        </g>
+
+                        <!-- 6. Video Effects (bottom-right orbit) -->
+                        <g class="home-orbit home-orbit-6" transform="translate(330, 310)">
+                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
+                            <polygon points="0,-4 4,2 -4,2" fill="#C3009D"/>
+                            <circle cx="-4" cy="0" r="1.5" fill="#C3009D"/>
+                            <circle cx="4" cy="0" r="1.5" fill="#C3009D"/>
+                        </g>
+
+                        <!-- 7. 3D Rendering (bottom orbit) -->
+                        <g class="home-orbit home-orbit-7" transform="translate(260, 335)">
+                            <circle r="12" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
+                            <polygon points="-4,-3 0,-5 4,-3 2,3 -2,3" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+                        </g>
+
+                        <!-- 8. Photo Enhancement (bottom-left orbit) -->
+                        <g class="home-orbit home-orbit-8" transform="translate(190, 310)">
+                            <circle r="12" fill="#1a1a88" stroke="#ffd700" stroke-width="1.5"/>
+                            <circle cx="-3" cy="-2" r="2" fill="#ffd700"/>
+                            <path d="M-5,3 L5,3" stroke="#ffd700" stroke-width="1.5"/>
+                            <path d="M-2,-4 L2,-4 L2,-1 L-2,-1 Z" fill="none" stroke="#ffd700" stroke-width="1"/>
+                        </g>
+
+                        <!-- 9. Quality Check (left orbit) -->
+                        <g class="home-orbit home-orbit-9" transform="translate(120, 240)">
+                            <circle r="12" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
+                            <circle cx="0" cy="0" r="6" fill="none" stroke="#00ff88" stroke-width="1.5"/>
+                            <path d="M-2,-1 L1,2 L3,-2" stroke="#00ff88" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- 10. Color Grading (left-top orbit) -->
+                        <g class="home-orbit home-orbit-10" transform="translate(130, 130)">
+                            <circle r="12" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
+                            <circle cx="-2" cy="-2" r="1.5" fill="#C3009D"/>
+                            <circle cx="2" cy="-2" r="1.5" fill="#C3009D"/>
+                            <circle cx="-2" cy="2" r="1.5" fill="#C3009D"/>
+                            <circle cx="2" cy="2" r="1.5" fill="#C3009D"/>
+                        </g>
+
+                        <!-- ── FLOATING DOTS ── -->
+                        <circle cx="90" cy="100" r="2.5" fill="#C3009D" opacity="0.6" class="home-dot1"/>
+                        <circle cx="450" cy="220" r="2" fill="#00d4ff" opacity="0.5" class="home-dot2"/>
+                        <circle cx="150" cy="350" r="2" fill="#C3009D" opacity="0.5" class="home-dot3"/>
+                        <circle cx="420" cy="200" r="2" fill="#ffd700" opacity="0.5" class="home-dot1"/>
+                        <circle cx="80" cy="280" r="1.5" fill="#00d4ff" opacity="0.4" class="home-dot2"/>
+
+                        <!-- ── ANIMATED SPARKLES ── -->
+                        <g class="home-sparkles">
+                            <circle cx="100" cy="80" r="1.5" fill="#ffd700" opacity="0.8" class="home-sparkle"/>
+                            <circle cx="420" cy="90" r="1.5" fill="#00ff88" opacity="0.7" class="home-sparkle"/>
+                            <circle cx="480" cy="160" r="1" fill="#C3009D" opacity="0.6" class="home-sparkle"/>
+                            <circle cx="450" cy="280" r="1.5" fill="#00d4ff" opacity="0.7" class="home-sparkle"/>
+                            <circle cx="50" cy="200" r="1" fill="#ffd700" opacity="0.6" class="home-sparkle"/>
+                            <circle cx="80" cy="320" r="1.5" fill="#00ff88" opacity="0.7" class="home-sparkle"/>
+                        </g>
+
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STATS SECTION ============ -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-card reveal" data-reveal="up">
+                <h3 class="stat-number" data-count="5" data-suffix="+">0</h3>
+                <p class="stat-label">Awards Rewarded</p>
+            </div>
+            <div class="stat-card reveal" data-reveal="up" data-delay="100">
+                <h3 class="stat-number" data-count="14" data-suffix="+">0</h3>
+                <p class="stat-label">Years of Experience</p>
+            </div>
+            <div class="stat-card reveal" data-reveal="up" data-delay="200">
+                <h3 class="stat-number" data-count="1800" data-suffix="+">0</h3>
+                <p class="stat-label">Completed Projects</p>
+            </div>
+            <div class="stat-card reveal" data-reveal="up" data-delay="300">
+                <h3 class="stat-number" data-count="1200" data-suffix="+">0</h3>
+                <p class="stat-label">Happy Clients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRUST / ABOUT SECTION ============ -->
+    <section class="trust" id="about">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">We Are Your Trusted Partner in Image Editing &amp; Post-Production Services</h2>
+                <p class="section-desc">
+                    Graphics Pixels have been providing all the photoshop editing for more than 10 years to many
+                    ecommerce companies, agencies &amp; studios. Simply order, reduce cost with fast turnaround time.
+                    Also, always grab big discounts on your bulk orders.
+                </p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card reveal" data-reveal="up">
+                    <div class="trust-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>100% Data Privacy</h3>
+                    <p>Your data's confidentiality is our utmost priority. We maintain the highest standard of data privacy for our image editing services.</p>
+                </div>
+                <div class="trust-card reveal" data-reveal="up" data-delay="150">
+                    <div class="trust-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Cost and Time Saving</h3>
+                    <p>Get our high-quality, pixel-perfect Photoshop editing services under your budget within a short time.</p>
+                </div>
+                <div class="trust-card reveal" data-reveal="up" data-delay="300">
+                    <div class="trust-icon"><i class="fas fa-images"></i></div>
+                    <h3>High-Quality Images</h3>
+                    <p>Our experts and dedicated team offer you high-quality images to increase your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW DOES IT WORK ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we've streamlined the process to make it effortless for you.</p>
+            </div>
+
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <!-- Step 1 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="how-number">1</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2">
+                            <i class="fas fa-pen-to-square"></i>
+                        </div>
+                        <div class="how-number">2</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Describe your edits and style preferences. Attach reference images if you have them.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="how-number">3</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your edited images are ready within 24 hours. Full quality, platform-ready.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <div class="how-number">4</div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request changes anytime. Unlimited revisions until your vision is exactly matched.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+
+            <!-- LEFT: Video Slider -->
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.vt-track -->
+
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide">
+                        <span class="vt-chevron vt-chevron-left"></span>
+                    </button>
+                    <span class="vt-counter">
+                        <span id="vtCurrent">1</span>
+                        <em>/</em>
+                        <span id="vtTotal">4</span>
+                    </span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide">
+                        <span class="vt-chevron vt-chevron-right"></span>
+                    </button>
+                </div>
+            </div><!-- /.vt-left -->
+
+            <!-- RIGHT: Content -->
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What Photographers, Business Owners, and Ecommerce Brands Say About Our Photo Retouching &amp; Post-Production Services
+                </h2>
+
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                    </button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                    </button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                    </button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                </div>
+
+                <a href="#portfolio" class="vt-cta">
+                    OUR PORTFOLIO
+                    <span class="vt-cta-arrow"></span>
+                </a>
+            </div><!-- /.vt-right -->
+
+        </div><!-- /.vt-wrap -->
+
+        <!-- YouTube Modal -->
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                    <span class="vt-close-icon"></span>
+                </button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Our Portfolio</span>
+                <h2 class="section-title">Graphics Pixels Offers You</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Clipping Path -->
+                <article class="service-card reveal" data-reveal="up">
+                    <div class="service-image" data-image="images/home/1_Clipping-Path-Services-1-945x1024.png" data-title="Clipping Path Services">
+                        <img src="images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Services example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
+                    <h3>Clipping Path Services</h3>
+                    <p class="service-tagline">Precision Meets Scale</p>
+                    <p>Hand-cutting paths for Amazon or high-end e-commerce isn't just about removing backgrounds—it's about pixel-perfect edges. For 13+ years, we've delivered flawless results that hold up even at full zoom.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 100% Manual Pen Tool — no AI, no shortcuts</li>
+                        <li><i class="fas fa-check"></i> Up to 4,000 images processed per day</li>
+                        <li><i class="fas fa-check"></i> Triple-layer QC on every batch</li>
+                        <li><i class="fas fa-check"></i> NDA-compliant, fully secure workflow</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Ghost Mannequin -->
+                <article class="service-card reveal" data-reveal="up" data-delay="100">
+                    <div class="service-image" data-image="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" data-title="Ghost Mannequin & Neck Joint Services">
+                        <img src="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" alt="Ghost Mannequin & Neck Joint example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-shirt"></i></div>
+                    <h3>Ghost Mannequin &amp; Neck Joint</h3>
+                    <p class="service-tagline">Bringing Shape and Life to Garments</p>
+                    <p>Ghost mannequin editing is about more than removal—it's about expert reconstruction. We help fashion brands in the EU and US create natural, full-bodied garment images that look worn, even without a model.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Seamless neckline rejoining &amp; sleeve positioning</li>
+                        <li><i class="fas fa-check"></i> Crease elimination &amp; color balancing</li>
+                        <li><i class="fas fa-check"></i> 3-stage quality review</li>
+                        <li><i class="fas fa-check"></i> High-volume seasonal batch reliability</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Photo Retouching -->
+                <article class="service-card reveal" data-reveal="up" data-delay="200">
+                    <div class="service-image" data-image="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" data-title="Premium Photo Retouching Services">
+                        <img src="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" alt="Premium Photo Retouching example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>Premium Photo Retouching</h3>
+                    <p class="service-tagline">Clean, Natural &amp; Sales-Focused</p>
+                    <p>High-quality retouching is about building trust. For 13+ years, we've helped global brands deliver "retail-ready" images that are honest, consistent, and visually compelling.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Skin correction, color grading &amp; cleanup</li>
+                        <li><i class="fas fa-check"></i> Natural, restrained, never over-processed</li>
+                        <li><i class="fas fa-check"></i> Batch consistency up to 500+ files</li>
+                        <li><i class="fas fa-check"></i> 24–48 hour fast turnaround</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Background Removal -->
+                <article class="service-card reveal" data-reveal="up" data-delay="300">
+                    <div class="service-image" data-image="images/home/4_Background-Removal-Services-1-945x1024.png" data-title="High-End Background Removal Services">
+                        <img src="images/home/4_Background-Removal-Services-1-945x1024.png" alt="High-End Background Removal example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-eraser"></i></div>
+                    <h3>High-End Background Removal</h3>
+                    <p class="service-tagline">Precision Tracing for Pro Results</p>
+                    <p>Automated tools often leave rough edges and artifacts. For 13+ years, we've focused on manual hand-editing to ensure every product image sits perfectly on its background.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 100% hand-edited, no AI guessing</li>
+                        <li><i class="fas fa-check"></i> Optimized for Amazon, Shopify, eBay, Etsy</li>
+                        <li><i class="fas fa-check"></i> 4,000 images daily, 24–48h turnaround</li>
+                        <li><i class="fas fa-check"></i> 3 levels of quality control</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+
+            <div class="services-cta reveal" data-reveal="up">
+                <a href="#services" class="btn btn-outline">See all Services</a>
+            </div>
+        </div>
+
+        <!-- Service Image Lightbox -->
+        <div class="lightbox" id="serviceLightbox">
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-container">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="lightbox-content">
+                    <img id="lightboxImage" src="" alt="Service image" class="lightbox-image">
+                    <h3 id="lightboxTitle" class="lightbox-title"></h3>
+                </div>
+                <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRICING SECTION ============ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Our Delivery Time &amp; Cost for Photo Editing Services</h2>
+                <p class="section-desc">
+                    Our standard delivery time is from 24 to 48 hours. However, if you need urgent delivery,
+                    we can provide it using our fastest delivery package.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card reveal" data-reveal="up">
+                    <h3 class="plan-name">Basic Plan</h3>
+                    <div class="plan-price">$0.29 <span>/ starting price</span></div>
+                    <p class="plan-for">For your 100–150 images order</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Quality checked perfectly</li>
+                        <li><i class="fas fa-check"></i> Simply upload and send the files</li>
+                        <li><i class="fas fa-check"></i> 24/7 support from us</li>
+                    </ul>
+                    <a href="#free-trial" class="btn btn-outline btn-block">Pricing Details</a>
+                </div>
+
+                <div class="pricing-card popular reveal" data-reveal="up" data-delay="150">
+                    <span class="popular-badge">Most Popular</span>
+                    <h3 class="plan-name">Standard</h3>
+                    <div class="plan-price">$0.69 <span>/ per image</span></div>
+                    <p class="plan-for">For your 150–600 images</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Quality ensured</li>
+                        <li><i class="fas fa-check"></i> Simply upload and send the files</li>
+                        <li><i class="fas fa-check"></i> Nonstop support from our experts</li>
+                    </ul>
+                    <a href="#free-trial" class="btn btn-primary btn-block">Pricing Details</a>
+                </div>
+
+                <div class="pricing-card reveal" data-reveal="up" data-delay="300">
+                    <h3 class="plan-name">Premium</h3>
+                    <div class="plan-price">$1.50 <span>/ per image</span></div>
+                    <p class="plan-for">For more than 600 images</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Quality ensured</li>
+                        <li><i class="fas fa-check"></i> Simple upload and send the files</li>
+                        <li><i class="fas fa-check"></i> Support team available 24 hours</li>
+                    </ul>
+                    <a href="#free-trial" class="btn btn-outline btn-block">Pricing Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL SECTION ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p>Complete the form, upload your images, and get your free trial project done in 1 hour.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-globe"></i> Global service</li>
+                    <li><i class="fas fa-bolt"></i> Fast turnaround</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
+                    <li><i class="fas fa-face-smile"></i> 100% client satisfaction</li>
+                    <li><i class="fas fa-microchip"></i> Cutting-edge technology</li>
+                    <li><i class="fas fa-cart-shopping"></i> Smooth ordering process</li>
+                    <li><i class="fas fa-gem"></i> Emphasis on perfection</li>
+                </ul>
+            </div>
+
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled selected>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Ghost Mannequin &amp; Neck Joint</option>
+                    <option>Photo Retouching</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option>Image Masking</option>
+                    <option>3D Service</option>
+                    <option>Video Editing</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">
+                    If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).
+                </p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/home-animations.js"></script>
+    <script src="components/load-components.js"></script>
+</body>
+</html>
