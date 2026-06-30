@@ -48,6 +48,72 @@
             font-size: 15px; color: var(--navy, #01015E);
             pointer-events: none;
         }
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('images/clipping path cover.png');
+            background-size: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: url('images/clipping path cover.png');
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                padding-top: 80vw;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 40px 20px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
     </style>
 </head>
 <body>
@@ -55,217 +121,17 @@
 
     <!-- ============ HEADER / NAVIGATION ============ -->
 
-    <!-- ============ PAGE HERO ============ -->
-    <section class="svc-hero">
-
-        <div class="svc-hero-pattern" aria-hidden="true">
-            <i class="fas fa-scissors"              style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
-            <i class="fas fa-pen-nib"               style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
-            <i class="fas fa-crop"                  style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
-            <i class="fas fa-object-group"          style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
-            <i class="fas fa-layer-group"           style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
-            <i class="fas fa-vector-square"         style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
-            <i class="fas fa-image"                 style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
-            <i class="fas fa-wand-magic-sparkles"   style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
-            <i class="fas fa-boxes-stacked"         style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
-            <i class="fas fa-bezier-curve"          style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
-            <i class="fas fa-check-double"          style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
-            <i class="fas fa-palette"               style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
-        </div>
-
-        <div class="container svc-hero-inner">
-            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
-                <span class="hero-eyebrow">Photo Editing</span>
-                <h1 class="svc-hero-title">Clipping Path<br>Service</h1>
-                <p class="svc-hero-text">
-                    Every path drawn by hand with the Photoshop pen tool — no automated selection,
-                    no batch processing. Clean, isolated subjects ready for any background, platform,
-                    or campaign. All complexity levels from simple product shapes to multi-part jewelry and lacework.
-                </p>
-                <ul class="svc-hero-icons">
-                    <li><i class="fas fa-pen-nib"></i> 100% manual pen tool</li>
-                    <li><i class="fas fa-scissors"></i> Every complexity level</li>
-                    <li><i class="fas fa-bolt"></i> 24–48 hr turnaround</li>
-                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
-                    <li><i class="fas fa-tag"></i> From $0.39/image</li>
-                    <li><i class="fas fa-boxes-stacked"></i> Bulk discounts available</li>
-                </ul>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
-                    <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
-                </div>
-            </div>
-            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
-                <div class="pe-svg-scene" aria-hidden="true">
-                    <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="pe-svg">
-
-                        <defs>
-                            <filter id="peCyanGlow">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="peMagentaGlow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <radialGradient id="peCircleGrad" cx="30%" cy="30%" r="70%">
-                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
-                                <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
-                            </radialGradient>
-                            <linearGradient id="clipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#01015E"/>
-                                <stop offset="50%" stop-color="#C3009D"/>
-                                <stop offset="100%" stop-color="#00ffff"/>
-                            </linearGradient>
-                            <!-- Checkerboard pattern for transparent BG -->
-                            <pattern id="checker" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect width="10" height="10" fill="#ccc" opacity="0.4"/>
-                                <rect x="10" y="10" width="10" height="10" fill="#ccc" opacity="0.4"/>
-                                <rect x="10" y="0" width="10" height="10" fill="#eee" opacity="0.4"/>
-                                <rect x="0" y="10" width="10" height="10" fill="#eee" opacity="0.4"/>
-                            </pattern>
-                        </defs>
-
-                        <!-- ── CANVAS (transparent BG half + solid BG half) ── -->
-                        <g class="pe-canvas">
-                            <!-- Transparent BG (checkerboard) half -->
-                            <rect x="90" y="50" width="148" height="220" rx="0" fill="url(#checker)" stroke="#888" stroke-width="2"/>
-                            <!-- Solid white BG half -->
-                            <rect x="238" y="50" width="152" height="220" rx="0" fill="#ffffff" stroke="#00ffff" stroke-width="2" opacity="0.9"/>
-                            <rect x="238" y="50" width="152" height="220" rx="0" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.5" class="pe-canvas-glow"/>
-
-                            <!-- Dividing line (path boundary) -->
-                            <line x1="238" y1="50" x2="238" y2="270" stroke="#C3009D" stroke-width="3" stroke-dasharray="6,4"/>
-
-                            <!-- Product silhouette (simple bottle shape) -->
-                            <ellipse cx="190" cy="160" rx="35" ry="60" fill="url(#clipGrad)" opacity="0.9" stroke="#00ffff" stroke-width="1.5"/>
-                            <ellipse cx="190" cy="95" rx="15" ry="10" fill="url(#clipGrad)" opacity="0.9" stroke="#00ffff" stroke-width="1.5"/>
-                            <!-- Same on white side -->
-                            <ellipse cx="315" cy="160" rx="35" ry="60" fill="url(#clipGrad)" opacity="0.9" stroke="#00ffff" stroke-width="1.5"/>
-                            <ellipse cx="315" cy="95" rx="15" ry="10" fill="url(#clipGrad)" opacity="0.9" stroke="#00ffff" stroke-width="1.5"/>
-
-                            <!-- ── GRAPHICS PIXELS LOGO CENTER ── -->
-                            <g class="pe-center-logo" transform="translate(240, 160)">
-                                <circle r="40" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.4" class="pe-center-logo-ring"/>
-                                <circle r="28" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#peMagentaGlow)"/>
-                                <image href="images/gp-logo.png" x="-20" y="-20" width="40" height="40" class="pe-center-logo-img"/>
-                            </g>
-                        </g>
-
-                        <!-- ── PEN TOOL ICON (top-left) ── -->
-                        <g class="pe-brightness" transform="translate(55, 110)">
-                            <circle r="28" fill="#1a1a88" stroke="#ffff00" stroke-width="2"/>
-                            <path d="M-8,8 L0,-10 L8,8 L0,4 Z" fill="#ffff00" opacity="0.8"/>
-                            <circle cx="0" cy="-10" r="3" fill="#ffff00" filter="url(#peCyanGlow)" class="pe-brightness-slider"/>
-                        </g>
-
-                        <!-- ── PATH ANCHOR POINTS (top-right) ── -->
-                        <g class="pe-saturation" transform="translate(425, 110)">
-                            <circle r="28" fill="#1a1a88" stroke="#ff00ff" stroke-width="2"/>
-                            <path d="M-12,-8 Q0,-16 12,-8 Q16,4 4,12 Q-4,16 -12,8 Q-16,-4 -12,-8" fill="none" stroke="#ff00ff" stroke-width="2" class="pe-saturation-slider"/>
-                            <circle cx="-12" cy="-8" r="3" fill="#ff00ff"/>
-                            <circle cx="12" cy="-8" r="3" fill="#ff00ff"/>
-                            <circle cx="4" cy="12" r="3" fill="#ff00ff"/>
-                        </g>
-
-                        <!-- ── LAYER ICON (bottom-left) ── -->
-                        <g class="pe-hue-wheel" transform="translate(55, 290)">
-                            <circle r="30" fill="#1a1a88" stroke="#00ffff" stroke-width="2"/>
-                            <rect x="-14" y="-16" width="28" height="8" rx="2" fill="#00ffff" opacity="0.8"/>
-                            <rect x="-14" y="-4" width="28" height="8" rx="2" fill="#00ffff" opacity="0.6"/>
-                            <rect x="-14" y="8" width="28" height="8" rx="2" fill="#00ffff" opacity="0.4"/>
-                        </g>
-
-                        <!-- ── SCISSORS ICON (bottom-right) ── -->
-                        <g class="pe-crop" transform="translate(418, 280)">
-                            <circle r="25" fill="#1a1a88" stroke="#00ff88" stroke-width="2"/>
-                            <circle cx="-8" cy="-8" r="6" fill="none" stroke="#00ff88" stroke-width="1.5"/>
-                            <circle cx="8" cy="8" r="6" fill="none" stroke="#00ff88" stroke-width="1.5"/>
-                            <line x1="-14" y1="14" x2="14" y2="-14" stroke="#00ff88" stroke-width="1.5"/>
-                            <line x1="-14" y1="-14" x2="14" y2="14" stroke="#00ff88" stroke-width="1.5" opacity="0.5"/>
-                        </g>
-
-                        <!-- ── BEFORE/AFTER LABELS ── -->
-                        <text x="155" y="45" text-anchor="middle" font-size="9" font-weight="700" fill="#888" font-family="Arial" letter-spacing="1">BEFORE</text>
-                        <text x="310" y="45" text-anchor="middle" font-size="9" font-weight="700" fill="#00ffff" font-family="Arial" letter-spacing="1">AFTER</text>
-
-                        <!-- ── DOTS ── -->
-                        <circle cx="150" cy="40" r="2.5" fill="#ff00ff" opacity="0.8" class="pe-dot1"/>
-                        <circle cx="350" cy="35" r="2" fill="#00ffff" opacity="0.7" class="pe-dot2"/>
-                        <circle cx="320" cy="300" r="2" fill="#ffff00" opacity="0.6" class="pe-dot3"/>
-                        <circle cx="100" cy="320" r="1.5" fill="#00ff88" opacity="0.5" class="pe-dot1"/>
-                        <circle cx="380" cy="330" r="2.5" fill="#ff6b00" opacity="0.7" class="pe-dot2"/>
-
-                        <!-- ── RAYS ── -->
-                        <g class="pe-rays" opacity="0.4">
-                            <line x1="240" y1="0" x2="240" y2="40" stroke="#C3009D" stroke-width="1.5"/>
-                            <line x1="200" y1="10" x2="220" y2="45" stroke="#00ffff" stroke-width="1.5"/>
-                            <line x1="280" y1="10" x2="260" y2="45" stroke="#ffff00" stroke-width="1.5"/>
-                        </g>
-
-                        <!-- ── ORBITING ICONS ── -->
-                        <g class="pe-orbit pe-orbit-1">
-                            <rect width="28" height="28" rx="4" fill="#1a1a88" stroke="#00ffff" stroke-width="1.5"/>
-                            <line x1="7" y1="14" x2="21" y2="14" stroke="#00ffff" stroke-width="1.5"/>
-                            <line x1="14" y1="7" x2="14" y2="21" stroke="#00ffff" stroke-width="1.5"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-2">
-                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="7" fill="none" stroke="#ff00ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="4" fill="#ff00ff" opacity="0.6"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-3">
-                            <rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
-                            <path d="M4,8 L12,4 L20,8 L12,12Z" fill="#ffff00" opacity="0.7"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-4">
-                            <circle r="14" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#00ff88" stroke-width="1.5"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-5">
-                            <circle r="14" fill="#1a1a88" stroke="#ff6b00" stroke-width="1.5"/>
-                            <circle cx="0" cy="-5" r="3" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
-                            <circle cx="-4" cy="4" r="3" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
-                            <circle cx="4" cy="4" r="3" fill="none" stroke="#ff6b00" stroke-width="1.5"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-6">
-                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <path d="M-8,0 Q0,-6 8,0 Q0,6 -8,0" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="2" fill="#00d4ff"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-7">
-                            <circle r="8" fill="none" stroke="#ffff00" stroke-width="2.5"/>
-                            <circle cx="0" cy="0" r="4" fill="none" stroke="#ffff00" stroke-width="1.5"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-8">
-                            <circle r="14" fill="#1a1a88" stroke="#ff00ff" stroke-width="1.5"/>
-                            <line x1="-6" y1="0" x2="6" y2="0" stroke="#ff00ff" stroke-width="1.5"/>
-                            <line x1="0" y1="-6" x2="0" y2="6" stroke="#ff00ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="2.5" fill="#ff00ff"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-9">
-                            <rect width="24" height="24" rx="2" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <path d="M4,20 L8,16 L16,8" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-10">
-                            <circle r="14" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="6" fill="none" stroke="#ffff00" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="2" fill="#ffff00"/>
-                        </g>
-                        <g class="pe-orbit pe-orbit-11">
-                            <circle r="14" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="#00d4ff" stroke-width="1.5"/>
-                            <circle cx="0" cy="0" r="3" fill="none" stroke="#00d4ff" stroke-width="1"/>
-                        </g>
-
-                        <g class="pe-sparkles">
-                            <circle cx="120" cy="70" r="1.5" fill="#ff00ff" opacity="0.8" class="pe-sparkle"/>
-                            <circle cx="320" cy="90" r="1.5" fill="#00ffff" opacity="0.7" class="pe-sparkle"/>
-                            <circle cx="100" cy="280" r="1" fill="#ffff00" opacity="0.6" class="pe-sparkle"/>
-                            <circle cx="380" cy="200" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
-                        </g>
-
-                    </svg>
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Clipping Path Services</h2>
+                <p class="ds-lead">Professional manual clipping path service for all product types. Every path drawn by hand with the Photoshop pen tool — no automated selection, no batch processing.</p>
+                <p>At Graphics Pixels, clipping path service means complete manual isolation using the Photoshop pen tool. Every path is assessed individually and drawn by hand to precision, delivering clean, isolated subjects ready for any background, platform, or campaign. We handle all complexity levels from simple product shapes to multi-part jewelry and lacework. 24–48 hour turnaround, unlimited revisions, from $0.39/image, with bulk discounts available.</p>
+                <div class="ds-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline-white">Learn More</a>
                 </div>
             </div>
         </div>
