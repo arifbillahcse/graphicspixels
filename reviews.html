@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews & Testimonials | Graphics Pixels</title>
+    <meta name="description" content="See what photographers, business owners and e-commerce brands say about Graphics Pixels. Video testimonials and verified Google reviews from 1,700+ happy clients.">
+
+    <!-- Google Fonts: Poppins + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+
+    <style>
+        /* ===== Page-scoped styles — Reviews ===== */
+
+        /* --- Page header --- */
+        .rv-header { padding: 150px 0 50px; background: var(--gradient-soft); }
+        .rv-header .rv-eyebrow {
+            font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px;
+            letter-spacing: 2px; text-transform: uppercase; color: var(--magenta);
+        }
+        .rv-header .rv-eyebrow b { color: var(--navy); }
+        .rv-header h1 {
+            font-family: 'Poppins', sans-serif; font-size: 44px; font-weight: 800;
+            color: var(--navy); text-transform: uppercase; line-height: 1.1; margin-top: 10px;
+        }
+
+        /* --- Video review grid --- */
+        .rv-videos { padding: 50px 0 30px; }
+        .rv-video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+        .rv-card { cursor: pointer; border-radius: var(--radius); overflow: hidden; }
+        .rv-card .vt-thumb { padding-top: 60%; border-radius: var(--radius); }
+        .rv-card .vt-thumb-overlay { border-radius: var(--radius); }
+
+        /* --- CTA row --- */
+        .rv-cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 44px; }
+
+        /* --- Rating summary --- */
+        .rv-summary { padding: 60px 0; background: var(--bg-light); }
+        .rv-summary-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+        .rv-summary-stars { color: #ffb800; font-size: 26px; letter-spacing: 3px; margin-bottom: 12px; }
+        .rv-summary-score { display: flex; align-items: baseline; gap: 10px; }
+        .rv-summary-score b { font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 800; color: var(--navy); }
+        .rv-summary h2 { font-family: 'Poppins', sans-serif; font-size: 30px; font-weight: 800; color: var(--navy); margin: 6px 0 10px; }
+        .rv-summary p { color: var(--text-light); font-size: 15px; max-width: 420px; }
+        .rv-bars-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 32px 36px; }
+        .rv-bars-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+        .rv-bars-head span { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--navy); font-size: 18px; }
+        .rv-bars-head .rv-google { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-light); font-size: 14px; }
+        .rv-bars-head .rv-google i { font-size: 18px; }
+        .rv-bar-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+        .rv-bar-label { font-size: 13px; font-weight: 600; color: var(--text-light); width: 56px; flex-shrink: 0; }
+        .rv-bar-track { flex: 1; height: 8px; border-radius: 100px; background: #e9e9f2; overflow: hidden; }
+        .rv-bar-fill { height: 100%; border-radius: 100px; background: var(--navy); }
+        .rv-bar-pct { font-size: 13px; font-weight: 700; color: var(--navy); width: 42px; text-align: right; flex-shrink: 0; }
+
+        /* --- Written reviews grid --- */
+        .rv-written { padding: 80px 0; }
+        .rv-written-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .rv-review { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 26px; display: flex; flex-direction: column; gap: 14px; transition: var(--transition); }
+        .rv-review:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+        .rv-review-head { display: flex; align-items: center; gap: 12px; }
+        .rv-avatar { width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 700; color: #fff; font-size: 17px; background: var(--gradient); }
+        .rv-review-meta { display: flex; flex-direction: column; line-height: 1.3; }
+        .rv-review-name { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--navy); font-size: 15px; }
+        .rv-review-loc { font-size: 12.5px; color: var(--text-light); }
+        .rv-review-time { margin-left: auto; font-size: 12px; color: var(--text-light); flex-shrink: 0; }
+        .rv-review-stars { color: #ffb800; font-size: 14px; letter-spacing: 1px; }
+        .rv-review-text { font-size: 14px; color: var(--text); line-height: 1.7; flex: 1; }
+        .rv-review-foot { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text-light); }
+        .rv-review-foot i { font-size: 15px; }
+        .rv-review.is-hidden { display: none; }
+        .rv-loadmore { text-align: center; margin-top: 40px; }
+
+        /* --- Featured on --- */
+        .rv-featured { padding: 60px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
+        .rv-featured h3 { text-align: center; font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 36px; }
+        .rv-featured-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; }
+        .rv-featured-logos span { display: inline-flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 20px; color: #9a9ab0; transition: var(--transition); }
+        .rv-featured-logos span i { font-size: 26px; }
+        .rv-featured-logos span:hover { color: var(--navy); }
+
+        /* --- Dark CTA banner --- */
+        .rv-banner { padding: 80px 0; }
+        .rv-banner-inner {
+            display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
+            border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);
+        }
+        .rv-banner-img { background-size: cover; background-position: center; min-height: 320px; }
+        .rv-banner-body {
+            background: linear-gradient(155deg, #01015E 0%, #16006e 55%, #0a0050 100%);
+            padding: 56px 48px; color: #fff;
+        }
+        .rv-banner-body h2 { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 16px; }
+        .rv-banner-body p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
+        .rv-banner-tools { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+        .rv-banner-tools span { font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 100px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: #fff; }
+
+        /* --- Responsive --- */
+        @media (max-width: 992px) {
+            .rv-summary-inner { grid-template-columns: 1fr; gap: 36px; }
+            .rv-written-grid { grid-template-columns: repeat(2, 1fr); }
+            .rv-banner-inner { grid-template-columns: 1fr; }
+            .rv-banner-img { min-height: 240px; }
+        }
+        @media (max-width: 768px) {
+            .rv-header { padding: 120px 0 40px; }
+            .rv-header h1 { font-size: 30px; }
+            .rv-video-grid { grid-template-columns: 1fr; }
+            .rv-written-grid { grid-template-columns: 1fr; }
+            .rv-featured-logos { gap: 30px; }
+            .rv-banner-body { padding: 40px 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="rv-header">
+        <div class="container">
+            <p class="rv-eyebrow">Amazing Review <b>From Our Customers</b></p>
+            <h1>Testimonials From Our<br>Satisfied Customers</h1>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO REVIEWS ============ -->
+    <section class="rv-videos">
+        <div class="container">
+            <div class="rv-video-grid" id="rvVideoGrid">
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Tyrell Scott</span>
+                                <span class="vt-card-company">Final Cut Multimedia</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Seb Chandler</span>
+                                <span class="vt-card-company">Seb Chandler Photography</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Andrew Porfyri</span>
+                                <span class="vt-card-company">Porfyri Photography</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Saville Coble</span>
+                                <span class="vt-card-company">Agency Creative Director</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Richard Doyle</span>
+                                <span class="vt-card-company">Photography INC</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Marcus Bell</span>
+                                <span class="vt-card-company">Luminous Studio</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Willy Senjuan</span>
+                                <span class="vt-card-company">Willy Senjuan Photograph</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Chris Pieta</span>
+                                <span class="vt-card-company">Pieta Production</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rv-card" data-video-id="bceNxgzx8ks">
+                    <div class="vt-thumb" style="background-image:url('https://img.youtube.com/vi/bceNxgzx8ks/hqdefault.jpg');">
+                        <div class="vt-thumb-overlay"></div>
+                        <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
+                        <div class="vt-card-footer">
+                            <div class="vt-card-info">
+                                <span class="vt-card-name">Justin Laurens</span>
+                                <span class="vt-card-company">Justin Laurens</span>
+                            </div>
+                            <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="rv-cta-row">
+                <a href="#" class="btn btn-primary">See More Reviews</a>
+                <a href="#free-trial" class="btn btn-outline">Get a Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RATING SUMMARY ============ -->
+    <section class="rv-summary">
+        <div class="container">
+            <div class="rv-summary-inner">
+                <div>
+                    <div class="rv-summary-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <div class="rv-summary-score"><b>4.8</b><span style="color:var(--text-light);font-size:14px;">(1700+ clients worldwide)</span></div>
+                    <h2>Over 99-star reviews</h2>
+                    <p>We've edited more than 8 million images for 1,700 businesses like yours.</p>
+                </div>
+                <div class="rv-bars-card">
+                    <div class="rv-bars-head">
+                        <span>Reviews</span>
+                        <span class="rv-google"><i class="fab fa-google"></i> Google</span>
+                    </div>
+                    <div class="rv-bar-row">
+                        <span class="rv-bar-label">5-Star</span>
+                        <span class="rv-bar-track"><span class="rv-bar-fill" style="width:97%;"></span></span>
+                        <span class="rv-bar-pct">97%</span>
+                    </div>
+                    <div class="rv-bar-row">
+                        <span class="rv-bar-label">4-Star</span>
+                        <span class="rv-bar-track"><span class="rv-bar-fill" style="width:3%;"></span></span>
+                        <span class="rv-bar-pct">3%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WRITTEN REVIEWS ============ -->
+    <section class="rv-written">
+        <div class="container">
+            <div class="rv-written-grid" id="rvWrittenGrid">
+
+                <div class="rv-review">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">A</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Anne Bergeron</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">3 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">I've been using Graphics Pixels for four years now and they have never let me down. Their work is always meticulous, consistent and delivered right on time. They are truly reliable and trustworthy.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">C</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Camille Nuttall</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">5 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">They're incredibly professional, with great communication and a really appreciable turnaround. I can't fault them on issues, always friendly and deliver high-quality work quickly. Highly recommend them.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">J</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Jacky Chapman</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">5 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">I've been working with Graphics Pixels for several years now. Fast with the team and the service has always been first rate. They save me a ton of time by handling cut-outs quickly and efficiently. Highly recommend.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">C</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Christoffer Johansson</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">7 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">Great experience with Graphics Pixels. Their service for several years now and they've always been professional, extremely friendly, and delivered top quality results. I'll happily continue working with them.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">T</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">TLF Multi Media</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">8 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">We've had an excellent experience working with Graphics Pixels for all our e-commerce image editing needs. They consistently delivered high-quality retouched images on time, even when we were up against tight deadlines.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">A</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Amanda Hardwick</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">8 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">I've worked with Graphics Pixels for several years, and they've consistently delivered outstanding service. Their work is consistently high quality and they never miss a deadline. Competitive pricing too.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">D</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Daniella Carruthers</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">9 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">Great communication and completed the job quickly. We did have a couple of amendments but they were completed quickly. Team was really friendly and helpful the whole time. We would definitely work with them again.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">A</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Audrey Mballo</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">1 year ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">I had an excellent experience with Graphics Pixels. They were very responsive, fast, and paid great attention to every detail and instruction. The retouching work was impeccable and perfectly met my expectations.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">J</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Joripher Enrise</span><span class="rv-review-loc">USA</span></div>
+                        <span class="rv-review-time">9 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">I've been working with Graphics Pixels on a couple of video resizing and editing projects, and they're consistently delivered great service. They provide their services with both speed and quality.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+            </div>
+
+            <div class="rv-loadmore">
+                <button class="btn btn-primary" id="rvLoadMore">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURED ON ============ -->
+    <section class="rv-featured">
+        <div class="container">
+            <h3>We are featured on these websites</h3>
+            <div class="rv-featured-logos">
+                <span><i class="fab fa-vimeo-v"></i> Vimeo</span>
+                <span><i class="fab fa-youtube"></i> YouTube</span>
+                <span><i class="fas fa-cube"></i> Sketchfab</span>
+                <span><i class="fas fa-palette"></i> ArtStation</span>
+                <span><i class="fas fa-camera"></i> iPhoto.com</span>
+                <span><i class="fas fa-image"></i> Photography</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DARK CTA BANNER ============ -->
+    <section class="rv-banner">
+        <div class="container">
+            <div class="rv-banner-inner">
+                <div class="rv-banner-img" style="background-image:url('images/services_hero.png');"></div>
+                <div class="rv-banner-body">
+                    <h2>Get Exceptional Photos and Videos That Turn Ordinary Visuals Into Extraordinary Impact</h2>
+                    <p>We specialize in creating three-aligned images and videos. We use professional software to provide photo and video editing services, such as Adobe Premiere Pro, After Effects, Photoshop, Final Cut Pro X and DaVinci Resolve.</p>
+                    <div class="rv-banner-tools">
+                        <span>Adobe Premiere Pro</span>
+                        <span>After Effects</span>
+                        <span>Photoshop</span>
+                        <span>Final Cut Pro X</span>
+                        <span>DaVinci Resolve</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ VIDEO MODAL ============ -->
+    <div class="vt-modal" id="vtModal">
+        <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+        <div class="vt-modal-box">
+            <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                <span class="vt-close-icon"></span>
+            </button>
+            <div class="vt-modal-frame">
+                <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script src="components/load-components.js"></script>
+
+    <!-- Reviews page interactions -->
+    <script>
+    (function () {
+        var modal   = document.getElementById('vtModal');
+        var backdrop= document.getElementById('vtBackdrop');
+        var closeBtn= document.getElementById('vtClose');
+        var iframe  = document.getElementById('vtIframe');
+
+        function openVideo(id) {
+            iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeVideo() {
+            iframe.src = '';
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Each video card opens the modal with its video id
+        document.querySelectorAll('.rv-card').forEach(function (card) {
+            card.addEventListener('click', function () {
+                openVideo(card.getAttribute('data-video-id'));
+            });
+        });
+
+        closeBtn.addEventListener('click', closeVideo);
+        backdrop.addEventListener('click', closeVideo);
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeVideo();
+        });
+
+        // Load more written reviews
+        var loadBtn = document.getElementById('rvLoadMore');
+        if (loadBtn) {
+            loadBtn.addEventListener('click', function () {
+                var hidden = document.querySelectorAll('.rv-review.is-hidden');
+                hidden.forEach(function (el) { el.classList.remove('is-hidden'); });
+                loadBtn.style.display = 'none';
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
