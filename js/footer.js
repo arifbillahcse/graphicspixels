@@ -56,8 +56,7 @@
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-link').forEach(function (link) {
         var href = link.getAttribute('href');
-        var hrefPage = href ? href.replace(/^\//, '').split('/').pop() : '';
-        if (hrefPage && hrefPage === currentPage) {
+        if (href && href === currentPage) {
             link.classList.add('active');
         }
     });
