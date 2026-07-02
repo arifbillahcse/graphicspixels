@@ -12,123 +12,90 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pricing.css">
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('images/Pricing banner image/banner.png');
+            background-size: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: url('images/Pricing banner image/banner.png');
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                padding-top: 80vw;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 40px 20px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
+    </style>
 </head>
 <body>
 
 
     <!-- ============ HERO ============ -->
-    <section class="svc-hero">
-        <div class="svc-hero-pattern" aria-hidden="true">
-            <i class="fas fa-tag"           style="top:8%;left:2%;font-size:64px;--rot:-14deg;--dl:0s;--dur:9s"></i>
-            <i class="fas fa-dollar-sign"   style="top:68%;left:9%;font-size:56px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
-            <i class="fas fa-receipt"       style="top:18%;left:38%;font-size:52px;--rot:-8deg;--dl:2s;--dur:8s"></i>
-            <i class="fas fa-percent"       style="top:50%;left:52%;font-size:64px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
-            <i class="fas fa-coins"         style="top:4%;left:63%;font-size:52px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
-            <i class="fas fa-file-invoice"  style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
-        </div>
-
-        <div class="container svc-hero-inner">
-            <div class="svc-hero-content reveal" data-reveal="up">
-                <span class="hero-eyebrow">Plans &amp; Pricing</span>
-                <h1 class="svc-hero-title">Simple, Transparent<br>Pricing</h1>
-                <p class="svc-hero-text">
-                    Professional photo editing starting at just $0.19 per image.
-                    No hidden fees, no surprises — just pixel-perfect results delivered on time, every time.
-                </p>
-                <div class="hero-actions">
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Plans &amp; Pricing</span>
+                <h2>Simple, Transparent Pricing</h2>
+                <p class="ds-lead">Professional photo editing starting at just $0.19 per image.</p>
+                <p>No hidden fees, no surprises — just pixel-perfect results delivered on time, every time.</p>
+                <div class="ds-showcase-actions">
                     <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
-                    <a href="#pricing-cards" class="btn btn-outline-white">View All Plans</a>
-                </div>
-            </div>
-
-            <div class="svc-hero-visual reveal" data-reveal="right">
-                <div class="pr-svg-scene" aria-hidden="true">
-                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="pr-svg-main">
-                        <defs>
-                            <filter id="prGlow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                        </defs>
-
-                        <!-- Main Frame -->
-                        <rect x="100" y="60" width="300" height="220" rx="8" fill="none" stroke="#00d4ff" stroke-width="3" class="pr-frame"/>
-                        <line x1="105" y1="85" x2="395" y2="85" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
-                        <line x1="100" y1="100" x2="400" y2="100" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
-
-                        <!-- Price Tag Icon (Top Left) -->
-                        <rect x="115" y="65" width="22" height="80" rx="2" fill="none" stroke="#ffff00" stroke-width="1.5" class="pr-icon"/>
-                        <!-- Dollar signs -->
-                        <text x="128" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#ffff00" opacity="0.8" class="pr-icon">$</text>
-                        <text x="128" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#ffff00" opacity="0.5" class="pr-icon">%</text>
-
-                        <!-- Center Spirals -->
-                        <circle cx="250" cy="170" r="35" fill="none" stroke="#C3009D" stroke-width="2.5" opacity="0.8" class="pr-spiral-1"/>
-                        <circle cx="250" cy="170" r="25" fill="none" stroke="#C3009D" stroke-width="2"   opacity="0.6" class="pr-spiral-2"/>
-                        <circle cx="250" cy="170" r="15" fill="none" stroke="#C3009D" stroke-width="1.5" opacity="0.4" class="pr-spiral-3"/>
-
-                        <!-- Center Logo -->
-                        <circle cx="250" cy="170" r="22" fill="#0d0d60" stroke="#C3009D" stroke-width="2" opacity="0.9" class="pr-logo-bg"/>
-                        <circle cx="250" cy="170" r="28" fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="3,3" opacity="0.6" class="pr-logo-ring"/>
-                        <image href="images/gp-logo.png" x="228" y="148" width="44" height="44" class="pr-logo-img"/>
-
-                        <!-- Company Name -->
-                        <text x="250" y="222" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#00d4ff" class="pr-text-g">GRAPHICS</text>
-                        <text x="250" y="238" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#C3009D" class="pr-text-p">PIXELS</text>
-
-                        <!-- Left Side Icons -->
-                        <rect x="125" y="125" width="20" height="14" rx="1" fill="none" stroke="#ffff00" stroke-width="1.5" class="pr-icon"/>
-                        <rect x="130" y="160" width="16" height="16" rx="1" fill="none" stroke="#00d4ff" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="120" cy="225" r="12" fill="none" stroke="#ff6b35" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="125" cy="245" r="8"  fill="none" stroke="#00d4ff" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="90" cy="180" r="25" fill="none" stroke="#C3009D" stroke-width="2" opacity="0.7" class="pr-left-circle"/>
-                        <circle cx="90" cy="180" r="20" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
-
-                        <!-- Right Side Icons -->
-                        <rect x="363" y="65" width="22" height="80" rx="2" fill="none" stroke="#C3009D" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="335" cy="105" r="8"  fill="none" stroke="#C3009D" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="350" cy="120" r="10" fill="none" stroke="#00ff88" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="335" cy="155" r="12" fill="none" stroke="#C3009D" stroke-width="1.5" class="pr-icon"/>
-                        <circle cx="350" cy="190" r="14" fill="none" stroke="#00ff88" stroke-width="1.5" class="pr-icon"/>
-
-                        <!-- Top crosshair -->
-                        <circle cx="250" cy="45" r="10" fill="#00d4ff" opacity="0.8" class="pr-top-dot"/>
-                        <line x1="230" y1="45" x2="270" y2="45" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
-                        <line x1="250" y1="25" x2="250" y2="50" stroke="#00d4ff" stroke-width="1.5" opacity="0.6"/>
-
-                        <!-- Bottom dashed box -->
-                        <rect x="380" y="300" width="40" height="40" rx="2" fill="none" stroke="#C3009D" stroke-width="1.5" stroke-dasharray="4,4" class="pr-dashed-box"/>
-                        <line x1="398" y1="318" x2="402" y2="318" stroke="#C3009D" stroke-width="1.5"/>
-                        <line x1="400" y1="316" x2="400" y2="320" stroke="#C3009D" stroke-width="1.5"/>
-
-                        <!-- Orbiting Price Tags -->
-                        <g class="pr-orbit-1">
-                            <circle r="10" fill="#1a1a88" stroke="#00d4ff" stroke-width="1.5"/>
-                            <text text-anchor="middle" dy="4" font-size="9" font-weight="700" fill="#00d4ff">$</text>
-                        </g>
-                        <g class="pr-orbit-2">
-                            <circle r="10" fill="#1a1a88" stroke="#C3009D" stroke-width="1.5"/>
-                            <text text-anchor="middle" dy="4" font-size="9" font-weight="700" fill="#C3009D">%</text>
-                        </g>
-                        <g class="pr-orbit-3">
-                            <circle r="10" fill="#1a1a88" stroke="#00ff88" stroke-width="1.5"/>
-                            <text text-anchor="middle" dy="4" font-size="8" font-weight="700" fill="#00ff88">¢</text>
-                        </g>
-                        <g class="pr-orbit-4">
-                            <circle r="10" fill="#1a1a88" stroke="#ffff00" stroke-width="1.5"/>
-                            <text text-anchor="middle" dy="4" font-size="9" font-weight="700" fill="#ffff00">£</text>
-                        </g>
-                        <g class="pr-orbit-5">
-                            <circle r="10" fill="#1a1a88" stroke="#ff6b35" stroke-width="1.5"/>
-                            <text text-anchor="middle" dy="4" font-size="9" font-weight="700" fill="#ff6b35">€</text>
-                        </g>
-
-                        <!-- Floating dots -->
-                        <circle cx="75"  cy="120" r="3" fill="#ffff00" opacity="0.7" class="pr-fdot"/>
-                        <circle cx="410" cy="240" r="3" fill="#C3009D" opacity="0.6" class="pr-fdot"/>
-                        <circle cx="180" cy="320" r="2" fill="#00d4ff" opacity="0.5" class="pr-fdot"/>
-                        <circle cx="320" cy="340" r="2" fill="#00ff88" opacity="0.5" class="pr-fdot"/>
-                    </svg>
+                    <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
         </div>
