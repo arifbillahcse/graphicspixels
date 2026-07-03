@@ -13,7 +13,7 @@
         <div class="footer-col">
             <h4>Useful Links</h4>
             <ul>
-                <li><a href="free-trial.html">Free Trial</a></li>
+                <li><a href="#free-trial">Free Trial</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -24,22 +24,22 @@
         <div class="footer-col">
             <h4>Services</h4>
             <ul>
-                <li><a href="services.html">Clipping Path Service</a></li>
-                <li><a href="services.html">Photo Retouching Service</a></li>
-                <li><a href="services.html">Ghost Mannequin Service</a></li>
-                <li><a href="services.html">Headshot Photo Editing</a></li>
-                <li><a href="services.html">Background Removal Service</a></li>
+                <li><a href="clipping-path-service.html">Clipping Path Service</a></li>
+                <li><a href="photo-retouching-service.html">Photo Retouching Service</a></li>
+                <li><a href="ghost-mannequin-service.html">Ghost Mannequin Service</a></li>
+                <li><a href="headshot-photo-editing.html">Headshot Photo Editing</a></li>
+                <li><a href="background-removal-service.html">Background Removal Service</a></li>
             </ul>
         </div>
         <div class="footer-col">
             <h4>More Services</h4>
             <ul>
-                <li><a href="services.html">Color Correction Service</a></li>
-                <li><a href="services.html">Drop Shadow Service</a></li>
-                <li><a href="services.html">Image Masking Service</a></li>
-                <li><a href="services.html">E-commerce Image Editing</a></li>
-                <li><a href="services.html">Photo Restoration Service</a></li>
-                <li><a href="services.html">AI-generated Image Fixes</a></li>
+                <li><a href="color-correction-service.html">Color Correction Service</a></li>
+                <li><a href="drop-shadow-service.html">Drop Shadow Service</a></li>
+                <li><a href="image-masking-service.html">Image Masking Service</a></li>
+                <li><a href="ecommerce-image-editing.html">E-commerce Image Editing</a></li>
+                <li><a href="photo-restoration-service.html">Photo Restoration Service</a></li>
+                <li><a href="ai-generated-image-fixes.html">AI-generated Image Fixes</a></li>
             </ul>
         </div>
     </div>
@@ -59,3 +59,46 @@
 </footer>
 
 <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ============ FREE TRIAL MODAL (loaded on all pages) ============ -->
+<div class="trial-modal-overlay" id="trialModalOverlay" role="dialog" aria-modal="true" aria-label="Free Trial Form">
+    <div class="trial-modal" id="trialModal">
+        <button class="trial-modal-close" id="trialModalClose" aria-label="Close modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="trial-modal-head">
+            <span class="trial-modal-tag">Get Started</span>
+            <h2 class="trial-modal-title">Get Your Free Trial</h2>
+        </div>
+        <form class="free-trial-form" id="modal-trial-form">
+            <div class="form-row">
+                <input type="text" placeholder="Your Name*" required>
+                <input type="email" placeholder="Add Email*" required>
+            </div>
+            <div class="form-row">
+                <input type="tel" placeholder="Phone*" required>
+                <input type="url" placeholder="Website">
+            </div>
+            <select required>
+                <option value="" disabled selected>Select The Service</option>
+                <option>Clipping Path</option>
+                <option>Ghost Mannequin &amp; Neck Joint</option>
+                <option>Photo Retouching</option>
+                <option>Background Removal</option>
+                <option>Color Correction</option>
+                <option>Image Masking</option>
+                <option>3D Service</option>
+                <option>Video Editing</option>
+            </select>
+            <textarea placeholder="Your message" rows="3"></textarea>
+            <div class="file-upload">
+                <label for="modal-file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                <input type="file" id="modal-file-input">
+                <span class="file-name">No file chosen</span>
+            </div>
+            <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+            <input type="url" placeholder="Paste the link here (URL)">
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+    </div>
+</div>

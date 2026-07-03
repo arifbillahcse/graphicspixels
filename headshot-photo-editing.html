@@ -11,54 +11,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('images/hero-banner-images/Headshot photo editing/graphics-pixels-4.png');
+            background-size: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: url('images/hero-banner-images/Headshot photo editing/graphics-pixels-4.png');
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                padding-top: 80vw;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 40px 20px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        /* Reduce top padding for intro section */
+        .hs-intro {
+            padding-top: 40px !important;
+        }
+    </style>
 </head>
 <body>
 
 
     <!-- ============ HEADER / NAVIGATION ============ -->
 
-    <!-- ============ PAGE HERO ============ -->
-    <section class="svc-hero">
-
-        <div class="svc-hero-pattern" aria-hidden="true">
-            <i class="fas fa-user"                  style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
-            <i class="fas fa-image"                 style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
-            <i class="fas fa-head-side-virus"       style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
-            <i class="fas fa-sparkles"              style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
-            <i class="fas fa-star"                  style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
-            <i class="fas fa-circle-check"          style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
-            <i class="fas fa-camera"                style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
-            <i class="fas fa-eye"                   style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
-            <i class="fas fa-wand-magic-sparkles"   style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
-            <i class="fas fa-face-smile"            style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
-            <i class="fas fa-linkedin"              style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
-            <i class="fas fa-briefcase"             style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
-        </div>
-
-        <div class="container svc-hero-inner">
-            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
-                <span class="hero-eyebrow">Photo Editing</span>
-                <h1 class="svc-hero-title">Headshot Photo<br>Editing Service</h1>
-                <p class="svc-hero-text">
-                    Professional headshot retouching done by hand in Photoshop. Skin correction, blemish removal,
-                    eye enhancement, lighting balance, and background cleanup — delivered clean and credible,
-                    never over-processed. Perfect for LinkedIn, corporate sites, casting portfolios, and professional profiles.
-                </p>
-                <ul class="svc-hero-icons">
-                    <li><i class="fas fa-user"></i> Skin tone correction</li>
-                    <li><i class="fas fa-eye"></i> Eye &amp; tooth enhancement</li>
-                    <li><i class="fas fa-bolt"></i> 24–48 hr turnaround</li>
-                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
-                    <li><i class="fas fa-tag"></i> From $5/image</li>
-                    <li><i class="fas fa-circle-check"></i> Batch rates available</li>
-                </ul>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
-                    <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Professional Headshot Editing</h2>
+                <p class="ds-lead">Expert headshot retouching for LinkedIn, corporate profiles, casting portfolios, and professional sites. Natural skin smoothing, blemish removal, eye enhancement — never over-processed.</p>
+                <p>Headshot photo editing is professional retouching tailored for portrait photography. Skin tone correction, blemish and acne removal, eye brightening and sharpening, teeth whitening, lighting balance, and background cleanup. Every edit is assessed individually and matched to your brief. Natural results that look credible and professional. 24–48 hour turnaround, unlimited revisions, starting at $5/image with batch discounts.</p>
+                <div class="ds-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline-white">Learn More</a>
                 </div>
             </div>
-            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
-                <div class="pe-svg-scene" aria-hidden="true">
+        </div>
+    </section>
+
                     <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="pe-svg">
 
                         <defs>
@@ -212,12 +254,6 @@
                             <circle cx="380" cy="200" r="1.5" fill="#00ff88" opacity="0.7" class="pe-sparkle"/>
                         </g>
 
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ WHAT IS HEADSHOT EDITING ============ -->
     <section class="cp-intro">
         <div class="container">
@@ -234,7 +270,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="images/individualservicepage/4.%20headshot-photo-editing/1.%20headshot-photo-editing/graphics%20pixels%20(1).jpg" alt="Headshot Photo Editing Service Explained" loading="lazy">
+                        <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional Headshot Photo Editing" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -280,7 +316,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="images/individualservicepage/4.%20headshot-photo-editing/1.%20headshot-photo-editing/graphics%20pixels%20(1).png" alt="Skin Tone and Texture Correction" loading="lazy">
+                            <img src="images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20(1).jpg" alt="Skin Tone and Texture Correction" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -304,7 +340,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="images/individualservicepage/4.%20headshot-photo-editing/2.%20headshot-photo-editing/graphics%20pixels%20(1).jpg" alt="Blemish and Shine Removal" loading="lazy">
+                            <img src="images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20(1).jpg" alt="Blemish and Shine Removal" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -328,7 +364,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="images/individualservicepage/4.%20headshot-photo-editing/3.%20headshot-photo-editing/graphics%20pixels%20(1).jpg" alt="Eye and Teeth Enhancement" loading="lazy">
+                            <img src="images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(4)/graphics%20pixels%20(1).jpg" alt="Eye and Teeth Enhancement" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -352,7 +388,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="images/individualservicepage/4.%20headshot-photo-editing/4.%20headshot-photo-editing/graphics%20pixels%20(1).jpg" alt="Hair and Background Cleanup" loading="lazy">
+                            <img src="images/individualservicepage/4.%20headshot-photo-editing/4.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(3)/graphics%20pixels%20(1).jpg" alt="Hair and Background Cleanup" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -376,7 +412,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="images/individualservicepage/4.%20headshot-photo-editing/5.%20headshot-photo-editing/graphics%20pixels%20(1).jpg" alt="Lighting and Color Balance" loading="lazy">
+                            <img src="images/individualservicepage/4.%20headshot-photo-editing/5.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(2)/graphics%20pixels%20(1).jpg" alt="Lighting and Color Balance" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -716,5 +752,10 @@
     <script src="js/script.js"></script>
     <script src="js/pe-animations.js"></script>
     <script src="components/load-components.js"></script>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>

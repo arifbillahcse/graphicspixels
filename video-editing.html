@@ -11,231 +11,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <style>
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('images/hero-banner-images/5__Video-Editing-service-__Mobile-and-TAB.png');
+            background-size: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: url('images/hero-banner-images/5__Video-Editing-service-__Mobile-and-TAB.png');
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                padding-top: 80vw;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 40px 20px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
+    </style>
 </head>
 <body>
 
     <script src="js/video-animations.js"></script>
 
-    <!-- ============ PAGE HERO ============ -->
-    <section class="svc-hero">
-
-        <div class="svc-hero-pattern" aria-hidden="true">
-            <i class="fas fa-film"                style="top:8%;left:2%;font-size:86px;--rot:-14deg;--dl:0s;--dur:9s"></i>
-            <i class="fas fa-play-circle"        style="top:68%;left:9%;font-size:52px;--rot:22deg;--dl:1.2s;--dur:11s"></i>
-            <i class="fas fa-scissors"           style="top:18%;left:38%;font-size:64px;--rot:-8deg;--dl:2s;--dur:8s"></i>
-            <i class="fas fa-palette"            style="top:50%;left:52%;font-size:76px;--rot:18deg;--dl:0.6s;--dur:10s"></i>
-            <i class="fas fa-waveform-lines"     style="top:4%;left:63%;font-size:58px;--rot:-22deg;--dl:1.8s;--dur:9.5s"></i>
-            <i class="fas fa-headphones"         style="top:82%;left:68%;font-size:44px;--rot:35deg;--dl:0.9s;--dur:12s"></i>
-            <i class="fas fa-star"               style="top:40%;left:17%;font-size:46px;--rot:-12deg;--dl:1.5s;--dur:10s"></i>
-            <i class="fas fa-clapperboard"       style="top:10%;left:83%;font-size:70px;--rot:28deg;--dl:2.4s;--dur:8.5s"></i>
-            <i class="fas fa-sliders"            style="top:64%;left:86%;font-size:50px;--rot:-18deg;--dl:0.3s;--dur:11.5s"></i>
-            <i class="fas fa-video"              style="top:88%;left:44%;font-size:54px;--rot:10deg;--dl:1s;--dur:9s"></i>
-            <i class="fas fa-mountain-city"      style="top:46%;left:5%;font-size:40px;--rot:0deg;--dl:2.2s;--dur:13s"></i>
-            <i class="fas fa-magic"              style="top:76%;left:28%;font-size:60px;--rot:-25deg;--dl:1.7s;--dur:10.5s"></i>
-        </div>
-
-        <div class="container svc-hero-inner">
-            <div class="svc-hero-content reveal" data-reveal="up" data-delay="100">
-                <span class="hero-eyebrow">Post-Production</span>
-                <h1 class="svc-hero-title">Professional Video<br>Editing</h1>
-                <p class="svc-hero-text">
-                    Hand-edited video for e-commerce, fashion, real estate, and content creators.
-                    No AI filters. 24–48 hour turnaround. Bulk projects handled at full capacity.
-                </p>
-                <ul class="svc-hero-icons">
-                    <li><i class="fas fa-film"></i> Product &amp; ads</li>
-                    <li><i class="fas fa-palette"></i> Color grading</li>
-                    <li><i class="fas fa-star"></i> Motion graphics</li>
-                    <li><i class="fas fa-headphones"></i> Audio post</li>
-                    <li><i class="fas fa-scissors"></i> Quick turnaround</li>
-                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
-                </ul>
-                <div class="hero-actions">
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Post-Production</span>
+                <h2>Professional Video Editing</h2>
+                <p class="ds-lead">Hand-edited video for e-commerce, fashion, real estate, and content creators.</p>
+                <p>No AI filters. 24–48 hour turnaround. Bulk projects handled at full capacity.</p>
+                <div class="ds-showcase-actions">
                     <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
-                </div>
-            </div>
-            <div class="svc-hero-visual reveal" data-reveal="right" data-delay="200">
-                <div class="ve-svg-scene" aria-hidden="true">
-                    <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="ve-svg">
-
-                        <!-- Glow defs -->
-                        <defs>
-                            <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#C3009D" stop-opacity="0.35"/>
-                                <stop offset="100%" stop-color="#4a4acf" stop-opacity="0"/>
-                            </radialGradient>
-                            <filter id="softGlow">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="strongGlow">
-                                <feGaussianBlur stdDeviation="5" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="veMagentaGlow">
-                                <feGaussianBlur stdDeviation="4" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <clipPath id="screenClip">
-                                <rect x="60" y="30" width="280" height="175" rx="10"/>
-                            </clipPath>
-                        </defs>
-
-                        <!-- Background glow blob -->
-                        <ellipse cx="200" cy="120" rx="190" ry="130" fill="url(#screenGlow)" class="ve-pulse"/>
-
-                        <!-- ── MONITOR ── -->
-                        <!-- Stand -->
-                        <rect x="178" y="215" width="44" height="12" rx="4" fill="#6666ee"/>
-                        <rect x="162" y="225" width="76" height="7" rx="3" fill="#6666ee"/>
-                        <!-- Monitor body -->
-                        <rect x="52" y="24" width="296" height="188" rx="14" fill="#4a4acf" stroke="#7a7add" stroke-width="2"/>
-                        <!-- Screen -->
-                        <rect x="60" y="30" width="280" height="175" rx="10" fill="#1a1a99"/>
-                        <!-- Screen content: fake video frame lines -->
-                        <g clip-path="url(#screenClip)">
-                            <rect x="60" y="30" width="280" height="175" fill="#2a2aaa"/>
-                            <!-- Sky gradient band -->
-                            <rect x="60" y="30" width="280" height="80" fill="#3a3acc" opacity="0.7"/>
-                            <!-- Fake scene shapes -->
-                            <ellipse cx="200" cy="95" rx="60" ry="40" fill="#5a5add" opacity="0.5"/>
-                            <rect x="90" y="130" width="200" height="75" fill="#1a1a88" opacity="0.8"/>
-                            <!-- Scan line animation -->
-                            <rect x="60" y="30" width="280" height="4" fill="rgba(195,0,157,0.18)" class="ve-scanline"/>
-                        </g>
-                        <!-- Screen glare -->
-                        <ellipse cx="115" cy="55" rx="22" ry="10" fill="white" opacity="0.04" transform="rotate(-20,115,55)"/>
-
-                        <!-- ── PLAY BUTTON (centre screen) ── -->
-                        <circle cx="200" cy="117" r="28" fill="rgba(195,0,157,0.18)" class="ve-play-ring"/>
-                        <circle cx="200" cy="117" r="20" fill="#C3009D" filter="url(#strongGlow)" class="ve-play-pulse"/>
-                        <polygon points="195,109 195,125 212,117" fill="white"/>
-
-                        <!-- ── TIMELINE BAR ── -->
-                        <rect x="52" y="240" width="296" height="60" rx="10" fill="#4a4acf" stroke="#6a6add" stroke-width="1.5"/>
-                        <!-- Track label -->
-                        <rect x="60" y="248" width="52" height="10" rx="3" fill="#5555dd"/>
-                        <rect x="60" y="263" width="52" height="10" rx="3" fill="#5555dd"/>
-                        <rect x="60" y="278" width="52" height="10" rx="3" fill="#5555dd"/>
-                        <!-- Track 1 clips -->
-                        <rect x="118" y="247" width="68" height="12" rx="3" fill="#C3009D" opacity="0.85" class="ve-clip1"/>
-                        <rect x="192" y="247" width="44" height="12" rx="3" fill="#8800c3" opacity="0.75"/>
-                        <rect x="242" y="247" width="96" height="12" rx="3" fill="#C3009D" opacity="0.65"/>
-                        <!-- Track 2 waveform bars -->
-                        <g class="ve-wave">
-                            <rect x="118" y="262" width="3" height="5" rx="1" fill="#00d4ff" opacity="0.8"/>
-                            <rect x="123" y="259" width="3" height="11" rx="1" fill="#00d4ff" opacity="0.9"/>
-                            <rect x="128" y="261" width="3" height="7" rx="1" fill="#00d4ff" opacity="0.8"/>
-                            <rect x="133" y="257" width="3" height="15" rx="1" fill="#00d4ff"/>
-                            <rect x="138" y="260" width="3" height="9" rx="1" fill="#00d4ff" opacity="0.85"/>
-                            <rect x="143" y="258" width="3" height="13" rx="1" fill="#00d4ff" opacity="0.9"/>
-                            <rect x="148" y="262" width="3" height="5" rx="1" fill="#00d4ff" opacity="0.7"/>
-                            <rect x="153" y="259" width="3" height="11" rx="1" fill="#00d4ff" opacity="0.8"/>
-                            <rect x="158" y="261" width="3" height="7" rx="1" fill="#00d4ff" opacity="0.75"/>
-                            <rect x="163" y="256" width="3" height="17" rx="1" fill="#00d4ff"/>
-                            <rect x="168" y="260" width="3" height="9" rx="1" fill="#00d4ff" opacity="0.85"/>
-                            <rect x="173" y="258" width="3" height="13" rx="1" fill="#00d4ff" opacity="0.9"/>
-                            <rect x="178" y="263" width="3" height="3" rx="1" fill="#00d4ff" opacity="0.6"/>
-                            <rect x="183" y="259" width="3" height="11" rx="1" fill="#00d4ff" opacity="0.8"/>
-                        </g>
-                        <!-- Track 3 color grade strip -->
-                        <rect x="118" y="278" width="30" height="10" rx="2" fill="#ff6b35" opacity="0.8"/>
-                        <rect x="152" y="278" width="24" height="10" rx="2" fill="#ffd700" opacity="0.8"/>
-                        <rect x="180" y="278" width="40" height="10" rx="2" fill="#00c8a0" opacity="0.8"/>
-                        <rect x="224" y="278" width="50" height="10" rx="2" fill="#C3009D" opacity="0.8"/>
-                        <rect x="278" y="278" width="58" height="10" rx="2" fill="#4a90e2" opacity="0.8"/>
-                        <!-- Playhead -->
-                        <line x1="186" y1="240" x2="186" y2="300" stroke="#fff" stroke-width="1.5" opacity="0.9" class="ve-playhead"/>
-                        <polygon points="182,240 190,240 186,245" fill="white" opacity="0.9"/>
-
-                        <!-- ── CLAPPERBOARD (floating top-right) ── -->
-                        <g class="ve-clap" transform="translate(355,15)">
-                            <rect width="80" height="66" rx="6" fill="#6666ee" stroke="#7a7aff" stroke-width="1.5"/>
-                            <!-- Clap stripe board -->
-                            <rect y="0" width="80" height="20" rx="6" fill="#555"/>
-                            <rect y="0" width="80" height="20" rx="0" fill="none"/>
-                            <!-- Stripes -->
-                            <polygon points="0,0 14,0 0,20" fill="white"/>
-                            <polygon points="14,0 28,0 14,20 0,20" fill="#C3009D"/>
-                            <polygon points="28,0 42,0 28,20 14,20" fill="white"/>
-                            <polygon points="42,0 56,0 42,20 28,20" fill="#C3009D"/>
-                            <polygon points="56,0 70,0 56,20 42,20" fill="white"/>
-                            <polygon points="70,0 80,0 70,20 56,20" fill="#C3009D"/>
-                            <!-- Board lines -->
-                            <line x1="8" y1="30" x2="72" y2="30" stroke="#7a7add" stroke-width="1"/>
-                            <line x1="8" y1="42" x2="72" y2="42" stroke="#7a7add" stroke-width="1"/>
-                            <line x1="8" y1="54" x2="72" y2="54" stroke="#7a7add" stroke-width="1"/>
-                            <!-- Text rects -->
-                            <rect x="10" y="26" width="30" height="7" rx="2" fill="#2a2a8a"/>
-                            <rect x="44" y="26" width="26" height="7" rx="2" fill="#2a2a8a"/>
-                        </g>
-
-                        <!-- ── FILM STRIP (left side, vertical) ── -->
-                        <g class="ve-film" transform="translate(10,40)">
-                            <rect width="36" height="180" rx="4" fill="#3a3aaa" stroke="#6a6aee" stroke-width="1.5"/>
-                            <!-- Sprocket holes left -->
-                            <rect x="3" y="8" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="26" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="44" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="62" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="80" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="98" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="116" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="134" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="152" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="3" y="170" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <!-- Sprocket holes right -->
-                            <rect x="25" y="8" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="26" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="44" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="62" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="80" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="98" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="116" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="134" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="152" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <rect x="25" y="170" width="8" height="10" rx="2" fill="#2a2a99"/>
-                            <!-- Frame thumbnails -->
-                            <rect x="13" y="8" width="10" height="10" rx="1" fill="#C3009D" opacity="0.6"/>
-                            <rect x="13" y="26" width="10" height="10" rx="1" fill="#4a90e2" opacity="0.6"/>
-                            <rect x="13" y="44" width="10" height="10" rx="1" fill="#00c8a0" opacity="0.6"/>
-                            <rect x="13" y="62" width="10" height="10" rx="1" fill="#ffd700" opacity="0.6"/>
-                            <rect x="13" y="80" width="10" height="10" rx="1" fill="#C3009D" opacity="0.6"/>
-                            <rect x="13" y="98" width="10" height="10" rx="1" fill="#4a90e2" opacity="0.6"/>
-                            <rect x="13" y="116" width="10" height="10" rx="1" fill="#ff6b35" opacity="0.6"/>
-                            <rect x="13" y="134" width="10" height="10" rx="1" fill="#C3009D" opacity="0.6"/>
-                            <rect x="13" y="152" width="10" height="10" rx="1" fill="#00c8a0" opacity="0.6"/>
-                            <rect x="13" y="170" width="10" height="10" rx="1" fill="#ffd700" opacity="0.6"/>
-                        </g>
-
-                        <!-- ── COLOR WHEEL (bottom-right) ── -->
-                        <g class="ve-wheel" transform="translate(390,295)">
-                            <circle r="36" fill="#4a4acf" stroke="#6a6add" stroke-width="1.5"/>
-                            <path d="M0,-36 A36,36 0 0,1 31.2,-18 L0,0 Z" fill="#ff4444" opacity="0.85"/>
-                            <path d="M31.2,-18 A36,36 0 0,1 31.2,18 L0,0 Z" fill="#ffaa00" opacity="0.85"/>
-                            <path d="M31.2,18 A36,36 0 0,1 0,36 L0,0 Z" fill="#44dd44" opacity="0.85"/>
-                            <path d="M0,36 A36,36 0 0,1 -31.2,18 L0,0 Z" fill="#00aaff" opacity="0.85"/>
-                            <path d="M-31.2,18 A36,36 0 0,1 -31.2,-18 L0,0 Z" fill="#C3009D" opacity="0.85"/>
-                            <path d="M-31.2,-18 A36,36 0 0,1 0,-36 L0,0 Z" fill="#8800ff" opacity="0.85"/>
-                            <circle r="14" fill="#4a4acf"/>
-                            <circle r="8" fill="#5a5add"/>
-                        </g>
-
-                        <!-- ── FLOATING PARTICLES ── -->
-                        <circle cx="310" cy="60"  r="3" fill="#C3009D" opacity="0.7" class="ve-dot1"/>
-                        <circle cx="430" cy="140" r="2" fill="#00d4ff" opacity="0.6" class="ve-dot2"/>
-                        <circle cx="345" cy="210" r="2.5" fill="#C3009D" opacity="0.5" class="ve-dot3"/>
-                        <circle cx="65"  cy="240" r="2" fill="#00d4ff" opacity="0.5" class="ve-dot1"/>
-                        <circle cx="440" cy="260" r="3" fill="#ffd700" opacity="0.5" class="ve-dot2"/>
-
-                        <!-- ── GRAPHICS PIXELS LOGO (bottom-left corner) ── -->
-                        <g class="ve-logo-icon" transform="translate(70, 330)">
-                            <circle r="22" fill="#1a1a88" stroke="#C3009D" stroke-width="2.5" filter="url(#veMagentaGlow)"/>
-                            <image href="images/gp-logo.png" x="-16" y="-16" width="32" height="32" class="ve-logo-img"/>
-                        </g>
-
-                    </svg>
                 </div>
             </div>
         </div>
@@ -709,5 +568,10 @@
     </script>
 
     <script src="components/load-components.js"></script>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 </html>
