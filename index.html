@@ -149,39 +149,89 @@
         }
 
         /* Modal CSS moved to css/style.css (loaded globally) */
+
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            min-height: 560px;
+            background-color: #fff;
+            background-image: url('images/hero-banner-images/1__main-page-Copy.png');
+            background-size: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 100px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: url('images/hero-banner-images/1__main-page-Copy.png');
+                background-size: contain;
+                background-position: center top;
+                background-repeat: no-repeat;
+                padding-top: 80vw;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 40px 20px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
     </style>
 </head>
 <body>
 
 
-    <!-- ============ HERO SECTION ============ -->
-    <section class="hero" id="home">
-        <div class="hero-bg-shape"></div>
-        <div class="container hero-container">
-            <div class="hero-content reveal" data-reveal="left">
-                <span class="hero-eyebrow">Meet Graphics Pixels</span>
-                <h1 class="hero-title">Your Photo Retouching &amp; Post-Production Service Partner</h1>
-                <p class="hero-subtitle">Complete Image Editing, Video, and 3D Solutions in One Place</p>
-                <p class="hero-text">
-                    No time for post-production? Outsource your photo clipping path, retouching and
-                    post-production work to Graphics Pixels and focus on growing your brand. From simple
-                    white backgrounds to complex ghost mannequins, we deliver pixel-perfect editing that
-                    makes your product photography stand out.
-                </p>
-                <div class="hero-actions">
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase" id="home">
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Meet Graphics Pixels</span>
+                <h2>Your Photo Retouching &amp; Post-Production Service Partner</h2>
+                <p class="ds-lead">Complete Image Editing, Video, and 3D Solutions in One Place</p>
+                <p>No time for post-production? Outsource your photo clipping path, retouching and post-production work to Graphics Pixels and focus on growing your brand. From simple white backgrounds to complex ghost mannequins, we deliver pixel-perfect editing that makes your product photography stand out.</p>
+                <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="#free-trial" class="btn btn-outline">Get A Free Quote</a>
-                </div>
-            </div>
-            <div class="hero-image reveal" data-reveal="right">
-                <div class="home-svg-scene">
-                    <div class="icon-orbit">
-                        <div class="orbit-icon orbit-1"><i class="fas fa-wand-magic-sparkles"></i></div>
-                        <div class="orbit-icon orbit-2"><i class="fas fa-pen-nib"></i></div>
-                        <div class="orbit-icon orbit-3"><i class="fas fa-paintbrush"></i></div>
-                        <div class="orbit-icon orbit-4"><i class="fas fa-eraser"></i></div>
-                    </div>
-                    <img src="https://arifbillahcse.github.io/graphicspixels/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Service" style="border-radius: 12px; position: relative; z-index: 1;">
                 </div>
             </div>
         </div>
