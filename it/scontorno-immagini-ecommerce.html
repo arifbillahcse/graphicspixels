@@ -27,8 +27,8 @@
             min-height: 100vh;
             background-color: #fff;
             background-image: url('../images/clipping%20path%20cover.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -76,27 +76,36 @@
         }
         .dt-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
         @media (max-width: 992px) {
-            .dt-showcase {
-                background-size: 55%;
-                background-position: right center;
-            }
             .dt-showcase-content { max-width: 55%; }
         }
         @media (max-width: 768px) {
             .dt-showcase {
                 min-height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .dt-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('../images/clipping%20path%20cover.png');
                 background-size: contain;
-                background-position: center top;
-                padding-top: 80vw;
-                align-items: flex-start;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
             }
             .dt-showcase-content {
                 max-width: 100%;
-                padding: 40px 0 60px;
+                padding: 0 0 40px;
             }
             .dt-showcase-content h1 { font-size: 28px; }
             .dt-showcase-icons { grid-template-columns: 1fr; }
+        }
+        @media (min-width: 769px) {
+            .dt-showcase-image { display: none; }
         }
 
         /* --- Generic section heads (reuse site classes via .container) --- */
@@ -284,6 +293,7 @@
 
     <!-- ============ HERO / SHOWCASE ============ -->
     <section class="dt-showcase">
+        <div class="dt-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="dt-showcase-content reveal" data-reveal="left">
                 <span class="dt-showcase-eyebrow">✨ Studio di Post-Produzione Premium &amp; Alta Moda Italiana</span>
