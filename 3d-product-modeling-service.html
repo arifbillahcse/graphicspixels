@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
         /* ---- Showcase Banner Section ---- */
         .ds-showcase {
@@ -87,6 +88,57 @@
         /* Reduce top padding for intro section */
         .cp-intro {
             padding-top: 40px !important;
+        }
+        /* ---- 3D Model Viewer (interactive GLB) ---- */
+        .svc-3d-wrap {
+            position: relative;
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #f4f2ec;
+        }
+        .svc-3d-viewer {
+            width: 100%;
+            height: 420px;
+            display: block;
+            --poster-color: transparent;
+        }
+        .svc-3d-expand {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            background: rgba(255,255,255,0.9);
+            color: #01015E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: background 0.2s;
+        }
+        .svc-3d-expand:hover { background: #fff; }
+        .svc-3d-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-top: 12px;
+        }
+        .svc-related {
+            font-size: 14px;
+            color: #666;
+            margin-top: -8px;
+            margin-bottom: 24px;
+        }
+        .svc-features-label {
+            margin-bottom: 8px;
+        }
+        @media (max-width: 768px) {
+            .svc-3d-viewer { height: 300px; }
         }
     </style>
 </head>
@@ -170,23 +222,48 @@
 
             <div class="svc-list">
 
-                <!-- 1. 3D Furniture Modeling & Rendering -->
+                <!-- 1. 3D Furniture Modeling & Rendering (Jewelry GLB) -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="svc-img">
-                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="3D Furniture Modeling and Rendering" loading="lazy">
+                        <div class="svc-3d-wrap">
+                            <model-viewer class="svc-3d-viewer" src="images/3D/3D%20Modelling/1.Jewelry-1.glb" alt="3D Furniture Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
+                        <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-couch"></i></span>
                         <h3>3D Furniture Modeling & Rendering</h3>
                         <p>Photorealistic 3D models of furniture — sofas, chairs, tables, shelving, and bedroom furniture — rendered with accurate material textures, lighting, and shadow. Output used for e-commerce product pages, interior design presentations, trade catalogs, and virtual staging.</p>
                         <p>Delivered in any environment: white studio background, lifestyle room setting, or outdoor architectural context. Colour and material variants produced from a single model without reshooting. AR-ready formats available.</p>
+                        <p class="svc-related"><em>→ Related: 3D Rendering | Virtual Staging | Product Marketing</em></p>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Premium Luxury Furniture (Bag GLB) -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-3d-wrap">
+                            <model-viewer class="svc-3d-viewer" src="images/3D/3D%20Modelling/2_bag.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
+                        </div>
+                        <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-gem"></i></span>
+                        <h3>Premium Luxury Furniture 3D Modeling and Rendering Services</h3>
+                        <p>Bring your luxury furniture designs to life with the best quality 3D Product Modeling Service and rendering services from Graphics Pixels. Our expert team creates stunning, realistic visuals that highlight the elegance, craftsmanship, and intricate details of your luxury furniture collection, ensuring the highest standard in every render. Perfect for interior designers, manufacturers, and online marketing, our services offer unmatched precision and quality that make your products stand out.</p>
+                        <p class="svc-features-label"><strong>Key Features:</strong></p>
                         <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> 3D Rendering &amp; Virtual Staging</li>
-                            <li><i class="fas fa-check"></i> Colour &amp; material variants from one model</li>
-                            <li><i class="fas fa-check"></i> AR-ready formats</li>
-                            <li><i class="fas fa-check"></i> Product Marketing visuals</li>
+                            <li><i class="fas fa-check"></i> Luxury Furniture 3D Modeling Service</li>
+                            <li><i class="fas fa-check"></i> Realistic 3D Rendering for Luxury Furniture</li>
+                            <li><i class="fas fa-check"></i> Custom Furniture Design Visualization</li>
+                            <li><i class="fas fa-check"></i> 3D Furniture Animation for Marketing</li>
+                            <li><i class="fas fa-check"></i> Virtual Staging for Luxury Furniture</li>
                         </ul>
                         <div class="svc-actions">
                             <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
@@ -195,24 +272,52 @@
                     </div>
                 </article>
 
-                <!-- 2. Premium Luxury Furniture -->
+                <!-- 3. Premium Luxury Furniture (Headphone GLB) -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-3d-wrap">
+                            <model-viewer class="svc-3d-viewer" src="images/3D/3D%20Modelling/3.headphone.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
+                        </div>
+                        <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-gem"></i></span>
+                        <h3>Premium Luxury Furniture 3D Modeling and Rendering Services</h3>
+                        <p>Bring your luxury furniture designs to life with the best quality 3D Product Modeling Service and rendering services from Graphics Pixels. Our expert team creates stunning, realistic visuals that highlight the elegance, craftsmanship, and intricate details of your luxury furniture collection, ensuring the highest standard in every render. Perfect for interior designers, manufacturers, and online marketing, our services offer unmatched precision and quality that make your products stand out.</p>
+                        <p class="svc-features-label"><strong>Key Features:</strong></p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Luxury Furniture 3D Modeling Service</li>
+                            <li><i class="fas fa-check"></i> Realistic 3D Rendering for Luxury Furniture</li>
+                            <li><i class="fas fa-check"></i> Custom Furniture Design Visualization</li>
+                            <li><i class="fas fa-check"></i> 3D Furniture Animation for Marketing</li>
+                            <li><i class="fas fa-check"></i> Virtual Staging for Luxury Furniture</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Premium Luxury Furniture (Sofa image) -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80" alt="Premium Luxury Furniture 3D Modeling" loading="lazy">
+                            <img src="images/3D/3D%20Modelling/4_sofa.jpg" alt="Premium Luxury Furniture 3D Modeling" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-gem"></i></span>
-                        <h3>Premium Luxury Furniture 3D Modeling and Rendering</h3>
-                        <p>Bring your luxury furniture designs to life with photorealistic 3D modeling and rendering from Graphics Pixels. Our expert team creates stunning, realistic visuals that highlight the elegance, craftsmanship, and intricate details of your luxury furniture collection — ensuring the highest standard in every render.</p>
-                        <p>Perfect for interior designers, manufacturers, and online marketing. We offer unmatched precision and quality that makes your products stand out in competitive marketplaces and brand campaigns.</p>
+                        <h3>Premium Luxury Furniture 3D Modeling and Rendering Services</h3>
+                        <p>Bring your luxury furniture designs to life with the best quality 3D Product Modeling Service and rendering services from Graphics Pixels. Our expert team creates stunning, realistic visuals that highlight the elegance, craftsmanship, and intricate details of your luxury furniture collection, ensuring the highest standard in every render. Perfect for interior designers, manufacturers, and online marketing, our services offer unmatched precision and quality that make your products stand out.</p>
+                        <p class="svc-features-label"><strong>Key Features:</strong></p>
                         <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> Luxury Furniture 3D Modeling</li>
-                            <li><i class="fas fa-check"></i> Realistic rendering for luxury brands</li>
-                            <li><i class="fas fa-check"></i> Custom furniture design visualisation</li>
-                            <li><i class="fas fa-check"></i> 3D furniture animation for marketing</li>
-                            <li><i class="fas fa-check"></i> Virtual staging for luxury furniture</li>
+                            <li><i class="fas fa-check"></i> Luxury Furniture 3D Modeling Service</li>
+                            <li><i class="fas fa-check"></i> Realistic 3D Rendering for Luxury Furniture</li>
+                            <li><i class="fas fa-check"></i> Custom Furniture Design Visualization</li>
+                            <li><i class="fas fa-check"></i> 3D Furniture Animation for Marketing</li>
+                            <li><i class="fas fa-check"></i> Virtual Staging for Luxury Furniture</li>
                         </ul>
                         <div class="svc-actions">
                             <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
@@ -221,11 +326,11 @@
                     </div>
                 </article>
 
-                <!-- 3. Footwear -->
+                <!-- 5. Footwear -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Footwear 3D Modeling and Rendering" loading="lazy">
+                            <img src="images/3D/3D%20Modelling/5_footwear.jpg" alt="Footwear 3D Modeling and Rendering" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -233,12 +338,7 @@
                         <h3>Footwear 3D Modeling & Rendering</h3>
                         <p>Photorealistic 3D models of footwear — heels, sneakers, boots, loafers, and sandals — with accurate mesh texture, sole structure, lace detail, and material finish. Output used for e-commerce listings, footwear brand marketing, 3D ads, and AR try-on applications.</p>
                         <p>Colour and material variants produced from one base model. Studio-lit hero renders and lifestyle environment placements are both available. AR-ready formats for virtual try-on and product configurators.</p>
-                        <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> 3D Product Rendering for footwear</li>
-                            <li><i class="fas fa-check"></i> AR try-on ready formats</li>
-                            <li><i class="fas fa-check"></i> 3D Animation for ads</li>
-                            <li><i class="fas fa-check"></i> E-commerce image editing compatible</li>
-                        </ul>
+                        <p class="svc-related"><em>→ Related: 3D Product Rendering | 3D Animation | E-commerce Image Editing</em></p>
                         <div class="svc-actions">
                             <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
@@ -246,11 +346,11 @@
                     </div>
                 </article>
 
-                <!-- 4. Handbag & Accessories -->
+                <!-- 6. Handbag & Accessories -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Handbag and Accessories 3D Modeling" loading="lazy">
+                            <img src="images/3D/3D%20Modelling/6_accessories.jpeg" alt="Handbag and Accessories 3D Modeling" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -258,12 +358,7 @@
                         <h3>Handbag & Accessories 3D Modeling</h3>
                         <p>Photorealistic 3D models of handbags, clutches, wallets, and leather accessories — with accurate stitching detail, hardware finish, leather grain texture, and zip and clasp elements. Output used for fashion e-commerce product pages, lookbook photography replacement, wholesale catalog production, and brand campaign visuals.</p>
                         <p>Material and colour variants from a single model. Multiple camera angles and environment renders from one production run. Used by fashion brands, independent designers, and luxury accessory retailers.</p>
-                        <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> 3D Rendering for fashion e-commerce</li>
-                            <li><i class="fas fa-check"></i> Fashion photo retouching compatible</li>
-                            <li><i class="fas fa-check"></i> Wholesale catalog production</li>
-                            <li><i class="fas fa-check"></i> E-commerce image editing</li>
-                        </ul>
+                        <p class="svc-related"><em>→ Related: 3D Rendering | Fashion Photo Retouching | E-commerce Image Editing</em></p>
                         <div class="svc-actions">
                             <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
@@ -271,11 +366,11 @@
                     </div>
                 </article>
 
-                <!-- 5. Fashion & Apparel -->
+                <!-- 7. Fashion & Apparel -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Fashion and Apparel 3D Modeling" loading="lazy">
+                            <img src="images/3D/3D%20Modelling/7_fashion.jpeg" alt="Fashion and Apparel 3D Modeling" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -283,12 +378,7 @@
                         <h3>Fashion & Apparel 3D Modeling</h3>
                         <p>Photorealistic 3D models of garments — evening dresses, formal wear, outerwear, and ready-to-wear — with accurate fabric simulation, drape and flow, texture, and garment construction detail. Used as an alternative to physical samples for pre-launch marketing, wholesale catalog production, and e-commerce listings before stock arrives.</p>
                         <p>Particularly useful for fashion brands producing collections in advance of physical production — 3D models can be used for buyer presentations, press imagery, and online listings from design files alone.</p>
-                        <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> Ghost Mannequin compatible</li>
-                            <li><i class="fas fa-check"></i> Fashion photo retouching</li>
-                            <li><i class="fas fa-check"></i> Pre-launch marketing visuals</li>
-                            <li><i class="fas fa-check"></i> 3D Animation for collections</li>
-                        </ul>
+                        <p class="svc-related"><em>→ Related: Ghost Mannequin Service | Fashion Photo Retouching | 3D Animation</em></p>
                         <div class="svc-actions">
                             <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
@@ -604,6 +694,16 @@
     <script src="js/script.js"></script>
     <script src="js/pe-animations.js"></script>
     <script src="components/load-components.js"></script>
+    <script>
+        document.querySelectorAll('.svc-3d-expand').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var viewer = btn.previousElementSibling;
+                if (viewer && viewer.requestFullscreen) {
+                    viewer.requestFullscreen();
+                }
+            });
+        });
+    </script>
     <!-- WhatsApp Chat Button -->
     <a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
