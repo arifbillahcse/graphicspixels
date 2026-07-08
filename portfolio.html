@@ -121,8 +121,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/8__Portfolio.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -160,21 +160,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/8__Portfolio.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -188,6 +198,7 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Our Work</span>
@@ -195,7 +206,7 @@
                 <p class="ds-lead">Real results from 13+ years of professional photo editing.</p>
                 <p>Drag any slider to compare the before and after — every image worked by hand in Photoshop by our specialists.</p>
                 <div class="ds-showcase-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
@@ -343,7 +354,7 @@
                     </div>
                     <a href="background-removal-service.html" class="pf-service-link">View Service <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="pf-grid pf-grid-2 reveal" data-reveal="up">
+                <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
                             <img src="images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="Before — Background Removal">
@@ -365,6 +376,9 @@
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                    </div>
+                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
+                        <img src="images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20(1).jpg" alt="Pure White Background for E-commerce" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>
@@ -538,7 +552,7 @@
             <h2>Ready to See Your Images Transformed?</h2>
             <p>Send 1–5 images for a free trial. Results back within 24 hours — no payment required.</p>
             <div class="pf-cta-actions">
-                <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                 <a href="services.html" class="btn btn-outline-white">Explore All Services</a>
             </div>
         </div>

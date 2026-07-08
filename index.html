@@ -153,12 +153,13 @@
         /* ---- Showcase Banner Section ---- */
         .ds-showcase {
             position: relative;
+            z-index: 0;
             width: 100%;
-            min-height: 560px;
+            height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/1__main-page-Copy.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -196,21 +197,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/1__main-page-Copy.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -223,12 +234,14 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase" id="home">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Meet Graphics Pixels</span>
                 <h2>Your Photo Retouching &amp; Post-Production Service Partner</h2>
                 <p class="ds-lead">Complete Image Editing, Video, and 3D Solutions in One Place</p>
-                <p>No time for post-production? Outsource your photo clipping path, retouching and post-production work to Graphics Pixels and focus on growing your brand. From simple white backgrounds to complex ghost mannequins, we deliver pixel-perfect editing that makes your product photography stand out.</p>
+                <p>Graphics Pixels is a dedicated photo editing and post-production outsourcing studio based in Dhaka, Bangladesh, with a UK office in Southampton. We handle clipping path, background removal, ghost mannequin, photo retouching, color correction, image masking, drop shadow, headshot editing, photo restoration, AI image fixes, 3D product modeling, and video editing—all done by hand by our 120+ in-house editors.</p>
+                <p>No AI shortcuts. No subcontracting. 24-hour standard turnaround. Free trial on every new order — send 1 to 5 images and get them back edited within 24 hours at no charge.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="#free-trial" class="btn btn-outline">Get A Free Quote</a>
@@ -441,6 +454,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!-- /.vt-track -->
 
                 <div class="vt-controls">
@@ -479,6 +564,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
 
@@ -589,7 +686,7 @@
             </div>
 
             <div class="services-cta reveal" data-reveal="up">
-                <a href="#services" class="btn btn-outline">See all Services</a>
+                <a href="services.html" class="btn btn-outline">See all Services</a>
             </div>
         </div>
 
@@ -636,7 +733,7 @@
                         <li><i class="fas fa-check"></i> Simply upload and send the files</li>
                         <li><i class="fas fa-check"></i> 24/7 support from us</li>
                     </ul>
-                    <a href="#free-trial" class="btn btn-outline btn-block">Pricing Details</a>
+                    <a href="pricing.html" class="btn btn-outline btn-block">Pricing Details</a>
                 </div>
 
                 <div class="pricing-card popular reveal" data-reveal="up" data-delay="150">
@@ -649,7 +746,7 @@
                         <li><i class="fas fa-check"></i> Simply upload and send the files</li>
                         <li><i class="fas fa-check"></i> Nonstop support from our experts</li>
                     </ul>
-                    <a href="#free-trial" class="btn btn-primary btn-block">Pricing Details</a>
+                    <a href="pricing.html" class="btn btn-primary btn-block">Pricing Details</a>
                 </div>
 
                 <div class="pricing-card reveal" data-reveal="up" data-delay="300">
@@ -661,7 +758,7 @@
                         <li><i class="fas fa-check"></i> Simple upload and send the files</li>
                         <li><i class="fas fa-check"></i> Support team available 24 hours</li>
                     </ul>
-                    <a href="#free-trial" class="btn btn-outline btn-block">Pricing Details</a>
+                    <a href="pricing.html" class="btn btn-outline btn-block">Pricing Details</a>
                 </div>
             </div>
         </div>

@@ -52,8 +52,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -91,21 +91,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -120,14 +130,16 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Photo Editing</span>
-                <h2>Color Correction Service</h2>
-                <p class="ds-lead">Accurate colour from image to image — white balance, exposure, hue, and saturation corrected by hand.</p>
-                <p>Consistent tones across your full product catalog, reduces return rates, and matches your brand colour standard. From marketplace compliance to fashion catalog standardisation — we handle every aspect of colour correction with image-by-image precision.</p>
+                <h2>Professional Color Correction Service — Product, Fashion &amp; E-commerce Photography</h2>
+                <p class="ds-lead">Graphics Pixels provides color correction for product photography, fashion catalogs, e-commerce listings, and portrait work. We adjust white balance, exposure, contrast, hue, vibrancy, and saturation — image by image — to bring your batch to a single consistent, accurate standard.</p>
+                <p>Inaccurate color in product photography causes returns. A garment that photographs with a blue cast looks different from the actual item, and buyers send it back. Accurate color correction is one of the most direct ways to reduce return rates and increase buyer confidence on Amazon, Shopify, and eBay.</p>
+                <p>Pricing from €0.50/image. 24-hour turnaround. Free trial on every new order.</p>
                 <div class="ds-showcase-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
@@ -144,7 +156,7 @@
                     <p>Color correction is the process of adjusting white balance, exposure, hue, saturation, and contrast to bring images to a consistent, accurate colour standard. It neutralises unwanted colour casts caused by mixed lighting, corrects exposure problems, and ensures tones match across your product catalog or shoot batch.</p>
                     <p>For e-commerce, inaccurate colour is one of the leading causes of returns — customers receive a product that doesn't match the listing photo. Color correction is one of the most direct ways to reduce returns, increase buyer confidence, and maintain your brand visual standard across every platform: website, Amazon, Instagram, print, and beyond.</p>
                     <div class="cp-intro-actions">
-                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                         <a href="services.html" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
@@ -197,10 +209,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Before — Color Correction">
+                                <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="Before — Color Correction">
                             </div>
                             <div class="ba-after">
-                                <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="After — Color Correction">
+                                <img src="images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="After — Color Correction">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -216,7 +228,7 @@
                             <li><i class="fas fa-check"></i> Marketplace compliant output</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -240,7 +252,7 @@
                             <li><i class="fas fa-check"></i> Professional catalog appearance</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -270,7 +282,7 @@
                             <li><i class="fas fa-check"></i> Consistent output across full batch</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -300,7 +312,7 @@
                             <li><i class="fas fa-check"></i> Fashion-grade colour accuracy</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -324,7 +336,7 @@
                             <li><i class="fas fa-check"></i> Consistent brand identity everywhere</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -468,6 +480,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!-- /.vt-track -->
 
                 <div class="vt-controls">
@@ -506,6 +590,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Graphics Pixels</title>
+    <meta name="description" content="Photo editing tips, e-commerce imaging guides and news from the Graphics Pixels team.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/graphics-pixels-logo-2-HR.png">
+
+    <style>
+        /* ===== Page-scoped styles — Blog ===== */
+        .bl-header { padding: 150px 0 50px; background: var(--gradient-soft); }
+        .bl-header .bl-eyebrow {
+            font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px;
+            letter-spacing: 2px; text-transform: uppercase; color: var(--magenta);
+        }
+        .bl-header h1 {
+            font-family: 'Poppins', sans-serif; font-size: 44px; font-weight: 800;
+            color: var(--navy); text-transform: uppercase; line-height: 1.1; margin-top: 10px;
+        }
+        .bl-header .bl-sub { margin-top: 14px; color: var(--text-light); font-size: 16px; max-width: 620px; }
+
+        .bl-empty { padding: 100px 0 120px; text-align: center; }
+        .bl-empty i { font-size: 48px; color: var(--magenta); margin-bottom: 22px; }
+        .bl-empty h2 { font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+        .bl-empty p { color: var(--text-light); font-size: 15px; max-width: 480px; margin: 0 auto 30px; }
+
+        @media (max-width: 768px) {
+            .bl-header { padding: 120px 0 40px; }
+            .bl-header h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="bl-header">
+        <div class="container">
+            <p class="bl-eyebrow">Graphics Pixels</p>
+            <h1>Blog</h1>
+            <p class="bl-sub">Photo editing tips, e-commerce imaging guides and news from our team.</p>
+        </div>
+    </section>
+
+    <!-- ============ EMPTY STATE ============ -->
+    <section class="bl-empty">
+        <div class="container">
+            <i class="fas fa-pen-nib"></i>
+            <h2>New posts are coming soon</h2>
+            <p>We're working on our first articles. In the meantime, get in touch or grab a free trial of our editing services.</p>
+            <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+                <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+    <script src="components/load-components.js"></script>
+</body>
+</html>

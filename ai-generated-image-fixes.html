@@ -19,8 +19,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -58,21 +58,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -87,14 +97,16 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Photo Editing</span>
-                <h2>AI-Generated Image Fixes</h2>
-                <p class="ds-lead">AI generators create stunning results — but sometimes stumble on anatomical details, text accuracy, and lighting consistency.</p>
-                <p>We fix what the AI got wrong manually in Photoshop, preserving the composition, style, and quality that works.</p>
+                <h2>AI-Generated Image Fixes — Human Retouching for AI Output Errors</h2>
+                <p class="ds-lead">AI image generators produce useful results but predictable errors: extra or malformed fingers, broken facial anatomy, warped or unreadable text, inconsistent lighting, mismatched skin texture, and background artefacts. Regenerating the prompt doesn't reliably fix specific problems — and often breaks what was working.</p>
+                <p>Graphics Pixels sends your AI-generated image to a human retoucher in Photoshop. We isolate the problem areas and correct them directly — hands, faces, text, edges, lighting — without starting the generation over. The result is a polished, usable image that keeps what the AI got right and fixes what it got wrong.</p>
+                <p>24-hour turnaround. 100% commercial rights. NDA-compliant. Free trial on every new order.</p>
                 <div class="ds-showcase-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
@@ -111,7 +123,7 @@
                     <p>AI image generators produce visually compelling results, but sometimes make consistent mistakes: extra or malformed fingers, asymmetric facial anatomy, unreadable or warped text, lighting inconsistencies, and background artefacts. Regenerating the prompt is unpredictable — it may fix the hands but break the composition or lighting.</p>
                     <p>We take your AI-generated image and send it to a human retoucher in Photoshop. We isolate the problem areas and correct them directly — hands, facial features, text, lighting, edges — without regenerating the entire image. The result preserves the strengths of the AI output while fixing the specific errors. 24-hour turnaround. 100% commercial usage rights. NDA-compliant workflow.</p>
                     <div class="cp-intro-actions">
-                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                         <a href="services.html" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
@@ -177,7 +189,7 @@
                             <li><i class="fas fa-check"></i> Skin tone and texture matched seamlessly</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -201,7 +213,7 @@
                             <li><i class="fas fa-check"></i> Skin texture made consistent and natural</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -216,16 +228,12 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-pen-nib"></i></span>
-                        <h3>Text &amp; Typography Correction</h3>
-                        <p>AI consistently struggles with readable text: letters are warped, words are nonsensical, and spacing is uneven. We rewrite text in Photoshop on signs, labels, packaging mockups, UI elements, and marketing graphics. Text is rendered to match the perspective, lighting, and style of the surrounding image, looking like it was there in the original AI generation.</p>
+                        <h3>Transparent Background</h3>
+                        <p>Making transparent background is a simple way, we do it to free your images from its background so that you can put your images on any background. Save your time and cost with our fast &amp; quality photo editing services.</p>
                         <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> Illegible text redrawn clearly</li>
-                            <li><i class="fas fa-check"></i> Warped perspective corrected</li>
-                            <li><i class="fas fa-check"></i> Spacing and alignment balanced</li>
-                            <li><i class="fas fa-check"></i> Text integrated naturally into scene</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -249,31 +257,7 @@
                             <li><i class="fas fa-check"></i> Perspective and lighting made coherent</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
-                            <a href="contact.html" class="btn btn-outline">Learn More</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- 5. Lighting & Shadow Correction -->
-                <article class="svc-row reveal" data-reveal="up">
-                    <div class="svc-media">
-                        <div class="svc-img">
-                            <img src="images/individualservicepage/11-ai-generated-image-services/1.-Graphics-Pixels-1024x559.jpg" alt="Lighting and Shadow Correction" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="svc-body">
-                        <span class="svc-badge"><i class="fas fa-lightbulb"></i></span>
-                        <h3>Lighting &amp; Shadow Consistency</h3>
-                        <p>AI-generated lighting is often physically implausible: light hits multiple directions, shadows point inconsistently, and ambient lighting is unbalanced. We correct these using curves, dodge-and-burn tools, and selective shadow painting. The final lighting reads as coherent and realistic, whether the image is supposed to be lit by sunlight, studio lights, or ambient room light.</p>
-                        <ul class="svc-features">
-                            <li><i class="fas fa-check"></i> Light direction made consistent</li>
-                            <li><i class="fas fa-check"></i> Shadow placement corrected</li>
-                            <li><i class="fas fa-check"></i> Ambient light balanced</li>
-                            <li><i class="fas fa-check"></i> Highlights and reflections refined</li>
-                        </ul>
-                        <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -417,6 +401,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!-- /.vt-track -->
 
                 <div class="vt-controls">
@@ -455,6 +511,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
 

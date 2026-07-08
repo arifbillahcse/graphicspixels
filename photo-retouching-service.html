@@ -56,8 +56,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/Photo Retouching service/graphics-pixels-2.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -95,21 +95,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/Photo Retouching service/graphics-pixels-2.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .pe-video-section {
@@ -123,12 +133,13 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Photo Editing</span>
-                <h2>Professional Photo Retouching</h2>
-                <p class="ds-lead">Human-edited retouching for e-commerce, fashion, beauty, and portrait photography. No AI filters, no batch presets — every image worked individually to your exact brief.</p>
-                <p>At Graphics Pixels, retouching is 100% human editing by trained Photoshop professionals. Skin work, tone correction, blemish removal, eye brightening, shadow refinement, and color grading — everything assessed individually and matched to your specifications. 24-hour turnaround, unlimited revisions, NDA-compliant work, with 120+ trained editors ready to handle any batch size or complexity.</p>
+                <h2>Professional Photo Retouching Services — Product, Fashion, Beauty &amp; Portrait</h2>
+                <p class="ds-lead">Graphics Pixels provides photo retouching for e-commerce brands, photographers, fashion studios, and advertising agencies. We handle product retouching, high-end beauty and portrait work, fashion and apparel retouching, jewelry polishing, and commercial and editorial finishing — all done by human editors in Photoshop, to your brief, with no AI presets.</p>
+                <p>Every order is matched against a reference standard before delivery. 120+ trained retouchers, 24-hour turnaround, unlimited revisions. Send 1–5 images for a free trial — returned within 24 hours, no charge.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Learn More</a>
@@ -196,7 +207,7 @@
                             <li><i class="fas fa-check"></i> Used by portrait, beauty &amp; editorial clients</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -226,7 +237,7 @@
                             <li><i class="fas fa-check"></i> Bulk orders from $1.50/image</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -256,7 +267,7 @@
                             <li><i class="fas fa-check"></i> Used by fashion brands &amp; advertising agencies</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -286,7 +297,7 @@
                             <li><i class="fas fa-check"></i> Used by ad agencies &amp; editorial photographers</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -310,7 +321,7 @@
                             <li><i class="fas fa-check"></i> Used by fashion brands &amp; beauty campaigns</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -453,6 +464,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!-- /.vt-track -->
 
                 <div class="vt-controls">
@@ -489,6 +572,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
                 <a href="portfolio.html" class="vt-cta">

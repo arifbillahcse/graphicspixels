@@ -20,8 +20,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/7__PLAN-PRICING.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -59,21 +59,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/7__PLAN-PRICING.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -86,6 +96,7 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Plans &amp; Pricing</span>
@@ -93,7 +104,7 @@
                 <p class="ds-lead">Professional photo editing starting at just $0.19 per image.</p>
                 <p>No hidden fees, no surprises — just pixel-perfect results delivered on time, every time.</p>
                 <div class="ds-showcase-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
@@ -107,7 +118,7 @@
                 <h2>Professional Photo Editing &amp; Retouching Services</h2>
                 <p>Starting at just <strong>$0.19 per image</strong> — Standard delivery 24–48 hours. Need it faster? We offer express packages to meet your tightest deadlines.</p>
             </div>
-            <a href="contact.html" class="btn btn-primary pr-banner-btn">Get Free Trial</a>
+            <a href="#free-trial" class="btn btn-primary pr-banner-btn">Get Free Trial</a>
         </div>
     </div>
 
@@ -143,7 +154,7 @@
                         <li><span class="pr-item-name">Super Complex Clipping Path</span><span class="pr-item-price">$7.99</span></li>
                         <li><span class="pr-item-name">Remove Unwanted Objects</span><span class="pr-item-price">$1.25</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Shadow Creation -->
@@ -167,7 +178,7 @@
                         <li><span class="pr-item-name">Shadow Removal Service</span><span class="pr-item-price">$0.99</span></li>
                         <li><span class="pr-item-name">Shadow on Portrait</span><span class="pr-item-price">$1.99</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Ghost Mannequin -->
@@ -189,7 +200,7 @@
                         <li><span class="pr-item-name">Complex Neck Joint on Ghost Mannequin</span><span class="pr-item-price">$1.20</span></li>
                         <li><span class="pr-item-name">Complex Packshot Ghost Mannequin Effect</span><span class="pr-item-price">$1.50</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Image Masking -->
@@ -213,7 +224,7 @@
                         <li><span class="pr-item-name">Transparent Image Masking</span><span class="pr-item-price">$2.49</span></li>
                         <li><span class="pr-item-name">Color Masking</span><span class="pr-item-price">$3.49</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- E-commerce Photo Editing -->
@@ -237,7 +248,7 @@
                         <li><span class="pr-item-name">Ghost Mannequin Effect</span><span class="pr-item-price">$1.20</span></li>
                         <li><span class="pr-item-name">Product Photo Cleaning</span><span class="pr-item-price">$1.00</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Photography Retouching -->
@@ -260,7 +271,7 @@
                         <li><span class="pr-item-name">Digital Airbrushing</span><span class="pr-item-price">$4.00</span></li>
                         <li><span class="pr-item-name">Portrait Cleaning &amp; Enhancement</span><span class="pr-item-price">$4.00</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Color Correction -->
@@ -282,7 +293,7 @@
                         <li><span class="pr-item-name">Complex Color Correction</span><span class="pr-item-price">$1.20</span></li>
                         <li><span class="pr-item-name">Complex Packshot Color Correction</span><span class="pr-item-price">$1.50</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <!-- Vector Conversion -->
@@ -306,7 +317,7 @@
                         <li><span class="pr-item-name">3D Vector Conversion</span><span class="pr-item-price">$19.99</span></li>
                         <li><span class="pr-item-name">Product to Vector</span><span class="pr-item-price">$14.99</span></li>
                     </ul>
-                    <a href="contact.html" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
             </div>

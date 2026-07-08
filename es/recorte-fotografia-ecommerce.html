@@ -27,8 +27,8 @@
             min-height: 100vh;
             background-color: #fff;
             background-image: url('../images/clipping%20path%20cover.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -76,27 +76,36 @@
         }
         .dt-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
         @media (max-width: 992px) {
-            .dt-showcase {
-                background-size: 55%;
-                background-position: right center;
-            }
             .dt-showcase-content { max-width: 55%; }
         }
         @media (max-width: 768px) {
             .dt-showcase {
                 min-height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .dt-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('../images/clipping%20path%20cover.png');
                 background-size: contain;
-                background-position: center top;
-                padding-top: 80vw;
-                align-items: flex-start;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
             }
             .dt-showcase-content {
                 max-width: 100%;
-                padding: 40px 0 60px;
+                padding: 0 0 40px;
             }
             .dt-showcase-content h1 { font-size: 28px; }
             .dt-showcase-icons { grid-template-columns: 1fr; }
+        }
+        @media (min-width: 769px) {
+            .dt-showcase-image { display: none; }
         }
 
         /* --- Generic section heads (reuse site classes via .container) --- */
@@ -246,7 +255,7 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="../services.html" class="nav-link">Services</a></li>
                     <li class="nav-item dropdown">
-                        <a href="../photo-editing.html" class="nav-link">Photo Editing <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-link">Photo Editing <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu dropdown-wide">
                             <li><a href="../clipping-path-service.html"><i class="fas fa-chevron-right"></i> Clipping Path service</a></li>
                             <li><a href="../photo-retouching-service.html"><i class="fas fa-chevron-right"></i> Photo Retouching service</a></li>
@@ -256,13 +265,13 @@
                             <li><a href="../color-correction-service.html"><i class="fas fa-chevron-right"></i> Color Correction Service</a></li>
                             <li><a href="../drop-shadow-service.html"><i class="fas fa-chevron-right"></i> Drop Shadow Service</a></li>
                             <li><a href="../image-masking-service.html"><i class="fas fa-chevron-right"></i> Image Masking service</a></li>
-                            <li><a href="../ecommerce-image-editing.html"><i class="fas fa-chevron-right"></i> E-commerce Image Editing</a></li>
+                            <li><a href="../ecommerce-image-editing-services.html"><i class="fas fa-chevron-right"></i> E-commerce Image Editing</a></li>
                             <li><a href="../photo-restoration-service.html"><i class="fas fa-chevron-right"></i> Photo Restoration Service</a></li>
                             <li><a href="../ai-generated-image-fixes.html"><i class="fas fa-chevron-right"></i> AI-generated Image Fixes</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="../3d-service.html" class="nav-link">3D Service <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-link">3D Service <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="../3d-product-modeling-service.html"><i class="fas fa-chevron-right"></i> 3D Modeling</a></li>
                             <li><a href="../3d-rendering-service.html"><i class="fas fa-chevron-right"></i> 3D Rendering</a></li>
@@ -284,6 +293,7 @@
 
     <!-- ============ HERO / SHOWCASE ============ -->
     <section class="dt-showcase">
+        <div class="dt-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="dt-showcase-content reveal" data-reveal="left">
                 <span class="dt-showcase-eyebrow">✨ Postproducción Visual Premium para el Retail en España</span>
@@ -544,8 +554,8 @@
                     <li><a href="../pricing.html">Pricing</a></li>
                     <li><a href="../about-us.html">About</a></li>
                     <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -564,7 +574,7 @@
                     <li><a href="../color-correction-service.html">Color Correction Service</a></li>
                     <li><a href="../drop-shadow-service.html">Drop Shadow Service</a></li>
                     <li><a href="../image-masking-service.html">Image Masking Service</a></li>
-                    <li><a href="../ecommerce-image-editing.html">E-commerce Image Editing</a></li>
+                    <li><a href="../ecommerce-image-editing-services.html">E-commerce Image Editing</a></li>
                     <li><a href="../photo-restoration-service.html">Photo Restoration Service</a></li>
                     <li><a href="../ai-generated-image-fixes.html">AI-generated Image Fixes</a></li>
                 </ul>
@@ -574,12 +584,12 @@
             <div class="container footer-bottom-inner">
                 <p>Copyright &copy; 2013 GRAPHICSPIXELS. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.pinterest.com/graphicspixels/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.youtube.com/@graphicspixels" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/graphicspixelss" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/grap.hicspixels/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/graphicspixels/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573139442036" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </div>

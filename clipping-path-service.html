@@ -55,8 +55,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/Clipping Path service/graphics-pixels-1.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -94,21 +94,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/Clipping Path service/graphics-pixels-1.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -123,12 +133,14 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Photo Editing</span>
-                <h2>Clipping Path Services</h2>
-                <p class="ds-lead">Professional manual clipping path service for all product types. Every path drawn by hand with the Photoshop pen tool — no automated selection, no batch processing.</p>
-                <p>At Graphics Pixels, clipping path service means complete manual isolation using the Photoshop pen tool. Every path is assessed individually and drawn by hand to precision, delivering clean, isolated subjects ready for any background, platform, or campaign. We handle all complexity levels from simple product shapes to multi-part jewelry and lacework. 24–48 hour turnaround, unlimited revisions, from $0.39/image, with bulk discounts available.</p>
+                <span class="ds-showcase-eyebrow">Clipping Path</span>
+                <h2>Professional Clipping Path Service — 100% Manual, Every Complexity Level</h2>
+                <p class="ds-lead">A clipping path is a closed vector path drawn by hand around a subject in Photoshop. Everything inside stays; everything outside is removed. The result is a clean, isolated subject ready to drop onto any background — no halos, no fringe, no edge artifacts from batch automation.</p>
+                <p>Every path at Graphics Pixels is drawn manually with the Photoshop pen tool. We cover all complexity levels: simple single-path shapes, compound paths for multi-part products, complex paths for furniture and apparel, and super-complex paths for jewelry, lacework, and fine-detailed subjects. Starting from $0.39 per image. Turnaround 24–48 hours. Bulk orders discounted.</p>
+                <p>Best for: footwear, packaged goods, electronics, jewelry, bags, furniture, and any product with hard, defined edges. For hair, fur, sheer fabric, or transparent materials — image masking is the right technique. We assess every batch and recommend the correct approach.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Learn More</a>
@@ -147,7 +159,7 @@
                     <p>A clipping path is a closed vector path drawn by hand around a subject using the Photoshop pen tool. Everything inside the path stays; everything outside is discarded. The output is a clean, isolated subject with no halos, no fringe, and no artefacts left over from automated selection tools.</p>
                     <p>Every path at Graphics Pixels is drawn manually. We cover all complexity levels: simple single-path products, compound paths for multi-part subjects, complex paths for apparel and furniture, and super-complex paths for jewelry, lacework, and fine-detailed items. From $0.39 per image, 24–48 hour turnaround, bulk orders discounted. Best for products with defined, hard edges — for hair, fur, or sheer fabric, image masking is the appropriate technique.</p>
                     <div class="cp-intro-actions">
-                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                         <a href="services.html" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
@@ -219,7 +231,7 @@
                             <li><i class="fas fa-check"></i> Ready to use on any background immediately</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -233,7 +245,7 @@
                                 <img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Before — White and Colored Background">
                             </div>
                             <div class="ba-after">
-                                <img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%282%29.jpg" alt="After — White and Colored Background">
+                                <img src="images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="After — White and Colored Background">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -249,7 +261,7 @@
                             <li><i class="fas fa-check"></i> Platform-ready output dimensions available</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -273,7 +285,7 @@
                             <li><i class="fas fa-check"></i> Looks like a single photograph, not a composite</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -303,7 +315,7 @@
                             <li><i class="fas fa-check"></i> Bulk pricing scales down with volume</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -327,7 +339,7 @@
                             <li><i class="fas fa-check"></i> Volume pricing from 100+ images per batch</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -471,6 +483,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!-- /.vt-track -->
 
                 <div class="vt-controls">
@@ -509,6 +593,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
 

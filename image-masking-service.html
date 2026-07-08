@@ -52,8 +52,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/Image Masking service/graphics-pixels-10.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -91,21 +91,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/Image Masking service/graphics-pixels-10.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -120,14 +130,16 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Photo Editing</span>
-                <h2>Image Masking Service</h2>
-                <p class="ds-lead">Hair, fur, glass, sheer fabric, fine mesh — subjects where clipping path fails.</p>
-                <p>Every strand, every soft edge, every transparent surface isolated by hand in Photoshop for a clean, natural result on any background. Layer masking, alpha channel masking, hair and fur masking, transparent object masking, and refine edge masking — all executed with precision.</p>
+                <h2>Professional Image Masking Service — Hair, Fur, Transparent Objects &amp; Complex Edges</h2>
+                <p class="ds-lead">Clipping path draws a hard vector outline around a subject. It works on products with clean, defined edges. It does not work on hair, fur, sheer fabric, fine mesh, glass, water, or any subject where the edge blends softly into the background. Image masking is the correct technique for those cases.</p>
+                <p>Graphics Pixels provides layer masking, alpha channel masking, hair and fur masking, transparent object masking, and refine edge masking — all done by hand in Photoshop. The result is a clean, natural-edged cutout that holds up on any background, in any format, at any size.</p>
+                <p>Pricing from $0.75/image. 24-hour turnaround. Free trial on every new order.</p>
                 <div class="ds-showcase-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
@@ -144,7 +156,7 @@
                     <p>Clipping path draws a precise vector outline around a subject. It is the correct technique for hard-edged products with clean, defined boundaries. But it does not work on hair, fur, sheer fabric, fine mesh, smoke, glass, or any subject where the edge blends gradually into the background — because a hard path cuts away the soft detail that makes those subjects look natural.</p>
                     <p>Image masking is the correct technique for those cases. At Graphics Pixels, we provide layer masking, alpha channel masking, hair and fur masking, transparent object masking, and refine edge masking — all executed by hand in Photoshop. The result is a clean, natural-edged cutout that holds up on any background, at any size, in any format.</p>
                     <div class="cp-intro-actions">
-                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                         <a href="services.html" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
@@ -210,7 +222,7 @@
                             <li><i class="fas fa-check"></i> Used by portrait &amp; beauty photographers</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -221,10 +233,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(2).jpg" alt="Before — Alpha Channel Masking">
+                                <img src="images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-Before-1-5.jpg" alt="Before — Alpha Channel Masking">
                             </div>
                             <div class="ba-after">
-                                <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(1).jpg" alt="After — Alpha Channel Masking">
+                                <img src="images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-After-1-4.jpg" alt="After — Alpha Channel Masking">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -240,7 +252,7 @@
                             <li><i class="fas fa-check"></i> Further post-processing without affecting bg</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -251,10 +263,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(2).jpg" alt="Before — Transparent Object Masking">
+                                <img src="images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-Before-2-5.jpg" alt="Before — Transparent Object Masking">
                             </div>
                             <div class="ba-after">
-                                <img src="images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(1).jpg" alt="After — Transparent Object Masking">
+                                <img src="images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-After-2-5.jpg" alt="After — Transparent Object Masking">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -270,7 +282,7 @@
                             <li><i class="fas fa-check"></i> Product still looks like glass, not a flat shape</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -279,8 +291,14 @@
                 <!-- 4. Refine Edge Masking -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="svc-img">
-                            <img src="images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Refine Edge Masking" loading="lazy">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-Before-3-5.jpg" alt="Before — Refine Edge Masking">
+                            </div>
+                            <div class="ba-after">
+                                <img src="images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-After-3-6.jpg" alt="After — Refine Edge Masking">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
                     </div>
                     <div class="svc-body">
@@ -294,7 +312,7 @@
                             <li><i class="fas fa-check"></i> No jagged or rough edge artefacts</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -324,7 +342,7 @@
                             <li><i class="fas fa-check"></i> Portrait, fashion, beauty &amp; animal photography</li>
                         </ul>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -467,6 +485,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="vt-controls">
@@ -504,6 +594,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
 

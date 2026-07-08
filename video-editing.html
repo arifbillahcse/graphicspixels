@@ -19,8 +19,8 @@
             height: 100vh;
             background-color: #fff;
             background-image: url('images/hero-banner-images/5__Video-Editing-service.png');
-            background-size: 48%;
-            background-position: right center;
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
             background-repeat: no-repeat;
             overflow: hidden;
             display: flex;
@@ -58,21 +58,31 @@
             .ds-showcase {
                 height: auto;
                 flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
                 background-image: url('images/hero-banner-images/5__Video-Editing-service.png');
                 background-size: contain;
-                background-position: center top;
+                background-position: center;
                 background-repeat: no-repeat;
-                padding-top: 80vw;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-end;
+                margin-bottom: 24px;
             }
             .ds-showcase-content {
                 max-width: 100%;
-                padding: 40px 20px;
+                padding: 0 20px 40px;
                 width: 100%;
             }
             .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
         }
         /* Reduce top padding for intro section */
         .cp-intro {
@@ -86,14 +96,16 @@
 
     <!-- ============ PAGE HERO / SHOWCASE ============ -->
     <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Post-Production</span>
-                <h2>Professional Video Editing</h2>
-                <p class="ds-lead">Hand-edited video for e-commerce, fashion, real estate, and content creators.</p>
-                <p>No AI filters. 24–48 hour turnaround. Bulk projects handled at full capacity.</p>
+                <h2>Professional Video Editing Service — Product, Fashion, Real Estate &amp; Beauty</h2>
+                <p class="ds-lead">Post-Production for E-commerce Brands, Videographers, Agencies &amp; Content Creators</p>
+                <p>Graphics Pixels provides professional video editing for product demos, e-commerce ads, fashion reels, real estate walkthroughs, beauty and skin retouching, cinematic color grading, motion graphics, and audio post-production. All editing is done by hand by our in-house team — no automated AI filters applied to your footage.</p>
+                <p>Send us your raw footage and a brief. We return the edited video within 24–48 hours. Bulk projects handled at scalable capacity. Free trial on every new order.</p>
                 <div class="ds-showcase-actions">
-                    <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="contact.html" class="btn btn-outline-white">Get A Free Quote</a>
                 </div>
             </div>
@@ -111,16 +123,13 @@
                     <p>We serve e-commerce brands, fashion labels, real estate developers, agencies, and content creators. 30-second product demos, cinematic walkthroughs, full beauty campaigns — we match your brief exactly and deliver within 24–48 hours.</p>
                     <p>No AI batch processing. No automated filters. Every edit is crafted by a specialist. Send us footage and a brief, and we handle the rest.</p>
                     <div class="cp-intro-actions">
-                        <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                         <a href="services.html" class="btn btn-outline">Learn More</a>
                     </div>
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
-                    <div class="video-hero-thumb" style="cursor: pointer;" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                        <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Professional Video Editing" loading="lazy" class="yt-thumb-img">
-                        <div class="yt-thumb-overlay">
-                            <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
-                        </div>
+                    <div class="svc-img">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Professional Video Editing" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -150,10 +159,10 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-cart-shopping"></i></span>
-                        <h3>E-commerce Product Videos</h3>
-                        <p>Product demos optimized for Amazon, Shopify, and eBay. Raw footage into high-impact shorts showing fit, texture, and detail. Motion graphics, smooth transitions, and platform-spec formatting. Bulk editing at consistent quality and speed.</p>
+                        <h3>Fashion and Accessory Highlights</h3>
+                        <p>You should pay attention to your clothes and accessories. I employ new methods like the ghost mannequin effect to make clothes look expensive and professional. I also show off stylish items like handbags in a clear and focused way.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -162,8 +171,8 @@
                 <!-- 2. Beauty & Portrait Video Retouching -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                            <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
+                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://www.youtube.com/shorts/XWU11Nj9W8E')">
+                            <img src="https://img.youtube.com/vi/XWU11Nj9W8E/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
                             <div class="yt-thumb-overlay">
                                 <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
                             </div>
@@ -171,10 +180,10 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-face-smile"></i></span>
-                        <h3>Beauty &amp; Skin Retouching</h3>
-                        <p>Frame-by-frame skin correction, blemish removal, and color grading for beauty brands, makeup artists, and influencers. "Natural perfection" — smooth skin without plastic look. Lighting and tone matched across clips. Perfect for campaigns and social content.</p>
+                        <h3>3D Product Motion Graphics</h3>
+                        <p>I use 3D motion graphics that give your products depth, width, and height to make them stand out. This method provides a realistic, moving effect that works great for electronics, cosmetics, or any other product that looks better when you show it off in detail.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -183,8 +192,8 @@
                 <!-- 3. Real Estate Walkthroughs -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                            <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
+                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://www.youtube.com/shorts/Gqxbk4H2ErM')">
+                            <img src="https://img.youtube.com/vi/Gqxbk4H2ErM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
                             <div class="yt-thumb-overlay">
                                 <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
                             </div>
@@ -192,10 +201,10 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-home"></i></span>
-                        <h3>Real Estate Walkthroughs</h3>
-                        <p>Cinematic property showcases with HDR video mixing, sky replacement, smooth transitions, and premium color grading. Every room lit and graded to highlight its best features. Drone footage integrated seamlessly. Perfect for marketing properties and attracting buyers.</p>
+                        <h3>Show Off Your Shoes</h3>
+                        <p>Shoes are more than just objects you wear; they tell people something about you. I make videos of shoes that show off their style, texture, and comfort as they're moving. This makes them more appealing to customers.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -204,8 +213,8 @@
                 <!-- 4. Cinematic Color Grading -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                            <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
+                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://www.youtube.com/watch?v=fcMT6-glbjk')">
+                            <img src="https://img.youtube.com/vi/fcMT6-glbjk/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
                             <div class="yt-thumb-overlay">
                                 <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
                             </div>
@@ -213,10 +222,12 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-palette"></i></span>
-                        <h3>Cinematic Color Grading</h3>
-                        <p>Professional color correction for a movie-like finish. Grade each clip individually, matching tones and mood across your project. LUT-based workflows with manual adjustment for perfect skin tones, vibrant products, and cohesive narrative flow.</p>
+                        <h3>High-End Real Estate Video Editing for Marketing | Cinematic Property Showcase</h3>
+                        <p>In this video, we show professional Real Estate Video Editing technique to make your property visuals more cinematic, clean, and premium.</p>
+                        <p>Learn how to enhance real estate footage, improve color grading, add smooth transitions, and create engaging property showcase videos that boost marketing results.</p>
+                        <p>Perfect for real estate agents, property marketers, and video editors.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -225,8 +236,8 @@
                 <!-- 5. Motion Graphics & Titles -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                            <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
+                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://www.youtube.com/watch?v=87YBqSdqLEU')">
+                            <img src="https://img.youtube.com/vi/87YBqSdqLEU/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
                             <div class="yt-thumb-overlay">
                                 <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
                             </div>
@@ -234,10 +245,12 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-wand-magic-sparkles"></i></span>
-                        <h3>Motion Graphics &amp; Titles</h3>
-                        <p>Engaging overlays, transitions, and text animations. Product reveals, lower-third graphics, end screens, and branded intros tailored to your style guide. Smooth 2D and 3D motion built to pace and feel premium. Used across YouTube, social, and broadcast.</p>
+                        <h3>Interior Video Editing Service | Cinematic Home &amp; Office Showcase Editing</h3>
+                        <p>Looking for premium interior video editing that makes spaces look elegant and luxurious?</p>
+                        <p>We provide professional Interior Video Editing Service for homes, offices, and commercial spaces. Our editing style focuses on cinematic visuals, smooth transitions, perfect color grading, and premium presentation that enhances the beauty of every space.</p>
+                        <p>This service is perfect for interior designers, real estate agents, architects, and property marketing agencies who want to attract more clients with high-quality visuals. We turn simple interior footage into visually stunning and engaging showcase videos.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -246,8 +259,8 @@
                 <!-- 6. Fashion & Accessory Edits -->
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                            <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
+                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://www.youtube.com/watch?v=FMLa79NEBOU')">
+                            <img src="https://img.youtube.com/vi/FMLa79NEBOU/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
                             <div class="yt-thumb-overlay">
                                 <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
                             </div>
@@ -255,10 +268,12 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-shirt"></i></span>
-                        <h3>Fashion &amp; Accessory Reels</h3>
-                        <p>Fashion reel editing showcasing texture, fabric movement, and styling details. Ghost mannequin and 360° product spins. Color grading matched to brand aesthetic and platforms (Instagram, TikTok, YouTube Shorts).</p>
+                        <h3>High-End Skin Color Video Editing Services | Professional Beauty Retouch &amp; Smooth Skin Editing</h3>
+                        <p>Looking for flawless and natural-looking skin in your videos?</p>
+                        <p>We provide professional Skin Video Editing Services that enhance beauty while keeping a natural and realistic look. Our editing focuses on smooth retouching, blemish removal, color correction, and cinematic beauty enhancement for high-end results.</p>
+                        <p>This service is perfect for beauty brands, makeup artists, influencers, fashion shoots, and skincare advertisements who want premium-quality visuals that attract attention and build trust. We make your visuals clean, elegant, and production-ready for social media and marketing campaigns.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -267,8 +282,8 @@
                 <!-- 7. Audio Post-Production -->
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
-                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://youtu.be/_355dopcByM?si=7ryZfuwPlD3jUWpD')">
-                            <img src="https://img.youtube.com/vi/_355dopcByM/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
+                        <div class="video-hero-thumb video-row-thumb" onclick="openVideoModal('https://www.youtube.com/watch?v=SbVWFLV-KY4')">
+                            <img src="https://img.youtube.com/vi/SbVWFLV-KY4/hqdefault.jpg" alt="Video Editing" loading="lazy" class="yt-thumb-img">
                             <div class="yt-thumb-overlay">
                                 <button class="yt-play-btn" aria-label="Play video"><i class="fas fa-play"></i></button>
                             </div>
@@ -276,10 +291,13 @@
                     </div>
                     <div class="svc-body">
                         <span class="svc-badge"><i class="fas fa-headphones"></i></span>
-                        <h3>Audio Post-Production</h3>
-                        <p>Professional audio cleanup, sync, and sound design. Remove background noise, balance levels, sync dialogue, and add sound effects and music beds. Perfect for product demos, testimonials, explainers, and branded content. Broadcast-ready audio delivered with your final video.</p>
+                        <h3>Product Video Editing | Professional Product Showcase Video Tutorial</h3>
+                        <p>Want to make your products look premium and increase sales with powerful visuals?</p>
+                        <p>In this video, we show professional Product Video Editing techniques to create high-quality, cinematic product showcase videos for brands and e-commerce businesses.</p>
+                        <p>You will learn how to enhance product footage, improve lighting, color grading, smooth transitions, and create engaging ads that grab customer attention instantly.</p>
+                        <p>Perfect for e-commerce brands, drop shipping stores, and product marketers.</p>
                         <div class="svc-actions">
-                            <a href="contact.html" class="btn btn-primary">Get Free Trial</a>
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                             <a href="contact.html" class="btn btn-outline">Learn More</a>
                         </div>
                     </div>
@@ -454,6 +472,78 @@
                         </div>
                     </div>
 
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div><!-- /.vt-track -->
 
                 <div class="vt-controls">
@@ -492,6 +582,18 @@
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
                         <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
                     </button>
                 </div>
 
@@ -545,7 +647,7 @@
         function openVideoModal(videoUrl) {
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('videoIframe');
-            const videoId = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/)[1];
+            const videoId = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]+)/)[1];
             iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
