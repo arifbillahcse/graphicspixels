@@ -40,7 +40,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -178,7 +178,7 @@ img { max-width: 100%; display: block; }
     pointer-events: none;
 }
 .vt-wrap {
-    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    max-width: 1440px; margin: 0 auto; padding: 0 24px;
     display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px;
 }
 .vt-left { display: flex; flex-direction: column; gap: 22px; }
