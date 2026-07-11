@@ -1319,7 +1319,7 @@ img { max-width: 100%; display: block; }
 .how-step-3 { animation: howStep3 4s infinite; }
 .how-step-4 { animation: howStep4 4s infinite; }
 
-.how-number { position: absolute; bottom: -6px; right: -6px; width: 32px; height: 32px; border-radius: 50%; background: var(--magenta); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; font-family: 'Poppins', sans-serif; box-shadow: 0 3px 12px rgba(195, 0, 157, 0.25); }
+.how-number { position: absolute; bottom: 0px; right: 0px; width: 32px; height: 32px; border-radius: 50%; background: var(--magenta); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; font-family: 'Poppins', sans-serif; box-shadow: 0 3px 12px rgba(195, 0, 157, 0.25); transform: translate(50%, 50%); }
 
 .how-content { text-align: center; }
 .how-content h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
