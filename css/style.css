@@ -1295,12 +1295,11 @@ img { max-width: 100%; display: block; }
 .how-works { padding: 100px 0; background: linear-gradient(135deg, #f9f8fd 0%, #fef5ff 100%); position: relative; overflow: hidden; }
 .how-works::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(195, 0, 157, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(1, 1, 94, 0.02) 0%, transparent 50%); pointer-events: none; }
 
-.how-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 80px; position: relative; z-index: 1; }
+.how-timeline { display: flex; align-items: flex-start; justify-content: center; gap: 0; margin-top: 80px; position: relative; z-index: 1; }
 
-/* Connecting line between steps */
-.how-timeline::before { content: ''; position: absolute; top: 60px; left: 12.5%; right: 12.5%; height: 3px; background: linear-gradient(to right, var(--magenta), var(--magenta) 48%, transparent 48%, transparent 52%, var(--magenta) 52%, var(--magenta)); z-index: 0; }
+.how-item { position: relative; flex: 1 1 0; min-width: 0; padding: 0 8px; }
 
-.how-item { position: relative; }
+.how-arrow { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: 44px; height: 84px; color: var(--magenta); font-size: 20px; opacity: 0.55; }
 
 .how-circle { position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; z-index: 2; }
 
@@ -1319,23 +1318,18 @@ img { max-width: 100%; display: block; }
 .how-step-3 { animation: howStep3 4s infinite; }
 .how-step-4 { animation: howStep4 4s infinite; }
 
-.how-number { position: absolute; bottom: 0px; right: 0px; width: 32px; height: 32px; border-radius: 50%; background: var(--magenta); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; font-family: 'Poppins', sans-serif; box-shadow: 0 3px 12px rgba(195, 0, 157, 0.25); transform: translate(50%, 50%); }
-
 .how-content { text-align: center; }
 .how-content h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .how-content p { font-size: 15px; color: var(--text-light); line-height: 1.6; }
 
-@media (max-width: 1024px) {
-    .how-timeline { grid-template-columns: repeat(2, 1fr); gap: 50px; }
-    .how-timeline::before { top: 60px; left: 5%; right: auto; width: 3px; height: auto; bottom: 0; background: linear-gradient(to bottom, var(--magenta), var(--magenta) 48%, transparent 48%, transparent 52%, var(--magenta) 52%, var(--magenta)); }
+@media (max-width: 900px) {
+    .how-timeline { flex-direction: column; align-items: center; gap: 0; margin-top: 50px; }
+    .how-item { width: 100%; max-width: 380px; padding: 0; }
+    .how-arrow { width: 100%; height: auto; margin: 4px 0; transform: rotate(90deg); }
 }
 
 @media (max-width: 600px) {
     .how-works { padding: 60px 0; }
-    .how-timeline { grid-template-columns: 1fr; gap: 40px; }
-    .how-timeline::before { left: 59px; width: 3px; top: 60px; height: calc(100% - 60px); background: linear-gradient(to bottom, var(--magenta), var(--magenta)); }
-    .how-circle { margin-left: 40px; }
-    .how-content { text-align: left; }
     .how-icon-bg { width: 72px; height: 72px; font-size: 28px; }
     .how-content h3 { font-size: 16px; }
     .how-content p { font-size: 14px; }
