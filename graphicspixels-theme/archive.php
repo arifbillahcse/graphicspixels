@@ -1,18 +1,16 @@
 <?php
 /**
- * Blog posts index / fallback template.
- * Serves the page assigned as "Posts page" in Settings → Reading.
+ * Archive (category, tag, date, author) — reuses the blog grid layout.
  */
 get_header();
 ?>
 
 <section class="section gp-blog">
     <div class="container">
-        <?php if ( is_home() && ! is_front_page() ) : ?>
-            <header class="gp-blog-head">
-                <h1 class="gp-blog-title"><?php echo esc_html( get_the_title( get_option( 'page_for_posts' ) ) ?: 'Blog' ); ?></h1>
-            </header>
-        <?php endif; ?>
+        <header class="gp-blog-head">
+            <h1 class="gp-blog-title"><?php the_archive_title(); ?></h1>
+            <?php the_archive_description( '<div class="gp-blog-desc">', '</div>' ); ?>
+        </header>
 
         <?php if ( have_posts() ) : ?>
             <div class="gp-post-grid">
@@ -34,7 +32,7 @@ get_header();
             </div>
             <?php the_posts_pagination( array( 'mid_size' => 1 ) ); ?>
         <?php else : ?>
-            <p>No posts yet. Check back soon.</p>
+            <p>Nothing found in this archive.</p>
         <?php endif; ?>
     </div>
 </section>
@@ -43,6 +41,7 @@ get_header();
     .gp-blog { padding: 60px 0; }
     .gp-blog-head { text-align: center; margin-bottom: 44px; }
     .gp-blog-title { font-size: 36px; }
+    .gp-blog-desc { color: var(--text-light, #667); margin-top: 10px; }
     .gp-post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .gp-card { background: #fff; border: 1px solid var(--border, #e5e7eb); border-radius: 14px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
     .gp-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(0,0,0,.08); }
