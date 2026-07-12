@@ -116,6 +116,30 @@ add_action( 'wp_enqueue_scripts', function () {
 	}
 } );
 
+/* ── Disable comments site-wide (no commenting on posts/pages) ── */
+add_action( 'init', function () {
+	// Close comments/pings on all post types that support them.
+	foreach ( get_post_types() as $type ) {
+		if ( post_type_supports( $type, 'comments' ) ) {
+			remove_post_type_support( $type, 'comments' );
+			remove_post_type_support( $type, 'trackbacks' );
+		}
+	}
+} );
+// Refuse new comments and report threads as closed.
+add_filter( 'comments_open', '__return_false', 20, 2 );
+add_filter( 'pings_open', '__return_false', 20, 2 );
+// Hide any existing comments.
+add_filter( 'comments_array', '__return_empty_array', 20, 2 );
+// Remove the admin Comments menu and toolbar item.
+add_action( 'admin_menu', function () {
+	remove_menu_page( 'edit-comments.php' );
+} );
+add_action( 'wp_before_admin_bar_render', function () {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu( 'comments' );
+} );
+
 /* model-viewer must load as an ES module */
 add_filter( 'script_loader_tag', function ( $tag, $handle ) {
 	if ( 'model-viewer' === $handle ) {

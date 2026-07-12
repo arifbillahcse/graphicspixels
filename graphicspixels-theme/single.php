@@ -44,12 +44,6 @@ get_header();
                 <div class="gp-post-nav-prev"><?php previous_post_link( '%link', '<i class="fas fa-arrow-left"></i> %title' ); ?></div>
                 <div class="gp-post-nav-next"><?php next_post_link( '%link', '%title <i class="fas fa-arrow-right"></i>' ); ?></div>
             </div>
-
-            <?php
-            if ( comments_open() || get_comments_number() ) {
-                comments_template();
-            }
-            ?>
         <?php endwhile; ?>
     </div>
 </section>
