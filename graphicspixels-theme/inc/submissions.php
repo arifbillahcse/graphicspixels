@@ -258,9 +258,26 @@ function gp_render_submission_details( $post ) {
 		$label = ucwords( str_replace( array( 'gp_', '_' ), array( '', ' ' ), $key ) );
 		$value = $values[0];
 		if ( 'gp_attachment_id' === $key ) {
-			$url   = wp_get_attachment_url( (int) $value );
-			$value = $url ? '<a href="' . esc_url( $url ) . '" target="_blank">Download attachment</a>' : esc_html( $value );
-			echo '<tr><td><strong>' . esc_html( $label ) . '</strong></td><td>' . wp_kses_post( $value ) . '</td></tr>';
+			$attachment_id = (int) $value;
+			$url           = wp_get_attachment_url( $attachment_id );
+
+			if ( ! $url ) {
+				echo '<tr><td><strong>' . esc_html( $label ) . '</strong></td><td>' . esc_html( $value ) . '</td></tr>';
+				continue;
+			}
+
+			$is_image = wp_attachment_is_image( $attachment_id );
+			$cell     = '';
+
+			if ( $is_image ) {
+				$thumb = wp_get_attachment_image( $attachment_id, 'medium', false, array( 'style' => 'max-width:260px;height:auto;border-radius:8px;display:block;margin-bottom:8px;' ) );
+				$cell .= '<a href="' . esc_url( $url ) . '" target="_blank">' . $thumb . '</a>';
+			}
+
+			$cell .= '<a href="' . esc_url( $url ) . '" target="_blank">' . ( $is_image ? 'View full size' : 'Download attachment' ) . '</a>';
+			$cell .= ' &nbsp;·&nbsp; <a href="' . esc_url( get_edit_post_link( $attachment_id ) ) . '" target="_blank">Open in Media Library</a>';
+
+			echo '<tr><td><strong>' . esc_html( $label ) . '</strong></td><td>' . wp_kses_post( $cell ) . '</td></tr>';
 			continue;
 		}
 		echo '<tr><td style="width:180px"><strong>' . esc_html( $label ) . '</strong></td><td>' . esc_html( $value ) . '</td></tr>';
