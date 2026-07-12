@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'GP_THEME_VERSION', '1.0.0' );
 
 require get_template_directory() . '/inc/submissions.php';
+require get_template_directory() . '/inc/auto-pages.php';
 
 /**
  * Base URL for the site's static images.

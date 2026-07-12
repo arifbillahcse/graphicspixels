@@ -44,11 +44,23 @@ The CDN must then mirror the same `/images/...` structure.
 
 **Settings → Permalinks → Post name** → Save. (Required — all internal links use `/page-slug/` URLs.)
 
-## 3. Create the pages
+## 3. Create the pages — automatic
 
-For each row below: **Pages → Add New**, set the **Title**, make sure the **slug**
-matches exactly (Yoast/permalink box under the title), leave content empty, and in
-the **Page Attributes → Template** dropdown pick the listed template. Publish.
+**You do not need to create pages by hand.** When you activate the theme, all 31
+pages are created automatically, each already linked to its correct template, and
+appear under **Pages → All Pages**.
+
+If you ever need to re-run it (e.g. you deleted a page and want it back), go to
+**Appearance → Create Pages** and click **Create / Repair Pages**. It never
+duplicates or overwrites — it only creates pages whose slug is missing, and that
+screen shows a live ✓ exists / — missing status for each page.
+
+<details>
+<summary>Reference: the pages it creates (title · slug · template)</summary>
+
+For each row below the auto-creator sets the **Title**, the **slug**, and the
+**Page Attributes → Template**. (Manual steps only needed if you prefer to build
+them yourself.)
 
 | Page title | Slug | Template |
 |---|---|---|
@@ -86,6 +98,8 @@ the **Page Attributes → Template** dropdown pick the listed template. Publish.
 
 You can change any slug later (Yoast/permalink) — the header/footer nav links point
 to the slugs above, so if you rename one of those, update `header.php`/`footer.php` too.
+
+</details>
 
 ## 4. Set the homepage
 
