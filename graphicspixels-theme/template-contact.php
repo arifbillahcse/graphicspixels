@@ -201,6 +201,10 @@
                             <label for="privacy" style="margin: 0; font-size: 14px; color: var(--text); cursor: pointer;">I agree to the privacy policy and terms of service</label>
                         </div>
 
+                        <div class="gp-honeypot" aria-hidden="true">
+                            <label for="contact-hp">Leave this field blank</label>
+                            <input type="text" name="gp_hp_optin" id="contact-hp" tabindex="-1" autocomplete="off">
+                        </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px 30px; font-size: 16px; font-weight: 600;">Send Message</button>
                     </form>
                 </div>

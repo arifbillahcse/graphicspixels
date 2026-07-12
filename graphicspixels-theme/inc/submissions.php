@@ -72,6 +72,55 @@ function gp_verify_form_nonce() {
 	}
 }
 
+/**
+ * Best-effort visitor IP, accounting for a reverse proxy/CDN in front of
+ * the site. Used only for rate-limiting, never stored publicly.
+ */
+function gp_get_client_ip() {
+	foreach ( array( 'HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR' ) as $key ) {
+		if ( ! empty( $_SERVER[ $key ] ) ) {
+			$ip = wp_unslash( $_SERVER[ $key ] );
+			$ip = trim( explode( ',', $ip )[0] );
+			if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+				return $ip;
+			}
+		}
+	}
+	return '0.0.0.0';
+}
+
+/**
+ * Honeypot + rate-limit guard, shared by both forms.
+ *
+ * The honeypot is a field that's invisible to real visitors (hidden via
+ * CSS, not via type="hidden" or display:none, since bots commonly skip
+ * those) but that automated bots tend to fill in anyway. If it's
+ * non-empty, or the same IP submits too many times in a short window,
+ * we pretend the submission succeeded (so the bot doesn't adapt) but
+ * never save it, email it, or forward it anywhere.
+ */
+function gp_is_spam_submission() {
+	if ( ! empty( $_POST['gp_hp_optin'] ) ) {
+		return true;
+	}
+
+	$ip  = gp_get_client_ip();
+	$key = 'gp_rl_' . md5( $ip );
+	$hits = (int) get_transient( $key );
+
+	if ( $hits >= 5 ) {
+		return true;
+	}
+
+	set_transient( $key, $hits + 1, 10 * MINUTE_IN_SECONDS );
+	return false;
+}
+
+function gp_reject_as_spam( $success_message ) {
+	// Respond as if it worked, so bots don't learn to adapt.
+	wp_send_json_success( array( 'message' => $success_message ) );
+}
+
 function gp_sanitized_field( $key ) {
 	return isset( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '';
 }
@@ -198,6 +247,10 @@ function gp_forward_to_app( $form_label, $fields, $post_id ) {
 function gp_handle_trial_submission() {
 	gp_verify_form_nonce();
 
+	if ( gp_is_spam_submission() ) {
+		gp_reject_as_spam( 'Thank you! Your free trial request has been received. We will get back to you shortly.' );
+	}
+
 	$fields = array(
 		'name'      => gp_sanitized_field( 'name' ),
 		'email'     => sanitize_email( wp_unslash( $_POST['email'] ?? '' ) ),
@@ -218,6 +271,10 @@ function gp_handle_trial_submission() {
 
 function gp_handle_contact_submission() {
 	gp_verify_form_nonce();
+
+	if ( gp_is_spam_submission() ) {
+		gp_reject_as_spam( 'Thank you for your message! We will get back to you as soon as possible.' );
+	}
 
 	$fields = array(
 		'name'    => gp_sanitized_field( 'name' ),

@@ -163,6 +163,10 @@
                 </div>
                 <p class="upload-note">Supported: JPG, PNG, PSD, TIFF, RAW. Max 25 MB per file. For larger files, use a cloud link below.</p>
                 <input type="text" placeholder="Or paste a Google Drive / Dropbox link here">
+                <div class="gp-honeypot" aria-hidden="true">
+                    <label for="ft-hp">Leave this field blank</label>
+                    <input type="text" name="gp_hp_optin" id="ft-hp" tabindex="-1" autocomplete="off">
+                </div>
                 <button type="submit" class="btn btn-primary btn-block">Start Your Free Trial</button>
                 <p style="font-size: 12px; text-align: center; margin-top: 12px; opacity: 0.8;">We'll review your request and send results within 24 hours.</p>
             </form>

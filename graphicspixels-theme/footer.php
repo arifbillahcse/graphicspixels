@@ -104,6 +104,10 @@
             </div>
             <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
             <input type="text" name="file_link" placeholder="Paste the link here (URL)">
+            <div class="gp-honeypot" aria-hidden="true">
+                <label for="modal-hp">Leave this field blank</label>
+                <input type="text" name="gp_hp_optin" id="modal-hp" tabindex="-1" autocomplete="off">
+            </div>
             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
         </form>
     </div>
