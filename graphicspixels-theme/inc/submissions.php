@@ -129,11 +129,21 @@ function gp_save_submission( $post_type, $fields, $form_label ) {
 			$body .= ucwords( str_replace( '_', ' ', $key ) ) . ': ' . $value . "\n";
 		}
 	}
-	wp_mail(
-		get_option( 'admin_email' ),
-		sprintf( '[%s] New %s from %s', get_bloginfo( 'name' ), $form_label, $fields['name'] ),
-		$body
-	);
+	if ( gp_notifications_enabled() ) {
+		$recipients = gp_notification_recipients();
+		if ( ! empty( $recipients ) ) {
+			$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+			if ( ! empty( $fields['email'] ) && is_email( $fields['email'] ) ) {
+				$headers[] = 'Reply-To: ' . $fields['name'] . ' <' . $fields['email'] . '>';
+			}
+			wp_mail(
+				$recipients,
+				sprintf( '[%s] New %s from %s', get_bloginfo( 'name' ), $form_label, $fields['name'] ),
+				$body,
+				$headers
+			);
+		}
+	}
 
 	/* Forward to the app if configured */
 	gp_forward_to_app( $form_label, $fields, $post_id );
@@ -256,4 +266,150 @@ function gp_render_submission_details( $post ) {
 		echo '<tr><td style="width:180px"><strong>' . esc_html( $label ) . '</strong></td><td>' . esc_html( $value ) . '</td></tr>';
 	}
 	echo '</table>';
+}
+
+/* ============================================================
+   Notification settings — admin-configurable recipient email(s)
+   ============================================================ */
+
+/**
+ * Whether email notifications are switched on. Default: on.
+ */
+function gp_notifications_enabled() {
+	return '1' === get_option( 'gp_notify_enabled', '1' );
+}
+
+/**
+ * Recipient list for notification emails. Falls back to the
+ * WordPress admin email if the admin has not set anything.
+ * Supports multiple addresses separated by comma or new line.
+ *
+ * @return string[] Array of valid email addresses.
+ */
+function gp_notification_recipients() {
+	$raw = trim( (string) get_option( 'gp_notify_email', '' ) );
+	if ( '' === $raw ) {
+		$raw = get_option( 'admin_email' );
+	}
+
+	$emails = preg_split( '/[,\r\n]+/', $raw );
+	$valid  = array();
+	foreach ( $emails as $email ) {
+		$email = sanitize_email( trim( $email ) );
+		if ( $email && is_email( $email ) ) {
+			$valid[] = $email;
+		}
+	}
+	return array_unique( $valid );
+}
+
+/* ── Settings page under "Trial Requests" menu ── */
+add_action( 'admin_menu', function () {
+	add_submenu_page(
+		'edit.php?post_type=gp_trial',
+		'Form Notifications',
+		'Notifications',
+		'manage_options',
+		'gp-form-settings',
+		'gp_render_settings_page'
+	);
+} );
+
+/* ── Register the settings ── */
+add_action( 'admin_init', function () {
+	register_setting( 'gp_form_settings', 'gp_notify_enabled', array(
+		'type'              => 'string',
+		'sanitize_callback' => function ( $v ) {
+			return '1' === $v ? '1' : '0';
+		},
+		'default'           => '1',
+	) );
+
+	register_setting( 'gp_form_settings', 'gp_notify_email', array(
+		'type'              => 'string',
+		'sanitize_callback' => 'gp_sanitize_email_list',
+		'default'           => '',
+	) );
+} );
+
+/**
+ * Keep only valid emails from a comma/newline separated list.
+ */
+function gp_sanitize_email_list( $value ) {
+	$emails = preg_split( '/[,\r\n]+/', (string) $value );
+	$valid  = array();
+	foreach ( $emails as $email ) {
+		$email = sanitize_email( trim( $email ) );
+		if ( $email && is_email( $email ) ) {
+			$valid[] = $email;
+		}
+	}
+	if ( empty( $valid ) && '' !== trim( (string) $value ) ) {
+		add_settings_error( 'gp_notify_email', 'gp_notify_email_invalid', 'No valid email address was entered. Notifications will fall back to the site admin email.', 'warning' );
+	}
+	return implode( ', ', array_unique( $valid ) );
+}
+
+function gp_render_settings_page() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
+	/* Handle the "send test email" action */
+	if ( isset( $_POST['gp_send_test'] ) && check_admin_referer( 'gp_send_test_email', 'gp_test_nonce' ) ) {
+		$recipients = gp_notification_recipients();
+		$sent       = ! empty( $recipients ) && wp_mail(
+			$recipients,
+			sprintf( '[%s] Test notification', get_bloginfo( 'name' ) ),
+			"This is a test email from your Graphics Pixels form notification settings.\n\nIf you received this, notifications are working."
+		);
+		if ( $sent ) {
+			echo '<div class="notice notice-success is-dismissible"><p>Test email sent to: ' . esc_html( implode( ', ', $recipients ) ) . '</p></div>';
+		} else {
+			echo '<div class="notice notice-error is-dismissible"><p>Could not send the test email. Check your server email configuration (an SMTP plugin is often required).</p></div>';
+		}
+	}
+
+	$current = get_option( 'gp_notify_email', '' );
+	$fallback = get_option( 'admin_email' );
+	?>
+	<div class="wrap">
+		<h1>Form Notifications</h1>
+		<p>Configure where email alerts are sent when someone submits the <strong>Free Trial</strong> (page &amp; popup) or <strong>Contact</strong> form. Every submission is always saved under <em>Trial Requests</em> and <em>Contact Messages</em> regardless of these settings.</p>
+
+		<form method="post" action="options.php">
+			<?php settings_fields( 'gp_form_settings' ); ?>
+			<table class="form-table" role="presentation">
+				<tr>
+					<th scope="row">Email notifications</th>
+					<td>
+						<label>
+							<input type="checkbox" name="gp_notify_enabled" value="1" <?php checked( gp_notifications_enabled() ); ?>>
+							Send an email when a form is submitted
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="gp_notify_email">Notification email(s)</label></th>
+					<td>
+						<textarea name="gp_notify_email" id="gp_notify_email" rows="3" class="large-text code" placeholder="<?php echo esc_attr( $fallback ); ?>"><?php echo esc_textarea( $current ); ?></textarea>
+						<p class="description">
+							Where to send submission alerts. Separate multiple addresses with a comma or new line.<br>
+							Leave empty to use the site admin email (<code><?php echo esc_html( $fallback ); ?></code>).
+						</p>
+					</td>
+				</tr>
+			</table>
+			<?php submit_button( 'Save Settings' ); ?>
+		</form>
+
+		<hr>
+		<h2>Send a test email</h2>
+		<p>Send a test message to the address(es) above to confirm delivery works.</p>
+		<form method="post">
+			<?php wp_nonce_field( 'gp_send_test_email', 'gp_test_nonce' ); ?>
+			<?php submit_button( 'Send Test Email', 'secondary', 'gp_send_test', false ); ?>
+		</form>
+	</div>
+	<?php
 }

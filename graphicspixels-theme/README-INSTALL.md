@@ -65,8 +65,19 @@ The Home page automatically uses `front-page.php` (no template selection needed)
 
 Free Trial (page section + popup modal) and Contact form submissions are stored in
 wp-admin under **Trial Requests** and **Contact Messages** — click any entry to see
-all fields and download attached files. Email notifications go to the site admin email
-(**Settings → General**).
+all fields and download attached files.
+
+### Notification email settings (admin-configurable)
+
+Go to **Trial Requests → Notifications**. There you can:
+
+- Turn submission email alerts on/off.
+- Set the recipient email address(es) — separate several with a comma or new line.
+- Leave it empty to fall back to the site admin email (**Settings → General**).
+- Send a **test email** to confirm delivery works.
+
+Submissions are always saved to the database regardless of these email settings.
+The sender's email is set as the **Reply-To**, so you can reply straight from your inbox.
 
 ### Forward submissions to app.graphicspixels.com (optional)
 
