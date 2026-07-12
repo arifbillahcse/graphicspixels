@@ -491,7 +491,7 @@ img { max-width: 100%; display: block; }
 .back-to-top:hover { transform: translate(-50%, -4px); }
 
 @media (max-width: 768px) {
-    .back-to-top { bottom: 80px; width: 46px; height: 46px; font-size: 16px; }
+    .back-to-top { bottom: 55px; width: 46px; height: 46px; font-size: 16px; }
 }
 
 /* ---------- Scroll Reveal Animations ---------- */
@@ -1396,6 +1396,6 @@ img { max-width: 100%; display: block; }
         height: 56px;
         font-size: 26px;
         right: 16px;
-        bottom: 80px;
+        bottom: 55px;
     }
 }
