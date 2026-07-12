@@ -1,0 +1,653 @@
+<?php /* Template Name: Ai Generated Image Fixes */ ?>
+<?php get_header(); ?>
+
+<style>
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
+                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 0 20px 40px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
+    </style>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>AI-Generated Image Fixes — Human Retouching for AI Output Errors</h2>
+                <p class="ds-lead">AI image generators produce useful results but predictable errors: extra or malformed fingers, broken facial anatomy, warped or unreadable text, inconsistent lighting, mismatched skin texture, and background artefacts. Regenerating the prompt doesn't reliably fix specific problems — and often breaks what was working.</p>
+                <p>Graphics Pixels sends your AI-generated image to a human retoucher in Photoshop. We isolate the problem areas and correct them directly — hands, faces, text, edges, lighting — without starting the generation over. The result is a polished, usable image that keeps what the AI got right and fixes what it got wrong.</p>
+                <p>24-hour turnaround. 100% commercial rights. NDA-compliant. Free trial on every new order.</p>
+                <div class="ds-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IS AI IMAGE FIX ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is AI Image Fixing?</h2>
+                    <p>AI image generators produce visually compelling results, but sometimes make consistent mistakes: extra or malformed fingers, asymmetric facial anatomy, unreadable or warped text, lighting inconsistencies, and background artefacts. Regenerating the prompt is unpredictable — it may fix the hands but break the composition or lighting.</p>
+                    <p>We take your AI-generated image and send it to a human retoucher in Photoshop. We isolate the problem areas and correct them directly — hands, facial features, text, lighting, edges — without regenerating the entire image. The result preserves the strengths of the AI output while fixing the specific errors. 24-hour turnaround. 100% commercial usage rights. NDA-compliant workflow.</p>
+                    <div class="cp-intro-actions">
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                        <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/0.%20christina-wocintechchat-com-m-LQ1t-8Ms5PY-unsplash-1024x683.jpg" alt="AI Image Fix Service Explained" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="pe-video-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">Watch AI Image Corrections in Real Time</h2>
+                <p class="section-desc">See how we identify AI errors, isolate problem areas, and apply manual corrections to anatomy, text, and lighting — preserving the original composition while fixing what went wrong.</p>
+            </div>
+            <div class="pe-video-wrap reveal" data-reveal="up" data-delay="100">
+                <div class="pe-video-container">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/-VUy_vWbYJs"
+                        title="AI Image Fix Process"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES LIST ============ -->
+    <section class="svc-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our AI Image Fix Services</h2>
+                <p class="section-desc">From correcting isolated hand or facial errors to removing background artefacts and fixing lighting inconsistencies — we handle the full range of AI generation mistakes with precision and speed.</p>
+            </div>
+
+            <div class="svc-list">
+
+                <!-- 1. Hand & Finger Correction -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/1.-Graphics-Pixels-1024x559.jpg" alt="Hand and Finger Correction" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-hand"></i></span>
+                        <h3>Hand &amp; Finger Anatomy Correction</h3>
+                        <p>Extra fingers, fused hands, broken knuckle structure, and incorrect wrist anatomy are the most common AI errors. We rebuild hands using the clone stamp and healing brush, matching surrounding skin tone, texture, and anatomical proportion. Complex hand poses and interlocking fingers are corrected individually to look natural and realistic.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Extra or malformed fingers removed</li>
+                            <li><i class="fas fa-check"></i> Fused hands separated cleanly</li>
+                            <li><i class="fas fa-check"></i> Knuckle and joint anatomy corrected</li>
+                            <li><i class="fas fa-check"></i> Skin tone and texture matched seamlessly</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Facial Anatomy Repair -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/2.-Graphics-Pixels-1024x559.jpg" alt="Facial Anatomy Repair" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-face-smile"></i></span>
+                        <h3>Facial Anatomy &amp; Detail Repair</h3>
+                        <p>Asymmetric eyes, distorted mouth and teeth, unnatural skin texture, misaligned ears, and broken nose structure are corrected in Photoshop without altering the subject's identity or expression. We maintain the character of the generated face while fixing anatomical inconsistencies. Skin pores, wrinkles, and fine detail are refined to look natural, not plastic.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Eye symmetry corrected</li>
+                            <li><i class="fas fa-check"></i> Mouth, teeth, and jaw aligned naturally</li>
+                            <li><i class="fas fa-check"></i> Nose and ear anatomy refined</li>
+                            <li><i class="fas fa-check"></i> Skin texture made consistent and natural</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Text & Typography Fixes -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/3.-Graphics-Pixels-1024x559.jpg" alt="Text and Typography Fixes" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-pen-nib"></i></span>
+                        <h3>Transparent Background</h3>
+                        <p>Making transparent background is a simple way, we do it to free your images from its background so that you can put your images on any background. Save your time and cost with our fast &amp; quality photo editing services.</p>
+                        <ul class="svc-features">
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Background Artifact Removal -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/4.-Graphics-Pixels-1024x559.jpg" alt="Background Artifact Removal" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-wand-magic-sparkles"></i></span>
+                        <h3>Background Artifact &amp; Noise Removal</h3>
+                        <p>AI-generated backgrounds often contain noise patches, blurred edges, repeated tiles, impossible geometry, and lighting inconsistencies. We clean these artefacts using content-aware fill and manual painting, rebuilding background areas to be seamless and realistic. The correction maintains the original lighting direction and atmospheric quality of the generated image.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Noise and blur patches cleaned</li>
+                            <li><i class="fas fa-check"></i> Repeated or impossible geometry fixed</li>
+                            <li><i class="fas fa-check"></i> Edges sharpened and refined</li>
+                            <li><i class="fas fa-check"></i> Perspective and lighting made coherent</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">Upload your AI-generated image and we'll fix the errors within 24 hours.</p>
+            </div>
+
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1"><i class="fas fa-folder-open"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Upload Your AI Image</h3>
+                        <p>Send your AI-generated image via the form or cloud link. JPG, PNG, and PSD formats accepted.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2"><i class="fas fa-pen-to-square"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What Needs Fixing</h3>
+                        <p>Describe the specific errors — hand anatomy, text, lighting, background artefacts — and we'll focus on those areas.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3"><i class="fas fa-magic"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Manual Corrections Applied</h3>
+                        <p>Your image is corrected by hand in Photoshop. The composition, style, and strengths of your original are preserved.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4"><i class="fas fa-check-double"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Delivered &amp; Ready to Use</h3>
+                        <p>Fixed image returned within 24 hours with full commercial usage rights. Revisions included if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+
+            <!-- LEFT: Video Slider -->
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.vt-track -->
+
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide">
+                        <span class="vt-chevron vt-chevron-left"></span>
+                    </button>
+                    <span class="vt-counter">
+                        <span id="vtCurrent">1</span>
+                        <em>/</em>
+                        <span id="vtTotal">4</span>
+                    </span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide">
+                        <span class="vt-chevron vt-chevron-right"></span>
+                    </button>
+                </div>
+            </div><!-- /.vt-left -->
+
+            <!-- RIGHT: Content -->
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What AI Creators, Designers, and Content Producers Say About Our AI Image Fix Service
+                </h2>
+
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                    </button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                    </button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                    </button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
+                    </button>
+                </div>
+
+                <a href="<?php echo esc_url( home_url('/reviews/') ); ?>" class="vt-cta">
+                    REVIEWS
+                    <span class="vt-cta-arrow"></span>
+                </a>
+            </div><!-- /.vt-right -->
+
+        </div><!-- /.vt-wrap -->
+
+        <!-- YouTube Modal -->
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                    <span class="vt-close-icon"></span>
+                </button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p><strong>Send an AI Image — We'll Fix It Free</strong><br>Send 1 to 3 AI-generated images with a description of what needs fixing, and we'll return them corrected within 24 hours at no charge. No payment required. No obligation to continue.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-credit-card"></i> No upfront payment — review the work before paying</li>
+                    <li><i class="fas fa-images"></i> 1 to 3 images corrected to your specification</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — all files handled securely</li>
+                    <li><i class="fas fa-tag"></i> Bulk rates for high-volume orders</li>
+                    <li><i class="fas fa-handshake"></i> 100% commercial usage rights included</li>
+                </ul>
+            </div>
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Photo Retouching</option>
+                    <option>Ghost Mannequin</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option>Drop Shadow</option>
+                    <option>Image Masking</option>
+                    <option>E-commerce Image Editing</option>
+                    <option>Photo Restoration</option>
+                    <option selected>AI-generated Image Fixes</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Commonly Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="up" data-delay="100">
+                <div class="faq-item">
+                    <button class="faq-q">Do you use AI to fix AI errors? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>No. Every correction is applied manually by a human retoucher in Photoshop. We do not use secondary AI passes. Human editing is the only reliable way to fix anatomy, text, and lighting errors precisely.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What if the AI error is very complex? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>We assess the image and describe what's achievable before starting work. Some errors — like severely malformed hands or impossible facial anatomy — may require more time or complex reconstruction. We'll let you know the scope and timeline upfront.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Will the fix look natural or obvious? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>The fix should be invisible. We match surrounding texture, tone, lighting, and detail so the correction blends seamlessly. The corrected area should not stand out or look obviously edited.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I get full commercial usage rights? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Corrected images are delivered with 100% commercial usage rights. You can use them for advertising, marketing, print, social media, products, and any commercial purpose without restriction or royalty.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does the process take? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Standard turnaround is 24 hours. Complex corrections may take 1-2 days. We'll confirm the timeline when you describe the errors.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can you handle bulk AI image corrections? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. For regular high-volume orders, we offer bulk rates and dedicated workflows. Contact us with your typical image volume and turnaround needs.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the free trial really free? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Send 1–3 AI images with a description of what needs fixing and we return them corrected within 24 hours — no charge, no obligation to continue.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ IMAGE LIGHTBOX ============ -->
+    <div class="lightbox" id="svcLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-backdrop" id="svcLightboxBackdrop"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="svcLightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="svcLightboxImg" class="lightbox-image" src="" alt="">
+                <p class="lightbox-title" id="svcLightboxCaption"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" id="svcLightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="svcLightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+<?php get_footer(); ?>

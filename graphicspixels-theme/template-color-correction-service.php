@@ -1,0 +1,752 @@
+<?php /* Template Name: Color Correction Service */ ?>
+<?php get_header(); ?>
+
+<style>
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
+        }
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; bottom: 12px; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px; color: #fff;
+            padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px); pointer-events: none;
+        }
+        .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
+        .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
+            pointer-events: none;
+        }
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
+                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 0 20px 40px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
+    </style>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Professional Color Correction Service — Product, Fashion &amp; E-commerce Photography</h2>
+                <p class="ds-lead">Graphics Pixels provides color correction for product photography, fashion catalogs, e-commerce listings, and portrait work. We adjust white balance, exposure, contrast, hue, vibrancy, and saturation — image by image — to bring your batch to a single consistent, accurate standard.</p>
+                <p>Inaccurate color in product photography causes returns. A garment that photographs with a blue cast looks different from the actual item, and buyers send it back. Accurate color correction is one of the most direct ways to reduce return rates and increase buyer confidence on Amazon, Shopify, and eBay.</p>
+                <p>Pricing from €0.50/image. 24-hour turnaround. Free trial on every new order.</p>
+                <div class="ds-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IS COLOR CORRECTION ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is Color Correction?</h2>
+                    <p>Color correction is the process of adjusting white balance, exposure, hue, saturation, and contrast to bring images to a consistent, accurate colour standard. It neutralises unwanted colour casts caused by mixed lighting, corrects exposure problems, and ensures tones match across your product catalog or shoot batch.</p>
+                    <p>For e-commerce, inaccurate colour is one of the leading causes of returns — customers receive a product that doesn't match the listing photo. Color correction is one of the most direct ways to reduce returns, increase buyer confidence, and maintain your brand visual standard across every platform: website, Amazon, Instagram, print, and beyond.</p>
+                    <div class="cp-intro-actions">
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                        <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Color Correction Service Explained" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="pe-video-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">Watch Professional Color Correction in Practice</h2>
+                <p class="section-desc">See how we assess colour casts, correct white balance, match exposure, and adjust hue and saturation to bring your images to a consistent, accurate standard.</p>
+            </div>
+            <div class="pe-video-wrap reveal" data-reveal="up" data-delay="100">
+                <div class="pe-video-container">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/qADaevgZ9U8"
+                        title="Professional Color Correction Process"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES LIST ============ -->
+    <section class="svc-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Color Correction Services</h2>
+                <p class="section-desc">From white balance correction for marketplace compliance to full catalog standardisation and brand colour accuracy — we handle every aspect of colour correction with image-by-image precision and consistent batch output.</p>
+            </div>
+
+            <div class="svc-list">
+
+                <!-- 1. What Is Color Correction -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="Before — Color Correction">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="After — Color Correction">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-eye-dropper"></i></span>
+                        <h3>White Balance &amp; Exposure Correction</h3>
+                        <p>Adjust colour temperature to eliminate warm or cool casts from studio lighting, mixed sources, or camera settings. Whites remain neutral, skin tones look natural, and no artificial colour is introduced. Exposure corrected simultaneously — lifted shadows, controlled highlights, balanced tonal range.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Neutral white balance across all images</li>
+                            <li><i class="fas fa-check"></i> Exposure lifted or reduced as needed</li>
+                            <li><i class="fas fa-check"></i> No artificial warmth or coolness</li>
+                            <li><i class="fas fa-check"></i> Marketplace compliant output</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Why Does Your Company Need Color Correction -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20(1).jpg" alt="Why You Need Color Correction" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-chart-line"></i></span>
+                        <h3>Catalog Consistency &amp; Return Reduction</h3>
+                        <p>Shoot-to-shoot lighting variation creates inconsistent colour across your product range. Send a reference image or brand colour guide and we match every image in your batch to that standard. Consistent colour builds trust — buyers see your catalog as professional and credible. Reduces "item not as described" returns by matching actual product colour.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> All images matched to single reference standard</li>
+                            <li><i class="fas fa-check"></i> Reduces product returns by 15-25%</li>
+                            <li><i class="fas fa-check"></i> Builds trust in e-commerce listings</li>
+                            <li><i class="fas fa-check"></i> Professional catalog appearance</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. How Does the Process of Color Correction Operate -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="Before — Hue and Saturation Adjustment">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="After — Hue and Saturation Adjustment">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-sliders"></i></span>
+                        <h3>Hue, Saturation &amp; Vibrancy Adjustment</h3>
+                        <p>Fine-tune colour channels individually — boost vibrancy without over-processing, adjust hue to match brand colour guidelines exactly, control saturation for a natural look. Whether you need punchy product photos for advertising or subtle tones for fashion, we adjust to your visual brief. Each image is assessed and corrected individually, not processed as a global batch.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Individual image assessment &amp; adjustment</li>
+                            <li><i class="fas fa-check"></i> Hue matched to brand guidelines</li>
+                            <li><i class="fas fa-check"></i> Natural saturation levels, no over-processing</li>
+                            <li><i class="fas fa-check"></i> Consistent output across full batch</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Typical Applications for Color Correction Services -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="Before — Skin Tone Standardisation">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="After — Skin Tone Standardisation">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-palette"></i></span>
+                        <h3>Skin Tone Standardisation &amp; Fashion Work</h3>
+                        <p>Portrait and headshot batches corrected for consistent skin tone and lighting across the full shoot. Fashion and apparel photography colour-matched to swatch reference — garments reproduce accurately across seasonal catalogs. Model skin tone standardised across campaign batches so every image reads as the same professional standard.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Skin tone standardised across portraits</li>
+                            <li><i class="fas fa-check"></i> Fabric colour matched to swatch</li>
+                            <li><i class="fas fa-check"></i> Campaign consistency across all images</li>
+                            <li><i class="fas fa-check"></i> Fashion-grade colour accuracy</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Professional Color Correction's Advantages -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/5.%20Professional%20Color%20Correction_s%20Advantages/graphics%20pixels%20(1).jpg" alt="Color Correction Advantages" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-check-double"></i></span>
+                        <h3>Multi-Platform Consistency &amp; Brand Accuracy</h3>
+                        <p>Your product appears on your website, Amazon listing, Instagram, print catalog, and email marketing. Color correction ensures it looks the same colour across every platform and context. Brand colours are matched to guidelines exactly — whether digital or print — so your visual identity remains consistent and recognisable everywhere your imagery appears.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Same colour across website, Amazon, Instagram</li>
+                            <li><i class="fas fa-check"></i> Brand colour matched to guidelines</li>
+                            <li><i class="fas fa-check"></i> Print and digital colour accuracy</li>
+                            <li><i class="fas fa-check"></i> Consistent brand identity everywhere</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we have streamlined the process to make it effortless for you.</p>
+            </div>
+
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1"><i class="fas fa-folder-open"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2"><i class="fas fa-pen-to-square"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Send a reference image or brand colour guide showing your preferred tone and colour standard.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3"><i class="fas fa-magic"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your colour-corrected images are returned within 24 hours, all matched to your reference.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4"><i class="fas fa-check-double"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request adjustments anytime. Unlimited revisions until the colour and tone match your brief exactly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+
+            <!-- LEFT: Video Slider -->
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.vt-track -->
+
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide">
+                        <span class="vt-chevron vt-chevron-left"></span>
+                    </button>
+                    <span class="vt-counter">
+                        <span id="vtCurrent">1</span>
+                        <em>/</em>
+                        <span id="vtTotal">4</span>
+                    </span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide">
+                        <span class="vt-chevron vt-chevron-right"></span>
+                    </button>
+                </div>
+            </div><!-- /.vt-left -->
+
+            <!-- RIGHT: Content -->
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What Product Photographers, Fashion Brands, and E-commerce Sellers Say About Our Color Correction Service
+                </h2>
+
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                    </button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                    </button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                    </button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
+                    </button>
+                </div>
+
+                <a href="<?php echo esc_url( home_url('/reviews/') ); ?>" class="vt-cta">
+                    REVIEWS
+                    <span class="vt-cta-arrow"></span>
+                </a>
+            </div><!-- /.vt-right -->
+
+        </div><!-- /.vt-wrap -->
+
+        <!-- YouTube Modal -->
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                    <span class="vt-close-icon"></span>
+                </button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p><strong>Try Our Service Free — Results Back in 24 Hours</strong><br>Send 1 to 5 images and we return them colour-corrected to your brief within 24 hours at no charge. No payment required. No commitment to continue.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-credit-card"></i> No upfront payment — review the work before paying</li>
+                    <li><i class="fas fa-images"></i> 1 to 5 images colour-corrected to your specification</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders until output matches your brief</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — your files are never shared or repurposed</li>
+                    <li><i class="fas fa-tag"></i> Bulk discounts from 100 images</li>
+                    <li><i class="fas fa-handshake"></i> Dedicated account handling for studios and agencies</li>
+                </ul>
+            </div>
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Photo Retouching</option>
+                    <option>Ghost Mannequin</option>
+                    <option>Background Removal</option>
+                    <option selected>Color Correction</option>
+                    <option>Drop Shadow</option>
+                    <option>Image Masking</option>
+                    <option>E-commerce Image Editing</option>
+                    <option>Photo Restoration</option>
+                    <option>AI-generated Image Fixes</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Commonly Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="up" data-delay="100">
+                <div class="faq-item">
+                    <button class="faq-q">How does colour correction reduce product returns? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Inaccurate product colour is one of the top reasons for 'item not as described' returns. Colour-corrected images match the actual product, so buyers receive what they saw in the listing — reducing returns by 15-25% for most e-commerce clients.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between colour correction and retouching? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Colour correction adjusts white balance, exposure, and hue to achieve accurate, consistent colour. Retouching removes blemishes, smooths skin, and enhances detail. They're complementary — corrected images then move to retouching if needed.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can you colour-correct fashion and garment photography? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Fabric colours are matched to swatch reference, seasonal catalog batches are standardised to a single tone, and multi-colorway variants produced from one base shoot. Apparel colour accuracy is critical for reducing returns in fashion e-commerce.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does colour correction take? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Standard turnaround is 24 hours. For batch orders or complex requirements, we agree timing at the start. Rush turnaround available — mention it in your brief and we'll confirm availability.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What file formats do you accept and deliver? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>We accept JPG, PNG, PSD, TIFF, and RAW. Delivery in your preferred format — same format as input, or specify different output if needed. Let us know platform requirements and we'll ensure compliance.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can you standardise my full product catalog to a single colour standard? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Send a reference image showing your preferred tone and colour standard, and we match your entire catalog to that benchmark. Bulk rates apply — pricing scales down as batch size increases.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the free trial really free? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Send 1–5 images with a brief and we'll return them colour-corrected within 24 hours — no charge, no obligation. It's designed so you can verify quality and consistency before ordering a paid batch.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ IMAGE LIGHTBOX ============ -->
+    <div class="lightbox" id="svcLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-backdrop" id="svcLightboxBackdrop"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="svcLightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="svcLightboxImg" class="lightbox-image" src="" alt="">
+                <p class="lightbox-title" id="svcLightboxCaption"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" id="svcLightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="svcLightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
+
+<?php get_footer(); ?>

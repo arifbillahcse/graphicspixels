@@ -1,0 +1,769 @@
+<?php /* Template Name: Drop Shadow Service */ ?>
+<?php get_header(); ?>
+
+<style>
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
+        }
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; bottom: 12px; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px; color: #fff;
+            padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px); pointer-events: none;
+        }
+        .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
+        .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-9.png');
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
+                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-9.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 0 20px 40px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
+        }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
+            pointer-events: none;
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
+    </style>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Discontinue Shadow Services</h2>
+                <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
+                <p>Drop Shadow Service give digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement. Our shadows transform flat images into effective assets, whether you're working with promotional visuals or product photography.</p>
+                <div class="ds-showcase-actions">
+                    <a href="<?php echo esc_url( home_url('/free-trial/') ); ?>" class="btn btn-primary">Get Free Trial</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IS DROP SHADOW ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is Drop Shadow Service?</h2>
+                    <p>Drop shadow service adds a realistic shadow beneath or behind your product, making it look grounded in a scene rather than floating on a white background. A well-executed shadow adds depth, dimension, and visual weight — turning a flat product cutout into something that looks like it was photographed in a real environment.</p>
+                    <p>At Graphics Pixels, every shadow is built by hand in Photoshop — not generated by an automated filter. Our editors assess the product's natural light direction, shape, and intended platform, then craft a shadow that matches. The result is a coherent, professional image that increases buyer confidence, improves click-through rates, and elevates your brand's visual credibility.</p>
+                    <div class="cp-intro-actions">
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                        <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Drop Shadow Service Example" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ VIDEO ============ -->
+    <section class="pe-video-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">See the Transformation in Action</h2>
+                <p class="section-desc">Watch how a flat product cutout is transformed with a hand-crafted shadow — angle adjusted, opacity balanced, and blur calibrated for a result that looks like it was shot in a professional studio.</p>
+            </div>
+            <div class="pe-video-wrap reveal" data-reveal="up" data-delay="100">
+                <div class="pe-video-container">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/auHCRnj5JOc"
+                        title="Professional Drop Shadow Service Process"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES LIST ============ -->
+    <section class="svc-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Drop Shadow Services</h2>
+                <p class="section-desc">Three distinct shadow types — each serving a different visual purpose. From realistic drop shadows for e-commerce listings to mirror reflections for high-end product advertising, we match the shadow style to your product and platform.</p>
+            </div>
+
+            <div class="svc-list">
+
+                <!-- 1. Types of Shadow Effects -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="Before — Drop Shadow Effects">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="After — Drop Shadow Effects">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-circle-half-stroke"></i></span>
+                        <h3>Shadow Types &amp; When to Use Each</h3>
+                        <p>Three shadow styles, each for a different product and context. Drop shadow grounds the product with a soft cast shadow behind or below — ideal for e-commerce, catalogs, and white-background listings. Reflection shadow creates a mirror effect beneath the product, used for premium product advertising. Natural shadow preserves an existing shadow from the original photograph, cleaned and retouched to look deliberate.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Drop shadow — e-commerce &amp; catalog standard</li>
+                            <li><i class="fas fa-check"></i> Reflection shadow — premium &amp; advertising imagery</li>
+                            <li><i class="fas fa-check"></i> Natural shadow — preserved &amp; cleaned from original</li>
+                            <li><i class="fas fa-check"></i> We recommend the right type for your product</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Drop Shadow for Realistic Product Photos -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20(1).jpg" alt="Drop Shadow for Realistic Product Photos" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-droplet"></i></span>
+                        <h3>Drop Shadow for Realistic Product Photos</h3>
+                        <p>A correctly built drop shadow makes your product look like it belongs on the surface it's sitting on — not like it was pasted onto a white background. The shadow angle, spread, blur, and opacity are calibrated to match the product's shape and the direction of light in the original photograph. Used by e-commerce sellers, product photographers, and advertising agencies to add depth and realism to product imagery.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Angle matched to original light source</li>
+                            <li><i class="fas fa-check"></i> Blur &amp; opacity tuned per product shape</li>
+                            <li><i class="fas fa-check"></i> Works on any surface or background</li>
+                            <li><i class="fas fa-check"></i> Amazon, Shopify &amp; catalog compliant</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Reflection Shadow -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20(1).jpg" alt="Reflection Shadow Editing" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-clone"></i></span>
+                        <h3>Reflection Shadow for Polished Product Images</h3>
+                        <p>A reflection shadow creates the appearance that the product was photographed on a polished, reflective surface — glass, lacquer, or high-gloss acrylic. The product's underside is mirrored and faded into the surface with precise gradient control. Used for premium cosmetics, perfume, electronics, and high-end lifestyle products where a luxurious visual impression is needed.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Mirror effect on reflective surface</li>
+                            <li><i class="fas fa-check"></i> Gradient fade precisely controlled</li>
+                            <li><i class="fas fa-check"></i> Luxury &amp; high-end product feel</li>
+                            <li><i class="fas fa-check"></i> Used for cosmetics, perfume &amp; electronics</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Natural Shadow Creation -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="Before — Natural Shadow Creation">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="After — Natural Shadow Creation">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-sun"></i></span>
+                        <h3>Natural Shadow Creation</h3>
+                        <p>When a product is cut out and placed on a white or custom background, a natural shadow recreates the subtle shadow the object would cast in real light — not an artificial filter, but a hand-drawn layer that follows the contour of the product. Makes the product look like it was photographed directly on that background rather than composited. Clean, quiet, and convincing — especially effective for fashion, furniture, and lifestyle products.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Contour-matched hand-drawn shadow</li>
+                            <li><i class="fas fa-check"></i> Convincing, non-artificial result</li>
+                            <li><i class="fas fa-check"></i> Ideal for fashion, furniture &amp; lifestyle</li>
+                            <li><i class="fas fa-check"></i> Works with any background colour</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Options for Shadow Customization -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="Before — Shadow Customisation">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="After — Shadow Customisation">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-sliders"></i></span>
+                        <h3>Full Shadow Customisation</h3>
+                        <p>Every shadow attribute is adjustable: angle, distance, spread, blur, opacity, and colour. A hard-edged, dense shadow for electronics reads differently from a soft, diffuse shadow for apparel — and both read differently from the luxurious reflection effect for cosmetics. Send your product images with your brief, reference images if you have them, or a platform specification, and we'll build the shadow to match your intent.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Angle, opacity, blur &amp; distance adjustable</li>
+                            <li><i class="fas fa-check"></i> Matched to product category &amp; platform</li>
+                            <li><i class="fas fa-check"></i> Reference-matched output on request</li>
+                            <li><i class="fas fa-check"></i> Consistent across bulk batches</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Workflow -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/6.%20Our%20Workflow%20for%20Drop%20Shadow/graphics%20pixels%20(1).jpg" alt="Drop Shadow Workflow" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-diagram-project"></i></span>
+                        <h3>Our Drop Shadow Workflow</h3>
+                        <p>Each image is assessed individually before shadow work begins. We identify the light source direction, the product contours, and the shadow type appropriate for the platform and brief. Shadow is then built by hand in Photoshop — not applied as a layer style — and reviewed against the original before delivery. Quality-checked batch by batch to ensure consistency across every image in the order.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Individual image assessment before editing</li>
+                            <li><i class="fas fa-check"></i> Hand-built in Photoshop, not layer style</li>
+                            <li><i class="fas fa-check"></i> Quality reviewed before every delivery</li>
+                            <li><i class="fas fa-check"></i> Batch consistency guaranteed</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we have streamlined the process to make it effortless for you.</p>
+            </div>
+
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1"><i class="fas fa-folder-open"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2"><i class="fas fa-pen-to-square"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Specify shadow type — drop, reflection, or natural. Add angle, opacity, and platform requirements if you have them.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3"><i class="fas fa-magic"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your edited images are returned within 24 hours with shadows hand-crafted to your brief.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4"><i class="fas fa-check-double"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request adjustments anytime — angle, opacity, blur. Unlimited revisions until the shadow matches your vision exactly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide">
+                        <span class="vt-chevron vt-chevron-left"></span>
+                    </button>
+                    <span class="vt-counter">
+                        <span id="vtCurrent">1</span>
+                        <em>/</em>
+                        <span id="vtTotal">4</span>
+                    </span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide">
+                        <span class="vt-chevron vt-chevron-right"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What E-commerce Sellers, Product Photographers, and Advertising Agencies Say About Our Drop Shadow Service
+                </h2>
+
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                    </button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                    </button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                    </button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
+                    </button>
+                </div>
+
+                <a href="<?php echo esc_url( home_url('/reviews/') ); ?>" class="vt-cta">
+                    REVIEWS
+                    <span class="vt-cta-arrow"></span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                    <span class="vt-close-icon"></span>
+                </button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p><strong>Try Our Service Free — Results Back in 24 Hours</strong><br>Send 1 to 5 images and we return them with shadows added to your brief within 24 hours at no charge. No payment required. No commitment to continue.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-credit-card"></i> No upfront payment — review the work before paying</li>
+                    <li><i class="fas fa-images"></i> 1 to 5 images edited to your exact specification</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders until output matches your brief</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — your files are never shared or repurposed</li>
+                    <li><i class="fas fa-tag"></i> Bulk discounts from 100 images</li>
+                    <li><i class="fas fa-handshake"></i> Dedicated account handling for studios and agencies</li>
+                </ul>
+            </div>
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Photo Retouching</option>
+                    <option>Ghost Mannequin</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option selected>Drop Shadow</option>
+                    <option>Image Masking</option>
+                    <option>E-commerce Image Editing</option>
+                    <option>Photo Restoration</option>
+                    <option>AI-generated Image Fixes</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Commonly Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="up" data-delay="100">
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between drop shadow, reflection shadow, and natural shadow? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Drop shadow adds a cast shadow beneath or behind the product to ground it on the surface. Reflection shadow mirrors the product on a polished surface — used for premium, high-end imagery. Natural shadow preserves and cleans a shadow that already exists in the original photograph. We'll recommend the right type based on your product and platform.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I customise the shadow angle and opacity? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes — fully. Angle, distance, spread, blur, opacity, and colour can all be specified in your brief. If you have a reference image or brand guidelines showing the shadow style you want, send it and we'll match it exactly.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do you use Photoshop layer styles or build shadows by hand? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Every shadow is built by hand in Photoshop. Automated layer styles produce generic, unconvincing results that don't follow the product's natural contour or light direction. Our editors assess the light source and product shape, then build the shadow as a separate hand-crafted layer.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What products do you add shadows to? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Any product type — footwear, electronics, cosmetics, jewellery, apparel, furniture, packaged goods, sunglasses, bags, and more. Shadow style and attributes are adjusted per category. We've worked across thousands of SKUs for e-commerce brands, photography studios, and advertising agencies.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does drop shadow service take? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Standard turnaround is 24 hours. For large batches or complex shadow work, we agree timing at the start. Rush delivery is available — mention it in your brief.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is the free trial really free? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Yes. Send 1–5 images with a brief and we'll return them with shadows added within 24 hours — no charge, no obligation. Use the trial to verify quality and shadow style before committing to a paid batch.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ IMAGE LIGHTBOX ============ -->
+    <div class="lightbox" id="svcLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-backdrop" id="svcLightboxBackdrop"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="svcLightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="svcLightboxImg" class="lightbox-image" src="" alt="">
+                <p class="lightbox-title" id="svcLightboxCaption"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" id="svcLightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="svcLightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
+
+<?php get_footer(); ?>

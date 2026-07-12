@@ -1,0 +1,688 @@
+<?php /* Template Name: Ghost Mannequin Service */ ?>
+<?php get_header(); ?>
+
+<style>
+        .ba-slider {
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3;
+            cursor: ew-resize; user-select: none; background: #f4f4f8;
+        }
+        .ba-before, .ba-after { position: absolute; inset: 0; overflow: hidden; }
+        .ba-before img, .ba-after img {
+            width: 100%; height: 100%; object-fit: contain; padding: 8px;
+            display: block; pointer-events: none;
+        }
+        .ba-after { clip-path: inset(0 50% 0 0); }
+        .ba-label {
+            position: absolute; bottom: 12px; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.8px; color: #fff;
+            padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px); pointer-events: none;
+        }
+        .ba-before .ba-label { left: 12px; background: rgba(1,1,94,0.80); }
+        .ba-after  .ba-label { right: 12px; background: rgba(195,0,157,0.85); }
+        .ba-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 3px; background: #fff; transform: translateX(-50%);
+            z-index: 3; pointer-events: none;
+        }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; border: 3px solid var(--navy, #01015E);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: var(--navy, #01015E);
+            pointer-events: none;
+        }
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Ghost Mannequin service/graphics-pixels-3 (1).png');
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 80px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
+                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Ghost Mannequin service/graphics-pixels-3 (1).png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 0 20px 40px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
+        }
+        /* Reduce top padding for intro section */
+        .gm-intro {
+            padding-top: 40px !important;
+        }
+    </style>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+
+    <!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <h2>Ghost Mannequin Services</h2>
+                <p class="ds-lead">Ghost Mannequin Services are ideal for ecommerce and fashion brands looking to showcase their apparel cleanly and professionally—without distracting mannequins.</p>
+                <p>Apparel ghost mannequin service is very important for all e-commerce business. Our expertise will use the best tricks for providing eye-catchy ghost mannequin effect for your apparel items</p>
+                <div class="ds-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHAT IS GHOST MANNEQUIN ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is Ghost Mannequin Editing?</h2>
+                    <p>Ghost mannequin editing removes the mannequin or model from apparel photographs, leaving a clean, hollow 3D shape that shows exactly how the garment fits and falls — without any visual distractions. The result looks natural and three-dimensional, building buyer confidence and reducing returns.</p>
+                    <p>It is the industry standard for fashion e-commerce. Platforms like Amazon, ASOS, and independent Shopify brands use it consistently because it presents apparel in the most accurate, professional way possible. Whether you need neck joint, sleeve, or full composite mannequin work, our editors handle every garment type to the same high standard.</p>
+                    <div class="cp-intro-actions">
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                        <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Before and After" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="pe-video-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">Ghost Mannequin Effect in Action</h2>
+                <p class="section-desc">Watch how we transform flat apparel shots into clean, professional ghost mannequin images — removing the form and creating a hollow 3D result your customers can trust.</p>
+            </div>
+            <div class="pe-video-wrap reveal" data-reveal="up" data-delay="100">
+                <div class="pe-video-container">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://www.youtube.com/embed/dmd5onUkEAk"
+                        title="Ghost Mannequin Editing Process"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES LIST ============ -->
+    <section class="svc-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Ghost Mannequin Services</h2>
+                <p class="section-desc">We handle all garment types and mannequin removal techniques — from basic neck joints to complex multi-layer composite builds. Every image is matched to your brief before delivery.</p>
+            </div>
+
+            <div class="svc-list">
+
+                <!-- 1. 3D Pack-shot -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-after-12.jpg" alt="Before — 3D Pack-shot Ghost Mannequin">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-Before-16.jpg" alt="After — 3D Pack-shot Ghost Mannequin">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-cube"></i></span>
+                        <h3>3D &amp; Pack-shot Ghost Mannequin Effect</h3>
+                        <p>We render your 360° or pack-shot apparel photos into a clean, three-dimensional ghost form — top, neck, and body joined seamlessly so the garment appears worn and full. Buyers see the true shape, fit, and structure without any visual interference from a mannequin or model body.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Top, body &amp; bottom joined as one continuous form</li>
+                            <li><i class="fas fa-check"></i> Full 360° pack-shot processing available</li>
+                            <li><i class="fas fa-check"></i> Maintains garment shape, drape &amp; volume</li>
+                            <li><i class="fas fa-check"></i> Suitable for all major fashion e-commerce platforms</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Neck Joint -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint Ghost Mannequin">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Neck Joint Ghost Mannequin">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-person-dress"></i></span>
+                        <h3>Neck Joint &amp; Collar Editing</h3>
+                        <p>The most in-demand ghost mannequin technique for garment catalogues. We remove the mannequin from the neckline and collar area, then reconstruct the interior neckline so the shirt, jacket, or dress looks clean, open, and naturally worn — maximising garment visibility across your product listings.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Interior neckline fully reconstructed</li>
+                            <li><i class="fas fa-check"></i> Works across shirts, jackets, dresses &amp; coats</li>
+                            <li><i class="fas fa-check"></i> Clean collar edges — no halos or fringing</li>
+                            <li><i class="fas fa-check"></i> Batch processing at consistent quality standard</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Sleeve & Side Joint -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(2).jpg" alt="Before — Sleeve and Side Joint Ghost Mannequin">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(1).jpg" alt="After — Sleeve and Side Joint Ghost Mannequin">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-hand-sparkles"></i></span>
+                        <h3>Sleeve &amp; Side Joint Editing</h3>
+                        <p>For jackets, blazers, knitwear, and outerwear requiring mannequin removal at the shoulder, sleeve, and armhole. We photograph the sleeve separately then seamlessly composite it back, producing a full-form apparel image that shows every detail of the garment's cut and construction.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Armhole &amp; shoulder region cleanly removed</li>
+                            <li><i class="fas fa-check"></i> Sleeve composited for accurate shape</li>
+                            <li><i class="fas fa-check"></i> Ideal for jackets, blazers &amp; knitwear</li>
+                            <li><i class="fas fa-check"></i> Delivered as layered PSD or flattened PNG</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Full Composite -->
+                <article class="svc-row reverse reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="ba-slider" aria-label="Before and after comparison">
+                            <div class="ba-before">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="Before — Full Composite Ghost Mannequin">
+                            </div>
+                            <div class="ba-after">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="After — Full Composite Ghost Mannequin">
+                            </div>
+                            <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-object-group"></i></span>
+                        <h3>Full-Body &amp; Multi-Piece Composite</h3>
+                        <p>Complex garments — dresses, full-body suits, multi-layer outfits — require composite mannequin work across several photographs. We align and blend each piece into a single, seamless garment image that reads as one continuous item and meets the visual standard of high-end fashion catalogues.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Multi-layer compositing across 2–6 source images</li>
+                            <li><i class="fas fa-check"></i> Seamless joins at every transition point</li>
+                            <li><i class="fas fa-check"></i> Suitable for dresses, suits &amp; outerwear</li>
+                            <li><i class="fas fa-check"></i> Meets luxury fashion catalogue standards</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Retouched Photos -->
+                <article class="svc-row reveal" data-reveal="up">
+                    <div class="svc-media">
+                        <div class="svc-img">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Get top-notch editing Retouched Photos" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="svc-body">
+                        <span class="svc-badge"><i class="fas fa-magic"></i></span>
+                        <h3>Get Top-Notch Editing Retouched Photos</h3>
+                        <p>Beyond ghost mannequin editing, we offer comprehensive photo retouching and enhancement. From color correction and background cleanup to product showcase enhancement, every image is polished to gallery quality and ready for your storefront.</p>
+                        <ul class="svc-features">
+                            <li><i class="fas fa-check"></i> Professional color correction and enhancement</li>
+                            <li><i class="fas fa-check"></i> Background cleanup and removal</li>
+                            <li><i class="fas fa-check"></i> Blemish and defect removal</li>
+                            <li><i class="fas fa-check"></i> Gallery-quality finish on every image</li>
+                        </ul>
+                        <div class="svc-actions">
+                            <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                            <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we've streamlined the process to make it effortless for you.</p>
+            </div>
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1"><i class="fas fa-folder-open"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2"><i class="fas fa-pen-to-square"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Describe your edits and style preferences. Attach reference images if you have them.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3"><i class="fas fa-magic"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your edited images are ready within 24 hours. Full quality, platform-ready.</p>
+                    </div>
+                </div>
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4"><i class="fas fa-check-double"></i></div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request changes anytime. Unlimited revisions until your vision is exactly matched.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide"><span class="vt-chevron vt-chevron-left"></span></button>
+                    <span class="vt-counter"><span id="vtCurrent">1</span><em>/</em><span id="vtTotal">4</span></span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide"><span class="vt-chevron vt-chevron-right"></span></button>
+                </div>
+            </div>
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What Fashion Brands, Photographers, and E-commerce Sellers Say About Our Ghost Mannequin &amp; Apparel Editing Services
+                </h2>
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott"></button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler"></button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri"></button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble"><img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble"></button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor"><img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor"></button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent"><img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent"></button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell"><img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell"></button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg"><img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg"></button>
+                </div>
+                <a href="<?php echo esc_url( home_url('/reviews/') ); ?>" class="vt-cta">REVIEWS <span class="vt-cta-arrow"></span></a>
+            </div>
+        </div>
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video"><span class="vt-close-icon"></span></button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p><strong>Try Our Service Free — Results Back in 24 Hours</strong><br>Send 1 to 5 images and we return them edited to your brief within 24 hours at no charge. No payment required. No commitment to continue.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-credit-card"></i> No upfront payment — review the work before paying</li>
+                    <li><i class="fas fa-images"></i> 1 to 5 images edited to your exact specification</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders until output matches your brief</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — your files are never shared or repurposed</li>
+                    <li><i class="fas fa-tag"></i> Bulk discounts from 100 images</li>
+                    <li><i class="fas fa-handshake"></i> Dedicated account handling for studios and agencies</li>
+                </ul>
+            </div>
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled selected>Select The Service</option>
+                    <option>Ghost Mannequin</option>
+                    <option>Clipping Path</option>
+                    <option>Photo Retouching</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option>Drop Shadow</option>
+                    <option>Image Masking</option>
+                    <option>E-commerce Image Editing</option>
+                    <option>Photo Restoration</option>
+                    <option>AI-generated Image Fixes</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Commonly Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal" data-reveal="up" data-delay="100">
+                <div class="faq-item">
+                    <button class="faq-q">What is ghost mannequin and why do I need it? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Ghost mannequin (also called invisible mannequin) removes the mannequin or model from apparel images, leaving a clean 3D hollow form. It makes garments look more professional and allows buyers to see the true shape and fit — which increases conversion rates and reduces return rates on every platform.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What photographs do I need to send? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>For most garments: a front view on mannequin and an inside or back view showing the inner neckline or hem. For complex garments needing sleeve or full-body compositing, additional angles may be required. If you are unsure, send your images and we will advise on the best approach before starting.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What garment types do you work with? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>All apparel types — t-shirts, shirts, dresses, suits, jackets, coats, knitwear, lingerie, swimwear, and activewear. We handle both woven and knit fabrics, adjusting technique depending on the garment's construction and how it behaves on the mannequin.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How long does ghost mannequin editing take? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>Standard turnaround is 24 hours. For large bulk orders, turnaround is agreed per project. Rush delivery is available — contact us to confirm capacity for urgent deadlines.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What output formats do you deliver? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>PNG with transparent background, layered PSD, or JPEG on white — whichever your platform requires. Specify in your brief and we deliver the correct format. Multi-format delivery is also available at no extra charge.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is there a minimum order size? <i class="fas fa-plus"></i></button>
+                    <div class="faq-a"><p>No minimum. You can send a single garment or a full seasonal catalogue of thousands of pieces. We handle both at the same brief-matched quality standard. Bulk discount pricing starts from 100 images.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+
+    <!-- ============ IMAGE LIGHTBOX ============ -->
+    <div class="lightbox" id="svcLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-backdrop" id="svcLightboxBackdrop"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="svcLightboxClose" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="svcLightboxImg" class="lightbox-image" src="" alt="">
+                <p class="lightbox-title" id="svcLightboxCaption"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" id="svcLightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="svcLightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+    document.querySelectorAll('.ba-slider').forEach(function (slider) {
+        var after   = slider.querySelector('.ba-after');
+        var divider = slider.querySelector('.ba-divider');
+        var dragging = false;
+        function setPos(clientX) {
+            var rect = slider.getBoundingClientRect();
+            var pct  = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+            after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+            divider.style.left   = pct + '%';
+        }
+        slider.addEventListener('mousedown',  function (e) { dragging = true; setPos(e.clientX); });
+        window.addEventListener('mousemove',  function (e) { if (dragging) setPos(e.clientX); });
+        window.addEventListener('mouseup',    function ()  { dragging = false; });
+        slider.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+        window.addEventListener('touchmove',  function (e) { if (dragging) setPos(e.touches[0].clientX); },   { passive: true });
+        window.addEventListener('touchend',   function ()  { dragging = false; }, { passive: true });
+    });
+    </script>
+
+<?php get_footer(); ?>

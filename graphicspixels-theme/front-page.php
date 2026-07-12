@@ -1,0 +1,807 @@
+<?php /* Front page — converted from index.html */ ?>
+<?php get_header(); ?>
+
+<style>
+        /* Hero Section Full Width */
+        .hero {
+            width: 100vw !important;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+        .hero .hero-container {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        /* Home Page Hero Image Styling */
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            width: 100%;
+            position: relative;
+            overflow: visible;
+            padding-right: 40px;
+        }
+        .home-svg-scene {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            overflow: visible;
+        }
+        .home-svg-scene img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            max-height: 100%;
+        }
+
+        /* ── Floating Icons (Hero Section) ── */
+        .icon-orbit {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+        }
+        .orbit-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #fff;
+            background: #C3009D;
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 4px 16px rgba(195, 0, 157, 0.4);
+            z-index: 2;
+        }
+
+        /* Position icons on 4 sides */
+        .orbit-1 {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .orbit-2 {
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .orbit-3 {
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .orbit-4 {
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .orbit-1, .orbit-2 {
+            animation: float 3s ease-in-out infinite;
+        }
+        .orbit-3 {
+            left: -20px;
+            animation: floatSide 3s ease-in-out infinite;
+        }
+        .orbit-4 {
+            right: -20px;
+            animation: floatSide 3s ease-in-out infinite;
+        }
+
+        @keyframes floatSide {
+            0%, 100% { transform: translateY(-50%) translateX(0px); }
+            50% { transform: translateY(-50%) translateX(-12px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                padding-right: 20px;
+            }
+            .orbit-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+            .orbit-1 {
+                top: -15px;
+            }
+            .orbit-2 {
+                bottom: -15px;
+            }
+            .orbit-3 {
+                left: -15px;
+            }
+            .orbit-4 {
+                right: -15px;
+            }
+        }
+
+        /* Modal CSS moved to css/style.css (loaded globally) */
+
+        /* ---- Showcase Banner Section ---- */
+        .ds-showcase {
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .ds-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 100px 0;
+        }
+        .ds-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(1,1,94,0.08);
+            color: #01015E; font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .ds-showcase-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 38px; font-weight: 700;
+            color: #01015E; margin-bottom: 16px; line-height: 1.2;
+        }
+        .ds-showcase-content .ds-lead {
+            font-weight: 600; font-size: 15px;
+            color: #111;
+            margin-bottom: 14px; line-height: 1.6;
+        }
+        .ds-showcase-content p {
+            font-size: 15px; color: #444;
+            line-height: 1.75; margin-bottom: 32px;
+        }
+        .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 768px) {
+            .ds-showcase {
+                height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .ds-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
+                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
+            }
+            .ds-showcase-content {
+                max-width: 100%;
+                padding: 0 20px 40px;
+                width: 100%;
+            }
+            .ds-showcase-content h2 { font-size: 26px; }
+        }
+        @media (min-width: 769px) {
+            .ds-showcase-image { display: none; }
+        }
+        /* Reduce top padding for intro section */
+        .cp-intro {
+            padding-top: 40px !important;
+        }
+    </style>
+
+<!-- ============ PAGE HERO / SHOWCASE ============ -->
+    <section class="ds-showcase" id="home">
+        <div class="ds-showcase-image" aria-hidden="true"></div>
+        <div class="container">
+            <div class="ds-showcase-content reveal" data-reveal="left">
+                <span class="ds-showcase-eyebrow">Meet Graphics Pixels</span>
+                <h2>Your Photo Retouching &amp; Post-Production Service Partner</h2>
+                <p class="ds-lead">Complete Image Editing, Video, and 3D Solutions in One Place</p>
+                <p>Graphics Pixels is a dedicated photo editing and post-production outsourcing studio based in Dhaka, Bangladesh, with a UK office in Southampton. We handle clipping path, background removal, ghost mannequin, photo retouching, color correction, image masking, drop shadow, headshot editing, photo restoration, AI image fixes, 3D product modeling, and video editing—all done by hand by our 120+ in-house editors.</p>
+                <p>No AI shortcuts. No subcontracting. 24-hour standard turnaround. Free trial on every new order — send 1 to 5 images and get them back edited within 24 hours at no charge.</p>
+                <div class="ds-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                    <a href="#free-trial" class="btn btn-outline">Get A Free Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STATS SECTION ============ -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-card reveal" data-reveal="up">
+                <h3 class="stat-number" data-count="5" data-suffix="+">0</h3>
+                <p class="stat-label">Awards Rewarded</p>
+            </div>
+            <div class="stat-card reveal" data-reveal="up" data-delay="100">
+                <h3 class="stat-number" data-count="14" data-suffix="+">0</h3>
+                <p class="stat-label">Years of Experience</p>
+            </div>
+            <div class="stat-card reveal" data-reveal="up" data-delay="200">
+                <h3 class="stat-number" data-count="1800" data-suffix="+">0</h3>
+                <p class="stat-label">Completed Projects</p>
+            </div>
+            <div class="stat-card reveal" data-reveal="up" data-delay="300">
+                <h3 class="stat-number" data-count="1200" data-suffix="+">0</h3>
+                <p class="stat-label">Happy Clients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TRUST / ABOUT SECTION ============ -->
+    <section class="trust" id="about">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">We Are Your Trusted Partner in Image Editing &amp; Post-Production Services</h2>
+                <p class="section-desc">
+                    Graphics Pixels have been providing all the photoshop editing for more than 10 years to many
+                    ecommerce companies, agencies &amp; studios. Simply order, reduce cost with fast turnaround time.
+                    Also, always grab big discounts on your bulk orders.
+                </p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card reveal" data-reveal="up">
+                    <div class="trust-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>100% Data Privacy</h3>
+                    <p>Your data's confidentiality is our utmost priority. We maintain the highest standard of data privacy for our image editing services.</p>
+                </div>
+                <div class="trust-card reveal" data-reveal="up" data-delay="150">
+                    <div class="trust-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Cost and Time Saving</h3>
+                    <p>Get our high-quality, pixel-perfect Photoshop editing services under your budget within a short time.</p>
+                </div>
+                <div class="trust-card reveal" data-reveal="up" data-delay="300">
+                    <div class="trust-icon"><i class="fas fa-images"></i></div>
+                    <h3>High-Quality Images</h3>
+                    <p>Our experts and dedicated team offer you high-quality images to increase your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW DOES IT WORK ============ -->
+    <section class="how-works">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works in 4 Steps</h2>
+                <p class="section-desc">From upload to delivery — we've streamlined the process to make it effortless for you.</p>
+            </div>
+
+            <div class="how-timeline reveal" data-reveal="up" data-delay="100">
+                <!-- Step 1 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-1">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Share Your Files</h3>
+                        <p>Upload 1–5 images or share a cloud link. We accept JPG, PNG, PSD, and RAW formats.</p>
+                    </div>
+                </div>
+
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Step 2 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-2">
+                            <i class="fas fa-pen-to-square"></i>
+                        </div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Describe your edits and style preferences. Attach reference images if you have them.</p>
+                    </div>
+                </div>
+
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Step 3 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-3">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                    </div>
+                    <div class="how-content">
+                        <h3>We Deliver Results</h3>
+                        <p>Your edited images are ready within 24 hours. Full quality, platform-ready.</p>
+                    </div>
+                </div>
+
+                <div class="how-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+
+                <!-- Step 4 -->
+                <div class="how-item">
+                    <div class="how-circle">
+                        <div class="how-icon-bg how-step-4">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                    </div>
+                    <div class="how-content">
+                        <h3>Revisions Until Perfect</h3>
+                        <p>Request changes anytime. Unlimited revisions until your vision is exactly matched.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO TESTIMONIALS SECTION ============ -->
+    <section class="vt-section">
+        <div class="vt-wrap">
+
+            <!-- LEFT: Video Slider -->
+            <div class="vt-left reveal" data-reveal="left">
+                <div class="vt-track" id="vtTrack">
+
+                    <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Tyrell Scott</span>
+                                        <span class="vt-card-company">E-commerce Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="An_AGr0jDMQ">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Seb Chandler</span>
+                                        <span class="vt-card-company">Fashion Brand Manager</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="y23k3pzTGQw">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Andrew Porfyri</span>
+                                        <span class="vt-card-company">Product Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="L9fTaCA_lvI">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Saville Coble</span>
+                                        <span class="vt-card-company">Agency Creative Director</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="QtF0jp6hfbY">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play David Okafor video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">David Okafor</span>
+                                        <span class="vt-card-company">E-Commerce Agency Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="HdKJDaa8K2Q">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Sophie Laurent video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Sophie Laurent</span>
+                                        <span class="vt-card-company">Studio Owner</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="ymumIHlhIJc">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play James Mitchell video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">James Mitchell</span>
+                                        <span class="vt-card-company">Commercial Photographer</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vt-slide" data-video-id="VCtTRd37F2M">
+                        <div class="vt-card">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg');">
+                                <div class="vt-thumb-overlay"></div>
+                                <button class="vt-play" aria-label="Play Anika Berg video"><span class="vt-play-icon"></span></button>
+                                <div class="vt-card-footer">
+                                    <div class="vt-card-info">
+                                        <span class="vt-card-name">Anika Berg</span>
+                                        <span class="vt-card-company">Studio Owner, Berlin</span>
+                                    </div>
+                                    <div class="vt-stars">
+                                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.vt-track -->
+
+                <div class="vt-controls">
+                    <button class="vt-arrow vt-prev" id="vtPrev" aria-label="Previous slide">
+                        <span class="vt-chevron vt-chevron-left"></span>
+                    </button>
+                    <span class="vt-counter">
+                        <span id="vtCurrent">1</span>
+                        <em>/</em>
+                        <span id="vtTotal">4</span>
+                    </span>
+                    <button class="vt-arrow vt-next" id="vtNext" aria-label="Next slide">
+                        <span class="vt-chevron vt-chevron-right"></span>
+                    </button>
+                </div>
+            </div><!-- /.vt-left -->
+
+            <!-- RIGHT: Content -->
+            <div class="vt-right reveal" data-reveal="right">
+                <div class="vt-stars-top">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                </div>
+                <h2 class="vt-heading">
+                    What Photographers, Business Owners, and Ecommerce Brands Say About Our Photo Retouching &amp; Post-Production Services
+                </h2>
+
+                <div class="vt-avatars" id="vtAvatars">
+                    <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                    </button>
+                    <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                    </button>
+                    <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                    </button>
+                    <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                    </button>
+                    <button class="vt-avatar" data-index="4" aria-label="David Okafor">
+                        <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
+                    </button>
+                    <button class="vt-avatar" data-index="5" aria-label="Sophie Laurent">
+                        <img src="https://img.youtube.com/vi/HdKJDaa8K2Q/hqdefault.jpg" alt="Sophie Laurent">
+                    </button>
+                    <button class="vt-avatar" data-index="6" aria-label="James Mitchell">
+                        <img src="https://img.youtube.com/vi/ymumIHlhIJc/hqdefault.jpg" alt="James Mitchell">
+                    </button>
+                    <button class="vt-avatar" data-index="7" aria-label="Anika Berg">
+                        <img src="https://img.youtube.com/vi/VCtTRd37F2M/hqdefault.jpg" alt="Anika Berg">
+                    </button>
+                </div>
+
+                <a href="<?php echo esc_url( home_url('/reviews/') ); ?>" class="vt-cta">
+                    REVIEWS
+                    <span class="vt-cta-arrow"></span>
+                </a>
+            </div><!-- /.vt-right -->
+
+        </div><!-- /.vt-wrap -->
+
+        <!-- YouTube Modal -->
+        <div class="vt-modal" id="vtModal">
+            <div class="vt-modal-backdrop" id="vtBackdrop"></div>
+            <div class="vt-modal-box">
+                <button class="vt-modal-close" id="vtClose" aria-label="Close video">
+                    <span class="vt-close-icon"></span>
+                </button>
+                <div class="vt-modal-frame">
+                    <iframe id="vtIframe" src="" title="Client review video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Our Portfolio</span>
+                <h2 class="section-title">Graphics Pixels Offers You</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Clipping Path -->
+                <article class="service-card reveal" data-reveal="up">
+                    <div class="service-image" data-image="images/home/1_Clipping-Path-Services-1-945x1024.png" data-title="Clipping Path Services">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Services example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
+                    <h3>Clipping Path Services</h3>
+                    <p class="service-tagline">Precision Meets Scale</p>
+                    <p>Hand-cutting paths for Amazon or high-end e-commerce isn't just about removing backgrounds—it's about pixel-perfect edges. For 13+ years, we've delivered flawless results that hold up even at full zoom.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 100% Manual Pen Tool — no AI, no shortcuts</li>
+                        <li><i class="fas fa-check"></i> Up to 4,000 images processed per day</li>
+                        <li><i class="fas fa-check"></i> Triple-layer QC on every batch</li>
+                        <li><i class="fas fa-check"></i> NDA-compliant, fully secure workflow</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Ghost Mannequin -->
+                <article class="service-card reveal" data-reveal="up" data-delay="100">
+                    <div class="service-image" data-image="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" data-title="Ghost Mannequin & Neck Joint Services">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" alt="Ghost Mannequin & Neck Joint example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-shirt"></i></div>
+                    <h3>Ghost Mannequin &amp; Neck Joint</h3>
+                    <p class="service-tagline">Bringing Shape and Life to Garments</p>
+                    <p>Ghost mannequin editing is about more than removal—it's about expert reconstruction. We help fashion brands in the EU and US create natural, full-bodied garment images that look worn, even without a model.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Seamless neckline rejoining &amp; sleeve positioning</li>
+                        <li><i class="fas fa-check"></i> Crease elimination &amp; color balancing</li>
+                        <li><i class="fas fa-check"></i> 3-stage quality review</li>
+                        <li><i class="fas fa-check"></i> High-volume seasonal batch reliability</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Photo Retouching -->
+                <article class="service-card reveal" data-reveal="up" data-delay="200">
+                    <div class="service-image" data-image="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" data-title="Premium Photo Retouching Services">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" alt="Premium Photo Retouching example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>Premium Photo Retouching</h3>
+                    <p class="service-tagline">Clean, Natural &amp; Sales-Focused</p>
+                    <p>High-quality retouching is about building trust. For 13+ years, we've helped global brands deliver "retail-ready" images that are honest, consistent, and visually compelling.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Skin correction, color grading &amp; cleanup</li>
+                        <li><i class="fas fa-check"></i> Natural, restrained, never over-processed</li>
+                        <li><i class="fas fa-check"></i> Batch consistency up to 500+ files</li>
+                        <li><i class="fas fa-check"></i> 24–48 hour fast turnaround</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <!-- Background Removal -->
+                <article class="service-card reveal" data-reveal="up" data-delay="300">
+                    <div class="service-image" data-image="images/home/4_Background-Removal-Services-1-945x1024.png" data-title="High-End Background Removal Services">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/4_Background-Removal-Services-1-945x1024.png" alt="High-End Background Removal example" loading="lazy" style="cursor: pointer;">
+                    </div>
+                    <div class="service-icon"><i class="fas fa-eraser"></i></div>
+                    <h3>High-End Background Removal</h3>
+                    <p class="service-tagline">Precision Tracing for Pro Results</p>
+                    <p>Automated tools often leave rough edges and artifacts. For 13+ years, we've focused on manual hand-editing to ensure every product image sits perfectly on its background.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 100% hand-edited, no AI guessing</li>
+                        <li><i class="fas fa-check"></i> Optimized for Amazon, Shopify, eBay, Etsy</li>
+                        <li><i class="fas fa-check"></i> 4,000 images daily, 24–48h turnaround</li>
+                        <li><i class="fas fa-check"></i> 3 levels of quality control</li>
+                    </ul>
+                    <a href="#free-trial" class="service-link">Free Trial <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+
+            <div class="services-cta reveal" data-reveal="up">
+                <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline">See all Services</a>
+            </div>
+        </div>
+
+        <!-- Service Image Lightbox -->
+        <div class="lightbox" id="serviceLightbox">
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-container">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="lightbox-content">
+                    <img id="lightboxImage" src="" alt="Service image" class="lightbox-image">
+                    <h3 id="lightboxTitle" class="lightbox-title"></h3>
+                </div>
+                <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRICING SECTION ============ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-head reveal" data-reveal="up">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Our Delivery Time &amp; Cost for Photo Editing Services</h2>
+                <p class="section-desc">
+                    Our standard delivery time is from 24 to 48 hours. However, if you need urgent delivery,
+                    we can provide it using our fastest delivery package.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card reveal" data-reveal="up">
+                    <h3 class="plan-name">Basic Plan</h3>
+                    <div class="plan-price">$0.29 <span>/ starting price</span></div>
+                    <p class="plan-for">For your 100–150 images order</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Quality checked perfectly</li>
+                        <li><i class="fas fa-check"></i> Simply upload and send the files</li>
+                        <li><i class="fas fa-check"></i> 24/7 support from us</li>
+                    </ul>
+                    <a href="<?php echo esc_url( home_url('/pricing/') ); ?>" class="btn btn-outline btn-block">Pricing Details</a>
+                </div>
+
+                <div class="pricing-card popular reveal" data-reveal="up" data-delay="150">
+                    <span class="popular-badge">Most Popular</span>
+                    <h3 class="plan-name">Standard</h3>
+                    <div class="plan-price">$0.69 <span>/ per image</span></div>
+                    <p class="plan-for">For your 150–600 images</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Quality ensured</li>
+                        <li><i class="fas fa-check"></i> Simply upload and send the files</li>
+                        <li><i class="fas fa-check"></i> Nonstop support from our experts</li>
+                    </ul>
+                    <a href="<?php echo esc_url( home_url('/pricing/') ); ?>" class="btn btn-primary btn-block">Pricing Details</a>
+                </div>
+
+                <div class="pricing-card reveal" data-reveal="up" data-delay="300">
+                    <h3 class="plan-name">Premium</h3>
+                    <div class="plan-price">$1.50 <span>/ per image</span></div>
+                    <p class="plan-for">For more than 600 images</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Quality ensured</li>
+                        <li><i class="fas fa-check"></i> Simple upload and send the files</li>
+                        <li><i class="fas fa-check"></i> Support team available 24 hours</li>
+                    </ul>
+                    <a href="<?php echo esc_url( home_url('/pricing/') ); ?>" class="btn btn-outline btn-block">Pricing Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FREE TRIAL SECTION ============ -->
+    <section class="free-trial" id="free-trial">
+        <div class="container free-trial-container">
+            <div class="free-trial-info reveal" data-reveal="left">
+                <span class="section-tag light">Get Started</span>
+                <h2 class="section-title light">With the FREE TRIAL</h2>
+                <p>Complete the form, upload your images, and get your free trial project done in 1 hour.</p>
+                <ul class="trial-perks">
+                    <li><i class="fas fa-globe"></i> Global service</li>
+                    <li><i class="fas fa-bolt"></i> Fast turnaround</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
+                    <li><i class="fas fa-face-smile"></i> 100% client satisfaction</li>
+                    <li><i class="fas fa-microchip"></i> Cutting-edge technology</li>
+                    <li><i class="fas fa-cart-shopping"></i> Smooth ordering process</li>
+                    <li><i class="fas fa-gem"></i> Emphasis on perfection</li>
+                </ul>
+            </div>
+
+            <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled selected>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Ghost Mannequin &amp; Neck Joint</option>
+                    <option>Photo Retouching</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option>Image Masking</option>
+                    <option>3D Service</option>
+                    <option>Video Editing</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">
+                    If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).
+                </p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Modal moved to components/footer.html (loaded on all pages) -->
+
+<?php get_footer(); ?>

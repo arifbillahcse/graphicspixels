@@ -1,0 +1,658 @@
+<?php /* Template Name: Recorte Fotografia Ecommerce (ES) */ ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php wp_head(); ?>
+<style>
+        /* ===== Page-scoped styles — Recorte E-commerce ===== */
+
+        /* --- Hero showcase (same structure as drop-shadow-service.html) --- */
+        .dt-showcase {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #fff;
+            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/clipping%20path%20cover.png');
+            background-size: auto calc(100% - 100px);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .dt-showcase-content {
+            position: relative; z-index: 2;
+            max-width: 52%;
+            padding: 120px 0 80px;
+        }
+        .dt-showcase-eyebrow {
+            display: inline-block;
+            background: rgba(195,0,157,0.08);
+            color: var(--magenta); font-size: 12px; font-weight: 600;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            padding: 6px 16px; border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .dt-showcase-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px; font-weight: 800;
+            color: var(--navy); margin-bottom: 18px; line-height: 1.15;
+        }
+        .dt-showcase-lead {
+            font-weight: 600; font-size: 16px;
+            color: #111; margin-bottom: 14px; line-height: 1.6;
+        }
+        .dt-showcase-content p {
+            font-size: 15px; color: #555;
+            line-height: 1.8; margin-bottom: 16px;
+        }
+        .dt-showcase-icons {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 10px 20px; margin: 24px 0 32px; list-style: none; padding: 0;
+        }
+        .dt-showcase-icons li {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; font-weight: 500; color: var(--navy);
+        }
+        .dt-showcase-icons li i {
+            width: 32px; height: 32px; border-radius: 8px;
+            background: rgba(195,0,157,0.1); display: inline-flex;
+            align-items: center; justify-content: center;
+            font-size: 13px; color: var(--magenta); flex-shrink: 0;
+        }
+        .dt-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        @media (max-width: 992px) {
+            .dt-showcase-content { max-width: 55%; }
+        }
+        @media (max-width: 768px) {
+            .dt-showcase {
+                min-height: auto;
+                flex-direction: column;
+                background-image: none;
+                padding-top: 90px;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .dt-showcase-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1108 / 874;
+                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/clipping%20path%20cover.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 24px;
+            }
+            .dt-showcase-content {
+                max-width: 100%;
+                padding: 0 0 40px;
+            }
+            .dt-showcase-content h1 { font-size: 28px; }
+            .dt-showcase-icons { grid-template-columns: 1fr; }
+        }
+        @media (min-width: 769px) {
+            .dt-showcase-image { display: none; }
+        }
+
+        /* --- Generic section heads (reuse site classes via .container) --- */
+        .dt-section { padding: 100px 0; }
+        .dt-section.alt { background: var(--bg-light); }
+        .dt-head { text-align: center; max-width: 760px; margin: 0 auto 60px; }
+        .dt-head .section-title { margin-bottom: 14px; }
+        .dt-head p { color: var(--text-light); font-size: 17px; }
+
+        /* --- Value cards (Por qué) --- */
+        .dt-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .dt-value-card {
+            background: var(--white); border-radius: var(--radius); padding: 40px 32px;
+            box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .dt-value-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-8px); border-color: rgba(195,0,157,0.25); }
+        .dt-value-icon {
+            width: 64px; height: 64px; border-radius: 18px; background: var(--gradient);
+            color: #fff; display: flex; align-items: center; justify-content: center;
+            font-size: 26px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(195,0,157,0.3);
+        }
+        .dt-value-card h3 { font-size: 20px; margin-bottom: 14px; }
+        .dt-value-card p { color: var(--text-light); font-size: 15px; line-height: 1.7; }
+
+        /* --- Services grid --- */
+        .dt-services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .dt-service-item {
+            display: flex; gap: 22px; padding: 32px; background: var(--white);
+            border: 1px solid var(--border); border-radius: var(--radius);
+            box-shadow: var(--shadow-sm); transition: var(--transition);
+        }
+        .dt-service-item:hover { box-shadow: var(--shadow-md); transform: translateY(-5px); }
+        .dt-service-ico {
+            flex-shrink: 0; width: 60px; height: 60px; border-radius: 16px;
+            background: var(--gradient-soft); color: var(--magenta);
+            display: flex; align-items: center; justify-content: center; font-size: 24px;
+        }
+        .dt-service-item h3 { font-size: 19px; margin-bottom: 8px; }
+        .dt-service-item p { color: var(--text-light); font-size: 14.5px; line-height: 1.65; }
+
+        /* --- Process (dark) --- */
+        .dt-process {
+            padding: 100px 0; position: relative; overflow: hidden;
+            background:
+                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(155deg, #01015E 0%, #16006e 45%, #0a0050 75%, #01015E 100%);
+            background-size: 28px 28px, 100% 100%;
+        }
+        .dt-process .dt-head .section-title { color: #fff; }
+        .dt-process .dt-head p { color: rgba(255,255,255,0.7); }
+        .dt-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; z-index: 2; }
+        .dt-step { text-align: center; }
+        .dt-step-num {
+            width: 60px; height: 60px; border-radius: 50%; background: var(--gradient);
+            color: #fff; display: flex; align-items: center; justify-content: center;
+            font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 24px;
+            margin: 0 auto 24px; box-shadow: 0 10px 30px rgba(195,0,157,0.4);
+        }
+        .dt-step h3 { color: #fff; font-size: 20px; margin-bottom: 12px; }
+        .dt-step p { color: rgba(255,255,255,0.72); font-size: 14.5px; line-height: 1.7; }
+
+        /* --- Pricing --- */
+        .dt-pricing { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 920px; margin: 0 auto; }
+        .dt-price-card {
+            background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 40px 36px; transition: var(--transition); position: relative;
+        }
+        .dt-price-card:hover { box-shadow: var(--shadow-md); }
+        .dt-price-card.featured { border: 2px solid var(--magenta); box-shadow: var(--shadow-lg); }
+        .dt-price-badge {
+            position: absolute; top: 0; right: 32px; transform: translateY(-50%);
+            background: var(--magenta); color: #fff; font-family: 'Poppins', sans-serif;
+            font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            padding: 6px 16px; border-radius: 100px;
+        }
+        .dt-price-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .dt-price-card > p { color: var(--text-light); font-size: 14.5px; margin-bottom: 20px; }
+        .dt-price-amount {
+            font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 800;
+            color: var(--navy); margin-bottom: 24px;
+        }
+        .dt-price-card.featured .dt-price-amount { color: var(--magenta); }
+        .dt-price-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+        .dt-price-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; color: var(--text); }
+        .dt-price-list li i { color: var(--magenta); margin-top: 4px; font-size: 13px; flex-shrink: 0; }
+
+        /* --- Testimonial --- */
+        .dt-testimonial { padding: 100px 0; background: var(--bg-light); text-align: center; }
+        .dt-testimonial-stars { color: #ffb800; font-size: 24px; margin-bottom: 24px; letter-spacing: 4px; }
+        .dt-testimonial blockquote {
+            font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 700; font-style: italic;
+            color: var(--navy); line-height: 1.45; max-width: 760px; margin: 0 auto 28px;
+        }
+        .dt-testimonial-text { font-size: 17px; color: var(--text-light); max-width: 680px; margin: 0 auto 28px; line-height: 1.8; }
+        .dt-testimonial-author { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--navy); }
+        .dt-testimonial-author span { color: var(--magenta); font-weight: 600; }
+
+        /* --- FAQ --- */
+        .dt-faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+        .dt-faq-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--white); }
+        .dt-faq-q {
+            width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+            padding: 24px 28px; background: none; border: none; cursor: pointer; text-align: left;
+            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy);
+            transition: var(--transition);
+        }
+        .dt-faq-q:hover { background: var(--gradient-soft); }
+        .dt-faq-q .dt-faq-icon { color: var(--magenta); font-size: 22px; flex-shrink: 0; transition: var(--transition); }
+        .dt-faq-item.open .dt-faq-icon { transform: rotate(45deg); }
+        .dt-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .dt-faq-a-inner { padding: 0 28px 24px; color: var(--text-light); font-size: 15px; line-height: 1.8; border-top: 1px solid var(--border); padding-top: 20px; }
+
+        /* --- Final CTA --- */
+        .dt-cta {
+            padding: 100px 0; text-align: center; position: relative; overflow: hidden;
+            background: linear-gradient(155deg, #01015E 0%, #16006e 50%, #0a0050 100%);
+        }
+        .dt-cta h2 { color: #fff; font-size: 40px; font-weight: 800; margin-bottom: 18px; }
+        .dt-cta p { color: rgba(255,255,255,0.8); font-size: 18px; max-width: 600px; margin: 0 auto 36px; }
+
+        /* --- Responsive --- */
+        @media (max-width: 992px) {
+            .dt-values { grid-template-columns: 1fr; }
+            .dt-services { grid-template-columns: 1fr; }
+            .dt-steps { grid-template-columns: 1fr; gap: 48px; }
+            .dt-pricing { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .dt-section { padding: 70px 0; }
+            .dt-process, .dt-testimonial, .dt-cta { padding: 70px 0; }
+            .dt-cta h2 { font-size: 30px; }
+            .dt-testimonial blockquote { font-size: 22px; }
+            .dt-service-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body <?php body_class(); ?>>
+<!-- ============ HEADER / NAVIGATION ============ -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="<?php echo esc_url( home_url('/') ); ?>" class="logo">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels Logo">
+            </a>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="<?php echo esc_url( home_url('/services/') ); ?>" class="nav-link">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Photo Editing <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu dropdown-wide">
+                            <li><a href="<?php echo esc_url( home_url('/clipping-path-service/') ); ?>"><i class="fas fa-chevron-right"></i> Clipping Path service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/photo-retouching-service/') ); ?>"><i class="fas fa-chevron-right"></i> Photo Retouching service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/ghost-mannequin-service/') ); ?>"><i class="fas fa-chevron-right"></i> Ghost Mannequin service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/headshot-photo-editing/') ); ?>"><i class="fas fa-chevron-right"></i> Headshot photo editing</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/background-removal-service/') ); ?>"><i class="fas fa-chevron-right"></i> Background Removal service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/color-correction-service/') ); ?>"><i class="fas fa-chevron-right"></i> Color Correction Service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/drop-shadow-service/') ); ?>"><i class="fas fa-chevron-right"></i> Drop Shadow Service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/image-masking-service/') ); ?>"><i class="fas fa-chevron-right"></i> Image Masking service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/ecommerce-image-editing-services/') ); ?>"><i class="fas fa-chevron-right"></i> E-commerce Image Editing</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/photo-restoration-service/') ); ?>"><i class="fas fa-chevron-right"></i> Photo Restoration Service</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/ai-generated-image-fixes/') ); ?>"><i class="fas fa-chevron-right"></i> AI-generated Image Fixes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">3D Service <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo esc_url( home_url('/3d-product-modeling-service/') ); ?>"><i class="fas fa-chevron-right"></i> 3D Modeling</a></li>
+                            <li><a href="<?php echo esc_url( home_url('/3d-rendering-service/') ); ?>"><i class="fas fa-chevron-right"></i> 3D Rendering</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="<?php echo esc_url( home_url('/video-editing/') ); ?>" class="nav-link">Video Editing</a></li>
+                    <li class="nav-item"><a href="<?php echo esc_url( home_url('/portfolio/') ); ?>" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="<?php echo esc_url( home_url('/pricing/') ); ?>" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="<?php echo esc_url( home_url('/about-us/') ); ?>" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="#free-trial" class="btn btn-primary nav-cta">Free Trial</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============ HERO / SHOWCASE ============ -->
+    <section class="dt-showcase">
+        <div class="dt-showcase-image" aria-hidden="true"></div>
+        <div class="container">
+            <div class="dt-showcase-content reveal" data-reveal="left">
+                <span class="dt-showcase-eyebrow">✨ Postproducción Visual Premium para el Retail en España</span>
+                <h1>Servicio de Trazado de Recorte y Retoque Fotográfico — 100% Hecho a Mano</h1>
+                <p class="dt-showcase-lead">Impulse las conversiones de su e-commerce con imágenes perfectas.</p>
+                <p>En <strong>Graphics Pixels</strong> ofrecemos soluciones avanzadas de postproducción visual para marcas de moda, retail y estudios fotográficos en España. Sin filtros automáticos ni errores de IA: trazados manuales con la herramienta pluma de Photoshop. Entrega garantizada en 24-48 horas.</p>
+                <ul class="dt-showcase-icons">
+                    <li><i class="fas fa-shield-halved"></i> Contrato NDA Garantizado</li>
+                    <li><i class="fas fa-bolt"></i> Entrega en 24h-48h</li>
+                    <li><i class="fas fa-fire"></i> Sin Atajos de IA</li>
+                </ul>
+                <div class="dt-showcase-actions">
+                    <a href="#free-trial" class="btn btn-primary">Solicite su prueba gratuita (Hasta 5 imágenes)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTADORES DE CONFIANZA ============ -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="120" data-suffix="+">120+</div>
+                    <div class="stat-label">Editores Expertos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="250" data-suffix="+">250+</div>
+                    <div class="stat-label">Proyectos Globales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="24" data-suffix="-48h">24-48h</div>
+                    <div class="stat-label">Plazo de Entrega</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100" data-suffix="%">100%</div>
+                    <div class="stat-label">Manual (Sin IA)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ POR QUÉ ELEGIRNOS ============ -->
+    <section class="dt-section" id="por-que">
+        <div class="container">
+            <div class="dt-head">
+                <span class="section-tag">¿Por qué elegirnos?</span>
+                <h2 class="section-title">¿Por qué elegir a Graphics Pixels?</h2>
+                <p>La precisión humana que necesita para optimizar las ventas de su negocio.</p>
+            </div>
+            <div class="dt-values">
+                <div class="dt-value-card">
+                    <div class="dt-value-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Trazado Manual Exclusivo (Sin IA)</h3>
+                    <p>Los algoritmos automáticos destruyen los detalles sutiles de los bordes. Nuestro equipo interno de más de 120 editores procesa cada imagen píxel por píxel, asegurando un zoom limpio y ultra nítido en Shopify, Amazon y catálogos impresos.</p>
+                </div>
+                <div class="dt-value-card">
+                    <div class="dt-value-icon"><i class="fas fa-shirt"></i></div>
+                    <h3>Efecto Maniquí Invisible (Ghost Mannequin)</h3>
+                    <p>Aporte volumen, textura y simetría natural a sus prendas de vestir. Unimos cuellos, eliminamos maniquíes y corregimos imperfecciones siguiendo los estándares visuales de las grandes cadenas de moda de Madrid y Barcelona.</p>
+                </div>
+                <div class="dt-value-card">
+                    <div class="dt-value-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Confidencialidad Absoluta y NDA</h3>
+                    <p>Protegemos el valor de sus próximas campañas y lanzamientos de temporada. Todos sus activos visuales se procesan en servidores seguros. Estamos listos para firmar un Acuerdo de Confidencialidad (NDA) antes de recibir sus archivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NUESTROS SERVICIOS ============ -->
+    <section class="dt-section alt" id="servicios">
+        <div class="container">
+            <div class="dt-head">
+                <span class="section-tag">Servicios</span>
+                <h2 class="section-title">Nuestros Servicios de Postproducción</h2>
+                <p>Resultados perfectos a nivel de píxel para cualquier canal de venta o distribución.</p>
+            </div>
+            <div class="dt-services">
+                <div class="dt-service-item">
+                    <div class="dt-service-ico"><i class="fas fa-image"></i></div>
+                    <div>
+                        <h3>Trazado de Recorte y Eliminación de Fondos</h3>
+                        <p>Fondos blancos puros optimizados para marketplaces (Amazon/eBay) o fondos transparentes (PNG/PSD) listos para su web.</p>
+                    </div>
+                </div>
+                <div class="dt-service-item">
+                    <div class="dt-service-ico"><i class="fas fa-gem"></i></div>
+                    <div>
+                        <h3>Retoque de Joyería y Productos de Lujo</h3>
+                        <p>Eliminación de reflejos no deseados, pulido de superficies metálicas y realce del brillo natural de gemas y cristales.</p>
+                    </div>
+                </div>
+                <div class="dt-service-item">
+                    <div class="dt-service-ico"><i class="fas fa-scissors"></i></div>
+                    <div>
+                        <h3>Enmascarado de Imágenes Complejas</h3>
+                        <p>Aislamiento quirúrgico para elementos difíciles como cabello, texturas de pieles, encajes y transparencias finas.</p>
+                    </div>
+                </div>
+                <div class="dt-service-item">
+                    <div class="dt-service-ico"><i class="fas fa-clone"></i></div>
+                    <div>
+                        <h3>Sombras Naturales y Efectos de Reflejo</h3>
+                        <p>Creación de sombras proyectadas o reflejos tipo espejo de alta calidad para dar peso, realismo y tridimensionalidad al producto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NUESTRO PROCESO ============ -->
+    <section class="dt-process" id="proceso">
+        <div class="container">
+            <div class="dt-head">
+                <span class="section-tag light">Nuestro Proceso</span>
+                <h2 class="section-title">¿Cómo funciona?</h2>
+                <p>Un flujo de trabajo ágil, directo y completamente transparente.</p>
+            </div>
+            <div class="dt-steps">
+                <div class="dt-step">
+                    <div class="dt-step-num">1</div>
+                    <h3>Envíe sus imágenes</h3>
+                    <p>Suba sus archivos brutos mediante nuestro portal seguro o comparta un enlace (Drive, Dropbox, FTP) junto con sus instrucciones específicas.</p>
+                </div>
+                <div class="dt-step">
+                    <div class="dt-step-num">2</div>
+                    <h3>Producción y Control de Calidad</h3>
+                    <p>Nuestros expertos editan cada elemento de forma manual. Posteriormente, un supervisor senior verifica la perfección absoluta de los trazados.</p>
+                </div>
+                <div class="dt-step">
+                    <div class="dt-step-num">3</div>
+                    <h3>Descargue sus archivos listos</h3>
+                    <p>Reciba sus imágenes listas para publicar en 24h-48h en los formatos solicitados, optimizadas para rendimiento y SEO en WebP o AVIF.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TARIFAS ============ -->
+    <section class="dt-section" id="tarifas">
+        <div class="container">
+            <div class="dt-head">
+                <span class="section-tag">Tarifas</span>
+                <h2 class="section-title">Tarifas Flexibles y Escalables</h2>
+                <p>Sin costes fijos ni suscripciones obligatorias. Pague solo por lo que necesita.</p>
+            </div>
+            <div class="dt-pricing">
+                <div class="dt-price-card">
+                    <h3>Pequeños Volúmenes</h3>
+                    <p>Ideal para marcas emergentes, tiendas locales y lanzamientos piloto.</p>
+                    <div class="dt-price-amount">Presupuestos a medida</div>
+                    <ul class="dt-price-list">
+                        <li><i class="fas fa-check"></i> Sin requisito de pedido mínimo</li>
+                        <li><i class="fas fa-check"></i> Formatos PSD, PNG, WebP y AVIF</li>
+                        <li><i class="fas fa-check"></i> Soporte al cliente ágil y directo</li>
+                    </ul>
+                </div>
+                <div class="dt-price-card featured">
+                    <span class="dt-price-badge">Popular</span>
+                    <h3>Grandes Volúmenes / E-commerce</h3>
+                    <p>Perfecto para marcas consolidadas y agencias con necesidades masivas mensuales.</p>
+                    <div class="dt-price-amount">Precios Dégressivos 🔥</div>
+                    <ul class="dt-price-list">
+                        <li><i class="fas fa-check"></i> Tarifas altamente competitivas por tramos</li>
+                        <li><i class="fas fa-check"></i> Capacidad para más de 2.500+ fotos/semana</li>
+                        <li><i class="fas fa-check"></i> Equipo de editores dedicado y Gestor de Proyecto</li>
+                        <li><i class="fas fa-check"></i> Contrato NDA para máxima seguridad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIO ============ -->
+    <section class="dt-testimonial">
+        <div class="container">
+            <div class="dt-testimonial-stars">★ ★ ★ ★ ★</div>
+            <blockquote>"Un socio estratégico clave para nuestro crecimiento"</blockquote>
+            <p class="dt-testimonial-text">
+                "Subcontratamos todo el volumen de retoque de nuestra tienda de calzado y moda en Valencia con Graphics Pixels. Procesan más de 2.500 fotos por semana con una consistencia impecable en los trazados y el retoque de color. Su velocidad nos permite lanzar colecciones en tiempo récord."
+            </p>
+            <div class="dt-testimonial-author">— Carlos G., <span>Director de Operaciones E-commerce, Barcelona</span></div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="dt-section alt" id="faq">
+        <div class="container">
+            <div class="dt-head">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Preguntas Frecuentes (FAQ)</h2>
+                <p>Respuestas claras alineadas con las demandas de rendimiento y velocidad web de 2026.</p>
+            </div>
+            <div class="dt-faq-list">
+                <div class="dt-faq-item">
+                    <button class="dt-faq-q">
+                        <span>¿Existe un volumen mínimo para trabajar con Graphics Pixels?</span>
+                        <i class="fas fa-plus dt-faq-icon"></i>
+                    </button>
+                    <div class="dt-faq-a">
+                        <div class="dt-faq-a-inner">
+                            No exigimos un mínimo de pedido. Atendemos con la misma rigurosidad técnica desde pequeños lotes de 10 imágenes para marcas emergentes, hasta proyectos masivos de más de 10.000 imágenes para grandes distribuidores, ofreciendo tarifas escalables y muy competitivas en el mercado europeo.
+                        </div>
+                    </div>
+                </div>
+                <div class="dt-faq-item">
+                    <button class="dt-faq-q">
+                        <span>¿En qué formatos entregan las imágenes editadas?</span>
+                        <i class="fas fa-plus dt-faq-icon"></i>
+                    </button>
+                    <div class="dt-faq-a">
+                        <div class="dt-faq-a-inner">
+                            Entregamos en los formatos nativos estándar como PSD, TIFF y PNG con capas. Además, de acuerdo con las normativas SEO de 2026 para cumplir con las Core Web Vitals y acelerar la carga de su web, optimizamos los archivos directamente en formatos de última generación WebP y AVIF sin pérdida de calidad.
+                        </div>
+                    </div>
+                </div>
+                <div class="dt-faq-item">
+                    <button class="dt-faq-q">
+                        <span>¿Cómo funciona el proceso de la prueba gratuita?</span>
+                        <i class="fas fa-plus dt-faq-icon"></i>
+                    </button>
+                    <div class="dt-faq-a">
+                        <div class="dt-faq-a-inner">
+                            Es un proceso directo, gratuito y sin compromisos. Solo debe subir entre 1 y 5 imágenes de muestra a través de nuestro portal junto con sus instrucciones de edición. Nuestro equipo procesará las imágenes y se las enviará de vuelta; usted solo decide contratar el servicio global si está 100% conforme con el resultado.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="dt-cta" id="prueba-gratuita">
+        <div class="container">
+            <h2>¿Listo para transformar sus productos?</h2>
+            <p>Únase a los líderes del e-commerce que confían en Graphics Pixels para obtener una postproducción manual premium de precisión milimétrica.</p>
+            <a href="#free-trial" class="btn btn-primary">Comience su prueba gratuita ahora</a>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels" class="footer-logo">
+                <p class="footer-address">
+                    <i class="fas fa-location-dot"></i>
+                    Unit 4, Storm 12 Plaza Shopping Centre, 54 St Marys Road, Southampton, United Kingdom, SO14 0BH
+                </p>
+                <p class="footer-contact"><i class="fas fa-phone"></i> +44 7462 284915</p>
+                <p class="footer-contact"><i class="fas fa-envelope"></i> info@graphicspixels.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#free-trial">Free Trial</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/pricing/') ); ?>">Pricing</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/about-us/') ); ?>">About</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/contact/') ); ?>">Contact</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/blog/') ); ?>">Blog</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/faq/') ); ?>">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="<?php echo esc_url( home_url('/clipping-path-service/') ); ?>">Clipping Path Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/photo-retouching-service/') ); ?>">Photo Retouching Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/ghost-mannequin-service/') ); ?>">Ghost Mannequin Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/headshot-photo-editing/') ); ?>">Headshot Photo Editing</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/background-removal-service/') ); ?>">Background Removal Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>More Services</h4>
+                <ul>
+                    <li><a href="<?php echo esc_url( home_url('/color-correction-service/') ); ?>">Color Correction Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/drop-shadow-service/') ); ?>">Drop Shadow Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/image-masking-service/') ); ?>">Image Masking Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/ecommerce-image-editing-services/') ); ?>">E-commerce Image Editing</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/photo-restoration-service/') ); ?>">Photo Restoration Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/ai-generated-image-fixes/') ); ?>">AI-generated Image Fixes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>Copyright &copy; 2013 GRAPHICSPIXELS. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.pinterest.com/graphicspixels/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.youtube.com/@graphicspixels" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/graphicspixelss" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/grap.hicspixels/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/graphicspixels/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573139442036" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ============ FREE TRIAL MODAL ============ -->
+    <div class="trial-modal-overlay" id="trialModalOverlay" role="dialog" aria-modal="true" aria-label="Free Trial Form">
+        <div class="trial-modal" id="trialModal">
+            <button class="trial-modal-close" id="trialModalClose" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="trial-modal-head">
+                <span class="trial-modal-tag">Get Started</span>
+                <h2 class="trial-modal-title">Get Your Free Trial</h2>
+            </div>
+            <form class="free-trial-form" id="modal-trial-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name*" required>
+                    <input type="email" placeholder="Add Email*" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone*" required>
+                    <input type="url" placeholder="Website">
+                </div>
+                <select required>
+                    <option value="" disabled selected>Select The Service</option>
+                    <option>Clipping Path</option>
+                    <option>Ghost Mannequin &amp; Neck Joint</option>
+                    <option>Photo Retouching</option>
+                    <option>Background Removal</option>
+                    <option>Color Correction</option>
+                    <option>Image Masking</option>
+                    <option>3D Service</option>
+                    <option>Video Editing</option>
+                </select>
+                <textarea placeholder="Your message" rows="3"></textarea>
+                <div class="file-upload">
+                    <label for="modal-file-input"><i class="fas fa-cloud-arrow-up"></i> Choose a file</label>
+                    <input type="file" id="modal-file-input">
+                    <span class="file-name">No file chosen</span>
+                </div>
+                <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
+                <input type="url" placeholder="Paste the link here (URL)">
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FAQ accordion -->
+    <script>
+    (function () {
+        // --- FAQ accordion ---
+        document.querySelectorAll('.dt-faq-item').forEach(function (item) {
+            var q = item.querySelector('.dt-faq-q');
+            var a = item.querySelector('.dt-faq-a');
+            q.addEventListener('click', function () {
+                var isOpen = item.classList.contains('open');
+                document.querySelectorAll('.dt-faq-item').forEach(function (other) {
+                    other.classList.remove('open');
+                    other.querySelector('.dt-faq-a').style.maxHeight = null;
+                });
+                if (!isOpen) {
+                    item.classList.add('open');
+                    a.style.maxHeight = a.scrollHeight + 'px';
+                }
+            });
+        });
+    })();
+    </script>
+<?php wp_footer(); ?>
+</body>
+</html>
