@@ -12,6 +12,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Normalize a user-typed website/link value into a full URL.
+ * Accepts bare domains like "arifbillah.com" (no scheme required by the
+ * form field) and prepends https:// so the stored/forwarded value is a
+ * valid, clickable link.
+ */
+function gp_normalize_url( $raw ) {
+	$raw = trim( (string) $raw );
+	if ( '' === $raw ) {
+		return '';
+	}
+	if ( ! preg_match( '#^https?://#i', $raw ) ) {
+		$raw = 'https://' . $raw;
+	}
+	return esc_url_raw( $raw );
+}
+
 /* ── Post types ── */
 add_action( 'init', function () {
 	$common = array(
@@ -185,10 +202,10 @@ function gp_handle_trial_submission() {
 		'name'      => gp_sanitized_field( 'name' ),
 		'email'     => sanitize_email( wp_unslash( $_POST['email'] ?? '' ) ),
 		'phone'     => gp_sanitized_field( 'phone' ),
-		'website'   => esc_url_raw( wp_unslash( $_POST['website'] ?? '' ) ),
+		'website'   => gp_normalize_url( wp_unslash( $_POST['website'] ?? '' ) ),
 		'service'   => gp_sanitized_field( 'service' ),
 		'message'   => sanitize_textarea_field( wp_unslash( $_POST['message'] ?? '' ) ),
-		'file_link' => esc_url_raw( wp_unslash( $_POST['file_link'] ?? '' ) ),
+		'file_link' => gp_normalize_url( wp_unslash( $_POST['file_link'] ?? '' ) ),
 	);
 
 	if ( ! $fields['name'] || ! is_email( $fields['email'] ) ) {

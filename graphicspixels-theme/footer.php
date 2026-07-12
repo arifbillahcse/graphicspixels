@@ -83,7 +83,7 @@
             </div>
             <div class="form-row">
                 <input type="tel" name="phone" placeholder="Phone*" required>
-                <input type="url" name="website" placeholder="Website">
+                <input type="text" name="website" placeholder="Website">
             </div>
             <select name="service" required>
                 <option value="" disabled selected>Select The Service</option>
@@ -103,7 +103,7 @@
                 <span class="file-name">No file chosen</span>
             </div>
             <p class="upload-note">If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or WeTransfer).</p>
-            <input type="url" name="file_link" placeholder="Paste the link here (URL)">
+            <input type="text" name="file_link" placeholder="Paste the link here (URL)">
             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
         </form>
     </div>

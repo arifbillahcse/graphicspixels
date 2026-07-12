@@ -13,15 +13,18 @@
     function fieldKey(el) {
         if (el.name) return el.name;
         var ph = (el.placeholder || '').toLowerCase();
-        switch (el.type) {
-            case 'text':     return 'name';
-            case 'email':    return 'email';
-            case 'tel':      return 'phone';
-            case 'file':     return 'attachment';
-            case 'url':      return ph.indexOf('link') !== -1 ? 'file_link' : 'website';
-        }
         if (el.tagName === 'SELECT')   return 'service';
         if (el.tagName === 'TEXTAREA') return 'message';
+        switch (el.type) {
+            case 'email': return 'email';
+            case 'tel':   return 'phone';
+            case 'file':  return 'attachment';
+            case 'text':
+            case 'url':
+                if (ph.indexOf('link') !== -1)    return 'file_link';
+                if (ph.indexOf('website') !== -1) return 'website';
+                return 'name';
+        }
         return '';
     }
 

@@ -135,7 +135,7 @@
                 </div>
                 <div class="form-row">
                     <input type="tel" placeholder="Phone*" required>
-                    <input type="url" placeholder="Website (optional)">
+                    <input type="text" placeholder="Website (optional)">
                 </div>
                 <select required>
                     <option value="" disabled selected>Select Service*</option>
@@ -162,7 +162,7 @@
                     <span class="file-name">No files chosen</span>
                 </div>
                 <p class="upload-note">Supported: JPG, PNG, PSD, TIFF, RAW. Max 25 MB per file. For larger files, use a cloud link below.</p>
-                <input type="url" placeholder="Or paste a Google Drive / Dropbox link here">
+                <input type="text" placeholder="Or paste a Google Drive / Dropbox link here">
                 <button type="submit" class="btn btn-primary btn-block">Start Your Free Trial</button>
                 <p style="font-size: 12px; text-align: center; margin-top: 12px; opacity: 0.8;">We'll review your request and send results within 24 hours.</p>
             </form>
