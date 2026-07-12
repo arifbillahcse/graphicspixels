@@ -116,6 +116,37 @@ add_action( 'wp_enqueue_scripts', function () {
 	}
 } );
 
+/**
+ * Fallback thumbnail URL for posts without a featured image.
+ *
+ * Defaults to the bundled branded placeholder. Override with a specific
+ * image (e.g. a Media Library URL) by adding to wp-config.php:
+ *   define( 'GP_DEFAULT_THUMB', 'https://example.com/path/to/image.jpg' );
+ */
+function gp_default_thumb_url() {
+	if ( defined( 'GP_DEFAULT_THUMB' ) && GP_DEFAULT_THUMB ) {
+		return GP_DEFAULT_THUMB;
+	}
+	return get_template_directory_uri() . '/assets/blog-placeholder.svg';
+}
+
+/**
+ * Echo a post's thumbnail <img>, falling back to the default placeholder.
+ *
+ * @param string $size WordPress image size for the real featured image.
+ */
+function gp_post_thumbnail( $size = 'medium_large' ) {
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( $size );
+		return;
+	}
+	printf(
+		'<img src="%s" alt="%s" loading="lazy">',
+		esc_url( gp_default_thumb_url() ),
+		esc_attr( get_the_title() )
+	);
+}
+
 /* ── Disable comments site-wide (no commenting on posts/pages) ── */
 add_action( 'init', function () {
 	// Close comments/pings on all post types that support them.

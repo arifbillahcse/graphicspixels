@@ -17,9 +17,7 @@ get_header();
                 <?php while ( have_posts() ) : the_post(); ?>
                     <article <?php post_class( 'gp-card' ); ?>>
                         <a class="gp-card-link" href="<?php the_permalink(); ?>">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <div class="gp-card-thumb"><?php the_post_thumbnail( 'medium_large' ); ?></div>
-                            <?php endif; ?>
+                            <div class="gp-card-thumb"><?php gp_post_thumbnail( 'medium_large' ); ?></div>
                             <div class="gp-card-body">
                                 <p class="gp-card-meta"><?php echo esc_html( get_the_date() ); ?></p>
                                 <h2 class="gp-card-title"><?php the_title(); ?></h2>

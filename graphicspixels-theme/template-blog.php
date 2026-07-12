@@ -99,9 +99,7 @@
                         <article <?php post_class( 'bl-card' ); ?>>
                             <a class="bl-card-link" href="<?php the_permalink(); ?>">
                                 <div class="bl-card-thumb">
-                                    <?php if ( has_post_thumbnail() ) : ?>
-                                        <?php the_post_thumbnail( 'medium_large' ); ?>
-                                    <?php endif; ?>
+                                    <?php gp_post_thumbnail( 'medium_large' ); ?>
                                 </div>
                                 <div class="bl-card-body">
                                     <p class="bl-card-meta">
