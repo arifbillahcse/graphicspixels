@@ -11,6 +11,7 @@ define( 'GP_THEME_VERSION', '1.0.3' );
 
 require get_template_directory() . '/inc/submissions.php';
 require get_template_directory() . '/inc/auto-pages.php';
+require get_template_directory() . '/inc/site-info.php';
 
 /**
  * Base URL for the site's static images.

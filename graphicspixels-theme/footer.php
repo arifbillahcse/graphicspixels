@@ -6,10 +6,10 @@
             <img src="<?php echo esc_url( $gp_uri ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels" class="footer-logo">
             <p class="footer-address">
                 <i class="fas fa-location-dot"></i>
-                Unit 4, Storm 12 Plaza Shopping Centre, 54 St Marys Road, Southampton, United Kingdom, SO14 0BH
+                <?php echo esc_html( gp_site_info( 'address' ) ); ?>
             </p>
-            <p class="footer-contact"><i class="fas fa-phone"></i> <a href="tel:+447462284915">+44 7462 284915</a></p>
-            <p class="footer-contact"><i class="fas fa-envelope"></i> <a href="mailto:info@graphicspixels.com">info@graphicspixels.com</a></p>
+            <p class="footer-contact"><i class="fas fa-phone"></i> <a href="tel:<?php echo esc_attr( gp_site_info( 'phone_link' ) ); ?>"><?php echo esc_html( gp_site_info( 'phone' ) ); ?></a></p>
+            <p class="footer-contact"><i class="fas fa-envelope"></i> <a href="mailto:<?php echo esc_attr( gp_site_info( 'email' ) ); ?>"><?php echo esc_html( gp_site_info( 'email' ) ); ?></a></p>
         </div>
         <div class="footer-col">
             <h4>Useful Links</h4>
@@ -62,7 +62,7 @@
 <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
 <!-- WhatsApp Chat Button -->
-<a href="https://wa.me/8801890373731" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+<a href="<?php echo esc_url( gp_site_info( 'whatsapp_link' ) ); ?>" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
