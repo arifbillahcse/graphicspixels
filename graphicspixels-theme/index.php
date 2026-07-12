@@ -38,7 +38,8 @@ get_header();
 </section>
 
 <style>
-    .gp-blog { padding: 60px 0; }
+    .gp-blog { padding: 150px 0 60px; }
+    @media (max-width: 768px) { .gp-blog { padding-top: 120px; } }
     .gp-blog-head { text-align: center; margin-bottom: 44px; }
     .gp-blog-title { font-size: 36px; }
     .gp-post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }

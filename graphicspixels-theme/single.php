@@ -49,7 +49,8 @@ get_header();
 </section>
 
 <style>
-    .gp-single { padding: 60px 0; }
+    .gp-single { padding: 150px 0 60px; }
+    @media (max-width: 768px) { .gp-single { padding-top: 120px; } }
     .gp-single-inner { max-width: 820px; }
     .gp-post-title { font-size: 34px; line-height: 1.25; margin-bottom: 14px; }
     .gp-post-meta { color: var(--text-light, #667); font-size: 14px; margin-bottom: 28px; }
