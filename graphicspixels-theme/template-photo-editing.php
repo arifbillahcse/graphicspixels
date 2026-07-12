@@ -8,7 +8,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/3__Photo-Editing-Services.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/3__Photo-Editing-Services.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/3__Photo-Editing-Services.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/3__Photo-Editing-Services.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -115,7 +115,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Example" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Example" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Transparent Background Service" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Transparent Background Service" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -179,7 +179,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/Pricing/1.%20Clipping%20Path/graphics%20pixels%20(1).png" alt="Clipping Path Before & After Results" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/Pricing/1.%20Clipping%20Path/graphics%20pixels%20(1).png" alt="Clipping Path Before & After Results" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -197,7 +197,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="White and Colored Backgrounds" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="White and Colored Backgrounds" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -215,7 +215,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20(1).jpg" alt="Product Placement Into Scenes" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20(1).jpg" alt="Product Placement Into Scenes" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -233,7 +233,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20(1).jpg" alt="Image Visual Appeal Enhancement" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20(1).jpg" alt="Image Visual Appeal Enhancement" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

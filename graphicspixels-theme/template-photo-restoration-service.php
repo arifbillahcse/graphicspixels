@@ -167,7 +167,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Photo Restoration Service/graphics-pixels-11.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Photo Restoration Service/graphics-pixels-11.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -217,7 +217,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Photo Restoration Service/graphics-pixels-11.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Photo Restoration Service/graphics-pixels-11.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -274,7 +274,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration Service Explained" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -321,10 +321,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).png" alt="Before — Scratch and Tear Repair">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).png" alt="Before — Scratch and Tear Repair">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Scratch and Tear Repair">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Scratch and Tear Repair">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -351,10 +351,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).png" alt="Before — Water Damage and Stain Removal">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).png" alt="Before — Water Damage and Stain Removal">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Water Damage and Stain Removal">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Water Damage and Stain Removal">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -381,10 +381,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(2).jpg" alt="Before — Fading and Tonal Restoration">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(2).jpg" alt="Before — Fading and Tonal Restoration">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Fading and Tonal Restoration">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Fading and Tonal Restoration">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -411,10 +411,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Before — Missing Section Reconstruction">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Before — Missing Section Reconstruction">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/1%20graphics%20pixels%20(2).jpg" alt="After — Missing Section Reconstruction">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/1%20graphics%20pixels%20(2).jpg" alt="After — Missing Section Reconstruction">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -440,7 +440,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/5.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Black and White Photo Colorization" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/5.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Black and White Photo Colorization" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

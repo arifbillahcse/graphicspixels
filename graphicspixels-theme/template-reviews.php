@@ -401,7 +401,7 @@
     <section class="rv-banner">
         <div class="container">
             <div class="rv-banner-inner">
-                <div class="rv-banner-img" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/services_hero.png');"></div>
+                <div class="rv-banner-img" style="background-image:url('<?php echo esc_url( gp_media_base() ); ?>/images/services_hero.png');"></div>
                 <div class="rv-banner-body">
                     <h2>Ready to See the Graphics Pixels Difference for Yourself?</h2>
                     <p>Join 1,700+ photographers and e-commerce brands who outsource their image editing to us — and get time back in their day without sacrificing a single pixel of quality. Background removal, retouching, clipping paths, color grading — we do it all, fast and flawlessly.</p>

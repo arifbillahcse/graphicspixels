@@ -41,7 +41,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Background Removal service/graphics-pixels-5.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Background Removal service/graphics-pixels-5.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -91,7 +91,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Background Removal service/graphics-pixels-5.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Background Removal service/graphics-pixels-5.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -148,7 +148,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="Background Removal Service Example" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="Background Removal Service Example" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -195,10 +195,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(2).jpg" alt="Before — Transparent Background Removal">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(2).jpg" alt="Before — Transparent Background Removal">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="After — Transparent Background Removal">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="After — Transparent Background Removal">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -224,7 +224,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20(1).jpg" alt="Pure White Background for E-commerce" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20(1).jpg" alt="Pure White Background for E-commerce" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -248,7 +248,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/3.%20Exact%20Clipping%20Path%20Services%20for%20Clean%20Cutouts/graphics%20pixels%20(1).png" alt="Exact Clipping Path for Clean Cutouts" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/3.%20Exact%20Clipping%20Path%20Services%20for%20Clean%20Cutouts/graphics%20pixels%20(1).png" alt="Exact Clipping Path for Clean Cutouts" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -273,10 +273,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(2).jpg" alt="Before — Background Replacement">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(2).jpg" alt="Before — Background Replacement">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(1).jpg" alt="After — Background Replacement">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(1).jpg" alt="After — Background Replacement">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -302,7 +302,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/5.%20Get%20A%20Standard%20Image%20Look/graphics%20pixels%20(1).png" alt="Consistent Standard Image Look Across Catalog" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/5.%20Get%20A%20Standard%20Image%20Look/graphics%20pixels%20(1).png" alt="Consistent Standard Image Look Across Catalog" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

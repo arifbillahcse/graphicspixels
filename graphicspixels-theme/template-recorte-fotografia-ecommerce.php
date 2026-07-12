@@ -14,7 +14,7 @@
             width: 100%;
             min-height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/clipping%20path%20cover.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/clipping%20path%20cover.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -79,7 +79,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/clipping%20path%20cover.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/clipping%20path%20cover.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -236,7 +236,7 @@
     <header class="header" id="header">
         <div class="container nav-container">
             <a href="<?php echo esc_url( home_url('/') ); ?>" class="logo">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels Logo">
+                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels Logo">
             </a>
             <nav class="nav" id="nav-menu">
                 <ul class="nav-list">
@@ -526,7 +526,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col footer-about">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels" class="footer-logo">
+                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels" class="footer-logo">
                 <p class="footer-address">
                     <i class="fas fa-location-dot"></i>
                     Unit 4, Storm 12 Plaza Shopping Centre, 54 St Marys Road, Southampton, United Kingdom, SO14 0BH

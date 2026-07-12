@@ -1,4 +1,4 @@
-<?php $gp_uri = get_template_directory_uri(); ?>
+<?php $gp_uri = gp_media_base(); ?>
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
     <div class="container footer-grid">

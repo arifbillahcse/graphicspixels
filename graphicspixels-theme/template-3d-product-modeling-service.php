@@ -8,7 +8,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/4__3D-Service.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/4__3D-Service.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/4__3D-Service.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/4__3D-Service.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -213,7 +213,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-3d-wrap">
-                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/1-sofa-fast-low.glb" alt="3D Furniture Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/1-sofa-fast-low.glb" alt="3D Furniture Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
                             <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
                         <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
@@ -235,7 +235,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-3d-wrap">
-                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/2_bag.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/2_bag.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
                             <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
                         <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
@@ -263,7 +263,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-3d-wrap">
-                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/3.headphone.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/3.headphone.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
                             <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
                         <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
@@ -291,7 +291,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/4_sofa.jpg" alt="Premium Luxury Furniture 3D Modeling" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/4_sofa.jpg" alt="Premium Luxury Furniture 3D Modeling" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -317,7 +317,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/5_footwear.jpg" alt="Footwear 3D Modeling and Rendering" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/5_footwear.jpg" alt="Footwear 3D Modeling and Rendering" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -337,7 +337,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/6_accessories.jpeg" alt="Handbag and Accessories 3D Modeling" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/6_accessories.jpeg" alt="Handbag and Accessories 3D Modeling" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -357,7 +357,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/3D/3D%20Modelling/7_fashion.jpeg" alt="Fashion and Apparel 3D Modeling" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/7_fashion.jpeg" alt="Fashion and Apparel 3D Modeling" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

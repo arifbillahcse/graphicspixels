@@ -41,7 +41,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Ghost Mannequin service/graphics-pixels-3 (1).png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Ghost Mannequin service/graphics-pixels-3 (1).png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -91,7 +91,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Ghost Mannequin service/graphics-pixels-3 (1).png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Ghost Mannequin service/graphics-pixels-3 (1).png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -148,7 +148,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Before and After" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Before and After" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -195,10 +195,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-after-12.jpg" alt="Before — 3D Pack-shot Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-after-12.jpg" alt="Before — 3D Pack-shot Ghost Mannequin">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-Before-16.jpg" alt="After — 3D Pack-shot Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-Before-16.jpg" alt="After — 3D Pack-shot Ghost Mannequin">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -225,10 +225,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint Ghost Mannequin">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Neck Joint Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Neck Joint Ghost Mannequin">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -255,10 +255,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(2).jpg" alt="Before — Sleeve and Side Joint Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(2).jpg" alt="Before — Sleeve and Side Joint Ghost Mannequin">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(1).jpg" alt="After — Sleeve and Side Joint Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20(1).jpg" alt="After — Sleeve and Side Joint Ghost Mannequin">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -285,10 +285,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="Before — Full Composite Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="Before — Full Composite Ghost Mannequin">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="After — Full Composite Ghost Mannequin">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="After — Full Composite Ghost Mannequin">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -314,7 +314,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Get top-notch editing Retouched Photos" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Get top-notch editing Retouched Photos" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

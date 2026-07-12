@@ -44,7 +44,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Clipping Path service/graphics-pixels-1.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Clipping Path service/graphics-pixels-1.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -94,7 +94,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Clipping Path service/graphics-pixels-1.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Clipping Path service/graphics-pixels-1.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -152,7 +152,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path Service Explained" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -199,10 +199,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="After — Transparent Background Clipping Path">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="After — Transparent Background Clipping Path">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-Before-1.jpg" alt="Before — Transparent Background Clipping Path">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-Before-1.jpg" alt="Before — Transparent Background Clipping Path">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -229,10 +229,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Before — White and Colored Background">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Before — White and Colored Background">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="After — White and Colored Background">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="After — White and Colored Background">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -258,7 +258,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Product Placement Into Scenes" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Product Placement Into Scenes" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -283,10 +283,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%282%29.jpg" alt="After — Catalog Consistency">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%282%29.jpg" alt="After — Catalog Consistency">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Before — Catalog Consistency">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Before — Catalog Consistency">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -312,7 +312,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/4.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Bulk E-commerce Clipping Path Processing" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/4.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Bulk E-commerce Clipping Path Processing" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

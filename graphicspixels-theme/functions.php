@@ -11,6 +11,26 @@ define( 'GP_THEME_VERSION', '1.0.0' );
 
 require get_template_directory() . '/inc/submissions.php';
 
+/**
+ * Base URL for the site's static images.
+ *
+ * Images live in wp-content/uploads/graphicspixels/ (outside the theme, so
+ * the theme package stays lean). Every template references images through
+ * this helper, so the origin can be changed in one place — e.g. point it at
+ * a CDN by adding to wp-config.php:
+ *
+ *   define( 'GP_MEDIA_URL', 'https://cdn.example.com/graphicspixels' );
+ *
+ * Templates append '/images/...' to this base, matching the folder you
+ * upload to wp-content/uploads/graphicspixels/images/.
+ */
+function gp_media_base() {
+	if ( defined( 'GP_MEDIA_URL' ) && GP_MEDIA_URL ) {
+		return untrailingslashit( GP_MEDIA_URL );
+	}
+	return content_url( '/uploads/graphicspixels' );
+}
+
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );

@@ -41,7 +41,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -91,7 +91,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Color Correction Service/graphics-pixels-6.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -149,7 +149,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Color Correction Service Explained" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Color Correction Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -196,10 +196,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="Before — Color Correction">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="Before — Color Correction">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="After — Color Correction">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="After — Color Correction">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -225,7 +225,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20(1).jpg" alt="Why You Need Color Correction" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20(1).jpg" alt="Why You Need Color Correction" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -250,10 +250,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="Before — Hue and Saturation Adjustment">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="Before — Hue and Saturation Adjustment">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="After — Hue and Saturation Adjustment">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="After — Hue and Saturation Adjustment">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -280,10 +280,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="Before — Skin Tone Standardisation">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="Before — Skin Tone Standardisation">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="After — Skin Tone Standardisation">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="After — Skin Tone Standardisation">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -309,7 +309,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/5.%20Professional%20Color%20Correction_s%20Advantages/graphics%20pixels%20(1).jpg" alt="Color Correction Advantages" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/5.%20Professional%20Color%20Correction_s%20Advantages/graphics%20pixels%20(1).jpg" alt="Color Correction Advantages" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

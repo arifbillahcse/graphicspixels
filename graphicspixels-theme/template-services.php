@@ -8,7 +8,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/graphics-pixels (1).png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/graphics-pixels (1).png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/graphics-pixels (1).png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/graphics-pixels (1).png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -125,7 +125,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/Pricing/1.%20Clipping%20Path/graphics%20pixels%20(1).png" alt="Clipping Path Service" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/Pricing/1.%20Clipping%20Path/graphics%20pixels%20(1).png" alt="Clipping Path Service" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -143,9 +143,9 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="ba-slider" data-pos="50">
-                            <img class="ba-img ba-after" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/1.%20Photo%20Retouching%20Services/graphics%20pixels%20(2).jpg" alt="After photo retouching" loading="lazy">
+                            <img class="ba-img ba-after" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/1.%20Photo%20Retouching%20Services/graphics%20pixels%20(2).jpg" alt="After photo retouching" loading="lazy">
                             <div class="ba-before-wrap">
-                                <img class="ba-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/1.%20Photo%20Retouching%20Services/graphics%20pixels%20(1).jpg" alt="Before photo retouching" loading="lazy">
+                                <img class="ba-img" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/1.%20Photo%20Retouching%20Services/graphics%20pixels%20(1).jpg" alt="Before photo retouching" loading="lazy">
                             </div>
                             <span class="ba-label ba-label-before">Before</span>
                             <span class="ba-label ba-label-after">After</span>
@@ -167,9 +167,9 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="ba-slider" data-pos="50">
-                            <img class="ba-img ba-after" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/2.%20Ghost%20Mannequin%20Services/graphics%20pixels%20(2).jpg" alt="After ghost mannequin" loading="lazy">
+                            <img class="ba-img ba-after" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/2.%20Ghost%20Mannequin%20Services/graphics%20pixels%20(2).jpg" alt="After ghost mannequin" loading="lazy">
                             <div class="ba-before-wrap">
-                                <img class="ba-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/2.%20Ghost%20Mannequin%20Services/graphics%20pixels%20(1).jpg" alt="Before ghost mannequin" loading="lazy">
+                                <img class="ba-img" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/2.%20Ghost%20Mannequin%20Services/graphics%20pixels%20(1).jpg" alt="Before ghost mannequin" loading="lazy">
                             </div>
                             <span class="ba-label ba-label-before">Before</span>
                             <span class="ba-label ba-label-after">After</span>
@@ -191,7 +191,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/3.%20Headshot%20Photo%20Editing%20%26%20Retouching/graphics%20pixels%20(1).jpg" alt="Headshot Photo Editing" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/3.%20Headshot%20Photo%20Editing%20%26%20Retouching/graphics%20pixels%20(1).jpg" alt="Headshot Photo Editing" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -209,9 +209,9 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="ba-slider" data-pos="50">
-                            <img class="ba-img ba-after" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/4.%20Background%20Removal%20Services/graphics%20pixels%20(2).jpg" alt="After background removal" loading="lazy">
+                            <img class="ba-img ba-after" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/4.%20Background%20Removal%20Services/graphics%20pixels%20(2).jpg" alt="After background removal" loading="lazy">
                             <div class="ba-before-wrap">
-                                <img class="ba-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/4.%20Background%20Removal%20Services/graphics%20pixels%20(1).jpg" alt="Before background removal" loading="lazy">
+                                <img class="ba-img" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/4.%20Background%20Removal%20Services/graphics%20pixels%20(1).jpg" alt="Before background removal" loading="lazy">
                             </div>
                             <span class="ba-label ba-label-before">Before</span>
                             <span class="ba-label ba-label-after">After</span>
@@ -233,9 +233,9 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="ba-slider" data-pos="50">
-                            <img class="ba-img ba-after" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/5.%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="After color correction" loading="lazy">
+                            <img class="ba-img ba-after" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/5.%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="After color correction" loading="lazy">
                             <div class="ba-before-wrap">
-                                <img class="ba-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/5.%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="Before color correction" loading="lazy">
+                                <img class="ba-img" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/5.%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="Before color correction" loading="lazy">
                             </div>
                             <span class="ba-label ba-label-before">Before</span>
                             <span class="ba-label ba-label-after">After</span>
@@ -257,7 +257,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20(1).jpg" alt="Drop Shadow Services" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20(1).jpg" alt="Drop Shadow Services" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -275,7 +275,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/6.%20Image%20Masking%20Services/graphics%20pixels%20(1).jpg" alt="Image Masking Services" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/6.%20Image%20Masking%20Services/graphics%20pixels%20(1).jpg" alt="Image Masking Services" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -293,7 +293,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/7.%20Ecommerce%20Image%20Editing%20Services/graphics%20pixels%20(1).jpg" alt="Ecommerce Image Editing" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/7.%20Ecommerce%20Image%20Editing%20Services/graphics%20pixels%20(1).jpg" alt="Ecommerce Image Editing" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -311,9 +311,9 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="ba-slider" data-pos="50">
-                            <img class="ba-img ba-after" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/8.%20Photo%20Restoration%20Service/graphics%20pixels%20(2).png" alt="After photo restoration" loading="lazy">
+                            <img class="ba-img ba-after" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/8.%20Photo%20Restoration%20Service/graphics%20pixels%20(2).png" alt="After photo restoration" loading="lazy">
                             <div class="ba-before-wrap">
-                                <img class="ba-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/servicespage/8.%20Photo%20Restoration%20Service/graphics%20pixels%20(1).png" alt="Before photo restoration" loading="lazy">
+                                <img class="ba-img" src="<?php echo esc_url( gp_media_base() ); ?>/images/servicespage/8.%20Photo%20Restoration%20Service/graphics%20pixels%20(1).png" alt="Before photo restoration" loading="lazy">
                             </div>
                             <span class="ba-label ba-label-before">Before</span>
                             <span class="ba-label ba-label-after">After</span>
@@ -335,7 +335,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/Pricing/6.%20Photo%20Retouching/graphics%20pixels%20(1).jpg" alt="AI-generated Image Fixes" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/Pricing/6.%20Photo%20Retouching/graphics%20pixels%20(1).jpg" alt="AI-generated Image Fixes" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

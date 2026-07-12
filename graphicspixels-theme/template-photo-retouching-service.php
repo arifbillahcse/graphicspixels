@@ -45,7 +45,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Photo Retouching service/graphics-pixels-2.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Photo Retouching service/graphics-pixels-2.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -95,7 +95,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Photo Retouching service/graphics-pixels-2.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Photo Retouching service/graphics-pixels-2.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -176,10 +176,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="After — High-End Beauty Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="After — High-End Beauty Retouching">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — High-End Beauty Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — High-End Beauty Retouching">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -206,10 +206,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(2).jpg" alt="After — E-commerce Product Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(2).jpg" alt="After — E-commerce Product Retouching">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — E-commerce Product Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — E-commerce Product Retouching">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -236,10 +236,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Model Portrait Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Model Portrait Retouching">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Model Portrait Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Model Portrait Retouching">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -266,10 +266,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Commercial & Editorial Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20(2).jpg" alt="After — Commercial & Editorial Retouching">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Commercial & Editorial Retouching">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20(1).jpg" alt="Before — Commercial & Editorial Retouching">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -295,7 +295,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/5.%20Fashion%20%26%20Beauty%20Photo%20Retouching/graphics%20pixels%20(1).jpg" alt="Fashion & Beauty Photo Retouching" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/5.%20Fashion%20%26%20Beauty%20Photo%20Retouching/graphics%20pixels%20(1).jpg" alt="Fashion & Beauty Photo Retouching" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

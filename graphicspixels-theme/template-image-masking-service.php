@@ -41,7 +41,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Image Masking service/graphics-pixels-10.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Image Masking service/graphics-pixels-10.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -91,7 +91,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Image Masking service/graphics-pixels-10.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Image Masking service/graphics-pixels-10.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -149,7 +149,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Image Masking Service — Hair and Soft Edge" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Image Masking Service — Hair and Soft Edge" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Layer Masking Service" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Layer Masking Service" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -220,10 +220,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-After-1-4.jpg" alt="Before — Alpha Channel Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-After-1-4.jpg" alt="Before — Alpha Channel Masking">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-Before-1-5.jpg" alt="After — Alpha Channel Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-Before-1-5.jpg" alt="After — Alpha Channel Masking">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -250,10 +250,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-After-2-5.jpg" alt="Before — Transparent Object Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-After-2-5.jpg" alt="Before — Transparent Object Masking">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-Before-2-5.jpg" alt="After — Transparent Object Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-Before-2-5.jpg" alt="After — Transparent Object Masking">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -280,10 +280,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-After-3-6.jpg" alt="Before — Refine Edge Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-After-3-6.jpg" alt="Before — Refine Edge Masking">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-Before-3-5.jpg" alt="After — Refine Edge Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-Before-3-5.jpg" alt="After — Refine Edge Masking">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -310,10 +310,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(2).jpg" alt="Before — Hair and Fur Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(2).jpg" alt="Before — Hair and Fur Masking">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(1).jpg" alt="After — Hair and Fur Masking">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20(1).jpg" alt="After — Hair and Fur Masking">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>

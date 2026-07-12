@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-logo-2-HR.png">
+    <link rel="icon" type="image/png" href="<?php echo esc_url( gp_media_base() ); ?>/images/graphics-pixels-logo-2-HR.png">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -12,7 +12,7 @@
 <header class="header" id="header">
     <div class="container nav-container">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels Logo">
+            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/graphics-pixels-logo-2-HR.png" alt="Graphics Pixels Logo">
         </a>
         <nav class="nav" id="nav-menu">
             <ul class="nav-list">

@@ -8,7 +8,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Headshot photo editing/graphics-pixels-4.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Headshot photo editing/graphics-pixels-4.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/Headshot photo editing/graphics-pixels-4.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/Headshot photo editing/graphics-pixels-4.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -161,7 +161,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20(1).jpg" alt="Skin Tone and Texture Correction" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20(1).jpg" alt="Skin Tone and Texture Correction" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -185,7 +185,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20(1).jpg" alt="Blemish and Shine Removal" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20(1).jpg" alt="Blemish and Shine Removal" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -209,7 +209,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(4)/graphics%20pixels%20(1).jpg" alt="Eye and Teeth Enhancement" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(4)/graphics%20pixels%20(1).jpg" alt="Eye and Teeth Enhancement" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -233,7 +233,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/4.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(3)/graphics%20pixels%20(1).jpg" alt="Hair and Background Cleanup" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/4.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(3)/graphics%20pixels%20(1).jpg" alt="Hair and Background Cleanup" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -257,7 +257,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/5.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(2)/graphics%20pixels%20(1).jpg" alt="Lighting and Color Balance" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/5.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(2)/graphics%20pixels%20(1).jpg" alt="Lighting and Color Balance" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

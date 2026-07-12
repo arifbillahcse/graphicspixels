@@ -142,7 +142,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -192,7 +192,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -599,7 +599,7 @@
                 <!-- Clipping Path -->
                 <article class="service-card reveal" data-reveal="up">
                     <div class="service-image" data-image="images/home/1_Clipping-Path-Services-1-945x1024.png" data-title="Clipping Path Services">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Services example" loading="lazy" style="cursor: pointer;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/home/1_Clipping-Path-Services-1-945x1024.png" alt="Clipping Path Services example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
                     <h3>Clipping Path Services</h3>
@@ -617,7 +617,7 @@
                 <!-- Ghost Mannequin -->
                 <article class="service-card reveal" data-reveal="up" data-delay="100">
                     <div class="service-image" data-image="images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" data-title="Ghost Mannequin & Neck Joint Services">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" alt="Ghost Mannequin & Neck Joint example" loading="lazy" style="cursor: pointer;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/home/2_Neck-joint-or-Ghost-Mannequin-Services-1-945x1024.jpg" alt="Ghost Mannequin & Neck Joint example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-shirt"></i></div>
                     <h3>Ghost Mannequin &amp; Neck Joint</h3>
@@ -635,7 +635,7 @@
                 <!-- Photo Retouching -->
                 <article class="service-card reveal" data-reveal="up" data-delay="200">
                     <div class="service-image" data-image="images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" data-title="Premium Photo Retouching Services">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" alt="Premium Photo Retouching example" loading="lazy" style="cursor: pointer;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/home/3_Professional-Photo-Retouching-Services_Update-945x1024.jpg" alt="Premium Photo Retouching example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
                     <h3>Premium Photo Retouching</h3>
@@ -653,7 +653,7 @@
                 <!-- Background Removal -->
                 <article class="service-card reveal" data-reveal="up" data-delay="300">
                     <div class="service-image" data-image="images/home/4_Background-Removal-Services-1-945x1024.png" data-title="High-End Background Removal Services">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/4_Background-Removal-Services-1-945x1024.png" alt="High-End Background Removal example" loading="lazy" style="cursor: pointer;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/home/4_Background-Removal-Services-1-945x1024.png" alt="High-End Background Removal example" loading="lazy" style="cursor: pointer;">
                     </div>
                     <div class="service-icon"><i class="fas fa-eraser"></i></div>
                     <h3>High-End Background Removal</h3>

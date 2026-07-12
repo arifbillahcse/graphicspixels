@@ -8,7 +8,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/1__main-page-Copy.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -103,7 +103,7 @@
         <div class="container">
             <div class="au-intro-grid">
                 <div class="au-intro-img reveal" data-reveal="left">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/graphics-pixels.jpg" alt="Graphics Pixels Production Team">
+                    <img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/graphics-pixels.jpg" alt="Graphics Pixels Production Team">
                     <div class="au-intro-badge">120+ Specialists<br>Dhaka Studio</div>
                 </div>
                 <div class="au-intro-text reveal" data-reveal="right">
@@ -304,14 +304,14 @@
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="100">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Muhammad-Abdullah.png" alt="Muhammad Abdullah"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Muhammad-Abdullah.png" alt="Muhammad Abdullah"></div>
                         <div class="au-team-info">
                             <p class="au-name">Muhammad Abdullah</p>
                             <p class="au-role">Chief Executive Officer</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="200">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Muntasir-Mahmud-Chowdhury.png" alt="Muntasir Mahmud Chowdhury"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Muntasir-Mahmud-Chowdhury.png" alt="Muntasir Mahmud Chowdhury"></div>
                         <div class="au-team-info">
                             <p class="au-name">Muntasir Mahmud Chowdhury</p>
                             <p class="au-role">General Manager</p>
@@ -331,21 +331,21 @@
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="100">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/MD.-SAHAB-UDDIN.png" alt="MD. Sahab Uddin"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/MD.-SAHAB-UDDIN.png" alt="MD. Sahab Uddin"></div>
                         <div class="au-team-info">
                             <p class="au-name">MD. Sahab Uddin</p>
                             <p class="au-role">Marketing Manager</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="200">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Md-Munna-Abir-Hossan.png" alt="MD. Munna Abir Hossan"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Md-Munna-Abir-Hossan.png" alt="MD. Munna Abir Hossan"></div>
                         <div class="au-team-info">
                             <p class="au-name">MD. Munna Abir Hossan</p>
                             <p class="au-role">Digital Marketing Manager</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="300">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Mehraj-Ome.png" alt="Mehraj Ome"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Mehraj-Ome.png" alt="Mehraj Ome"></div>
                         <div class="au-team-info">
                             <p class="au-name">Mehraj Ome</p>
                             <p class="au-role">Marketing Manager</p>
@@ -365,42 +365,42 @@
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="100">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Al-Amin.png" alt="Al-Amin"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Al-Amin.png" alt="Al-Amin"></div>
                         <div class="au-team-info">
                             <p class="au-name">Al-Amin</p>
                             <p class="au-role">Team Leader</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="200">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Md-Sojib-Alam.png" alt="Md Sojib Alam"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Md-Sojib-Alam.png" alt="Md Sojib Alam"></div>
                         <div class="au-team-info">
                             <p class="au-name">Md Sojib Alam</p>
                             <p class="au-role">Team Leader</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="300">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Tariqul.png" alt="Tariqul"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Tariqul.png" alt="Tariqul"></div>
                         <div class="au-team-info">
                             <p class="au-name">Tariqul</p>
                             <p class="au-role">Team Leader</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="0">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Mushlay-Uddin-Himel.png" alt="Mushlay Uddin Himel"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Mushlay-Uddin-Himel.png" alt="Mushlay Uddin Himel"></div>
                         <div class="au-team-info">
                             <p class="au-name">Mushlay Uddin Himel</p>
                             <p class="au-role">Quality Control QC</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="100">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Forhad-Hossain-Fahim.png" alt="Forhad Hossain Fahim"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Forhad-Hossain-Fahim.png" alt="Forhad Hossain Fahim"></div>
                         <div class="au-team-info">
                             <p class="au-name">Forhad Hossain Fahim</p>
                             <p class="au-role">Quality Control QC</p>
                         </div>
                     </div>
                     <div class="au-team-card reveal" data-reveal="up" data-delay="200">
-                        <div class="au-avatar"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/team/Md.-Reyaj-Hassan.png" alt="Md. Reyaj Hassan"></div>
+                        <div class="au-avatar"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/team/Md.-Reyaj-Hassan.png" alt="Md. Reyaj Hassan"></div>
                         <div class="au-team-info">
                             <p class="au-name">Md. Reyaj Hassan</p>
                             <p class="au-role">Quality Control QC</p>
@@ -421,13 +421,13 @@
             <div class="au-culture-grid">
                 <div class="au-culture-photos reveal" data-reveal="left">
                     <div class="au-culture-photo au-photo-tall">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/1-graphics-pixels.png" alt="Graphics Pixels Team">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/1-graphics-pixels.png" alt="Graphics Pixels Team">
                     </div>
                     <div class="au-culture-photo">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/2-graphics-pixels.jpg" alt="Studio Workspace">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/2-graphics-pixels.jpg" alt="Studio Workspace">
                     </div>
                     <div class="au-culture-photo">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about/3-graphics-pixels.jpg" alt="Production Floor">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/about/3-graphics-pixels.jpg" alt="Production Floor">
                     </div>
                 </div>
                 <div class="au-culture-text reveal" data-reveal="right">

@@ -109,7 +109,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/8__Portfolio.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/8__Portfolio.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -159,7 +159,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/8__Portfolio.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/8__Portfolio.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -216,28 +216,28 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="After — Transparent Background Clipping Path">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="After — Transparent Background Clipping Path">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-Before-1.jpg" alt="Before — Transparent Background Clipping Path">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-Before-1.jpg" alt="Before — Transparent Background Clipping Path">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Before — White and Colored Background">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Before — White and Colored Background">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="After — White and Colored Background">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="After — White and Colored Background">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="Clipping Path — Transparent Background" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="Clipping Path — Transparent Background" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>
@@ -256,33 +256,33 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="Before — Beauty Retouching">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="Before — Beauty Retouching">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="After — Beauty Retouching">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="After — Beauty Retouching">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(2).jpg" alt="Before — Product Retouching">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(2).jpg" alt="Before — Product Retouching">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(1).jpg" alt="After — Product Retouching">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20(1).jpg" alt="After — Product Retouching">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="Before — Portrait Retouching">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(2).jpg" alt="Before — Portrait Retouching">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="After — Portrait Retouching">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20(1).jpg" alt="After — Portrait Retouching">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
@@ -304,33 +304,33 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-after-12.jpg" alt="Before — 3D Pack-shot">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-after-12.jpg" alt="Before — 3D Pack-shot">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-Before-16.jpg" alt="After — 3D Pack-shot">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/1-%203D%20or%20Pack-shot%20Ghost%20Mannequin%20Effect/graphics-pixels-Before-16.jpg" alt="After — 3D Pack-shot">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(1).jpg" alt="Before — Neck Joint">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Neck Joint">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20(2).jpg" alt="After — Neck Joint">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="Before — Ghost Mannequin">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(2).jpg" alt="Before — Ghost Mannequin">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="After — Ghost Mannequin">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20(1).jpg" alt="After — Ghost Mannequin">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
@@ -351,13 +351,13 @@
                 </div>
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20(1).jpg" alt="Headshot Editing — Before & After" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20(1).jpg" alt="Headshot Editing — Before & After" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20(1).jpg" alt="Headshot Editing — Before & After" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20(1).jpg" alt="Headshot Editing — Before & After" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(4)/graphics%20pixels%20(1).jpg" alt="Headshot Editing — Before & After" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20(4)/graphics%20pixels%20(1).jpg" alt="Headshot Editing — Before & After" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>
@@ -376,28 +376,28 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(2).jpg" alt="Before — Background Removal">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(2).jpg" alt="Before — Background Removal">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="After — Background Removal">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="After — Background Removal">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(2).jpg" alt="Before — Background Merging">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(2).jpg" alt="Before — Background Merging">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(1).jpg" alt="After — Background Merging">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20(1).jpg" alt="After — Background Merging">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20(1).jpg" alt="Pure White Background for E-commerce" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20(1).jpg" alt="Pure White Background for E-commerce" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>
@@ -416,33 +416,33 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="Before — Color Correction">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(2).jpg" alt="Before — Color Correction">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="After — Color Correction">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="After — Color Correction">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="Before — Color Grading">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(2).jpg" alt="Before — Color Grading">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="After — Color Grading">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20(1).jpg" alt="After — Color Grading">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="Before — Skin Tone Correction">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(2).jpg" alt="Before — Skin Tone Correction">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="After — Skin Tone Correction">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20(1).jpg" alt="After — Skin Tone Correction">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
@@ -464,33 +464,33 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="Before — Drop Shadow">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="Before — Drop Shadow">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="After — Drop Shadow">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="After — Drop Shadow">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="Before — Natural Shadow">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="Before — Natural Shadow">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="After — Natural Shadow">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="After — Natural Shadow">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="Before — Shadow Customization">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="Before — Shadow Customization">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="After — Shadow Customization">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="After — Shadow Customization">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
@@ -512,33 +512,33 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-After-1-4.jpg" alt="Before — Alpha Channel Masking">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-After-1-4.jpg" alt="Before — Alpha Channel Masking">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-Before-1-5.jpg" alt="After — Alpha Channel Masking">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/2.%20ALPHA%20CHANNEL%20MASKING/graphics-pixels-Before-1-5.jpg" alt="After — Alpha Channel Masking">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-After-2-5.jpg" alt="Before — Transparent Object Masking">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-After-2-5.jpg" alt="Before — Transparent Object Masking">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-Before-2-5.jpg" alt="After — Transparent Object Masking">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/3.%20TRANSPARENT%20OBJECT%20MASKING/graphics-pixels-Before-2-5.jpg" alt="After — Transparent Object Masking">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-After-3-6.jpg" alt="Before — Refine Edge Masking">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-After-3-6.jpg" alt="Before — Refine Edge Masking">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-Before-3-5.jpg" alt="After — Refine Edge Masking">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/4.%20REFINE%20EDGE%20MASKING/graphics-pixels-Before-3-5.jpg" alt="After — Refine Edge Masking">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
@@ -560,20 +560,20 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/graphics%20p.jpg" alt="Before — E-commerce Clipping Path">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/graphics%20p.jpg" alt="Before — E-commerce Clipping Path">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20(1).jpg" alt="After — E-commerce Clipping Path">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20(1).jpg" alt="After — E-commerce Clipping Path">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/2.%20Product%20Image%20Background%20Removal/graphics%20pixels%20(1).jpg" alt="E-commerce — Background Removal" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/2.%20Product%20Image%20Background%20Removal/graphics%20pixels%20(1).jpg" alt="E-commerce — Background Removal" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/3.%20Product%20Image%20Background%20Removal%20-%20Copy/graphics%20pixels%20(1).jpg" alt="E-commerce — Ghost Mannequin Effect" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/3.%20Product%20Image%20Background%20Removal%20-%20Copy/graphics%20pixels%20(1).jpg" alt="E-commerce — Ghost Mannequin Effect" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>
@@ -592,20 +592,20 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(2).jpg" alt="Before — Photo Restoration">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(2).jpg" alt="Before — Photo Restoration">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Photo Restoration">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="After — Photo Restoration">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Scratch Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Scratch Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Damage Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Damage Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>
@@ -623,13 +623,13 @@
                 </div>
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/1.-Graphics-Pixels-1024x559.jpg" alt="AI-generated Image Fix — Example 1" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/1.-Graphics-Pixels-1024x559.jpg" alt="AI-generated Image Fix — Example 1" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/2.-Graphics-Pixels-1024x559.jpg" alt="AI-generated Image Fix — Example 2" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/2.-Graphics-Pixels-1024x559.jpg" alt="AI-generated Image Fix — Example 2" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                     <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/3.-Graphics-Pixels-1024x559.jpg" alt="AI-generated Image Fix — Example 3" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/3.-Graphics-Pixels-1024x559.jpg" alt="AI-generated Image Fix — Example 3" style="width:100%;height:100%;object-fit:contain;padding:8px;">
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -58,7 +58,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/hero-banner-images/AI-generated Image Fixes/graphics-pixels-12.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -116,7 +116,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/0.%20christina-wocintechchat-com-m-LQ1t-8Ms5PY-unsplash-1024x683.jpg" alt="AI Image Fix Service Explained" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/0.%20christina-wocintechchat-com-m-LQ1t-8Ms5PY-unsplash-1024x683.jpg" alt="AI Image Fix Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/1.-Graphics-Pixels-1024x559.jpg" alt="Hand and Finger Correction" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/1.-Graphics-Pixels-1024x559.jpg" alt="Hand and Finger Correction" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -186,7 +186,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/2.-Graphics-Pixels-1024x559.jpg" alt="Facial Anatomy Repair" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/2.-Graphics-Pixels-1024x559.jpg" alt="Facial Anatomy Repair" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -210,7 +210,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/3.-Graphics-Pixels-1024x559.jpg" alt="Text and Typography Fixes" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/3.-Graphics-Pixels-1024x559.jpg" alt="Text and Typography Fixes" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -230,7 +230,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/11-ai-generated-image-services/4.-Graphics-Pixels-1024x559.jpg" alt="Background Artifact Removal" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/4.-Graphics-Pixels-1024x559.jpg" alt="Background Artifact Removal" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

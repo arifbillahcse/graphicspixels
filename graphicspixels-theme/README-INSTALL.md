@@ -6,8 +6,39 @@ page template, so your SEO specialist can manage titles/keywords per page with Y
 ## 1. Install the theme
 
 1. Zip the `graphicspixels-theme` folder (the folder itself, so the zip contains
-   `graphicspixels-theme/style.css` at its top level).
+   `graphicspixels-theme/style.css` at its top level). The theme is ~1.5 MB —
+   the site images are **not** bundled; see step 1a.
 2. In wp-admin: **Appearance → Themes → Add New → Upload Theme** → upload the zip → **Activate**.
+
+## 1a. Upload the site images (one-time)
+
+The theme's static images live outside the theme, in the WordPress uploads folder,
+so the theme package stays small. Upload them once via FTP / cPanel File Manager:
+
+1. Take the repository's root **`images/`** folder (275 files, ~106 MB).
+2. Upload it into **`wp-content/uploads/graphicspixels/`** on your server, so the
+   final path is:
+
+   ```
+   wp-content/uploads/graphicspixels/images/...
+   ```
+
+   (i.e. you should end up with `wp-content/uploads/graphicspixels/images/home/…`,
+   `.../images/portfolio/…`, etc. — the `images` folder sits *inside* `graphicspixels`.)
+
+That's it — the theme resolves every image to this location automatically via the
+`gp_media_base()` helper. These are static files (not Media Library items); blog/post
+images you add later through the editor go to the normal Media Library and never
+conflict with this folder.
+
+**Optional — serve images from a CDN later:** add one line to `wp-config.php` and
+every image reference follows it, no template edits needed:
+
+```php
+define( 'GP_MEDIA_URL', 'https://your-cdn.example.com/graphicspixels' );
+```
+
+The CDN must then mirror the same `/images/...` structure.
 
 ## 2. Set permalinks
 

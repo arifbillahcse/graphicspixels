@@ -26,7 +26,7 @@
             width: 100%;
             height: 100vh;
             background-color: #fff;
-            background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-9.png');
+            background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/graphics-pixels-9.png');
             background-size: auto calc(100% - 100px);
             background-position: right bottom;
             background-repeat: no-repeat;
@@ -76,7 +76,7 @@
                 display: block;
                 width: 100%;
                 aspect-ratio: 1108 / 874;
-                background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/graphics-pixels-9.png');
+                background-image: url('<?php echo esc_url( gp_media_base() ); ?>/images/graphics-pixels-9.png');
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -148,7 +148,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Drop Shadow Service Example" loading="lazy">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Drop Shadow Service Example" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -196,10 +196,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="Before — Drop Shadow Effects">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(2).jpg" alt="Before — Drop Shadow Effects">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="After — Drop Shadow Effects">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="After — Drop Shadow Effects">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -225,7 +225,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20(1).jpg" alt="Drop Shadow for Realistic Product Photos" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20(1).jpg" alt="Drop Shadow for Realistic Product Photos" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -249,7 +249,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20(1).jpg" alt="Reflection Shadow Editing" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20(1).jpg" alt="Reflection Shadow Editing" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">
@@ -274,10 +274,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="Before — Natural Shadow Creation">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(2).jpg" alt="Before — Natural Shadow Creation">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="After — Natural Shadow Creation">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20(1).jpg" alt="After — Natural Shadow Creation">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -304,10 +304,10 @@
                     <div class="svc-media">
                         <div class="ba-slider" aria-label="Before and after comparison">
                             <div class="ba-before">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="Before — Shadow Customisation">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(2).jpg" alt="Before — Shadow Customisation">
                             </div>
                             <div class="ba-after">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="After — Shadow Customisation">
+                                <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20(1).jpg" alt="After — Shadow Customisation">
                             </div>
                             <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                         </div>
@@ -333,7 +333,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-img">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/6.%20Our%20Workflow%20for%20Drop%20Shadow/graphics%20pixels%20(1).jpg" alt="Drop Shadow Workflow" loading="lazy">
+                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/6.%20Our%20Workflow%20for%20Drop%20Shadow/graphics%20pixels%20(1).jpg" alt="Drop Shadow Workflow" loading="lazy">
                         </div>
                     </div>
                     <div class="svc-body">

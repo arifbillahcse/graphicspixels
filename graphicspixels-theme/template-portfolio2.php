@@ -183,7 +183,7 @@
                         <circle cx="200" cy="200" r="40" fill="none" stroke="#C3009D" stroke-width="1.5" opacity="0.5"/>
                         <circle cx="200" cy="200" r="25" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.6"/>
                         <circle cx="200" cy="200" r="20" fill="#0d0d60" stroke="#C3009D" stroke-width="1.5" opacity="0.9"/>
-                        <image href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/gp-logo.png" x="186" y="186" width="28" height="28" opacity="0.9"/>
+                        <image href="<?php echo esc_url( gp_media_base() ); ?>/images/gp-logo.png" x="186" y="186" width="28" height="28" opacity="0.9"/>
                         <circle cx="200" cy="80" r="8" fill="#00d4ff" opacity="0.8"/>
                         <circle cx="320" cy="200" r="6" fill="#C3009D" opacity="0.7"/>
                         <circle cx="200" cy="320" r="8" fill="#00ff88" opacity="0.8"/>
@@ -223,260 +223,260 @@
 
                 <!-- ===== CLIPPING PATH ===== -->
                 <figure class="pf-item" data-cat="clipping">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path — White & Coloured Background" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path — White & Coloured Background" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="clipping">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Product Placement Into Scenes" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/2.%20Product%20Placement%20Into%20Scenes/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Product Placement Into Scenes" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="clipping">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Visual Appeal Cutout" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Visual Appeal Cutout" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="clipping">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%282%29.jpg" alt="Clipping Path — Complex Path Cutout" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/3.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%282%29.jpg" alt="Clipping Path — Complex Path Cutout" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="clipping">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/1.%20clipping-path-service/4.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Super-Complex Subject" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/4.%20Image%20Get%20More%20Visually%20Appeal%20to%20Customers/graphics%20pixels%20%281%29.jpg" alt="Clipping Path — Super-Complex Subject" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-scissors"></i> Clipping Path</figcaption>
                 </figure>
 
                 <!-- ===== PHOTO RETOUCHING ===== -->
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="High-End Beauty & Portrait Retouching" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/1.%20High-End%20Beauty%20%26%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="High-End Beauty & Portrait Retouching" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20%281%29.jpg" alt="E-commerce & Product Retouching" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/2.%20E-commerce%20%26%20Product%20Retouching/graphics%20pixels%20%281%29.jpg" alt="E-commerce & Product Retouching" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Model Portrait Retouching" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/3.%20Model%20Portrait%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Model Portrait Retouching" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Commercial & Editorial Retouching" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/4.%20Commercial%20%26%20Editorial%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Commercial & Editorial Retouching" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="retouching">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/2.%20photo-retouching-service/5.%20Fashion%20%26%20Beauty%20Photo%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Fashion & Beauty Photo Retouching" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/5.%20Fashion%20%26%20Beauty%20Photo%20Retouching/graphics%20pixels%20%281%29.jpg" alt="Fashion & Beauty Photo Retouching" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-wand-magic-sparkles"></i> Photo Retouching</figcaption>
                 </figure>
 
                 <!-- ===== GHOST MANNEQUIN ===== -->
                 <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Neck Joint Service" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/2.%20Neck%20Joint%20Services/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Neck Joint Service" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — True-to-Life Look" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/3.%20Exhibit%20a%20True-to-Life%20Look/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — True-to-Life Look" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Apparel Display" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/4.%20Engage%20the%20Largest%20Number%20of%20Viewers/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Apparel Display" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ghost">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Retouched Garment" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20%281%29.jpg" alt="Ghost Mannequin — Retouched Garment" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-shirt"></i> Ghost Mannequin</figcaption>
                 </figure>
 
                 <!-- ===== HEADSHOT EDITING ===== -->
                 <figure class="pf-item" data-cat="headshot">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Before & After" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/1.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Before & After" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-user"></i> Headshot Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="headshot">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Natural Retouch" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/2.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Natural Retouch" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-user"></i> Headshot Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="headshot">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%284%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Corporate Profile" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/3.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%284%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Corporate Profile" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-user"></i> Headshot Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="headshot">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/4.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%283%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Professional Portrait" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/4.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%283%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Professional Portrait" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-user"></i> Headshot Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="headshot">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/5.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%282%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Portfolio Headshot" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/4.%20headshot-photo-editing/5.%20Headshot%20Editing%20Prior%20to%20and%20Following%20Results%20-%20Copy%20%282%29/graphics%20pixels%20%281%29.jpg" alt="Headshot Editing — Portfolio Headshot" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-user"></i> Headshot Editing</figcaption>
                 </figure>
 
                 <!-- ===== BACKGROUND REMOVAL ===== -->
                 <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Clean Cutout" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Clean Cutout" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Retouching Feature" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/2.%20Our%20retouching%20features/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Retouching Feature" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/3.%20Exact%20Clipping%20Path%20Services%20for%20Clean%20Cutouts/graphics%20pixels%20%281%29.png" alt="Background Removal — Transparent PNG" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/3.%20Exact%20Clipping%20Path%20Services%20for%20Clean%20Cutouts/graphics%20pixels%20%281%29.png" alt="Background Removal — Transparent PNG" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Background Merge" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/4.%20Background%20Merging%20Services/graphics%20pixels%20%281%29.jpg" alt="Background Removal — Background Merge" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="background">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/5.%20background-removal-service/5.%20Get%20A%20Standard%20Image%20Look/graphics%20pixels%20%281%29.png" alt="Background Removal — Standard White" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/5.%20Get%20A%20Standard%20Image%20Look/graphics%20pixels%20%281%29.png" alt="Background Removal — Standard White" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-eraser"></i> Background Removal</figcaption>
                 </figure>
 
                 <!-- ===== COLOR CORRECTION ===== -->
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20%281%29.jpg" alt="Color Correction — White Balance" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20%281%29.jpg" alt="Color Correction — White Balance" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Catalog Consistency" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/2.%20Why%20Does%20Your%20Company%20Need%20Color%20Correction/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Catalog Consistency" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Process" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/3.%20How%20Does%20the%20Process%20of%20Color%20Correction%20Operate/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Process" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Application" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/4.%20Typical%20Applications%20for%20Color%20Correction%20Services/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Application" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="color">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/6.%20color-correction-service/5.%20Professional%20Color%20Correction_s%20Advantages/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Brand Accuracy" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/5.%20Professional%20Color%20Correction_s%20Advantages/graphics%20pixels%20%281%29.jpg" alt="Color Correction — Brand Accuracy" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-sliders"></i> Color Correction</figcaption>
                 </figure>
 
                 <!-- ===== DROP SHADOW ===== -->
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Shadow Types" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Shadow Types" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Realistic Product" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/2.%20Drop%20Shadow%20Services%20for%20Realistic%20Product%20Photos/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Realistic Product" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Reflection Shadow" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/3.%20Reflection%20Shadow%20Editing%20for%20Clean%2C%20Polished%20Images/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Reflection Shadow" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Natural Shadow" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/4.%20Photoshop%20Natural%20Shadow%20Creation/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Natural Shadow" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Customisation" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/5.%20Options%20for%20Shadow%20Customization/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Customisation" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="shadow">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/7.%20drop-shadow-service/6.%20Our%20Workflow%20for%20Drop%20Shadow/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Workflow" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/6.%20Our%20Workflow%20for%20Drop%20Shadow/graphics%20pixels%20%281%29.jpg" alt="Drop Shadow — Workflow" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clone"></i> Drop Shadow</figcaption>
                 </figure>
 
                 <!-- ===== IMAGE MASKING ===== -->
                 <figure class="pf-item" data-cat="masking">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Layer Masking" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Layer Masking" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-mask"></i> Image Masking</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="masking">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Hair & Fur Masking" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/5.%20Hair%20%26%20Fur%20Masking/graphics%20pixels%20%281%29.jpg" alt="Image Masking — Hair & Fur Masking" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-mask"></i> Image Masking</figcaption>
                 </figure>
 
                 <!-- ===== E-COMMERCE IMAGE EDITING ===== -->
                 <figure class="pf-item" data-cat="ecommerce">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Clipping Path Workflow" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Clipping Path Workflow" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-cart-shopping"></i> E-commerce Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ecommerce">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/graphics%20p.jpg" alt="E-commerce Editing — Product Prep" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/graphics%20p.jpg" alt="E-commerce Editing — Product Prep" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-cart-shopping"></i> E-commerce Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ecommerce">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/2.%20Product%20Image%20Background%20Removal/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Background Removal" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/2.%20Product%20Image%20Background%20Removal/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Background Removal" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-cart-shopping"></i> E-commerce Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ecommerce">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/3.%20Product%20Image%20Background%20Removal%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Marketplace Ready" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/3.%20Product%20Image%20Background%20Removal%20-%20Copy/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Marketplace Ready" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-cart-shopping"></i> E-commerce Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ecommerce">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/4.%20Product%20Image%20Background%20Removal%20-%20Copy%20%283%29/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Catalog Image" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/4.%20Product%20Image%20Background%20Removal%20-%20Copy%20%283%29/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Catalog Image" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-cart-shopping"></i> E-commerce Editing</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="ecommerce">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/5.%20Product%20Image%20Background%20Removal%20-%20Copy%20%282%29/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Bundled Output" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/5.%20Product%20Image%20Background%20Removal%20-%20Copy%20%282%29/graphics%20pixels%20%281%29.jpg" alt="E-commerce Editing — Bundled Output" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-cart-shopping"></i> E-commerce Editing</figcaption>
                 </figure>
 
                 <!-- ===== PHOTO RESTORATION ===== -->
                 <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Scratch & Tear Repair" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Scratch & Tear Repair" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Water Damage Repair" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Water Damage Repair" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Fading Restoration" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/3.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Fading Restoration" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Missing Section Rebuild" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/4.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — Missing Section Rebuild" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
                 <figure class="pf-item" data-cat="restoration">
-                    <div class="pf-img"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/individualservicepage/10.%20photo-restoration-service/5.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — B&W Colorization" loading="lazy"></div>
+                    <div class="pf-img"><img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/5.%20photo-restoration-service/graphics%20pixels%20%281%29.jpg" alt="Photo Restoration — B&W Colorization" loading="lazy"></div>
                     <span class="pf-zoom"><i class="fas fa-expand"></i></span>
                     <figcaption class="pf-tag"><i class="fas fa-clock-rotate-left"></i> Photo Restoration</figcaption>
                 </figure>
