@@ -25,7 +25,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
     font-family: 'Inter', sans-serif;
@@ -40,7 +40,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -178,7 +178,7 @@ img { max-width: 100%; display: block; }
     pointer-events: none;
 }
 .vt-wrap {
-    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    max-width: 1440px; margin: 0 auto; padding: 0 24px;
     display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px;
 }
 .vt-left { display: flex; flex-direction: column; gap: 22px; }
@@ -1295,48 +1295,42 @@ img { max-width: 100%; display: block; }
 .how-works { padding: 100px 0; background: linear-gradient(135deg, #f9f8fd 0%, #fef5ff 100%); position: relative; overflow: hidden; }
 .how-works::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(195, 0, 157, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(1, 1, 94, 0.02) 0%, transparent 50%); pointer-events: none; }
 
-.how-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 80px; position: relative; z-index: 1; }
+.how-timeline { display: flex; align-items: flex-start; justify-content: center; gap: 0; margin-top: 80px; position: relative; z-index: 1; }
 
-/* Connecting line between steps */
-.how-timeline::before { content: ''; position: absolute; top: 60px; left: 12.5%; right: 12.5%; height: 3px; background: linear-gradient(to right, var(--magenta), var(--magenta) 48%, transparent 48%, transparent 52%, var(--magenta) 52%, var(--magenta)); z-index: 0; }
+.how-item { position: relative; flex: 1 1 0; min-width: 0; padding: 0 8px; }
 
-.how-item { position: relative; }
+.how-arrow { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; width: 44px; height: 84px; color: var(--magenta); font-size: 20px; opacity: 0.55; }
 
 .how-circle { position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; z-index: 2; }
 
-.how-icon-bg { width: 120px; height: 120px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--white); box-shadow: 0 10px 40px rgba(195, 0, 157, 0.25); transition: transform var(--transition), box-shadow var(--transition); }
+.how-icon-bg { width: 84px; height: 84px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--white); box-shadow: 0 6px 22px rgba(195, 0, 157, 0.18); transition: transform var(--transition), box-shadow var(--transition); }
 
-.how-item:hover .how-icon-bg { transform: scale(1.1); box-shadow: 0 15px 50px rgba(195, 0, 157, 0.35); }
+.how-item:hover .how-icon-bg { transform: scale(1.06); box-shadow: 0 10px 30px rgba(195, 0, 157, 0.25); }
 
 /* Sequential animation for each step */
-@keyframes howStep1 { 0%, 25%, 100% { filter: brightness(1); box-shadow: 0 10px 40px rgba(195, 0, 157, 0.25); } 10%, 15% { filter: brightness(1.3); box-shadow: 0 15px 60px rgba(195, 0, 157, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3); } }
-@keyframes howStep2 { 0%, 50%, 100% { filter: brightness(1); box-shadow: 0 10px 40px rgba(195, 0, 157, 0.25); } 35%, 40% { filter: brightness(1.3); box-shadow: 0 15px 60px rgba(195, 0, 157, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3); } }
-@keyframes howStep3 { 0%, 75%, 100% { filter: brightness(1); box-shadow: 0 10px 40px rgba(195, 0, 157, 0.25); } 60%, 65% { filter: brightness(1.3); box-shadow: 0 15px 60px rgba(195, 0, 157, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3); } }
-@keyframes howStep4 { 0%, 100% { filter: brightness(1); box-shadow: 0 10px 40px rgba(195, 0, 157, 0.25); } 85%, 90% { filter: brightness(1.3); box-shadow: 0 15px 60px rgba(195, 0, 157, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.3); } }
+@keyframes howStep1 { 0%, 25%, 100% { filter: brightness(1); box-shadow: 0 6px 22px rgba(195, 0, 157, 0.18); } 10%, 15% { filter: brightness(1.12); box-shadow: 0 8px 28px rgba(195, 0, 157, 0.3); } }
+@keyframes howStep2 { 0%, 50%, 100% { filter: brightness(1); box-shadow: 0 6px 22px rgba(195, 0, 157, 0.18); } 35%, 40% { filter: brightness(1.12); box-shadow: 0 8px 28px rgba(195, 0, 157, 0.3); } }
+@keyframes howStep3 { 0%, 75%, 100% { filter: brightness(1); box-shadow: 0 6px 22px rgba(195, 0, 157, 0.18); } 60%, 65% { filter: brightness(1.12); box-shadow: 0 8px 28px rgba(195, 0, 157, 0.3); } }
+@keyframes howStep4 { 0%, 100% { filter: brightness(1); box-shadow: 0 6px 22px rgba(195, 0, 157, 0.18); } 85%, 90% { filter: brightness(1.12); box-shadow: 0 8px 28px rgba(195, 0, 157, 0.3); } }
 
 .how-step-1 { animation: howStep1 4s infinite; }
 .how-step-2 { animation: howStep2 4s infinite; }
 .how-step-3 { animation: howStep3 4s infinite; }
 .how-step-4 { animation: howStep4 4s infinite; }
 
-.how-number { position: absolute; bottom: -8px; right: -8px; width: 44px; height: 44px; border-radius: 50%; background: var(--magenta); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; font-family: 'Poppins', sans-serif; box-shadow: 0 4px 20px rgba(195, 0, 157, 0.3); }
-
 .how-content { text-align: center; }
 .how-content h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .how-content p { font-size: 15px; color: var(--text-light); line-height: 1.6; }
 
-@media (max-width: 1024px) {
-    .how-timeline { grid-template-columns: repeat(2, 1fr); gap: 50px; }
-    .how-timeline::before { top: 60px; left: 5%; right: auto; width: 3px; height: auto; bottom: 0; background: linear-gradient(to bottom, var(--magenta), var(--magenta) 48%, transparent 48%, transparent 52%, var(--magenta) 52%, var(--magenta)); }
+@media (max-width: 900px) {
+    .how-timeline { flex-direction: column; align-items: center; gap: 0; margin-top: 50px; }
+    .how-item { width: 100%; max-width: 380px; padding: 0; }
+    .how-arrow { width: 100%; height: auto; margin: 4px 0; transform: rotate(90deg); }
 }
 
 @media (max-width: 600px) {
     .how-works { padding: 60px 0; }
-    .how-timeline { grid-template-columns: 1fr; gap: 40px; }
-    .how-timeline::before { left: 59px; width: 3px; top: 60px; height: calc(100% - 60px); background: linear-gradient(to bottom, var(--magenta), var(--magenta)); }
-    .how-circle { margin-left: 40px; }
-    .how-content { text-align: left; }
-    .how-icon-bg { width: 100px; height: 100px; font-size: 40px; }
+    .how-icon-bg { width: 72px; height: 72px; font-size: 28px; }
     .how-content h3 { font-size: 16px; }
     .how-content p { font-size: 14px; }
 }
