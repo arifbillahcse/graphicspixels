@@ -63,6 +63,8 @@ get_header();
     .gp-post-content h2 { font-size: 26px; margin: 34px 0 14px; }
     .gp-post-content h3 { font-size: 21px; margin: 28px 0 12px; }
     .gp-post-content ul, .gp-post-content ol { margin: 0 0 20px 22px; }
+    .gp-post-content a { color: var(--primary, #4f46e5); text-decoration: underline; }
+    .gp-post-content a:hover { text-decoration: none; }
     .gp-post-content blockquote { border-left: 4px solid var(--primary, #4f46e5); padding-left: 18px; margin: 22px 0; color: var(--text-light, #667); font-style: italic; }
     .gp-post-tags { margin-top: 34px; font-size: 14px; color: var(--text-light, #667); }
     .gp-post-tags a { color: inherit; }
