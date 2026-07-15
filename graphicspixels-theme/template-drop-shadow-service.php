@@ -60,7 +60,7 @@
             margin-bottom: 14px; line-height: 1.6;
         }
         .ds-showcase-content p {
-            font-size: 15px; color: #444;
+            font-size: 15px; color: #000;
             line-height: 1.75; margin-bottom: 32px;
         }
         .ds-showcase-actions { display: flex; gap: 16px; flex-wrap: wrap; }
