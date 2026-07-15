@@ -57,7 +57,7 @@ get_header();
     .gp-post-meta a { color: inherit; }
     .gp-post-thumb { margin: 0 0 32px; border-radius: 12px; overflow: hidden; }
     .gp-post-thumb img { width: 100%; height: auto; display: block; }
-    .gp-post-content { font-size: 17px; line-height: 1.75; }
+    .gp-post-content { font-size: 17px; line-height: 1.75; color: #000; }
     .gp-post-content p { margin-bottom: 20px; }
     .gp-post-content img { max-width: 100%; height: auto; border-radius: 10px; margin: 18px 0; }
     .gp-post-content h2 { font-size: 26px; margin: 34px 0 14px; }

@@ -114,12 +114,12 @@
         .svc-3d-caption {
             text-align: center;
             font-size: 13px;
-            color: #666;
+            color: #000;
             margin-top: 12px;
         }
         .svc-related {
             font-size: 14px;
-            color: #666;
+            color: #000;
             margin-top: -8px;
             margin-bottom: 24px;
         }

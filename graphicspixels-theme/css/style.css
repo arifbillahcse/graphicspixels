@@ -9,8 +9,8 @@
     --magenta: #C3009D;
     --navy-light: #2a2a8a;
     --magenta-dark: #9c007e;
-    --text: #333333;
-    --text-light: #666666;
+    --text: #000000;
+    --text-light: #000000;
     --bg-light: #f7f7fb;
     --white: #ffffff;
     --border: #e5e5ef;
@@ -1225,7 +1225,7 @@ img { max-width: 100%; display: block; }
     position: absolute; top: 14px; right: 14px;
     width: 34px; height: 34px; border-radius: 50%;
     border: none; background: #f0f0f6; cursor: pointer;
-    font-size: 15px; color: #555;
+    font-size: 15px; color: #000;
     display: flex; align-items: center; justify-content: center;
     transition: background 0.2s;
 }

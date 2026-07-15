@@ -111,7 +111,7 @@
         }
         .pc-qty-btn:hover { background: var(--magenta, #C3009D); color: #fff; border-color: var(--magenta, #C3009D); }
         .pc-qty-row input { text-align: center; font-weight: 600; }
-        .pc-note { font-size: 12.5px; color: #888; margin-top: 6px; }
+        .pc-note { font-size: 12.5px; color: #000; margin-top: 6px; }
 
         .pc-result {
             background: var(--navy, #01015E); color: #fff; padding: 38px 36px;

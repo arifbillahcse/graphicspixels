@@ -45,7 +45,7 @@
             color: #111; margin-bottom: 14px; line-height: 1.6;
         }
         .dt-showcase-content p {
-            font-size: 15px; color: #555;
+            font-size: 15px; color: #000;
             line-height: 1.8; margin-bottom: 16px;
         }
         .dt-showcase-icons {
