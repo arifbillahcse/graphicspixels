@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GP_THEME_VERSION', '1.0.5' );
+define( 'GP_THEME_VERSION', '1.0.6' );
 
 require get_template_directory() . '/inc/submissions.php';
 require get_template_directory() . '/inc/auto-pages.php';
@@ -105,6 +105,10 @@ add_action( 'wp_enqueue_scripts', function () {
 		$tpl = get_page_template_slug();
 		if ( $tpl && isset( $map[ $tpl ] ) ) {
 			$active = $tpl;
+		} elseif ( is_page( 'about-us' ) ) {
+			// Fallback: guarantees about.css/about-animations still load even if
+			// the page's assigned template got reset to Default in wp-admin.
+			$active = 'template-about-us.php';
 		}
 	}
 	if ( $active ) {
