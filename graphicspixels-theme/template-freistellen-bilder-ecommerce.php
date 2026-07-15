@@ -21,6 +21,8 @@
             overflow: hidden;
             display: flex;
             align-items: center;
+            padding-top: 80px;
+            box-sizing: border-box;
         }
         .dt-showcase-content {
             position: relative; z-index: 2;
