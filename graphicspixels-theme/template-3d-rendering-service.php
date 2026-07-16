@@ -92,7 +92,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">3D Service</span>
+                <span class="ds-showcase-eyebrow">3D Rendering Service</span>
                 <h2>Investigate Our Photorealistic 3D Modeling and Rendering Services</h2>
                 <p class="ds-lead">In the digital realm of nowadays, pictures are all things present.</p>
                 <p>Great 3D Rendering Services models and lifelike renderings will really boost your brand presence and customer interaction, be it in fashion, furnishings, e-commerce, or architecture.</p>

@@ -89,7 +89,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <span class="ds-showcase-eyebrow">Headshot Photo Editing</span>
                 <h2>Professional Headshot Photo Editing Service — Natural Retouching for Portraits &amp; Profiles</h2>
                 <p class="ds-lead">Graphics Pixels provides professional headshot retouching for photographers, photography studios, and individual clients. We handle skin tone correction, blemish and shine removal, flyaway hair cleanup, teeth whitening, eye enhancement, background removal or replacement, and lighting balance — all done by hand in Photoshop, with no AI filters.</p>
                 <p>The result looks polished and credible, not over-processed. Turnaround 24–48 hours. Pricing from $5. Free trial: send 1–5 images, returned edited within 24 hours at no charge.</p>

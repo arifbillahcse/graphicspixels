@@ -126,7 +126,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <span class="ds-showcase-eyebrow">Photo Retouching Services</span>
                 <h2>Professional Photo Retouching Services — Product, Fashion, Beauty &amp; Portrait</h2>
                 <p class="ds-lead">Graphics Pixels provides photo retouching for e-commerce brands, photographers, fashion studios, and advertising agencies. We handle product retouching, high-end beauty and portrait work, fashion and apparel retouching, jewelry polishing, and commercial and editorial finishing — all done by human editors in Photoshop, to your brief, with no AI presets.</p>
                 <p>Every order is matched against a reference standard before delivery. 120+ trained retouchers, 24-hour turnaround, unlimited revisions. Send 1–5 images for a free trial — returned within 24 hours, no charge.</p>

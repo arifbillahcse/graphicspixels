@@ -122,7 +122,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <span class="ds-showcase-eyebrow">Color Correction Service</span>
                 <h2>Professional Color Correction Service — Product, Fashion &amp; E-commerce Photography</h2>
                 <p class="ds-lead">Graphics Pixels provides color correction for product photography, fashion catalogs, e-commerce listings, and portrait work. We adjust white balance, exposure, contrast, hue, vibrancy, and saturation — image by image — to bring your batch to a single consistent, accurate standard.</p>
                 <p>Inaccurate color in product photography causes returns. A garment that photographs with a blue cast looks different from the actual item, and buyers send it back. Accurate color correction is one of the most direct ways to reduce return rates and increase buyer confidence on Amazon, Shopify, and eBay.</p>

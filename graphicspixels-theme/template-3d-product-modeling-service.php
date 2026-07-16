@@ -140,7 +140,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">3D Service</span>
+                <span class="ds-showcase-eyebrow">3D Product Modeling Service</span>
                 <h2>3D Product Modeling &amp; Rendering Service — Photorealistic CGI for E-commerce and Marketing</h2>
                 <p class="ds-lead">Graphics Pixels produces photorealistic 3D product models and renderings for e-commerce brands, fashion companies, furniture manufacturers, jewelry designers, and marketing agencies. We model products from scratch using reference images, design files, or physical samples — and deliver print-ready, web-ready, and AR-ready assets.</p>
                 <p>3D modeling removes the need for expensive product photography at every stage of a product cycle. A 3D model can be rendered in any colour, on any background, in any environment—without reshooting. Used for Amazon listings, Shopify product pages, marketing campaigns, trade catalogs, and virtual staging.</p>

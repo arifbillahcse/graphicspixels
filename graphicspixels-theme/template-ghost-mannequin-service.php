@@ -122,7 +122,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <span class="ds-showcase-eyebrow">Ghost Mannequin Service</span>
                 <h2>Ghost Mannequin Services</h2>
                 <p class="ds-lead">Ghost Mannequin Services are ideal for ecommerce and fashion brands looking to showcase their apparel cleanly and professionally—without distracting mannequins.</p>
                 <p>Apparel ghost mannequin service is very important for all e-commerce business. Our expertise will use the best tricks for providing eye-catchy ghost mannequin effect for your apparel items</p>

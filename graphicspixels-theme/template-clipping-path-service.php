@@ -125,7 +125,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Clipping Path</span>
+                <span class="ds-showcase-eyebrow">Clipping Path Service</span>
                 <h2>Professional Clipping Path Service — 100% Manual, Every Complexity Level</h2>
                 <p class="ds-lead">A clipping path is a closed vector path drawn by hand around a subject in Photoshop. Everything inside stays; everything outside is removed. The result is a clean, isolated subject ready to drop onto any background — no halos, no fringe, no edge artifacts from batch automation.</p>
                 <p>Every path at Graphics Pixels is drawn manually with the Photoshop pen tool. We cover all complexity levels: simple single-path shapes, compound paths for multi-part products, complex paths for furniture and apparel, and super-complex paths for jewelry, lacework, and fine-detailed subjects. Starting from $0.39 per image. Turnaround 24–48 hours. Bulk orders discounted.</p>

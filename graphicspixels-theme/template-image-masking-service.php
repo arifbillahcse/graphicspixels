@@ -122,7 +122,7 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Photo Editing</span>
+                <span class="ds-showcase-eyebrow">Image Masking Service</span>
                 <h2>Professional Image Masking Service — Hair, Fur, Transparent Objects &amp; Complex Edges</h2>
                 <p class="ds-lead">Clipping path draws a hard vector outline around a subject. It works on products with clean, defined edges. It does not work on hair, fur, sheer fabric, fine mesh, glass, water, or any subject where the edge blends softly into the background. Image masking is the correct technique for those cases.</p>
                 <p>Graphics Pixels provides layer masking, alpha channel masking, hair and fur masking, transparent object masking, and refine edge masking — all done by hand in Photoshop. The result is a clean, natural-edged cutout that holds up on any background, in any format, at any size.</p>
