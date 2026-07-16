@@ -152,7 +152,7 @@
         .au-team { padding: 100px 0; background: var(--bg-light); }
         .au-team-group { margin-bottom: 56px; }
         .au-group-title { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 28px; padding-left: 16px; border-left: 4px solid var(--magenta); }
-        .au-team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+        .au-team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; }
         .au-team-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
         .au-team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
         .au-avatar { width: 100%; aspect-ratio: 212 / 240; background: linear-gradient(135deg, #01015E 0%, #3a0080 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
