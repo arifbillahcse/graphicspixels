@@ -39,7 +39,7 @@
 
         /* ── Portfolio service sections ── */
         .pf-service {
-            padding: 80px 0;
+            padding: 20px 0;
         }
         .pf-service:nth-child(even) {
             background: var(--bg-light, #f8f8fc);
