@@ -192,14 +192,6 @@ img { max-width: 100%; display: block; }
     background-size: cover; background-position: center; background-repeat: no-repeat;
     background-color: var(--gradient-soft); cursor: pointer; border-radius: var(--radius); overflow: hidden;
 }
-.vt-thumb-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.10) 45%, rgba(1,1,94,0.75) 100%);
-    border-radius: var(--radius); z-index: 1; transition: background var(--transition);
-}
-.vt-thumb:hover .vt-thumb-overlay {
-    background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.18) 45%, rgba(1,1,94,0.88) 100%);
-}
 .vt-play {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -54%);
     width: 68px; height: 68px; min-width: 68px; min-height: 68px; border-radius: 50%;
