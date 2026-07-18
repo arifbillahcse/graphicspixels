@@ -125,8 +125,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">Carlos Mendez</span>
-                                <span class="vt-card-company">Mendez Creative Studio · ES</span>
+                                <span class="vt-card-name">Mark Vence</span>
+                                <span class="vt-card-company">Fashion and Lifestyle Brand Manager · USA</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -139,8 +139,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">Sarah Jennings</span>
-                                <span class="vt-card-company">Jennings Bridal Photography · USA</span>
+                                <span class="vt-card-name">Neo N.</span>
+                                <span class="vt-card-company">E-Commerce Post-Production Manager · USA</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -153,8 +153,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">Luca Rossi</span>
-                                <span class="vt-card-company">Rossi Fotografia Professionale · IT</span>
+                                <span class="vt-card-name">Jorge</span>
+                                <span class="vt-card-company">Creative Agency Director · Portugal</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -167,8 +167,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">Emma Thornton</span>
-                                <span class="vt-card-company">Thornton Product Photography · CA</span>
+                                <span class="vt-card-name">Brooklyn</span>
+                                <span class="vt-card-company">Photography Studio Owner · USA</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -181,8 +181,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">David Okafor</span>
-                                <span class="vt-card-company">Okafor E-Commerce Agency · UK</span>
+                                <span class="vt-card-name">Arthur Brad</span>
+                                <span class="vt-card-company">Visual Content Photography · Germany</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -195,8 +195,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">Sophie Laurent</span>
-                                <span class="vt-card-company">Laurent &amp; Co Studio · FR</span>
+                                <span class="vt-card-name">Matteo</span>
+                                <span class="vt-card-company">Creative Agency · Italy</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -209,8 +209,8 @@
                         <button class="vt-play" aria-label="Play video"><span class="vt-play-icon"></span></button>
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
-                                <span class="vt-card-name">James Mitchell</span>
-                                <span class="vt-card-company">Mitchell Commercial Photography · AU</span>
+                                <span class="vt-card-name">Sarah Allen</span>
+                                <span class="vt-card-company">eCommerce Photography · France</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
@@ -224,7 +224,7 @@
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
                                 <span class="vt-card-name">Anika Berg</span>
-                                <span class="vt-card-company">Berg Studio Berlin · DE</span>
+                                <span class="vt-card-company">Berg Studio · Berlin</span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
