@@ -790,12 +790,7 @@ img { max-width: 100%; display: block; }
 }
 .yt-thumb-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(195,0,157,0.22) 0%, rgba(1,1,94,0.32) 100%);
     display: flex; align-items: center; justify-content: center;
-    transition: background 0.3s ease;
-}
-.video-hero-thumb:hover .yt-thumb-overlay {
-    background: linear-gradient(135deg, rgba(195,0,157,0.45) 0%, rgba(1,1,94,0.55) 100%);
 }
 .yt-play-btn {
     width: 64px; height: 64px; border-radius: 50%; border: none; cursor: pointer;
