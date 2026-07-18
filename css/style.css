@@ -194,7 +194,7 @@ img { max-width: 100%; display: block; }
 }
 .vt-thumb-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.10) 45%, rgba(1,1,94,0.75) 100%);
+    background: transparent;
     border-radius: var(--radius); z-index: 1; transition: background var(--transition);
 }
 .vt-thumb:hover .vt-thumb-overlay {
