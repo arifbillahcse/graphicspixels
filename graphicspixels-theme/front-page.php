@@ -221,9 +221,8 @@
         <div class="ds-showcase-image" aria-hidden="true"></div>
         <div class="container">
             <div class="ds-showcase-content reveal" data-reveal="left">
-                <span class="ds-showcase-eyebrow">Meet Graphics Pixels</span>
-                <h2>Your Photo Retouching &amp; Post-Production Service Partner</h2>
-                <p class="ds-lead">Complete Image Editing, Video, and 3D Solutions in One Place</p>
+                <p class="ds-lead">Professional Photo Editing &amp; Post-Production Outsourcing</p>
+                <h2>Your Visual Solutions &amp; Post-Production Services Partner</h2>
                 <p>Graphics Pixels is a dedicated photo editing and post-production outsourcing studio based in Dhaka, Bangladesh, with a UK office in Southampton. We handle clipping path, background removal, ghost mannequin, photo retouching, color correction, image masking, drop shadow, headshot editing, photo restoration, AI image fixes, 3D product modeling, and video editing—all done by hand by our 120+ in-house editors.</p>
                 <p>No AI shortcuts. No subcontracting. 24-hour standard turnaround. Free trial on every new order — send 1 to 5 images and get them back edited within 24 hours at no charge.</p>
                 <div class="ds-showcase-actions">
