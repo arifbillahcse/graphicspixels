@@ -428,6 +428,174 @@
                     <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
                 </div>
 
+                <!-- Background Removal -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="0">
+                    <div class="pr-card-header pr-accent-cyan">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-eraser"></i></div>
+                            <h3>Background Removal</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>0.39</div>
+                            <span class="pr-per">per image</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">Simple Background Removal</span><span class="pr-item-price">$0.39</span></li>
+                        <li><span class="pr-item-name">Medium Background Removal</span><span class="pr-item-price">$0.79</span></li>
+                        <li><span class="pr-item-name">Complex Background Removal</span><span class="pr-item-price">$1.49</span></li>
+                        <li><span class="pr-item-name">White Background Replacement</span><span class="pr-item-price">$0.99</span></li>
+                        <li><span class="pr-item-name">Transparent Background (PNG)</span><span class="pr-item-price">$0.89</span></li>
+                        <li><span class="pr-item-name">Bulk Background Removal</span><span class="pr-item-price">$0.29</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Headshot Photo Editing -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="100">
+                    <div class="pr-card-header pr-accent-magenta">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-user-tie"></i></div>
+                            <h3>Headshot Photo Editing</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>1.50</div>
+                            <span class="pr-per">per image</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">Basic Headshot Retouching</span><span class="pr-item-price">$1.50</span></li>
+                        <li><span class="pr-item-name">Corporate Headshot Editing</span><span class="pr-item-price">$2.00</span></li>
+                        <li><span class="pr-item-name">LinkedIn Profile Retouching</span><span class="pr-item-price">$2.00</span></li>
+                        <li><span class="pr-item-name">Headshot Background Replacement</span><span class="pr-item-price">$2.50</span></li>
+                        <li><span class="pr-item-name">Skin &amp; Blemish Cleanup</span><span class="pr-item-price">$2.99</span></li>
+                        <li><span class="pr-item-name">Premium Portrait Finishing</span><span class="pr-item-price">$4.00</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Photo Restoration -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="0">
+                    <div class="pr-card-header pr-accent-magenta">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-clock-rotate-left"></i></div>
+                            <h3>Photo Restoration</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>2.99</div>
+                            <span class="pr-per">per image</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">Basic Scratch &amp; Dust Removal</span><span class="pr-item-price">$2.99</span></li>
+                        <li><span class="pr-item-name">Torn Photo Repair</span><span class="pr-item-price">$5.99</span></li>
+                        <li><span class="pr-item-name">Color Restoration (Faded Photo)</span><span class="pr-item-price">$6.99</span></li>
+                        <li><span class="pr-item-name">Black &amp; White Colorization</span><span class="pr-item-price">$9.99</span></li>
+                        <li><span class="pr-item-name">Severe Damage Restoration</span><span class="pr-item-price">$19.99</span></li>
+                        <li><span class="pr-item-name">Missing Part Reconstruction</span><span class="pr-item-price">$24.99</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- AI-Generated Image Fixes -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="100">
+                    <div class="pr-card-header pr-accent-cyan">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                            <h3>AI-Generated Image Fixes</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>1.99</div>
+                            <span class="pr-per">per image</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">AI Hand &amp; Finger Correction</span><span class="pr-item-price">$1.99</span></li>
+                        <li><span class="pr-item-name">AI Face &amp; Feature Fixes</span><span class="pr-item-price">$2.49</span></li>
+                        <li><span class="pr-item-name">AI Text &amp; Logo Cleanup</span><span class="pr-item-price">$2.99</span></li>
+                        <li><span class="pr-item-name">AI Artifact Removal</span><span class="pr-item-price">$2.49</span></li>
+                        <li><span class="pr-item-name">AI Background Refinement</span><span class="pr-item-price">$3.49</span></li>
+                        <li><span class="pr-item-name">Full AI Image Retouch</span><span class="pr-item-price">$4.99</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 3D Modeling -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="0">
+                    <div class="pr-card-header pr-accent-cyan">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-cube"></i></div>
+                            <h3>3D Product Modeling</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>25</div>
+                            <span class="pr-per">per model</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">Simple Product 3D Model</span><span class="pr-item-price">$25.00</span></li>
+                        <li><span class="pr-item-name">Medium Complexity 3D Model</span><span class="pr-item-price">$49.00</span></li>
+                        <li><span class="pr-item-name">Complex Product 3D Model</span><span class="pr-item-price">$99.00</span></li>
+                        <li><span class="pr-item-name">Furniture 3D Model</span><span class="pr-item-price">$79.00</span></li>
+                        <li><span class="pr-item-name">Jewelry / Fine Detail Model</span><span class="pr-item-price">$149.00</span></li>
+                        <li><span class="pr-item-name">AR-Ready 3D Model</span><span class="pr-item-price">$129.00</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn pr-card-btn-cyan">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 3D Rendering -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="100">
+                    <div class="pr-card-header pr-accent-magenta">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-cubes"></i></div>
+                            <h3>3D Rendering</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>15</div>
+                            <span class="pr-per">per render</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">Single-Angle Product Render</span><span class="pr-item-price">$15.00</span></li>
+                        <li><span class="pr-item-name">Photorealistic Hero Render</span><span class="pr-item-price">$59.00</span></li>
+                        <li><span class="pr-item-name">360&deg; Spin Render</span><span class="pr-item-price">$49.00</span></li>
+                        <li><span class="pr-item-name">Lifestyle / Scene Render</span><span class="pr-item-price">$79.00</span></li>
+                        <li><span class="pr-item-name">Multi-Angle Render Set</span><span class="pr-item-price">$99.00</span></li>
+                        <li><span class="pr-item-name">Animation Render (per sec)</span><span class="pr-item-price">$9.99</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Video Editing -->
+                <div class="pr-card reveal" data-reveal="up" data-delay="0">
+                    <div class="pr-card-header pr-accent-magenta">
+                        <div class="pr-card-title-wrap">
+                            <div class="pr-card-icon"><i class="fas fa-film"></i></div>
+                            <h3>Video Editing</h3>
+                        </div>
+                        <div class="pr-price-badge">
+                            <span class="pr-from">Starting at</span>
+                            <div class="pr-price"><sup>$</sup>5</div>
+                            <span class="pr-per">per project</span>
+                        </div>
+                    </div>
+                    <ul class="pr-list">
+                        <li><span class="pr-item-name">Basic Video Cut &amp; Trim</span><span class="pr-item-price">$5.00</span></li>
+                        <li><span class="pr-item-name">Social Media Reel Editing</span><span class="pr-item-price">$19.00</span></li>
+                        <li><span class="pr-item-name">Color Grading &amp; Correction</span><span class="pr-item-price">$15.00</span></li>
+                        <li><span class="pr-item-name">Product Demo Editing</span><span class="pr-item-price">$25.00</span></li>
+                        <li><span class="pr-item-name">Motion Graphics &amp; Titles</span><span class="pr-item-price">$29.00</span></li>
+                        <li><span class="pr-item-name">Full Post-Production (per min)</span><span class="pr-item-price">$9.99</span></li>
+                    </ul>
+                    <a href="#free-trial" class="pr-card-btn">Get Free Trial <i class="fas fa-arrow-right"></i></a>
+                </div>
+
             </div>
         </div>
     </section>
