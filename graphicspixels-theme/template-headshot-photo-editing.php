@@ -117,7 +117,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional Headshot Photo Editing" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/headshot.jpg" alt="Professional Headshot Photo Editing" loading="lazy">
                     </div>
                 </div>
             </div>
