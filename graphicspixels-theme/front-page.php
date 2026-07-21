@@ -214,6 +214,8 @@
         .cp-intro {
             padding-top: 40px !important;
         }
+        /* Free-trial perks: single column on desktop and mobile */
+        .trial-perks { grid-template-columns: 1fr; }
     </style>
 
 <!-- ============ PAGE HERO / SHOWCASE ============ -->
@@ -761,9 +763,7 @@
                     <li><i class="fas fa-bolt"></i> Fast turnaround</li>
                     <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
                     <li><i class="fas fa-face-smile"></i> 100% client satisfaction</li>
-                    <li><i class="fas fa-microchip"></i> Cutting-edge technology</li>
                     <li><i class="fas fa-cart-shopping"></i> Smooth ordering process</li>
-                    <li><i class="fas fa-gem"></i> Emphasis on perfection</li>
                 </ul>
             </div>
 
