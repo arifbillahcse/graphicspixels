@@ -200,7 +200,7 @@
                         <select id="pc-type"></select>
                     </div>
                     <div class="pc-field">
-                        <label for="pc-qty">Number of Images</label>
+                        <label for="pc-qty" id="pc-qty-label">Number of Images</label>
                         <div class="pc-qty-row">
                             <button type="button" class="pc-qty-btn" id="pc-minus" aria-label="Decrease quantity">&minus;</button>
                             <input type="number" id="pc-qty" min="1" value="10" inputmode="numeric">
@@ -899,6 +899,41 @@
                 ["Raster to Vector Conversion", 4.49], ["Vector Line Drawing", 4.49],
                 ["Vector Logo Design", 50.00], ["2D CAD Design", 9.99],
                 ["3D Vector Conversion", 19.99], ["Product to Vector", 14.99]
+            ]},
+            { name: "Background Removal", items: [
+                ["Simple Background Removal", 0.39], ["Medium Background Removal", 0.79],
+                ["Complex Background Removal", 1.49], ["White Background Replacement", 0.99],
+                ["Transparent Background (PNG)", 0.89], ["Bulk Background Removal", 0.29]
+            ]},
+            { name: "Headshot Photo Editing", items: [
+                ["Basic Headshot Retouching", 1.50], ["Corporate Headshot Editing", 2.00],
+                ["LinkedIn Profile Retouching", 2.00], ["Headshot Background Replacement", 2.50],
+                ["Skin & Blemish Cleanup", 2.99], ["Premium Portrait Finishing", 4.00]
+            ]},
+            { name: "Photo Restoration", items: [
+                ["Basic Scratch & Dust Removal", 2.99], ["Torn Photo Repair", 5.99],
+                ["Color Restoration (Faded Photo)", 6.99], ["Black & White Colorization", 9.99],
+                ["Severe Damage Restoration", 19.99], ["Missing Part Reconstruction", 24.99]
+            ]},
+            { name: "AI-Generated Image Fixes", items: [
+                ["AI Hand & Finger Correction", 1.99], ["AI Face & Feature Fixes", 2.49],
+                ["AI Text & Logo Cleanup", 2.99], ["AI Artifact Removal", 2.49],
+                ["AI Background Refinement", 3.49], ["Full AI Image Retouch", 4.99]
+            ]},
+            { name: "3D Product Modeling", unit: "model", items: [
+                ["Simple Product 3D Model", 25.00], ["Medium Complexity 3D Model", 49.00],
+                ["Complex Product 3D Model", 99.00], ["Furniture 3D Model", 79.00],
+                ["Jewelry / Fine Detail Model", 149.00], ["AR-Ready 3D Model", 129.00]
+            ]},
+            { name: "3D Rendering", unit: "render", items: [
+                ["Single-Angle Product Render", 15.00], ["Photorealistic Hero Render", 59.00],
+                ["360° Spin Render", 49.00], ["Lifestyle / Scene Render", 79.00],
+                ["Multi-Angle Render Set", 99.00], ["Animation Render (per sec)", 9.99]
+            ]},
+            { name: "Video Editing", unit: "project", items: [
+                ["Basic Video Cut & Trim", 5.00], ["Social Media Reel Editing", 19.00],
+                ["Color Grading & Correction", 15.00], ["Product Demo Editing", 25.00],
+                ["Motion Graphics & Titles", 29.00], ["Full Post-Production (per min)", 9.99]
             ]}
         ];
 
@@ -907,6 +942,7 @@
         var qtyInput = document.getElementById('pc-qty');
         var minusBtn = document.getElementById('pc-minus');
         var plusBtn = document.getElementById('pc-plus');
+        var qtyLabel = document.getElementById('pc-qty-label');
         var sumType = document.getElementById('pc-sum-type');
         var sumPrice = document.getElementById('pc-sum-price');
         var sumQty = document.getElementById('pc-sum-qty');
@@ -938,12 +974,15 @@
         function recalc() {
             var cat = PRICING[catSel.value];
             var item = cat.items[typeSel.value] || cat.items[0];
+            var unit = cat.unit || 'image';
             var qty = parseInt(qtyInput.value, 10);
             if (isNaN(qty) || qty < 1) qty = 1;
             var total = item[1] * qty;
+            var unitTitle = unit.charAt(0).toUpperCase() + unit.slice(1);
+            if (qtyLabel) qtyLabel.textContent = 'Number of ' + unitTitle + 's';
             sumType.textContent = item[0];
-            sumPrice.textContent = '$' + item[1].toFixed(2) + ' / image';
-            sumQty.textContent = qty.toLocaleString('en-US') + (qty === 1 ? ' image' : ' images');
+            sumPrice.textContent = '$' + item[1].toFixed(2) + ' / ' + unit;
+            sumQty.textContent = qty.toLocaleString('en-US') + ' ' + unit + (qty === 1 ? '' : 's');
             totalEl.innerHTML = '<sup>$</sup>' + money(total);
         }
 
