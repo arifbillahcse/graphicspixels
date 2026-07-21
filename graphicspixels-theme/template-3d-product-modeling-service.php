@@ -215,7 +215,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-3d-wrap">
-                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/1-sofa-fast-low.glb" alt="3D Furniture Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/graphics-pixels-1.glb" alt="3D Furniture Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
                             <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
                         <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
@@ -237,7 +237,7 @@
                 <article class="svc-row reverse reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-3d-wrap">
-                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/2_bag.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/graphics-pixels-2-1.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
                             <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
                         <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
@@ -265,7 +265,7 @@
                 <article class="svc-row reveal" data-reveal="up">
                     <div class="svc-media">
                         <div class="svc-3d-wrap">
-                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/3.headphone.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+                            <model-viewer class="svc-3d-viewer" src="<?php echo esc_url( gp_media_base() ); ?>/images/3D/3D%20Modelling/graphics-pixels-3.glb" alt="Premium Luxury Furniture 3D Model" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
                             <button class="svc-3d-expand" aria-label="View fullscreen"><i class="fas fa-expand"></i></button>
                         </div>
                         <p class="svc-3d-caption">Drag to rotate and explore the 3D model</p>
