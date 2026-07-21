@@ -470,7 +470,7 @@
 
                     <div class="vt-slide active" data-video-id="U_mQ6MHt-wI">
                         <div class="vt-card">
-                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg');">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/U_mQ6MHt-wI/hqdefault.jpg');">
                                 <div class="vt-thumb-overlay"></div>
                                 <button class="vt-play" aria-label="Play Tyrell Scott video"><span class="vt-play-icon"></span></button>
                                 <div class="vt-card-footer">
@@ -488,7 +488,7 @@
 
                     <div class="vt-slide" data-video-id="An_AGr0jDMQ">
                         <div class="vt-card">
-                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg');">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/An_AGr0jDMQ/hqdefault.jpg');">
                                 <div class="vt-thumb-overlay"></div>
                                 <button class="vt-play" aria-label="Play Seb Chandler video"><span class="vt-play-icon"></span></button>
                                 <div class="vt-card-footer">
@@ -506,7 +506,7 @@
 
                     <div class="vt-slide" data-video-id="y23k3pzTGQw">
                         <div class="vt-card">
-                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg');">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/y23k3pzTGQw/hqdefault.jpg');">
                                 <div class="vt-thumb-overlay"></div>
                                 <button class="vt-play" aria-label="Play Andrew Porfyri video"><span class="vt-play-icon"></span></button>
                                 <div class="vt-card-footer">
@@ -524,7 +524,7 @@
 
                     <div class="vt-slide" data-video-id="L9fTaCA_lvI">
                         <div class="vt-card">
-                            <div class="vt-thumb" style="background-image: url('https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg');">
+                            <div class="vt-thumb" style="background-image: url('https://img.youtube.com/vi/L9fTaCA_lvI/hqdefault.jpg');">
                                 <div class="vt-thumb-overlay"></div>
                                 <button class="vt-play" aria-label="Play Saville Coble video"><span class="vt-play-icon"></span></button>
                                 <div class="vt-card-footer">
@@ -640,16 +640,16 @@
 
                 <div class="vt-avatars" id="vtAvatars">
                     <button class="vt-avatar active" data-index="0" aria-label="Tyrell Scott">
-                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-1.jpg" alt="Tyrell Scott">
+                        <img src="https://img.youtube.com/vi/U_mQ6MHt-wI/hqdefault.jpg" alt="Tyrell Scott">
                     </button>
                     <button class="vt-avatar" data-index="1" aria-label="Seb Chandler">
-                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-2.jpg" alt="Seb Chandler">
+                        <img src="https://img.youtube.com/vi/An_AGr0jDMQ/hqdefault.jpg" alt="Seb Chandler">
                     </button>
                     <button class="vt-avatar" data-index="2" aria-label="Andrew Porfyri">
-                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-3.jpg" alt="Andrew Porfyri">
+                        <img src="https://img.youtube.com/vi/y23k3pzTGQw/hqdefault.jpg" alt="Andrew Porfyri">
                     </button>
                     <button class="vt-avatar" data-index="3" aria-label="Saville Coble">
-                        <img src="https://graphicspixels.com/wp-content/uploads/2026/05/Video-4.jpg" alt="Saville Coble">
+                        <img src="https://img.youtube.com/vi/L9fTaCA_lvI/hqdefault.jpg" alt="Saville Coble">
                     </button>
                     <button class="vt-avatar" data-index="4" aria-label="David Okafor">
                         <img src="https://img.youtube.com/vi/QtF0jp6hfbY/hqdefault.jpg" alt="David Okafor">
