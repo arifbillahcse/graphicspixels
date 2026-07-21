@@ -374,6 +374,105 @@
                     <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
                 </div>
 
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">M</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Marco Bianchi</span><span class="rv-review-loc">Milan, Italy</span></div>
+                        <span class="rv-review-time">4 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">I handed over a box of my grandparents' torn, water-damaged photographs and honestly expected a rough result. What came back looked like the day they were taken — faces rebuilt, colour restored, cracks gone. My whole family was moved to tears. Extraordinary restoration work.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">P</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Priya Nair</span><span class="rv-review-loc">Dubai, UAE</span></div>
+                        <span class="rv-review-time">6 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">Our AI-generated product visuals kept coming out with warped hands and garbled logos. Graphics Pixels cleaned up every artefact by hand and made them genuinely usable for our campaign. Fast, meticulous, and they actually understood what looked "off" better than we did.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">L</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Lukas Weber</span><span class="rv-review-loc">Berlin, Germany</span></div>
+                        <span class="rv-review-time">7 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">We needed photorealistic 3D renders of a furniture line before the physical samples even existed. The models Graphics Pixels built were indistinguishable from studio photography — right down to the fabric texture and lighting. It saved us an entire product shoot.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">S</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Sofia Reyes</span><span class="rv-review-loc">Madrid, Spain</span></div>
+                        <span class="rv-review-time">3 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">They edit all our social media reels and product demo videos now. Clean cuts, tasteful colour grading, and the motion graphics match our brand perfectly. Turnaround is always ahead of schedule and the revision process is painless. A genuinely reliable creative partner.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">J</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">James Whitfield</span><span class="rv-review-loc">Austin, USA</span></div>
+                        <span class="rv-review-time">9 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">As a corporate photographer I send Graphics Pixels dozens of executive headshots a week. The retouching is natural — nobody looks plastic — skin tones stay true and backgrounds are swapped flawlessly. My clients constantly compliment the final images. Couldn't run my business without them.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">Y</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Yuki Tanaka</span><span class="rv-review-loc">Tokyo, Japan</span></div>
+                        <span class="rv-review-time">5 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">We migrated our entire jewellery catalogue to a new platform and needed thousands of images re-edited to spec. Graphics Pixels handled the volume without a hiccup — consistent reflections, clean shadows, exact sizing. Their attention to detail on tiny gemstone facets is remarkable.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">E</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Emily Carter</span><span class="rv-review-loc">Auckland, New Zealand</span></div>
+                        <span class="rv-review-time">10 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">Vector conversion of our hand-drawn logo and packaging artwork was flawless — crisp, scalable, print-ready files delivered exactly as promised. They even flagged a couple of alignment issues we'd missed in the original. Thoughtful, skilled team that clearly cares about the outcome.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">O</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Olivia Andersson</span><span class="rv-review-loc">Copenhagen, Denmark</span></div>
+                        <span class="rv-review-time">6 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">Bulk e-commerce editing at scale is where they truly shine. We push 500-plus SKUs a month through them — background removal, colour correction, consistent cropping — and every batch comes back uniform and on brand. The reliability alone has transformed our listing workflow.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
+                <div class="rv-review is-hidden">
+                    <div class="rv-review-head">
+                        <div class="rv-avatar">T</div>
+                        <div class="rv-review-meta"><span class="rv-review-name">Thabo Molefe</span><span class="rv-review-loc">Cape Town, South Africa</span></div>
+                        <span class="rv-review-time">8 months ago</span>
+                    </div>
+                    <div class="rv-review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                    <p class="rv-review-text">Their ghost mannequin and neck-joint work took our clothing brand's product pages to a whole new level. The garments look full and three-dimensional without a model, and the consistency across an entire collection is spot on. Fast, affordable, and genuinely a pleasure to work with.</p>
+                    <span class="rv-review-foot"><i class="fab fa-google"></i> See on Google</span>
+                </div>
+
             </div>
 
             <div class="rv-loadmore">
