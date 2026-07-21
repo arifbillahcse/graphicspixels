@@ -611,11 +611,27 @@
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
-                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Scratch Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-5-5.jpg" alt="Before — Photo Restoration">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-6-3.jpg" alt="After — Photo Restoration">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
-                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/2%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration — Damage Repair" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-1-21.jpg" alt="Before — Photo Restoration">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-1-5.png" alt="After — Photo Restoration">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                 </div>
             </div>
