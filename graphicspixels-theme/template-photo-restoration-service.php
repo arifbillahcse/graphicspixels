@@ -276,7 +276,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/10.%20photo-restoration-service/1%20photo-restoration-service/graphics%20pixels%20(1).jpg" alt="Photo Restoration Service Explained" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/Features-of-Old-Photo-Restoration-Service-at-Silo-Path.webp" alt="Photo Restoration Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>

@@ -151,7 +151,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/6.%20color-correction-service/1.%20Color%20correction%20what%20is%20it/graphics%20pixels%20(1).jpg" alt="Color Correction Service Explained" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/images-1.jpg" alt="Color Correction Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>

@@ -151,7 +151,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/8.%20image-masking-service/1.%20Layer%20Masking/graphics%20pixels%20(1).jpg" alt="Image Masking Service — Hair and Soft Edge" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/images-2.jpg" alt="Image Masking Service — Hair and Soft Edge" loading="lazy">
                     </div>
                 </div>
             </div>

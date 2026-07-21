@@ -118,7 +118,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/11-ai-generated-image-services/0.%20christina-wocintechchat-com-m-LQ1t-8Ms5PY-unsplash-1024x683.jpg" alt="AI Image Fix Service Explained" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/0d9e6aa4-48ae-47bd-b8bd-d6aa9b55df27.jpg" alt="AI Image Fix Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>

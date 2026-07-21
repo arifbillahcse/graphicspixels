@@ -150,7 +150,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/7.%20drop-shadow-service/1.%20Types%20of%20Shadow%20Effects%20We%20Provide/graphics%20pixels%20(1).jpg" alt="Drop Shadow Service Example" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/Drop-shadow-service-2.png" alt="Drop Shadow Service Example" loading="lazy">
                     </div>
                 </div>
             </div>

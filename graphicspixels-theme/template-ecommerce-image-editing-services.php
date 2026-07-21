@@ -153,7 +153,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/9.%20ecommerce-image-editing-services/1.%20Clipping%20Path%20with%20Ecommerce%20Image%20Editing%20Services/1%20graphics%20pixels%20(1).jpg" alt="E-commerce Image Editing Service" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/images-3.jpg" alt="E-commerce Image Editing Service" loading="lazy">
                     </div>
                 </div>
             </div>
