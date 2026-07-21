@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GP_THEME_VERSION', '1.2.8' );
+define( 'GP_THEME_VERSION', '1.2.9' );
 
 require get_template_directory() . '/inc/submissions.php';
 require get_template_directory() . '/inc/auto-pages.php';

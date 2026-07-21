@@ -154,7 +154,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="Clipping Path Service Explained" loading="lazy">
+                        <img src="https://techcloudltd.com/wp-content/uploads/2024/11/Clipping-path-service-in-image-post-production-a-girls-bag-edited-to-enhance-sharpness-and-detail.webp" alt="Clipping Path Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>
