@@ -214,8 +214,6 @@
         .cp-intro {
             padding-top: 40px !important;
         }
-        /* Free-trial perks: single column on desktop and mobile */
-        .trial-perks { grid-template-columns: 1fr; }
     </style>
 
 <!-- ============ PAGE HERO / SHOWCASE ============ -->

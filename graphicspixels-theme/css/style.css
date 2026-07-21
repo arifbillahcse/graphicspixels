@@ -427,7 +427,7 @@ img { max-width: 100%; display: block; }
 .free-trial-container { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
 .free-trial-info p { color: rgba(255, 255, 255, 0.8); margin-bottom: 28px; font-size: 16px; }
 .free-trial-info .section-title { margin-top: 8px; }
-.trial-perks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.trial-perks { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .trial-perks li { color: rgba(255, 255, 255, 0.9); font-size: 15px; display: flex; align-items: center; gap: 10px; }
 .trial-perks li i { color: var(--magenta); width: 20px; }
 .free-trial-form { background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-lg); }

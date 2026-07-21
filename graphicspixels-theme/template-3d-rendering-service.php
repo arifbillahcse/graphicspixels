@@ -681,9 +681,7 @@
                     <li><i class="fas fa-bolt"></i> Fast turnaround</li>
                     <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
                     <li><i class="fas fa-face-smile"></i> 100% client satisfaction</li>
-                    <li><i class="fas fa-microchip"></i> Cutting-edge technology</li>
                     <li><i class="fas fa-cart-shopping"></i> Smooth ordering process</li>
-                    <li><i class="fas fa-gem"></i> Emphasis on perfection</li>
                 </ul>
             </div>
             <form class="free-trial-form reveal" data-reveal="right" id="trial-form">
