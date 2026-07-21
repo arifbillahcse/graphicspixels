@@ -150,7 +150,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/5.%20background-removal-service/1.%20Our%20services%20for%20removing%20backgrounds/graphics%20pixels%20(1).jpg" alt="Background Removal Service Example" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/images.jpg" alt="Background Removal Service Example" loading="lazy">
                     </div>
                 </div>
             </div>

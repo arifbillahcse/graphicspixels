@@ -300,7 +300,7 @@ are served efficiently from the uploads folder.
 ## 14. Support & Credits
 
 - **Theme:** Graphics Pixels (custom build)
-- **Current Version:** 1.3.3
+- **Current Version:** 1.3.4
 - **Platform:** WordPress (self-hosted)
 - **Developed by:** [Softorio](https://softorio.com)
 
