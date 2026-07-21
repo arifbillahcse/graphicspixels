@@ -154,7 +154,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/5.%20Fashion%20%26%20Beauty%20Photo%20Retouching/graphics%20pixels%20(1).jpg" alt="Professional Photo Retouching Service Explained" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/images-4.jpg" alt="Professional Photo Retouching Service Explained" loading="lazy">
                     </div>
                 </div>
             </div>

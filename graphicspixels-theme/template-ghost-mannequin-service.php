@@ -150,7 +150,7 @@
                 </div>
                 <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
                     <div class="svc-img">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/3.%20ghost-mannequin-service/5.%20Get%20top-notch%20editing%20Retouched%20Photos/graphics%20pixels%20(1).jpg" alt="Ghost Mannequin Before and After" loading="lazy">
+                        <img src="https://graphicspixels.com/wp-content/uploads/2026/07/ghost-mannequin-effects-changes-game-for-apparel-business.webp" alt="Ghost Mannequin Before and After" loading="lazy">
                     </div>
                 </div>
             </div>
