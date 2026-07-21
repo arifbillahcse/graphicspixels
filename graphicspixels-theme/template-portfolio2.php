@@ -716,18 +716,6 @@
         </div>
     </section>
 
-    <!-- ============ CTA STRIP ============ -->
-    <section class="pf-cta">
-        <div class="container pf-cta-inner">
-            <h2>Like What You See?</h2>
-            <p>Send us 1 to 5 images and we'll edit them free within 24 hours — across any service in this portfolio. No payment required until you're happy with the result.</p>
-            <div class="pf-cta-actions">
-                <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline-white">View All Services</a>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ PORTFOLIO LIGHTBOX ============ -->
     <div class="pf-lb" id="pfLb" role="dialog" aria-modal="true" aria-label="Portfolio image preview">
         <div class="pf-lb-back" id="pfLbBack"></div>

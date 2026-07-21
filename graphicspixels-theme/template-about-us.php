@@ -811,18 +811,4 @@
         </div>
     </section>
 
-    <!-- ============ CTA ============ -->
-    <section class="au-cta">
-        <div class="container">
-            <div class="reveal" data-reveal="up">
-                <h2>Ready to Transform Your Images?</h2>
-                <p>Join 1,500+ global brands who trust Graphicspixels for professional photo editing, retouching, and 3D visualisation.</p>
-                <div class="au-cta-actions">
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-primary">Get a Free Quote</a>
-                    <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline-white">View All Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
 <?php get_footer(); ?>

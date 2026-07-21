@@ -857,21 +857,6 @@
         </div>
     </section>
 
-    <!-- ============ CUSTOM PRICING CTA ============ -->
-    <section class="pr-cta">
-        <div class="container">
-            <div class="pr-cta-inner reveal" data-reveal="up">
-                <span class="section-tag">Custom Solutions</span>
-                <h2>Let's Talk About Your<br>Custom Pricing</h2>
-                <p>Check out what satisfied customers have to say about our products &amp; services. We're ready to discuss your specific needs and create a tailored solution that fits your budget and requirements.</p>
-                <div class="pr-cta-actions">
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-primary">Let's Talk</a>
-                    <a href="<?php echo esc_url( home_url('/portfolio/') ); ?>" class="btn pr-btn-outline">View Our Work</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ PRICING CALCULATOR SCRIPT ============ -->
     <script>
     (function () {

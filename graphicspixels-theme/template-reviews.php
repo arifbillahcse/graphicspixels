@@ -72,27 +72,11 @@
         .rv-featured-logos span:hover { color: var(--navy); }
 
         /* --- Dark CTA banner --- */
-        .rv-banner { padding: 80px 0; }
-        .rv-banner-inner {
-            display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
-            border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);
-        }
-        .rv-banner-img { background-size: cover; background-position: center; min-height: 320px; }
-        .rv-banner-body {
-            background: linear-gradient(155deg, #01015E 0%, #16006e 55%, #0a0050 100%);
-            padding: 56px 48px; color: #fff;
-        }
-        .rv-banner-body h2 { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 16px; }
-        .rv-banner-body p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
-        .rv-banner-tools { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
-        .rv-banner-tools span { font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 100px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: #fff; }
 
         /* --- Responsive --- */
         @media (max-width: 992px) {
             .rv-summary-inner { grid-template-columns: 1fr; gap: 36px; }
             .rv-written-grid { grid-template-columns: repeat(2, 1fr); }
-            .rv-banner-inner { grid-template-columns: 1fr; }
-            .rv-banner-img { min-height: 240px; }
         }
         @media (max-width: 768px) {
             .rv-header { padding: 120px 0 40px; }
@@ -100,7 +84,6 @@
             .rv-video-grid { grid-template-columns: 1fr; }
             .rv-written-grid { grid-template-columns: 1fr; }
             .rv-featured-logos { gap: 30px; }
-            .rv-banner-body { padding: 40px 28px; }
         }
     </style>
 
@@ -492,27 +475,6 @@
                 <span><i class="fab fa-amazon"></i> Amazon Community</span>
                 <span><i class="fas fa-camera-retro"></i> ShotKit</span>
                 <span><i class="fas fa-award"></i> Clutch.co</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ DARK CTA BANNER ============ -->
-    <section class="rv-banner">
-        <div class="container">
-            <div class="rv-banner-inner">
-                <div class="rv-banner-img" style="background-image:url('<?php echo esc_url( gp_media_base() ); ?>/images/services_hero.png');"></div>
-                <div class="rv-banner-body">
-                    <h2>Ready to See the Graphics Pixels Difference for Yourself?</h2>
-                    <p>Join 1,700+ photographers and e-commerce brands who outsource their image editing to us — and get time back in their day without sacrificing a single pixel of quality. Background removal, retouching, clipping paths, color grading — we do it all, fast and flawlessly.</p>
-                    <div class="rv-banner-tools">
-                        <span>Adobe Photoshop</span>
-                        <span>Adobe Lightroom</span>
-                        <span>Capture One</span>
-                        <span>Affinity Photo</span>
-                        <span>CorelDRAW</span>
-                    </div>
-                    <a href="#free-trial" class="btn btn-primary">Start a Free Trial</a>
-                </div>
             </div>
         </div>
     </section>

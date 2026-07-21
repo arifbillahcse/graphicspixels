@@ -126,18 +126,4 @@
         </div>
     </section>
 
-    <!-- ============ CTA ============ -->
-    <section class="faq-cta">
-        <div class="container">
-            <h2>Still have questions?</h2>
-            <p>Our team is happy to help — reach out or start with a free trial.</p>
-            <div class="faq-cta-actions">
-                <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-
 <?php get_footer(); ?>

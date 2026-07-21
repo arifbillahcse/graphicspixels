@@ -1,4 +1,49 @@
 <?php $gp_uri = gp_media_base(); ?>
+
+<!-- ============ GLOBAL CTA BANNER ============ -->
+<style>
+    .gp-cta-banner { padding: 80px 0; }
+    .gp-cta-banner-inner {
+        display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
+        border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);
+    }
+    .gp-cta-banner-img { background-size: cover; background-position: center; min-height: 320px; }
+    .gp-cta-banner-body {
+        background: linear-gradient(155deg, #01015E 0%, #16006e 55%, #0a0050 100%);
+        padding: 56px 48px; color: #fff;
+    }
+    .gp-cta-banner-body h2 { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 16px; }
+    .gp-cta-banner-body p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
+    .gp-cta-banner-tools { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+    .gp-cta-banner-tools span { font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 100px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: #fff; }
+    @media (max-width: 992px) {
+        .gp-cta-banner-inner { grid-template-columns: 1fr; }
+        .gp-cta-banner-img { min-height: 240px; }
+    }
+    @media (max-width: 768px) {
+        .gp-cta-banner-body { padding: 40px 28px; }
+    }
+</style>
+<section class="gp-cta-banner">
+    <div class="container">
+        <div class="gp-cta-banner-inner">
+            <div class="gp-cta-banner-img" style="background-image:url('<?php echo esc_url( $gp_uri ); ?>/images/services_hero.png');"></div>
+            <div class="gp-cta-banner-body">
+                <h2>Ready to See the Graphics Pixels Difference for Yourself?</h2>
+                <p>Join 1,700+ photographers and e-commerce brands who outsource their image editing to us — and get time back in their day without sacrificing a single pixel of quality. Background removal, retouching, clipping paths, color grading — we do it all, fast and flawlessly.</p>
+                <div class="gp-cta-banner-tools">
+                    <span>Adobe Photoshop</span>
+                    <span>Adobe Lightroom</span>
+                    <span>Capture One</span>
+                    <span>Affinity Photo</span>
+                    <span>CorelDRAW</span>
+                </div>
+                <a href="#free-trial" class="btn btn-primary">Start a Free Trial</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
     <div class="container footer-grid">

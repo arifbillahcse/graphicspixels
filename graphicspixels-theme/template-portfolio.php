@@ -892,18 +892,6 @@
         </div>
     </section>
 
-    <!-- ============ CTA STRIP ============ -->
-    <section class="pf-cta-strip">
-        <div class="container">
-            <h2>Ready to See Your Images Transformed?</h2>
-            <p>Send 1–5 images for a free trial. Results back within 24 hours — no payment required.</p>
-            <div class="pf-cta-actions">
-                <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline-white">Explore All Services</a>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ FOOTER ============ -->
 
     <script>
