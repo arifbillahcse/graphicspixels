@@ -218,28 +218,36 @@
                 <div class="pf-grid pf-grid-3 reveal" data-reveal="up">
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="After — Transparent Background Clipping Path">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-1-14.jpg" alt="Before — Clipping Path Service">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-Before-1.jpg" alt="Before — Transparent Background Clipping Path">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-1-4.png" alt="After — Clipping Path Service">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                     <div class="ba-slider" aria-label="Before and after comparison">
                         <div class="ba-before">
-                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/graphics%20pixels%20%281%29.jpg" alt="Before — White and Colored Background">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-Before-1-6.jpg" alt="Before — Clipping Path Service">
                             <span class="ba-label ba-label-before">Before</span>
                         </div>
                         <div class="ba-after">
-                            <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/1.%20White%20and%20Colored%20Backgrounds/1%20graphics%20pixels.jpg" alt="After — White and Colored Background">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-After-1-5.jpg" alt="After — Clipping Path Service">
                             <span class="ba-label ba-label-after">After</span>
                         </div>
                         <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
-                    <div class="svc-img" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:#f4f4f8;">
-                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/1.%20clipping-path-service/0-transparent-background/graphics-pixels-After-1.jpg" alt="Clipping Path — Transparent Background" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+                    <div class="ba-slider" aria-label="Before and after comparison">
+                        <div class="ba-before">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-2-1-1.jpg" alt="Before — Clipping Path Service">
+                            <span class="ba-label ba-label-before">Before</span>
+                        </div>
+                        <div class="ba-after">
+                            <img src="https://graphicspixels.com/wp-content/uploads/2026/07/graphics-pixels-3.jpg" alt="After — Clipping Path Service">
+                            <span class="ba-label ba-label-after">After</span>
+                        </div>
+                        <div class="ba-divider"><button class="ba-handle" aria-hidden="true"><i class="fas fa-arrows-left-right"></i></button></div>
                     </div>
                 </div>
             </div>
