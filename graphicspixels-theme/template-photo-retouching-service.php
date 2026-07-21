@@ -138,6 +138,29 @@
         </div>
     </section>
 
+    <!-- ============ ABOUT THE SERVICE ============ -->
+    <section class="cp-intro">
+        <div class="container">
+            <div class="cp-intro-inner">
+                <div class="cp-intro-text reveal" data-reveal="left">
+                    <span class="section-tag">About the Service</span>
+                    <h2 class="section-title">What Is Professional Photo Retouching?</h2>
+                    <p>Photo retouching is the manual refinement of a photograph after the shoot — correcting skin tone, smoothing texture, removing blemishes, adjusting light and shadow, and sharpening detail — without losing the natural look of the original image. At Graphics Pixels, every frame is retouched by hand in Photoshop by a trained human editor, never run through an automated filter or AI preset.</p>
+                    <p>We cover the full range: high-end beauty and portrait retouching for skin and features, e-commerce and product retouching for clean, sale-ready listings, fashion and apparel retouching for texture and fit, jewelry polishing for reflective detail, and commercial and editorial finishing for advertising and print. Every order is checked against a reference standard before delivery, with 120+ trained retouchers on staff, a 24-hour turnaround, and unlimited revisions until you're satisfied.</p>
+                    <div class="cp-intro-actions">
+                        <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
+                        <a href="<?php echo esc_url( home_url('/services/') ); ?>" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="cp-intro-image reveal" data-reveal="right" data-delay="150">
+                    <div class="svc-img">
+                        <img src="<?php echo esc_url( gp_media_base() ); ?>/images/individualservicepage/2.%20photo-retouching-service/5.%20Fashion%20%26%20Beauty%20Photo%20Retouching/graphics%20pixels%20(1).jpg" alt="Professional Photo Retouching Service Explained" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ VIDEO ============ -->
     <section class="pe-video-section">
         <div class="container">
