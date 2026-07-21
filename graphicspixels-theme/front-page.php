@@ -755,13 +755,15 @@
             <div class="free-trial-info reveal" data-reveal="left">
                 <span class="section-tag light">Get Started</span>
                 <h2 class="section-title light">With the FREE TRIAL</h2>
-                <p>Complete the form, upload your images, and get your free trial project done in 1 hour.</p>
+                <p><strong>Try Our Editing Services Free — Results Back in 24 Hours</strong><br>Send 1 to 5 images and we return them edited to your specification within 24 hours at no charge. No payment required. Review the quality before placing a paid order.</p>
                 <ul class="trial-perks">
-                    <li><i class="fas fa-globe"></i> Global service</li>
-                    <li><i class="fas fa-bolt"></i> Fast turnaround</li>
-                    <li><i class="fas fa-rotate"></i> Unlimited revisions</li>
-                    <li><i class="fas fa-face-smile"></i> 100% client satisfaction</li>
-                    <li><i class="fas fa-cart-shopping"></i> Smooth ordering process</li>
+                    <li><i class="fas fa-credit-card"></i> No payment required — review the work before ordering</li>
+                    <li><i class="fas fa-images"></i> 1 to 5 images edited at full quality</li>
+                    <li><i class="fas fa-clock"></i> Results returned within 24 hours</li>
+                    <li><i class="fas fa-rotate"></i> Unlimited revisions on paid orders</li>
+                    <li><i class="fas fa-lock"></i> NDA-compliant — your files are never shared</li>
+                    <li><i class="fas fa-tag"></i> Bulk discounts from 100 images</li>
+                    <li><i class="fas fa-handshake"></i> Dedicated account management for studios</li>
                 </ul>
             </div>
 
