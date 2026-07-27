@@ -15,6 +15,12 @@
                         Edit
                     </a>
                 @endcan
+                @can('create', App\Models\Order::class)
+                    <a href="{{ route('leads.convert', $lead) }}"
+                       class="px-3 py-1.5 rounded-md bg-[#C3009D] text-white text-sm hover:bg-[#C3009D]/90">
+                        Convert to order
+                    </a>
+                @endcan
             </div>
         </div>
     </x-slot>

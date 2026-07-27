@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\BatchController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LeadAttachmentController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\LeadConversionController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -62,6 +65,34 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::get('/{lead}/attachments/{attachment}', [LeadAttachmentController::class, 'download'])
             ->name('attachments.download');
+
+        // Turning a won lead into a client and their first order.
+        Route::get('/{lead}/convert', [LeadConversionController::class, 'create'])->name('convert');
+        Route::post('/{lead}/convert', [LeadConversionController::class, 'store'])->name('convert.store');
+    });
+
+    /*
+    | Production. OrderPolicy gates these on orders.* plus ownership, so a team
+    | leader can drive their own orders without holding orders.update. Editors
+    | have no order access at all and work from /batches/mine instead.
+    */
+    Route::prefix('orders')->name('orders.')->group(function () {
+        Route::get('/', [OrderController::class, 'index'])->name('index');
+        Route::get('/queue', [OrderController::class, 'queue'])->name('queue');
+
+        Route::get('/{order}', [OrderController::class, 'show'])->name('show');
+        Route::put('/{order}', [OrderController::class, 'update'])->name('update');
+        Route::patch('/{order}/status', [OrderController::class, 'updateStatus'])->name('status');
+        Route::patch('/{order}/assign', [OrderController::class, 'assign'])->name('assign');
+        Route::post('/{order}/notes', [OrderController::class, 'storeNote'])->name('notes.store');
+        Route::post('/{order}/batches', [BatchController::class, 'store'])->name('batches.store');
+    });
+
+    Route::prefix('batches')->name('batches.')->group(function () {
+        Route::get('/mine', [BatchController::class, 'mine'])->name('mine');
+        Route::patch('/{batch}/assign', [BatchController::class, 'assign'])->name('assign');
+        Route::patch('/{batch}/status', [BatchController::class, 'updateStatus'])->name('status');
+        Route::post('/{batch}/notes', [BatchController::class, 'storeNote'])->name('notes.store');
     });
 });
 

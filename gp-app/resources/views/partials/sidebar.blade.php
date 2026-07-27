@@ -5,8 +5,8 @@
     $navItems = [
         ['label' => 'Leads',           'permission' => 'leads.view',      'route' => 'leads.index'],
         ['label' => 'Clients',         'permission' => 'clients.view',    'phase' => 2],
-        ['label' => 'Orders',          'permission' => 'orders.view',     'phase' => 3],
-        ['label' => 'Batches',         'permission' => 'batches.view',    'phase' => 3],
+        ['label' => 'Orders',          'permission' => 'orders.view',     'route' => 'orders.index'],
+        ['label' => 'My batches',      'permission' => 'batches.view',    'route' => 'batches.mine'],
         ['label' => 'Quality Control', 'permission' => 'qc.view',         'phase' => 4],
         ['label' => 'Staff',           'permission' => 'staff.view',      'phase' => 5],
         ['label' => 'Reports',         'permission' => 'reports.view',    'phase' => 5],
@@ -47,6 +47,6 @@
     </nav>
 
     <div class="px-5 py-3 border-t border-white/10 text-[11px] text-white/40">
-        Phase 2 &middot; Lead pipeline
+        Phase 3 &middot; Production
     </div>
 </aside>

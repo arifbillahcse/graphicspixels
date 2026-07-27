@@ -144,13 +144,21 @@ class RoleAccessTest extends TestCase
         $this->assertFalse($qc->can('leads.view'));
     }
 
-    public function test_marketing_manager_owns_leads_but_not_production(): void
+    public function test_marketing_manager_owns_leads_and_raises_orders(): void
     {
         $marketing = $this->user('marketing1@graphicspixels.test');
 
         $this->assertTrue($marketing->can('leads.create'));
         $this->assertTrue($marketing->can('clients.manage'));
-        $this->assertFalse($marketing->can('orders.create'));
+
+        // Marketing converts a won lead into an order and can follow it.
+        $this->assertTrue($marketing->can('orders.create'));
+        $this->assertTrue($marketing->can('orders.view'));
+
+        // Running the floor stays with production.
+        $this->assertFalse($marketing->can('orders.assign'));
+        $this->assertFalse($marketing->can('orders.delete'));
+        $this->assertFalse($marketing->can('batches.create'));
         $this->assertFalse($marketing->can('qc.approve'));
     }
 

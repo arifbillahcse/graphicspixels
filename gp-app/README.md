@@ -7,7 +7,7 @@ production workflow, quality control, and team management.
 |---|---|---|
 | **1** | Authentication, roles, permissions, staff schema, role-aware dashboards | Built |
 | **2** | Lead intake webhook, CRM pipeline, activity log, attachments | Built |
-| 3 | Orders and production workflow | Not started |
+| **3** | Lead conversion, orders, production board, batches, SLA | Built |
 | 4 | Quality control | Not started |
 | 5 | Team, HR and reporting | Not started |
 | 6 | Notifications and polish | Not started |
@@ -122,15 +122,30 @@ phase is granted to administrators automatically.
 | Role | Permissions |
 |---|---|
 | **Admin** | everything (25) |
-| **Marketing Manager** | `leads.view` `leads.create` `leads.update` `leads.assign` `clients.view` `clients.manage` `reports.view` |
+| **Marketing Manager** | `leads.view` `leads.create` `leads.update` `leads.assign` `clients.view` `clients.manage` `reports.view` `orders.view` `orders.create` |
 | **Production Manager** | `orders.*` `batches.view` `batches.create` `batches.assign` `qc.view` `clients.view` `staff.view` `staff.workload.view` `reports.view` `reports.export` |
 | **Team Leader** | `orders.view` `batches.view` `batches.create` `batches.assign` `qc.view` `staff.workload.view` |
 | **Editor** | `batches.view` `batches.update.own` |
 | **QC Staff** | `batches.view` `qc.view` `qc.approve` `qc.reject` |
 
-The `leads.*` permissions are live as of phase 2; the rest are seeded and gate
-the sidebar, but their features arrive in later phases. Editors and QC staff hold
-no `leads.*` permission at all, so every lead route returns 403 for them.
+The `leads.*` and `orders.*`/`batches.*` permissions are live as of phases 2 and
+3; the rest are seeded and gate the sidebar, but their features arrive later.
+Editors and QC staff hold no `leads.*` or `orders.*` permission at all, so those
+routes return 403 for them.
+
+Two ownership rules sit alongside the permissions rather than inside them:
+
+- **Team leaders** hold `orders.view` but not `orders.update`. `OrderPolicy`
+  also accepts *being the order's team leader*, so they can drive their own
+  queue and nobody else's, without being given blanket update rights.
+- **Editors** hold `batches.update.own`, and `BatchPolicy` checks the batch is
+  actually theirs. `BatchStatus::editorCanMoveTo()` further limits them to the
+  legal next step, so an editor cannot move work straight to Completed and
+  skip QC.
+
+Marketing gained `orders.view` and `orders.create` in phase 3: they win the deal,
+so they raise the order and can follow it. Handing it to a team leader
+(`orders.assign`) and running the floor stayed with production.
 
 ---
 
@@ -240,6 +255,7 @@ php artisan test
 | `RoleAccessTest` | Redirect map, cross-role 403s, permission matrix per role, seeded roster, editor→team-leader links |
 | `SubmissionWebhookTest` | Token auth, both real WP payload shapes, empty-string handling, duplicate suppression, validation, attachment queueing, scheme filtering |
 | `LeadPipelineTest` | Who may see and act on leads, status/assign/note logging, bulk actions, attachment download authorisation and cross-lead access |
+| `OrderWorkflowTest` | Lead→client→order conversion, returning-client reuse, board access, status moves (form and JSON), team-leader ownership, batch splitting and auto-assign, editor isolation, SLA bands and the at-risk scope |
 
 ---
 
@@ -252,8 +268,9 @@ database with plain PDO. They need no dependencies, so you can re-run them any
 time:
 
 ```bash
-php tools/verify-phase1-standalone.php   # 40 assertions
+php tools/verify-phase1-standalone.php   # 42 assertions
 php tools/verify-phase2-standalone.php   # 55 assertions
+php tools/verify-phase3-standalone.php   # 99 assertions
 php tools/check-blade.php                # directive balance + @include targets
 ```
 
@@ -284,7 +301,27 @@ Once Laravel is installed, `php artisan test` supersedes them.
 - Deleting a lead cascades to its activities and attachments
 - Status transitions persist `{from, to}` in the activity properties
 
-Also checked: `php -l` clean on all 39 PHP files; all 20 Blade templates have
+**Verified — phase 3** (99 assertions, all passing):
+
+- `BatchPlanner` conserves every image across both split modes, spreads the
+  remainder so sizes never differ by more than one, clamps a request for more
+  batches than images, and never emits an empty batch
+- Assignment skips a loaded editor until the others catch up, levels uneven
+  loads out, and leaves the caller's load array unmutated
+- The SLA bands were walked across their exact boundaries — 12h, 11h59m, 4h,
+  3h59m, on the deadline, one minute over — plus the 80% at-risk rule, the
+  delivered met/missed outcomes, and a zero-length window that would otherwise
+  divide by zero
+- Duplicate order references and duplicate batch numbers within an order are
+  both rejected, while batch numbers restart correctly per order
+- The at-risk query returns nothing 12h in, both orders past 80%, and drops
+  delivered orders
+- Deleting a batch removes its notes but leaves order-level notes; deleting an
+  order cascades to both; removing an editor leaves their batches in place
+- `ServiceType::guessFrom()` matches website free text including American
+  spelling, and returns null rather than guessing wrong
+
+Also checked: `php -l` clean on all 64 PHP files; all 26 Blade templates have
 balanced directives and resolving `@include` targets; every Laravel and Spatie
 API used was confirmed against the actual framework source.
 
@@ -339,6 +376,25 @@ tests/Feature/{SubmissionWebhookTest,LeadPipelineTest}.php
 tools/                                  Standalone verification harnesses
 ```
 
+**Phase 3 — production**
+
+```
+app/Enums/{OrderStatus,BatchStatus,ServiceType,RateTier}.php
+app/Support/Sla.php                     Countdown, risk bands, at-risk rule
+app/Support/BatchPlanner.php            Splitting + load-balanced assignment
+app/Support/OrderReference.php          GP-YYYY-NNNN references
+app/Models/{Client,Order,Batch,OrderNote}.php
+app/Policies/{OrderPolicy,BatchPolicy}.php
+app/Http/Controllers/LeadConversionController.php
+app/Http/Controllers/{OrderController,BatchController}.php
+database/migrations/2025_03_01_00000{1,2,3,4}_*.php
+database/factories/{ClientFactory,OrderFactory,BatchFactory}.php
+resources/views/orders/                 Board, card, detail, conversion form
+resources/views/batches/mine.blade.php  Editor work queue
+resources/views/partials/production-summary.blade.php
+tests/Feature/OrderWorkflowTest.php
+```
+
 `PermissionMatrix`, `StaffRoster`, `SubmissionPayload` and `AttachmentFilename`
 are deliberately free of framework dependencies so they can be asserted against
 in isolation — that is what makes the standalone harnesses possible.
@@ -347,7 +403,6 @@ in isolation — that is what makes the standalone harnesses possible.
 
 ## Next phase
 
-**Phase 3 — Orders & production workflow.** Converting a won lead into an order,
-the production board (Received → Assigned → Editing → QC → Revision → Delivered),
-splitting orders into batches across a team leader's editors, and SLA countdowns
-against the studio's 24-hour turnaround promise.
+**Phase 4 — Quality control.** A QC queue of batches marked Ready for QC,
+service-specific checklists, approve/reject with blocker and minor comments, the
+rework loop back to the original editor, and per-editor defect rates.

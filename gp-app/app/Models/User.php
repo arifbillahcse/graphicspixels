@@ -65,6 +65,31 @@ class User extends Authenticatable
     }
 
     /**
+     * Orders this user is the responsible team leader for.
+     */
+    public function managedOrders(): HasMany
+    {
+        return $this->hasMany(Order::class, 'team_leader_id');
+    }
+
+    /**
+     * Batches assigned to this user as the editor.
+     */
+    public function batches(): HasMany
+    {
+        return $this->hasMany(Batch::class, 'editor_id');
+    }
+
+    /**
+     * How much unfinished work this editor is carrying, used to balance new
+     * batch assignments.
+     */
+    public function openBatchCount(): int
+    {
+        return $this->batches()->open()->count();
+    }
+
+    /**
      * Primary role as an enum, or null when the user has no recognised role.
      * Users are seeded with exactly one role; if that ever changes, the first
      * assigned role wins for routing purposes.

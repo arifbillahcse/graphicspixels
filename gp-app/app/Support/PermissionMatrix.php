@@ -79,6 +79,12 @@ final class PermissionMatrix
             'clients.view',
             'clients.manage',
             'reports.view',
+
+            // Marketing wins the deal, so they raise the resulting order and
+            // can follow it afterwards. Handing it to a team leader
+            // (orders.assign) and running the floor stay with production.
+            'orders.view',
+            'orders.create',
         ],
         'production_manager' => [
             'orders.view',

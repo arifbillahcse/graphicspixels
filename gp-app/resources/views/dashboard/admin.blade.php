@@ -3,6 +3,8 @@
         <h1 class="text-lg font-semibold text-gray-900">Admin Dashboard</h1>
     </x-slot>
 
+    @include('partials.production-summary')
+
     @include('partials.lead-summary')
 
     @include('partials.role-panel', [

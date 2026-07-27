@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\BatchStatus;
 use App\Enums\LeadStatus;
+use App\Enums\OrderStatus;
+use App\Models\Batch;
 use App\Models\Lead;
 use App\Models\LeadActivity;
+use App\Models\Order;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -31,7 +35,10 @@ class DashboardController extends Controller
 
     public function admin(): View
     {
-        return view('dashboard.admin', ['leads' => $this->leadSummary()]);
+        return view('dashboard.admin', [
+            'leads' => $this->leadSummary(),
+            'production' => $this->productionSummary(),
+        ]);
     }
 
     public function marketing(): View
@@ -41,17 +48,39 @@ class DashboardController extends Controller
 
     public function production(): View
     {
-        return view('dashboard.production');
+        return view('dashboard.production', ['production' => $this->productionSummary()]);
     }
 
-    public function team(): View
+    public function team(Request $request): View
     {
-        return view('dashboard.team');
+        $userId = $request->user()->id;
+
+        return view('dashboard.team', [
+            'queue' => Order::forTeamLeader($userId)
+                ->open()
+                ->with('client')
+                ->withCount('batches')
+                ->orderBy('deadline')
+                ->get(),
+            'unbatched' => Order::forTeamLeader($userId)
+                ->open()
+                ->doesntHave('batches')
+                ->count(),
+        ]);
     }
 
-    public function editor(): View
+    public function editor(Request $request): View
     {
-        return view('dashboard.editor');
+        $batches = Batch::forEditor($request->user()->id)
+            ->with('order.client')
+            ->orderBy('status')
+            ->get();
+
+        return view('dashboard.editor', [
+            'batches' => $batches,
+            'openBatches' => $batches->filter(fn (Batch $b) => $b->status->isOpen())->count(),
+            'revisions' => $batches->where('status', BatchStatus::Revision)->count(),
+        ]);
     }
 
     public function qc(): View
@@ -89,6 +118,39 @@ class DashboardController extends Controller
                 ->count(),
             'total' => array_sum($byStatus),
             'recent' => LeadActivity::with(['lead', 'user'])->latest()->limit(10)->get(),
+        ];
+    }
+
+    /**
+     * Production figures for the admin and production dashboards.
+     *
+     * @return array<string,mixed>
+     */
+    private function productionSummary(): array
+    {
+        $counts = Order::query()
+            ->selectRaw('status, COUNT(*) as aggregate')
+            ->groupBy('status')
+            ->pluck('aggregate', 'status')
+            ->all();
+
+        $byStatus = [];
+
+        foreach (OrderStatus::cases() as $status) {
+            $byStatus[$status->value] = (int) ($counts[$status->value] ?? 0);
+        }
+
+        return [
+            'counts' => $byStatus,
+            'open' => array_sum($byStatus) - $byStatus[OrderStatus::Delivered->value],
+            'unassigned' => Order::open()->whereNull('team_leader_id')->count(),
+            'dueToday' => Order::open()->whereDate('deadline', today())->count(),
+            'atRiskCount' => Order::atRisk()->count(),
+            'atRisk' => Order::atRisk()
+                ->with(['client', 'teamLeader'])
+                ->orderBy('deadline')
+                ->limit(10)
+                ->get(),
         ];
     }
 }
