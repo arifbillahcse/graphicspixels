@@ -117,7 +117,7 @@
                         </div>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-phone" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="tel:+447576228915" style="color: var(--magenta); text-decoration: none; font-weight: 600;">+44 7576-228-915</a></p>
+                            <p style="margin: 0;"><a href="tel:+447462284915" style="color: var(--magenta); text-decoration: none; font-weight: 600;">+44 7462 284915</a></p>
                         </div>
                         <div style="display: flex; gap: 10px;">
                             <i class="fas fa-envelope" style="color: var(--magenta); margin-top: 2px;"></i>
@@ -134,7 +134,7 @@
                         </div>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-phone" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="tel:+8801980326731" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Phone number: +8801980326731</a></p>
+                            <p style="margin: 0;"><a href="tel:+8801890373731" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Phone number: +880 1890-373731</a></p>
                         </div>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-envelope" style="color: var(--magenta); margin-top: 2px;"></i>
