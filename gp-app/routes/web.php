@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LeadAttachmentController;
+use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +38,31 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/qc', [DashboardController::class, 'qc'])
         ->middleware('role:admin|qc_staff')
         ->name('dashboard.qc');
+
+    /*
+    | Lead pipeline. Access is enforced by LeadPolicy against the leads.*
+    | permissions, so editors and QC staff cannot reach any of these.
+    | Static segments are declared before /{lead} so they are not swallowed
+    | by the wildcard.
+    */
+    Route::prefix('leads')->name('leads.')->group(function () {
+        Route::get('/', [LeadController::class, 'index'])->name('index');
+        Route::get('/create', [LeadController::class, 'create'])->name('create');
+        Route::post('/', [LeadController::class, 'store'])->name('store');
+        Route::post('/bulk', [LeadController::class, 'bulk'])->name('bulk');
+
+        Route::get('/{lead}', [LeadController::class, 'show'])->name('show');
+        Route::get('/{lead}/edit', [LeadController::class, 'edit'])->name('edit');
+        Route::put('/{lead}', [LeadController::class, 'update'])->name('update');
+        Route::delete('/{lead}', [LeadController::class, 'destroy'])->name('destroy');
+
+        Route::patch('/{lead}/status', [LeadController::class, 'updateStatus'])->name('status');
+        Route::patch('/{lead}/assign', [LeadController::class, 'assign'])->name('assign');
+        Route::post('/{lead}/notes', [LeadController::class, 'storeNote'])->name('notes.store');
+
+        Route::get('/{lead}/attachments/{attachment}', [LeadAttachmentController::class, 'download'])
+            ->name('attachments.download');
+    });
 });
 
 Route::middleware('auth')->group(function () {

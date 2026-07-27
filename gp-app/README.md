@@ -1,11 +1,16 @@
-# GraphicsPixels Operations Platform — Phase 1 (Foundation)
+# GraphicsPixels Operations Platform
 
 Internal management application for GraphicsPixels: leads and client onboarding,
 production workflow, quality control, and team management.
 
-Phase 1 delivers **only the foundation** — authentication, roles, permissions,
-the staff schema, and role-aware dashboard shells. Leads, orders, batches and QC
-arrive in phases 2–4.
+| Phase | Scope | State |
+|---|---|---|
+| **1** | Authentication, roles, permissions, staff schema, role-aware dashboards | Built |
+| **2** | Lead intake webhook, CRM pipeline, activity log, attachments | Built |
+| 3 | Orders and production workflow | Not started |
+| 4 | Quality control | Not started |
+| 5 | Team, HR and reporting | Not started |
+| 6 | Notifications and polish | Not started |
 
 ---
 
@@ -60,6 +65,20 @@ php artisan db:seed
 php artisan serve
 ```
 
+### Also needed for phase 2
+
+```bash
+# Queue table + worker, so attachment downloads do not block the webhook
+php artisan queue:table
+php artisan migrate
+#   in .env set QUEUE_CONNECTION=database
+php artisan queue:work
+```
+
+Attachments are stored on the `local` disk, outside `public/`, and served only
+through an authorised download route — so **no `storage:link` is required**, and
+deliberately so: lead files should never be reachable by URL guessing.
+
 > `cp -rn` copies without overwriting, so the overlay files below survive. If you
 > prefer, scaffold directly and copy the overlay over the top with plain `cp -r`.
 
@@ -109,9 +128,77 @@ phase is granted to administrators automatically.
 | **Editor** | `batches.view` `batches.update.own` |
 | **QC Staff** | `batches.view` `qc.view` `qc.approve` `qc.reject` |
 
-Phase 1 only *seeds* these names and binds them to roles — the features that
-consume them come later. The sidebar is already gated on them, so the navigation
-visibly differs per role.
+The `leads.*` permissions are live as of phase 2; the rest are seeded and gate
+the sidebar, but their features arrive in later phases. Editors and QC staff hold
+no `leads.*` permission at all, so every lead route returns 403 for them.
+
+---
+
+## Connecting the WordPress site
+
+The theme on the `wp-graphicspixels` branch already forwards submissions — see
+`gp_forward_to_app()` in `inc/submissions.php`. Point it at this app by adding
+two constants to the site's `wp-config.php`:
+
+```php
+define( 'GP_APP_WEBHOOK_URL', 'https://app.graphicspixels.com/api/submissions' );
+define( 'GP_APP_API_KEY', 'a-long-random-secret' );
+```
+
+Then set the same secret in this app's `.env`:
+
+```
+GP_APP_API_KEY=a-long-random-secret
+```
+
+If `GP_APP_API_KEY` is unset here the endpoint returns **503** rather than
+accepting unauthenticated posts.
+
+### Payload
+
+The theme sends slightly different fields per form. Both are handled:
+
+| Field | Free trial | Contact | Notes |
+|---|:--:|:--:|---|
+| `name`, `email` | ✓ | ✓ | Required; everything else is optional |
+| `phone`, `service`, `message` | ✓ | ✓ | Blank fields arrive as `""` and are stored as `NULL` |
+| `website` | ✓ | — | |
+| `company` | — | ✓ | |
+| `file_link` | ✓ | — | Cloud link the client pasted instead of uploading |
+| `attachment_url` | ✓ | ✓ | URL in the WP media library, not the file itself |
+| `form` | ✓ | ✓ | `Free Trial Request` / `Contact Message` → lead source |
+| `submitted_at` | ✓ | ✓ | ISO-8601, site timezone |
+| `wp_entry_id` | ✓ | ✓ | WP post ID — the idempotency key |
+
+**Duplicates.** `wp_entry_id` is unique, so a re-delivered submission returns
+`200 {"duplicate": true}` and logs a note on the existing lead instead of
+creating a second one. Submissions without a `wp_entry_id` are not deduplicated.
+
+**Attachments.** WordPress sends a URL, not file content, so the download happens
+in a queued job (`FetchLeadAttachment`) — the theme's webhook call times out
+after 8 seconds. Without a queue worker the job runs inline and may exceed that.
+
+### Try it
+
+```bash
+curl -X POST http://localhost:8000/api/submissions \
+  -H "Authorization: Bearer a-long-random-secret" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Jane Buyer",
+    "email": "jane@example.com",
+    "phone": "+44 7700 900123",
+    "website": "https://example.com",
+    "service": "Clipping Path",
+    "message": "Please quote for 500 images.",
+    "form": "Free Trial Request",
+    "submitted_at": "2026-07-27T10:15:00+06:00",
+    "wp_entry_id": 4021
+  }'
+```
+
+Expect `201` with a `lead_id`. Repeat the same command and you get `200` with
+`"duplicate": true`, and still only one lead.
 
 ---
 
@@ -132,84 +219,135 @@ Log in as each account above and confirm:
 5. Visiting another role's dashboard directly (e.g. `/dashboard/admin` as an
    editor) returns **403**.
 
+Then, as `marketing1@graphicspixels.test`:
+
+6. Post the sample submission above and confirm the lead appears under **Leads**.
+7. Move it between stages on the board and open it — the transition is in the
+   activity log.
+8. Add a note, and assign it to another marketing user; both appear in the log.
+9. Select several leads in table view and apply a bulk status change.
+10. As `editor1@graphicspixels.test`, visit `/leads` — **403**, and Leads is
+    absent from the sidebar.
+
 ## Automated test
 
 ```bash
-php artisan test --filter=RoleAccessTest
+php artisan test
 ```
 
-`tests/Feature/RoleAccessTest.php` covers the redirect map, cross-role 403s, the
-full permission matrix per role, the seeded role distribution, and the
-editor→team-leader links.
+| Suite | Covers |
+|---|---|
+| `RoleAccessTest` | Redirect map, cross-role 403s, permission matrix per role, seeded roster, editor→team-leader links |
+| `SubmissionWebhookTest` | Token auth, both real WP payload shapes, empty-string handling, duplicate suppression, validation, attachment queueing, scheme filtering |
+| `LeadPipelineTest` | Who may see and act on leads, status/assign/note logging, bulk actions, attachment download authorisation and cross-lead access |
 
 ---
 
 ## Verification status
 
-Because Composer was unavailable, the checks below were run through
-`tools/verify-phase1-standalone.php` — a harness that loads the real
-`PermissionMatrix` and `StaffRoster` classes and executes the schema and seed
-logic against an in-memory SQLite database with plain PDO. It needs no
-dependencies, so you can re-run it any time:
+Composer was unavailable in the environment this was written in, so Laravel could
+not boot. Verification instead runs through standalone harnesses that load the
+real framework-independent classes and execute them against an in-memory SQLite
+database with plain PDO. They need no dependencies, so you can re-run them any
+time:
 
 ```bash
-php tools/verify-phase1-standalone.php
+php tools/verify-phase1-standalone.php   # 40 assertions
+php tools/verify-phase2-standalone.php   # 55 assertions
+php tools/check-blade.php                # directive balance + @include targets
 ```
 
-Once Laravel is installed, `php artisan test` supersedes it.
+Once Laravel is installed, `php artisan test` supersedes them.
 
-**Verified** (executed against a live SQLite database via PDO, 40 assertions, all passing):
+**Verified — phase 1** (40 assertions, all passing):
 
 - Schema builds: `users` with the added staff columns, plus all five Spatie tables
 - All 25 permissions and 6 roles seed correctly
 - Every role's grants resolve correctly through SQL joins, including negative
   cases (Editor cannot `orders.create`, Marketing cannot `qc.approve`, …)
 - Editor's grant set is exactly `[batches.update.own, batches.view]`
-- Roster seeds 15 users with the 1/2/2/3/5/2 distribution
-- Department matches role for all 15 users
-- All 5 editors link to a real team leader; non-editors have none
-- Each role maps to a distinct dashboard route
+- Roster seeds 15 users with the 1/2/2/3/5/2 distribution, correct departments,
+  and every editor linked to a real team leader
 
-Also checked: `php -l` clean on all 13 PHP files; all Blade directives balanced
-and every `@include` target resolves; every Laravel and Spatie API used was
-confirmed against the actual framework source.
+**Verified — phase 2** (55 assertions, all passing):
+
+- `SubmissionPayload` normalises both real WP bodies: email lowercased, blank
+  strings to `NULL`, form label to lead source, unknown labels to `other`,
+  numeric-string and zero `wp_entry_id` handled, oversized fields truncated
+- Attachment URLs: `https` accepted, `file://` and `javascript:` rejected, the
+  single and array shapes merged and de-duplicated
+- `AttachmentFilename` survives traversal attempts — `../../etc/passwd`,
+  percent-encoded traversal and `....//` all yield a name with no separator or
+  `..`, and long names keep their extension
+- The unique index on `wp_entry_id` genuinely rejects a second insert, while
+  `NULL` entry IDs stay insertable — this is what makes retries safe
+- Deleting a lead cascades to its activities and attachments
+- Status transitions persist `{from, to}` in the activity properties
+
+Also checked: `php -l` clean on all 39 PHP files; all 20 Blade templates have
+balanced directives and resolving `@include` targets; every Laravel and Spatie
+API used was confirmed against the actual framework source.
 
 **Not verified** — needs a real install, please confirm locally:
 
 - Application boot and `php artisan migrate` actually running
-- HTTP login, session handling, and the middleware redirects at runtime
-- Blade template rendering and Vite asset compilation
+- HTTP login, session handling, middleware redirects and policy 403s at runtime
+- Blade rendering and Vite asset compilation
+- The queued attachment download against a real WordPress media URL
 
 ---
 
 ## Files in this overlay
 
+**Phase 1 — foundation**
+
 ```
-app/Enums/Department.php              Four departments
-app/Enums/RoleName.php                Six roles → department + dashboard route
-app/Support/PermissionMatrix.php      Single source of truth for permissions
-app/Support/StaffRoster.php           The 15 development staff accounts
-app/Models/User.php                   HasRoles, department cast, team relations
+app/Enums/{Department,RoleName}.php     Departments; roles → department + route
+app/Support/PermissionMatrix.php        Single source of truth for permissions
+app/Support/StaffRoster.php             The 15 development staff accounts
+app/Models/User.php                     HasRoles, department cast, team relations
 app/Http/Controllers/DashboardController.php
-bootstrap/app.php                     Registers Spatie middleware aliases
+bootstrap/app.php                       Middleware aliases + api route file
 database/migrations/2025_01_01_000001_add_staff_fields_to_users_table.php
 database/seeders/{DatabaseSeeder,RolePermissionSeeder,UserSeeder}.php
-routes/web.php                        Role-gated dashboard routes + Breeze auth
 resources/views/layouts/app.blade.php
-resources/views/partials/{navbar,sidebar,role-panel}.blade.php
-resources/views/dashboard/*.blade.php Six role dashboards + unassigned
+resources/views/partials/{navbar,sidebar,role-panel,flash}.blade.php
+resources/views/dashboard/*.blade.php   Six role dashboards + unassigned
 tests/Feature/RoleAccessTest.php
 ```
 
-`PermissionMatrix` and `StaffRoster` are deliberately free of framework
-dependencies so they can be asserted against in isolation.
+**Phase 2 — lead pipeline**
+
+```
+app/Enums/{LeadStatus,LeadSource,ActivityAction}.php
+app/Support/SubmissionPayload.php       Normalises the WP webhook body
+app/Support/AttachmentFilename.php      Hardened filename derivation
+app/Models/{Lead,LeadActivity,LeadAttachment}.php
+app/Http/Middleware/VerifyWebhookToken.php
+app/Http/Requests/StoreSubmissionRequest.php
+app/Http/Controllers/Api/SubmissionController.php
+app/Http/Controllers/{LeadController,LeadAttachmentController}.php
+app/Policies/LeadPolicy.php             Maps abilities onto leads.* permissions
+app/Jobs/FetchLeadAttachment.php        Copies WP media into local storage
+config/graphicspixels.php               Webhook key + attachment limits
+database/migrations/2025_02_01_00000{1,2,3}_*.php
+database/factories/LeadFactory.php
+routes/api.php                          POST /api/submissions
+resources/views/leads/                  Board, table, detail, create, edit
+resources/views/partials/lead-summary.blade.php
+tests/Feature/{SubmissionWebhookTest,LeadPipelineTest}.php
+tools/                                  Standalone verification harnesses
+```
+
+`PermissionMatrix`, `StaffRoster`, `SubmissionPayload` and `AttachmentFilename`
+are deliberately free of framework dependencies so they can be asserted against
+in isolation — that is what makes the standalone harnesses possible.
 
 ---
 
 ## Next phase
 
-**Phase 2 — Lead intake & CRM.** The WordPress theme on the `wp-graphicspixels`
-branch already posts free-trial and contact submissions to an external webhook
-(`GP_APP_WEBHOOK_URL`, Bearer `GP_APP_API_KEY`, in `inc/submissions.php`), so
-phase 2 builds the `POST /api/submissions` endpoint that receives them, plus the
-lead pipeline and client profiles.
+**Phase 3 — Orders & production workflow.** Converting a won lead into an order,
+the production board (Received → Assigned → Editing → QC → Revision → Delivered),
+splitting orders into batches across a team leader's editors, and SLA countdowns
+against the studio's 24-hour turnaround promise.

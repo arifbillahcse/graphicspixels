@@ -1,9 +1,9 @@
 @php
     // Feature areas are gated on the same permissions seeded in PermissionMatrix,
-    // so the sidebar visibly differs per role. The destinations themselves land
-    // in later phases, hence the phase badge instead of a link.
+    // so the sidebar visibly differs per role. Items without a route have not
+    // been built yet and show the phase they arrive in.
     $navItems = [
-        ['label' => 'Leads',           'permission' => 'leads.view',      'phase' => 2],
+        ['label' => 'Leads',           'permission' => 'leads.view',      'route' => 'leads.index'],
         ['label' => 'Clients',         'permission' => 'clients.view',    'phase' => 2],
         ['label' => 'Orders',          'permission' => 'orders.view',     'phase' => 3],
         ['label' => 'Batches',         'permission' => 'batches.view',    'phase' => 3],
@@ -28,18 +28,25 @@
 
         @foreach ($navItems as $item)
             @can($item['permission'])
-                <span class="flex items-center justify-between px-3 py-2 rounded-md text-sm text-white/45 cursor-not-allowed"
-                      title="Arrives in phase {{ $item['phase'] }}">
-                    {{ $item['label'] }}
-                    <span class="text-[10px] uppercase tracking-wide bg-white/10 px-1.5 py-0.5 rounded">
-                        P{{ $item['phase'] }}
+                @if (isset($item['route']))
+                    <a href="{{ route($item['route']) }}"
+                       class="block px-3 py-2 rounded-md text-sm font-medium {{ request()->routeIs(Str::before($item['route'], '.').'.*') ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white' }}">
+                        {{ $item['label'] }}
+                    </a>
+                @else
+                    <span class="flex items-center justify-between px-3 py-2 rounded-md text-sm text-white/45 cursor-not-allowed"
+                          title="Arrives in phase {{ $item['phase'] }}">
+                        {{ $item['label'] }}
+                        <span class="text-[10px] uppercase tracking-wide bg-white/10 px-1.5 py-0.5 rounded">
+                            P{{ $item['phase'] }}
+                        </span>
                     </span>
-                </span>
+                @endif
             @endcan
         @endforeach
     </nav>
 
     <div class="px-5 py-3 border-t border-white/10 text-[11px] text-white/40">
-        Phase 1 &middot; Foundation
+        Phase 2 &middot; Lead pipeline
     </div>
 </aside>

@@ -3,6 +3,8 @@
         <h1 class="text-lg font-semibold text-gray-900">Admin Dashboard</h1>
     </x-slot>
 
+    @include('partials.lead-summary')
+
     @include('partials.role-panel', [
         'summary' => 'Full oversight across every department. Administrators automatically receive every permission in the system, including ones added in later phases.',
         'upcoming' => [

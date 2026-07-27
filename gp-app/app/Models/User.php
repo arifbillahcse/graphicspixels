@@ -57,6 +57,14 @@ class User extends Authenticatable
     }
 
     /**
+     * Leads currently assigned to this user.
+     */
+    public function assignedLeads(): HasMany
+    {
+        return $this->hasMany(Lead::class, 'assigned_to');
+    }
+
+    /**
      * Primary role as an enum, or null when the user has no recognised role.
      * Users are seeded with exactly one role; if that ever changes, the first
      * assigned role wins for routing purposes.
