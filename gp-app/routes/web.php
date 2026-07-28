@@ -7,6 +7,7 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\LeadConversionController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QcController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -86,6 +87,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::patch('/{order}/assign', [OrderController::class, 'assign'])->name('assign');
         Route::post('/{order}/notes', [OrderController::class, 'storeNote'])->name('notes.store');
         Route::post('/{order}/batches', [BatchController::class, 'store'])->name('batches.store');
+    });
+
+    /*
+    | Quality control. Gated on qc.* via QcReviewPolicy, which is deliberately
+    | separate from the production permissions so signing work off is not
+    | something the production chain can do to itself.
+    */
+    Route::prefix('qc')->name('qc.')->group(function () {
+        Route::get('/', [QcController::class, 'queue'])->name('queue');
+        Route::get('/defects', [QcController::class, 'defects'])->name('defects');
+        Route::get('/batches/{batch}', [QcController::class, 'show'])->name('show');
+        Route::post('/reviews/{review}/approve', [QcController::class, 'approve'])->name('approve');
+        Route::post('/reviews/{review}/reject', [QcController::class, 'reject'])->name('reject');
     });
 
     Route::prefix('batches')->name('batches.')->group(function () {

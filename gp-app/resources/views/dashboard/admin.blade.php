@@ -5,6 +5,8 @@
 
     @include('partials.production-summary')
 
+    @include('partials.qc-summary')
+
     @include('partials.lead-summary')
 
     @include('partials.role-panel', [

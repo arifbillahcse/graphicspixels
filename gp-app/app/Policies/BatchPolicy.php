@@ -25,7 +25,10 @@ class BatchPolicy
 
         return $this->owns($user, $batch)
             || $user->can('orders.view')
-            || $user->can('batches.assign');
+            || $user->can('batches.assign')
+            // QC staff hold none of the above, but must be able to open the
+            // batch they are reviewing.
+            || $user->can('qc.view');
     }
 
     /**

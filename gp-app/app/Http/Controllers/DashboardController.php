@@ -9,6 +9,9 @@ use App\Models\Batch;
 use App\Models\Lead;
 use App\Models\LeadActivity;
 use App\Models\Order;
+use App\Models\DefectStat;
+use App\Models\QcReview;
+use App\Support\DefectRate;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -38,6 +41,7 @@ class DashboardController extends Controller
         return view('dashboard.admin', [
             'leads' => $this->leadSummary(),
             'production' => $this->productionSummary(),
+            'qc' => $this->qcSummary(),
         ]);
     }
 
@@ -85,7 +89,7 @@ class DashboardController extends Controller
 
     public function qc(): View
     {
-        return view('dashboard.qc');
+        return view('dashboard.qc', ['qc' => $this->qcSummary()]);
     }
 
     /**
@@ -150,6 +154,40 @@ class DashboardController extends Controller
                 ->with(['client', 'teamLeader'])
                 ->orderBy('deadline')
                 ->limit(10)
+                ->get(),
+        ];
+    }
+
+    /**
+     * Quality-control figures for the admin and QC dashboards.
+     *
+     * @return array<string,mixed>
+     */
+    private function qcSummary(): array
+    {
+        $period = DefectRate::period();
+
+        $stats = DefectStat::period($period)
+            ->with('editor')
+            ->get()
+            ->sortByDesc('reject_rate')
+            ->values();
+
+        return [
+            'period' => $period,
+            'waiting' => Batch::where('status', BatchStatus::ReadyForQc->value)->count(),
+            'inRevision' => Batch::where('status', BatchStatus::Revision->value)->count(),
+            'reviewedThisMonth' => (int) $stats->sum('total_reviews'),
+            'rejectedThisMonth' => (int) $stats->sum('rejected_count'),
+            'studioRate' => DefectRate::calculate(
+                (int) $stats->sum('total_reviews'),
+                (int) $stats->sum('rejected_count'),
+            ),
+            'stats' => $stats,
+            'recent' => QcReview::completed()
+                ->with(['batch.order', 'editor', 'reviewer'])
+                ->latest('completed_at')
+                ->limit(5)
                 ->get(),
         ];
     }

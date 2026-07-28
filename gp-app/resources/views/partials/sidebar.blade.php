@@ -7,7 +7,7 @@
         ['label' => 'Clients',         'permission' => 'clients.view',    'phase' => 2],
         ['label' => 'Orders',          'permission' => 'orders.view',     'route' => 'orders.index'],
         ['label' => 'My batches',      'permission' => 'batches.view',    'route' => 'batches.mine'],
-        ['label' => 'Quality Control', 'permission' => 'qc.view',         'phase' => 4],
+        ['label' => 'Quality Control', 'permission' => 'qc.view',         'route' => 'qc.queue'],
         ['label' => 'Staff',           'permission' => 'staff.view',      'phase' => 5],
         ['label' => 'Reports',         'permission' => 'reports.view',    'phase' => 5],
         ['label' => 'Settings',        'permission' => 'settings.manage', 'phase' => 6],
@@ -47,6 +47,6 @@
     </nav>
 
     <div class="px-5 py-3 border-t border-white/10 text-[11px] text-white/40">
-        Phase 3 &middot; Production
+        Phase 4 &middot; Quality control
     </div>
 </aside>

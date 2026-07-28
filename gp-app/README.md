@@ -8,7 +8,7 @@ production workflow, quality control, and team management.
 | **1** | Authentication, roles, permissions, staff schema, role-aware dashboards | Built |
 | **2** | Lead intake webhook, CRM pipeline, activity log, attachments | Built |
 | **3** | Lead conversion, orders, production board, batches, SLA | Built |
-| 4 | Quality control | Not started |
+| **4** | QC queue, checklists, rework loop, defect rates | Built |
 | 5 | Team, HR and reporting | Not started |
 | 6 | Notifications and polish | Not started |
 
@@ -256,6 +256,7 @@ php artisan test
 | `SubmissionWebhookTest` | Token auth, both real WP payload shapes, empty-string handling, duplicate suppression, validation, attachment queueing, scheme filtering |
 | `LeadPipelineTest` | Who may see and act on leads, status/assign/note logging, bulk actions, attachment download authorisation and cross-lead access |
 | `OrderWorkflowTest` | Lead→client→order conversion, returning-client reuse, board access, status moves (form and JSON), team-leader ownership, batch splitting and auto-assign, editor isolation, SLA bands and the at-risk scope |
+| `QcWorkflowTest` | Queue access, approve/reject, checklist recording, the full reject→rework→approve loop, order delivery only when every batch passes, defect accumulation and the pinned editor |
 
 ---
 
@@ -271,6 +272,7 @@ time:
 php tools/verify-phase1-standalone.php   # 42 assertions
 php tools/verify-phase2-standalone.php   # 55 assertions
 php tools/verify-phase3-standalone.php   # 99 assertions
+php tools/verify-phase4-standalone.php   # 49 assertions
 php tools/check-blade.php                # directive balance + @include targets
 ```
 
@@ -321,7 +323,21 @@ Once Laravel is installed, `php artisan test` supersedes them.
 - `ServiceType::guessFrom()` matches website free text including American
   spelling, and returns null rather than guessing wrong
 
-Also checked: `php -l` clean on all 64 PHP files; all 26 Blade templates have
+**Verified — phase 4** (49 assertions, all passing):
+
+- Every one of the 13 services has its own checklist, none shorter than three
+  checks and none repeating an item
+- `DefectRate` clamps nonsense inputs — more rejections than reviews, negative
+  counts — rather than putting an impossible figure on a dashboard
+- The small-sample guard holds: 50% over two reviews is not flagged, and rates
+  below five reviews render greyed out
+- A batch was walked through reject → rework → approve in SQL: the rejection
+  survives the later approval, both reviews stay on record, and the rebuilt
+  rate matches
+- One defect row per editor per month is enforced, and defect history survives
+  the batch being deleted
+
+Also checked: `php -l` clean on all 78 PHP files; all 30 Blade templates have
 balanced directives and resolving `@include` targets; every Laravel and Spatie
 API used was confirmed against the actual framework source.
 
@@ -395,6 +411,21 @@ resources/views/partials/production-summary.blade.php
 tests/Feature/OrderWorkflowTest.php
 ```
 
+**Phase 4 — quality control**
+
+```
+app/Enums/{QcOutcome,QcSeverity}.php
+app/Support/QcChecklist.php             Per-service checks
+app/Support/DefectRate.php              Rate maths + small-sample guard
+app/Models/{QcReview,QcComment,DefectStat}.php
+app/Policies/QcReviewPolicy.php
+app/Http/Controllers/QcController.php
+database/migrations/2025_04_01_00000{1,2,3}_*.php
+resources/views/qc/                     Queue, review screen, defect table
+resources/views/partials/qc-summary.blade.php
+tests/Feature/QcWorkflowTest.php
+```
+
 `PermissionMatrix`, `StaffRoster`, `SubmissionPayload` and `AttachmentFilename`
 are deliberately free of framework dependencies so they can be asserted against
 in isolation — that is what makes the standalone harnesses possible.
@@ -403,6 +434,6 @@ in isolation — that is what makes the standalone harnesses possible.
 
 ## Next phase
 
-**Phase 4 — Quality control.** A QC queue of batches marked Ready for QC,
-service-specific checklists, approve/reject with blocker and minor comments, the
-rework loop back to the original editor, and per-editor defect rates.
+**Phase 5 — Team, HR and reporting.** Staff directory, live workload per editor
+with drag-drop rebalancing, leave requests that take an editor out of the
+auto-assign pool, and exportable weekly and monthly reports.
