@@ -124,9 +124,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Image Masking Service</span>
                 <h2>Professional Image Masking Service — Hair, Fur, Transparent Objects &amp; Complex Edges</h2>
-                <p class="ds-lead">Clipping path draws a hard vector outline around a subject. It works on products with clean, defined edges. It does not work on hair, fur, sheer fabric, fine mesh, glass, water, or any subject where the edge blends softly into the background. Image masking is the correct technique for those cases.</p>
-                <p>Graphics Pixels provides layer masking, alpha channel masking, hair and fur masking, transparent object masking, and refine edge masking — all done by hand in Photoshop. The result is a clean, natural-edged cutout that holds up on any background, in any format, at any size.</p>
-                <p>Pricing from $0.75/image. 24-hour turnaround. Free trial on every new order.</p>
+                <p class="ds-lead">Clipping path fails on hair, fur, sheer fabric, glass, and any subject whose edge blends softly into the background. Image masking is the right technique.</p>
+                <p>We provide layer, alpha channel, hair and fur, transparent object, and refine edge masking — all by hand in Photoshop. From $0.75/image, 24-hour turnaround.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

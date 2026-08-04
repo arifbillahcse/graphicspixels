@@ -90,8 +90,8 @@
                 <span class="ds-showcase-eyebrow">Post-Production</span>
                 <h2>Professional Video Editing Service — Product, Fashion, Real Estate &amp; Beauty</h2>
                 <p class="ds-lead">Post-Production for E-commerce Brands, Videographers, Agencies &amp; Content Creators</p>
-                <p>Graphics Pixels provides professional video editing for product demos, e-commerce ads, fashion reels, real estate walkthroughs, beauty and skin retouching, cinematic color grading, motion graphics, and audio post-production. All editing is done by hand by our in-house team — no automated AI filters applied to your footage.</p>
-                <p>Send us your raw footage and a brief. We return the edited video within 24–48 hours. Bulk projects handled at scalable capacity. Free trial on every new order.</p>
+                <p>We edit product demos, e-commerce ads, fashion reels, real estate walkthroughs, colour grading, motion graphics, and audio post — all by hand, no AI filters. Send raw footage and a brief; edited video back in 24–48 hours.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

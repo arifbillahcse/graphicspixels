@@ -127,8 +127,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">E-commerce Image Editing</span>
                 <h2>E-commerce Image Editing Services — Full Post-Production for Online Sellers</h2>
-                <p class="ds-lead">Graphics Pixels handles the complete e-commerce image editing workflow for online sellers and retailers — background removal, clipping path, ghost mannequin, shadow creation, color correction, retouching, and 360-degree pack-shot editing. All prepared to platform specification for Amazon, Shopify, eBay, Etsy, and Walmart.</p>
-                <p>Whether you sell 50 products or 50,000, we process batches at consistent quality and turnaround. 120+ in-house editors. 24-hour standard delivery. Bulk discounts from 100 images. Free trial on every new order.</p>
+                <p class="ds-lead">We handle the complete e-commerce editing workflow — background removal, clipping path, ghost mannequin, shadows, colour correction, retouching, and 360° pack-shots — built to Amazon, Shopify, and eBay specification.</p>
+                <p>From 50 products to 50,000, at consistent quality. 120+ in-house editors, 24-hour delivery, bulk discounts from 100 images.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>

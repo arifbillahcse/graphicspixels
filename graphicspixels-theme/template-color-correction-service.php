@@ -124,9 +124,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Color Correction Service</span>
                 <h2>Professional Color Correction Service — Product, Fashion &amp; E-commerce Photography</h2>
-                <p class="ds-lead">Graphics Pixels provides color correction for product photography, fashion catalogs, e-commerce listings, and portrait work. We adjust white balance, exposure, contrast, hue, vibrancy, and saturation — image by image — to bring your batch to a single consistent, accurate standard.</p>
-                <p>Inaccurate color in product photography causes returns. A garment that photographs with a blue cast looks different from the actual item, and buyers send it back. Accurate color correction is one of the most direct ways to reduce return rates and increase buyer confidence on Amazon, Shopify, and eBay.</p>
-                <p>Pricing from €0.50/image. 24-hour turnaround. Free trial on every new order.</p>
+                <p class="ds-lead">We correct white balance, exposure, contrast, hue, and saturation image by image — bringing your entire batch to one consistent, accurate standard.</p>
+                <p>Inaccurate colour drives returns: a garment with a blue cast looks wrong on arrival. From €0.50/image, 24-hour turnaround, free trial on every new order.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

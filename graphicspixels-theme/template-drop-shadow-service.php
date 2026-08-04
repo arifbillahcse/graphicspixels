@@ -124,8 +124,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Drop Shadow Service</span>
                 <h2>Discontinue Shadow Services</h2>
-                <p class="ds-lead">Our specialty at Graphics Pixels is expert Drop Shadow Service, which gives your product and marketing photos depth, realism, and visual coherence.</p>
-                <p>Drop Shadow Service give digital displays a more realistic and appealing appearance by adding dimension and a subtle 3D effect. We make sure every object looks organically incorporated into its scene by using sophisticated Photoshop techniques and hand shadow crafting, which increases visual impact without overpowering the subject. Ordinary photos are transformed into dynamic visuals by our service, which increases trust and engagement. Our shadows transform flat images into effective assets, whether you're working with promotional visuals or product photography.</p>
+                <p class="ds-lead">Our expert Drop Shadow Service gives product and marketing photos depth, realism, and visual coherence.</p>
+                <p>Using hand-crafted Photoshop shadows, we make every object sit naturally in its scene — adding a subtle 3D effect that boosts engagement without overpowering the subject.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="<?php echo esc_url( home_url('/free-trial/') ); ?>" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>

@@ -124,8 +124,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Background Removal Service</span>
                 <h2>Background Removal Service — Manual Editing, All Product Types</h2>
-                <p class="ds-lead">Graphics Pixels provides professional background removal for product photography, e-commerce listings, studio batches, and portrait work. Every image is edited by hand using clipping path or image masking — no automated tools, no AI batch processing.</p>
-                <p>Output options: pure white background (RGB 255,255,255) for Amazon, eBay, and Walmart compliance; transparent PNG for Shopify and web use; custom brand colour; and background replacement with lifestyle or studio scenes. Pricing from $0.20/image. 24-hour turnaround. Free trial on every new order.</p>
+                <p class="ds-lead">Professional background removal for product photography, e-commerce listings, and portraits — every image edited by hand with clipping path or masking, never automated.</p>
+                <p>Pure white for Amazon and eBay compliance, transparent PNG, custom brand colour, or full background replacement. From $0.20/image, 24-hour turnaround, free trial.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

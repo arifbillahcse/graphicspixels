@@ -142,9 +142,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">3D Product Modeling Service</span>
                 <h2>3D Product Modeling &amp; Rendering Service — Photorealistic CGI for E-commerce and Marketing</h2>
-                <p class="ds-lead">Graphics Pixels produces photorealistic 3D product models and renderings for e-commerce brands, fashion companies, furniture manufacturers, jewelry designers, and marketing agencies. We model products from scratch using reference images, design files, or physical samples — and deliver print-ready, web-ready, and AR-ready assets.</p>
-                <p>3D modeling removes the need for expensive product photography at every stage of a product cycle. A 3D model can be rendered in any colour, on any background, in any environment—without reshooting. Used for Amazon listings, Shopify product pages, marketing campaigns, trade catalogs, and virtual staging.</p>
-                <p>Custom quote on request. Standard turnaround 3–7 business days, depending on complexity. Free trial available.</p>
+                <p class="ds-lead">Graphics Pixels builds photorealistic 3D product models for e-commerce, fashion, furniture, and jewelry brands — from reference images, design files, or physical samples.</p>
+                <p>Render in any colour, background, or environment without reshooting. Print-ready, web-ready, and AR-ready assets. Custom quote, 3–7 day turnaround, free trial available.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

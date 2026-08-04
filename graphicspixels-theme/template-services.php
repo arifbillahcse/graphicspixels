@@ -89,8 +89,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">SERVICES</span>
                 <h2>Professional Photo Editing &amp; Retouching Services</h2>
-                <p class="ds-lead">Graphics Pixels is a dedicated photo editing and post-production outsourcing studio. We handle clipping path, background removal, ghost mannequin, photo retouching, color correction, image masking, drop shadow, headshot editing, photo restoration, 3D product modeling, and video editing — all under one roof, all done by hand, for clients across the USA, UK, Canada, and Europe.</p>
-                <p>Whether you send us 10 images or 10,000, every file goes through the same brief-matched workflow and triple-layer quality check before it leaves us. Trusted by e-commerce brands, photographers, fashion studios, and agencies for 14+ years. Start with a free trial — we return your edited images within 24 hours, no charge, no commitment.</p>
+                <p class="ds-lead">A dedicated photo editing and post-production studio handling clipping path, background removal, ghost mannequin, retouching, colour correction, masking, shadows, restoration, 3D modeling, and video editing — all under one roof.</p>
+                <p>From 10 images to 10,000, every file goes through the same workflow and triple-layer quality check. 14+ years. Free 24-hour trial.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

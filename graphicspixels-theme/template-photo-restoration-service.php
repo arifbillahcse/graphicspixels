@@ -250,8 +250,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">Photo Restoration Service</span>
                 <h2>Photo Restoration Service — Repair Old, Damaged &amp; Faded Photos</h2>
-                <p class="ds-lead">Graphics Pixels provides professional photo restoration for old, damaged, and deteriorated photographs. We repair scratches, cracks, tears, water damage, mould staining, and fading — and reconstruct missing sections where damage has destroyed detail. Black and white photo colorization is also available.</p>
-                <p>Every restoration is done by hand in Photoshop. We do not run automated restoration filters. Each image is assessed individually and worked on at the pixel level to preserve the original character of the photograph while correcting the damage. Pricing from $30. Standard turnaround 2–5 business days. Free quote on request.</p>
+                <p class="ds-lead">We repair scratches, cracks, tears, water damage, mould staining, and fading — and reconstruct missing sections where damage has destroyed detail. Colorization also available.</p>
+                <p>Every restoration is done by hand at pixel level, never automated filters, preserving the photograph's original character. From $30, 2–5 business days, free quote.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

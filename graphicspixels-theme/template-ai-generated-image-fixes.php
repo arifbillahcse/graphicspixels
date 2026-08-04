@@ -91,9 +91,9 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">AI-Generated Image Fixes</span>
                 <h2>AI-Generated Image Fixes — Human Retouching for AI Output Errors</h2>
-                <p class="ds-lead">AI image generators produce useful results but predictable errors: extra or malformed fingers, broken facial anatomy, warped or unreadable text, inconsistent lighting, mismatched skin texture, and background artefacts. Regenerating the prompt doesn't reliably fix specific problems — and often breaks what was working.</p>
-                <p>Graphics Pixels sends your AI-generated image to a human retoucher in Photoshop. We isolate the problem areas and correct them directly — hands, faces, text, edges, lighting — without starting the generation over. The result is a polished, usable image that keeps what the AI got right and fixes what it got wrong.</p>
-                <p>24-hour turnaround. 100% commercial rights. NDA-compliant. Free trial on every new order.</p>
+                <p class="ds-lead">AI generators produce predictable errors: malformed hands, broken faces, warped text, and background artefacts. Regenerating rarely fixes them — and often breaks what worked.</p>
+                <p>We send your image to a human retoucher who corrects the problem areas directly in Photoshop. 24-hour turnaround, full commercial rights, NDA-compliant.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>

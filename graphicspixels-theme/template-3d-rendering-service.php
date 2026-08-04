@@ -94,9 +94,10 @@
             <div class="ds-showcase-content reveal" data-reveal="left">
                 <span class="ds-showcase-eyebrow">3D Rendering Service</span>
                 <h2>Investigate Our Photorealistic 3D Modeling and Rendering Services</h2>
-                <p class="ds-lead">In the digital realm of nowadays, pictures are all things present.</p>
-                <p>Great 3D Rendering Services models and lifelike renderings will really boost your brand presence and customer interaction, be it in fashion, furnishings, e-commerce, or architecture.</p>
-                <p>"At Graphicspixels.com, we turn your ideas into amazing, photorealistic 3D depictions…" that mesmerize, entice, and sell.</p>
+                <p class="ds-lead">In today's digital world, visuals are everything.</p>
+                <p>Photorealistic 3D models and renderings boost brand presence and customer engagement across fashion, furniture, e-commerce, and architecture.</p>
+                <p>At Graphics Pixels, we turn your ideas into stunning 3D depictions that captivate, entice, and sell.</p>
+
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
                     <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>
