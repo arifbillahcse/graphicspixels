@@ -231,26 +231,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    /* ---------- Free trial form (demo handler) ---------- */
-    const trialForm = document.getElementById('trial-form');
-    if (trialForm) {
-        trialForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = trialForm.querySelector('button[type="submit"]');
-            const original = btn.textContent;
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-            setTimeout(function () {
-                btn.textContent = '✓ Message Sent!';
-                trialForm.reset();
-                if (fileName) fileName.textContent = 'No file chosen';
-                setTimeout(function () {
-                    btn.textContent = original;
-                    btn.disabled = false;
-                }, 2500);
-            }, 1200);
-        });
-    }
+    /* ---------- Free trial form ----------
+       Handled by js/wp-forms.js, which submits to WordPress via AJAX.
+       The old demo handler that lived here was removed: it double-bound
+       to the same form, overwrote the submit button label (leaving it
+       stuck on "Sending…"), and faked a success message regardless of
+       whether the real submission actually succeeded. */
 
     /* ---------- Before / After Sliders ---------- */
     (function () {
