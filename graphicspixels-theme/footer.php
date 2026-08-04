@@ -91,7 +91,7 @@
     </div>
     <div class="footer-bottom">
         <div class="container footer-bottom-inner">
-            <p>Copyright &copy; 2013 GRAPHICSPIXELS. Developed by <a href="https://softorio.com" target="_blank" rel="noopener">Softorio</a></p>
+            <p>Copyright &copy; 2013 GRAPHICSPIXELS. </p>
             <div class="social-links">
                 <a href="https://www.pinterest.com/graphicspixels/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                 <a href="https://www.youtube.com/@graphicspixels" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
