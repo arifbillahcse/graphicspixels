@@ -207,7 +207,7 @@
                         <div class="vt-card-footer">
                             <div class="vt-card-info">
                                 <span class="vt-card-name">Anika Berg</span>
-                                <span class="vt-card-company">Berg Studio · Berlin</span>
+                                <span class="vt-card-company">Berg Studio · Spain </span>
                             </div>
                             <div class="vt-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
                         </div>
