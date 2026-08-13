@@ -113,15 +113,15 @@
                         <h3 style="font-size: 18px; margin-bottom: 15px; color: var(--navy); font-weight: 700;">UK OFFICE ADDRESS - CORPORATE OFFICE</h3>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-map-marker-alt" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0; line-height: 1.6; color: var(--text);">Unit 4, Storm 12 Plaza Shopping<br>Centre, 56 St Marys Road,<br>Southampton, United Kingdom</p>
+                            <p style="margin: 0; line-height: 1.6; color: var(--text);"><?php echo nl2br( esc_html( gp_site_info( 'uk_address' ) ) ); ?></p>
                         </div>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-phone" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="tel:+447462284915" style="color: var(--magenta); text-decoration: none; font-weight: 600;">+44 7462 284915</a></p>
+                            <p style="margin: 0;"><a href="tel:<?php echo esc_attr( gp_site_info( 'uk_phone_link' ) ); ?>" style="color: var(--magenta); text-decoration: none; font-weight: 600;"><?php echo esc_html( gp_site_info( 'uk_phone' ) ); ?></a></p>
                         </div>
                         <div style="display: flex; gap: 10px;">
                             <i class="fas fa-envelope" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="mailto:info@graphicspixels.com" style="color: var(--magenta); text-decoration: none; font-weight: 600;">info@graphicspixels.com</a></p>
+                            <p style="margin: 0;"><a href="mailto:<?php echo esc_attr( gp_site_info( 'uk_email' ) ); ?>" style="color: var(--magenta); text-decoration: none; font-weight: 600;"><?php echo esc_html( gp_site_info( 'uk_email' ) ); ?></a></p>
                         </div>
                     </div>
 
@@ -130,19 +130,19 @@
                         <h3 style="font-size: 18px; margin-bottom: 15px; color: var(--navy); font-weight: 700;">BANGLADESH OFFICE - POST-PRODUCTION HOUSE</h3>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-map-marker-alt" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0; line-height: 1.6; color: var(--text);">House # 31, Road # 3 (New),<br>Dhanmondi, Dhaka-1209<br>Bangladesh</p>
+                            <p style="margin: 0; line-height: 1.6; color: var(--text);"><?php echo nl2br( esc_html( gp_site_info( 'bd_address' ) ) ); ?></p>
                         </div>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-phone" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="tel:+8801890373731" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Phone number: +880 1890-373731</a></p>
+                            <p style="margin: 0;"><a href="tel:<?php echo esc_attr( gp_site_info( 'bd_phone_link' ) ); ?>" style="color: var(--magenta); text-decoration: none; font-weight: 600;"><?php echo esc_html( gp_site_info( 'bd_phone' ) ); ?></a></p>
                         </div>
                         <div style="display: flex; gap: 10px; margin-bottom: 10px;">
                             <i class="fas fa-envelope" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="mailto:info@graphicspixels.com" style="color: var(--magenta); text-decoration: none; font-weight: 600;">info@graphicspixels.com</a></p>
+                            <p style="margin: 0;"><a href="mailto:<?php echo esc_attr( gp_site_info( 'bd_email' ) ); ?>" style="color: var(--magenta); text-decoration: none; font-weight: 600;"><?php echo esc_html( gp_site_info( 'bd_email' ) ); ?></a></p>
                         </div>
                         <div style="display: flex; gap: 10px;">
                             <i class="fab fa-skype" style="color: var(--magenta); margin-top: 2px;"></i>
-                            <p style="margin: 0;"><a href="skype:live:csd.rafy23?chat" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Skype: live:csd.rafy23</a></p>
+                            <p style="margin: 0;"><a href="skype:<?php echo esc_attr( gp_site_info( 'bd_skype' ) ); ?>?chat" style="color: var(--magenta); text-decoration: none; font-weight: 600;">Skype: <?php echo esc_html( gp_site_info( 'bd_skype' ) ); ?></a></p>
                         </div>
                     </div>
 
