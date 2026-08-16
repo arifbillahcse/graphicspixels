@@ -8,8 +8,12 @@
         ['label' => 'Orders',          'permission' => 'orders.view',     'route' => 'orders.index'],
         ['label' => 'My batches',      'permission' => 'batches.view',    'route' => 'batches.mine'],
         ['label' => 'Quality Control', 'permission' => 'qc.view',         'route' => 'qc.queue'],
-        ['label' => 'Staff',           'permission' => 'staff.view',      'phase' => 5],
-        ['label' => 'Reports',         'permission' => 'reports.view',    'phase' => 5],
+        ['label' => 'Staff',           'permission' => 'staff.view',      'route' => 'staff.index'],
+        ['label' => 'Workload',        'permission' => 'staff.workload.view', 'route' => 'staff.workload'],
+        // Leave has no permission: everyone books their own, and the policy
+        // decides who may act on somebody else's.
+        ['label' => 'Leave',           'permission' => null,              'route' => 'leave.index'],
+        ['label' => 'Reports',         'permission' => 'reports.view',    'route' => 'reports.index'],
         ['label' => 'Settings',        'permission' => 'settings.manage', 'phase' => 6],
     ];
 @endphp
@@ -27,7 +31,7 @@
         </a>
 
         @foreach ($navItems as $item)
-            @can($item['permission'])
+            @if ($item['permission'] === null || auth()->user()->can($item['permission']))
                 @if (isset($item['route']))
                     <a href="{{ route($item['route']) }}"
                        class="block px-3 py-2 rounded-md text-sm font-medium {{ request()->routeIs(Str::before($item['route'], '.').'.*') ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white' }}">
@@ -42,11 +46,11 @@
                         </span>
                     </span>
                 @endif
-            @endcan
+            @endif
         @endforeach
     </nav>
 
     <div class="px-5 py-3 border-t border-white/10 text-[11px] text-white/40">
-        Phase 4 &middot; Quality control
+        Phase 5 &middot; Team &amp; reporting
     </div>
 </aside>

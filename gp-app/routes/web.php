@@ -7,7 +7,10 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\LeadConversionController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LeaveRequestController;
 use App\Http\Controllers\QcController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -100,6 +103,32 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/batches/{batch}', [QcController::class, 'show'])->name('show');
         Route::post('/reviews/{review}/approve', [QcController::class, 'approve'])->name('approve');
         Route::post('/reviews/{review}/reject', [QcController::class, 'reject'])->name('reject');
+    });
+
+    /*
+    | Staff, workload and leave. The directory is gated on staff.view, the
+    | workload board on staff.workload.view so team leaders can use it, and
+    | leave decisions on LeaveRequestPolicy, which accepts either staff.manage
+    | or being the requester's own team leader.
+    */
+    Route::prefix('staff')->name('staff.')->group(function () {
+        Route::get('/', [StaffController::class, 'index'])->name('index');
+        Route::get('/workload', [StaffController::class, 'workload'])->name('workload');
+        Route::get('/{staff}', [StaffController::class, 'show'])->name('show');
+        Route::put('/{staff}', [StaffController::class, 'update'])->name('update');
+    });
+
+    Route::prefix('leave')->name('leave.')->group(function () {
+        Route::get('/', [LeaveRequestController::class, 'index'])->name('index');
+        Route::post('/', [LeaveRequestController::class, 'store'])->name('store');
+        Route::patch('/{leaveRequest}/approve', [LeaveRequestController::class, 'approve'])->name('approve');
+        Route::patch('/{leaveRequest}/deny', [LeaveRequestController::class, 'deny'])->name('deny');
+        Route::patch('/{leaveRequest}/cancel', [LeaveRequestController::class, 'cancel'])->name('cancel');
+    });
+
+    Route::prefix('reports')->name('reports.')->group(function () {
+        Route::get('/', [ReportController::class, 'index'])->name('index');
+        Route::get('/export', [ReportController::class, 'export'])->name('export');
     });
 
     Route::prefix('batches')->name('batches.')->group(function () {

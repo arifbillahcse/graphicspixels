@@ -185,10 +185,16 @@ class BatchController extends Controller
         return back()->with('status', 'Note added.');
     }
 
+    /**
+     * Editors who can take work right now: active, and not on approved leave
+     * today. Handing a batch to someone who is away would sit untouched
+     * against a 24-hour deadline.
+     */
     private function availableEditors()
     {
         return User::role(RoleName::Editor->value)
             ->where('is_active', true)
+            ->availableOn()
             ->withCount(['batches as open_batches_count' => fn ($q) => $q->open()])
             ->orderBy('name')
             ->get();

@@ -62,6 +62,21 @@ class OrderPolicy
         return $user->can('orders.view');
     }
 
+    /**
+     * Reporting is keyed off the reports.* permissions rather than orders.view,
+     * so who may read the numbers can be widened without also handing out the
+     * production board.
+     */
+    public function viewReports(User $user): bool
+    {
+        return $user->can('reports.view');
+    }
+
+    public function exportReports(User $user): bool
+    {
+        return $user->can('reports.export');
+    }
+
     private function leads(User $user, Order $order): bool
     {
         return $order->team_leader_id !== null && $order->team_leader_id === $user->id;

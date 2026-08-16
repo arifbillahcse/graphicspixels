@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use App\Enums\Department;
+use App\Enums\LeaveStatus;
 use App\Enums\RoleName;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -87,6 +89,42 @@ class User extends Authenticatable
     public function openBatchCount(): int
     {
         return $this->batches()->open()->count();
+    }
+
+    public function leaveRequests(): HasMany
+    {
+        return $this->hasMany(LeaveRequest::class)->latest('starts_on');
+    }
+
+    /**
+     * Whether approved leave covers the given day.
+     */
+    public function isOnLeaveOn(?string $date = null): bool
+    {
+        $date ??= now()->toDateString();
+
+        return $this->leaveRequests()
+            ->approved()
+            ->where('starts_on', '<=', $date)
+            ->where('ends_on', '>=', $date)
+            ->exists();
+    }
+
+    /**
+     * Staff who are not on approved leave on the given day.
+     *
+     * Only approved leave removes somebody from the pool — a pending request
+     * must not quietly stop work being assigned to them.
+     */
+    public function scopeAvailableOn(Builder $query, ?string $date = null): Builder
+    {
+        $date ??= now()->toDateString();
+
+        return $query->whereDoesntHave('leaveRequests', function (Builder $leave) use ($date) {
+            $leave->where('status', LeaveStatus::Approved->value)
+                ->where('starts_on', '<=', $date)
+                ->where('ends_on', '>=', $date);
+        });
     }
 
     /**
