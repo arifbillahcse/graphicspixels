@@ -18,7 +18,10 @@
     ];
 @endphp
 
-<aside class="w-64 shrink-0 bg-[#01015E] text-white flex flex-col">
+{{-- Fixed and hidden below lg, where the navbar's toggle reveals it. --}}
+<aside data-sidebar
+       class="hidden lg:flex w-64 shrink-0 bg-[#01015E] text-white flex-col
+              fixed lg:static inset-y-0 left-0 z-40 overflow-y-auto">
     <div class="px-5 py-4 border-b border-white/10">
         <div class="font-bold tracking-tight">Graphics<span class="text-[#C3009D]">Pixels</span></div>
         <div class="text-xs text-white/50 mt-0.5">Operations Platform</div>

@@ -185,6 +185,9 @@ class ReportController extends Controller
 
         $reviews = \App\Models\QcReview::query()
             ->completed()
+            // Eager loaded because the editor is read back off a review when an
+            // editor has QC history but no completed batches in the window.
+            ->with('editor')
             ->whereNotNull('editor_id')
             ->where('completed_at', '>=', $range->start)
             ->where('completed_at', '<', $range->endExclusive())

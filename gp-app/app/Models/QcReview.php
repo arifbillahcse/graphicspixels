@@ -6,6 +6,7 @@ use App\Enums\BatchStatus;
 use App\Enums\OrderStatus;
 use App\Enums\QcOutcome;
 use App\Enums\QcSeverity;
+use App\Notifications\BatchRejected;
 use App\Support\DefectRate;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -155,6 +156,15 @@ class QcReview extends Model
 
             $this->recordDefectStat(rejected: true);
         });
+
+        // Outside the transaction: the editor should only hear about rework
+        // that actually committed.
+        $editor = $this->editor;
+
+        if ($editor && $editor->id !== $reviewer->id) {
+            $this->load(['comments', 'batch.order']);
+            $editor->notify(new BatchRejected($this));
+        }
     }
 
     private function recordDefectStat(bool $rejected): void

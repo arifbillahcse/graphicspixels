@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\BatchStatus;
+use App\Notifications\BatchAssigned;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -103,6 +104,10 @@ class Batch extends Model
             $actor,
             $this,
         );
+
+        if ($editor && $editor->id !== $actor?->id) {
+            $editor->notify(new BatchAssigned($this));
+        }
 
         return true;
     }

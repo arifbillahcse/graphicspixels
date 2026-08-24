@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\OrderStatus;
 use App\Enums\ServiceType;
+use App\Notifications\OrderAssigned;
 use App\Support\OrderReference;
 use App\Support\Sla;
 use DateTimeInterface;
@@ -39,6 +40,7 @@ class Order extends Model
         'deadline',
         'completed_at',
         'risk_at',
+        'sla_alerted_at',
         'team_leader_id',
         'created_by',
         'notes',
@@ -51,6 +53,12 @@ class Order extends Model
     {
         static::saving(function (self $order) {
             $order->risk_at = $order->calculateRiskAt();
+
+            // A moved deadline is a new promise, so the order earns a fresh
+            // at-risk alert rather than staying silent on the old one.
+            if ($order->exists && $order->isDirty('deadline')) {
+                $order->sla_alerted_at = null;
+            }
         });
     }
 
@@ -65,6 +73,7 @@ class Order extends Model
             'deadline' => 'datetime',
             'completed_at' => 'datetime',
             'risk_at' => 'datetime',
+            'sla_alerted_at' => 'datetime',
         ];
     }
 
@@ -207,6 +216,10 @@ class Order extends Model
             $leader ? "Assigned to {$leader->name}." : 'Team leader removed.',
             $actor,
         );
+
+        if ($leader && $leader->id !== $actor?->id) {
+            $leader->notify(new OrderAssigned($this));
+        }
 
         return true;
     }

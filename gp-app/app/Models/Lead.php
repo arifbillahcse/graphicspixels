@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\ActivityAction;
 use App\Enums\LeadSource;
 use App\Enums\LeadStatus;
+use App\Notifications\LeadAssigned;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -127,6 +128,11 @@ class Lead extends Model
                 'assigned_to' => $assignee->id,
                 'assigned_to_name' => $assignee->name,
             ]);
+
+            // Picking up a lead yourself should not ping you about it.
+            if ($assignee->id !== $actor?->id) {
+                $assignee->notify(new LeadAssigned($this));
+            }
         } else {
             $this->recordActivity(ActivityAction::Unassigned, $actor);
         }

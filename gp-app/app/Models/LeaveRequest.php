@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\LeaveStatus;
 use App\Enums\LeaveType;
+use App\Notifications\LeaveDecided;
 use App\Support\DateRange;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -62,22 +63,25 @@ class LeaveRequest extends Model
 
     public function approve(User $reviewer, ?string $note = null): void
     {
-        $this->update([
-            'status' => LeaveStatus::Approved->value,
-            'reviewed_by' => $reviewer->id,
-            'reviewed_at' => now(),
-            'review_note' => $note,
-        ]);
+        $this->decide(LeaveStatus::Approved, $reviewer, $note);
     }
 
     public function deny(User $reviewer, ?string $note = null): void
     {
+        $this->decide(LeaveStatus::Denied, $reviewer, $note);
+    }
+
+    private function decide(LeaveStatus $status, User $reviewer, ?string $note): void
+    {
         $this->update([
-            'status' => LeaveStatus::Denied->value,
+            'status' => $status->value,
             'reviewed_by' => $reviewer->id,
             'reviewed_at' => now(),
             'review_note' => $note,
         ]);
+
+        $this->load('reviewer');
+        $this->user?->notify(new LeaveDecided($this));
     }
 
     public function cancel(): void

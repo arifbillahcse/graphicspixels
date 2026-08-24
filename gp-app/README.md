@@ -10,7 +10,7 @@ production workflow, quality control, and team management.
 | **3** | Lead conversion, orders, production board, batches, SLA | Built |
 | **4** | QC queue, checklists, rework loop, defect rates | Built |
 | **5** | Staff directory, workload, leave, reporting | Built |
-| 6 | Notifications and polish | Not started |
+| **6** | Notifications, preferences, SLA alerts, polish | Built |
 
 ---
 
@@ -63,6 +63,25 @@ php artisan db:seed
 
 # 8. Run it
 php artisan serve
+```
+
+### Also needed for notifications and SLA alerts
+
+Notifications are queued, and the SLA check runs on the scheduler, so both need
+a worker. Add one cron entry on the server:
+
+```
+* * * * * cd /path-to-app && php artisan schedule:run >> /dev/null 2>&1
+```
+
+Configure mail in `.env` (`MAIL_MAILER`, `MAIL_FROM_ADDRESS`) — with the default
+`log` mailer nothing is actually sent, which is fine for development. In-app
+notifications work regardless.
+
+To see what the SLA check would do without notifying anybody:
+
+```bash
+php artisan orders:check-sla --dry-run
 ```
 
 ### Also needed for phase 2
@@ -258,6 +277,7 @@ php artisan test
 | `OrderWorkflowTest` | Lead→client→order conversion, returning-client reuse, board access, status moves (form and JSON), team-leader ownership, batch splitting and auto-assign, editor isolation, SLA bands and the at-risk scope |
 | `QcWorkflowTest` | Queue access, approve/reject, checklist recording, the full reject→rework→approve loop, order delivery only when every batch passes, defect accumulation and the pinned editor |
 | `StaffAndLeaveTest` | Directory and workload access, team reassignment, leave requests and overlap refusal, who may decide leave, approved leave removing an editor from auto-assign, report and export gating |
+| `NotificationTest` | Every dispatch point, the self-assignment guard, preferences gating delivery per type, notification centre isolation, and the SLA command alerting once |
 
 ---
 
@@ -275,6 +295,7 @@ php tools/verify-phase2-standalone.php   # 55 assertions
 php tools/verify-phase3-standalone.php   # 99 assertions
 php tools/verify-phase4-standalone.php   # 49 assertions
 php tools/verify-phase5-standalone.php   # 76 assertions
+php tools/verify-phase6-standalone.php   # 42 assertions
 php tools/check-blade.php                # directive balance + @include targets
 ```
 
@@ -358,7 +379,22 @@ SQL bound the range ends the obvious way round rather than cross-wise. The
 application's `scopeOverlapping` was correct; the harness was not, and now binds
 by name and cross-checks itself against `DateRange`.
 
-Also checked: `php -l` clean on all 92 PHP files; all 35 Blade templates have
+**Verified — phase 6** (42 assertions, all passing):
+
+- The catalog is internally consistent: unique namespaced keys, every entry
+  fully described, distinct labels, and nothing that defaults to being
+  undeliverable
+- An unknown notification key resolves to no channels at all — a typo in a
+  notification class sends nothing rather than mailing everybody
+- An explicit preference wins even when it is `false`, so switching a type off
+  actually silences it instead of falling back to the default
+- A half-written preference row falls back per flag rather than losing the
+  other channel
+- Only `database` and `mail` are ever produced, in that order
+- One preference row per person per type is enforced, and deleting a user
+  removes their preferences
+
+Also checked: `php -l` clean on all 111 PHP files; all 37 Blade templates have
 balanced directives and resolving `@include` targets; every Laravel and Spatie
 API used was confirmed against the actual framework source.
 
@@ -466,14 +502,37 @@ resources/views/reports/index.blade.php
 tests/Feature/StaffAndLeaveTest.php
 ```
 
+**Phase 6 — notifications and polish**
+
+```
+app/Support/NotificationCatalog.php     What can be sent, and its defaults
+app/Support/ChannelResolver.php         Preference + default -> channels
+app/Notifications/BaseNotification.php  Queued, preference-aware base
+app/Notifications/*.php                 Seven concrete notifications
+app/Models/NotificationPreference.php
+app/Http/Controllers/NotificationController.php
+app/Console/Commands/CheckOrderSla.php  Hourly at-risk alerting
+database/migrations/2025_06_01_00000{1,2,3}_*.php
+resources/views/notifications/          Centre and preferences
+routes/console.php                      Schedule for the SLA check
+tests/Feature/NotificationTest.php
+```
+
 `PermissionMatrix`, `StaffRoster`, `SubmissionPayload` and `AttachmentFilename`
 are deliberately free of framework dependencies so they can be asserted against
 in isolation — that is what makes the standalone harnesses possible.
 
 ---
 
-## Next phase
+## Beyond the roadmap
 
-**Phase 6 — Notifications and polish.** Email and in-app alerts for new leads,
-SLA breaches, QC rejections and batch assignment; a notification centre; mobile
-layout work; and a performance pass over the dashboard queries.
+All six planned phases are built. The obvious next pieces, none of them started:
+
+- **Client portal** — order tracking, delivery downloads and revision requests
+  for clients, so they stop emailing account managers for status.
+- **Invoicing** — rates per tier already exist on the client record; billing
+  from delivered image counts is the natural follow-on.
+- **Defect trends** — the monthly rollup is stored, so trends by editor, team
+  and service type are a reporting job rather than a schema change.
+- **Real-time board** — the production board currently reloads after a drag;
+  broadcasting would let several team leaders work it at once.

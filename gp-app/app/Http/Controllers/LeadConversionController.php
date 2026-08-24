@@ -12,6 +12,7 @@ use App\Models\Client;
 use App\Models\Lead;
 use App\Models\Order;
 use App\Models\User;
+use App\Notifications\OrderCreated;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -114,6 +115,14 @@ class LeadConversionController extends Controller
 
             return $order;
         });
+
+        // Production needs to know a job has landed. Sent outside the
+        // transaction so nobody is told about an order that rolled back.
+        User::role(RoleName::ProductionManager->value)
+            ->where('is_active', true)
+            ->when($actor, fn ($q) => $q->where('id', '!=', $actor->id))
+            ->get()
+            ->each(fn (User $manager) => $manager->notify(new OrderCreated($order)));
 
         return redirect()
             ->route('orders.show', $order)

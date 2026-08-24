@@ -96,6 +96,28 @@ class User extends Authenticatable
         return $this->hasMany(LeaveRequest::class)->latest('starts_on');
     }
 
+    public function notificationPreferences(): HasMany
+    {
+        return $this->hasMany(NotificationPreference::class);
+    }
+
+    /**
+     * This user's stored choice for one notification type, or null when they
+     * have never changed it — in which case the catalog default applies.
+     *
+     * @return array{email:bool,in_app:bool}|null
+     */
+    public function notificationPreferenceFor(string $key): ?array
+    {
+        // Cached per request: via() is called once per notification, and a
+        // batch assignment can fan out across a whole team.
+        $this->loadMissing('notificationPreferences');
+
+        return $this->notificationPreferences
+            ->firstWhere('notification_key', $key)
+            ?->toChannelPreference();
+    }
+
     /**
      * Whether approved leave covers the given day.
      */

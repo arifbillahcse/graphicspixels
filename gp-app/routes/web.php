@@ -8,6 +8,7 @@ use App\Http\Controllers\LeadConversionController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LeaveRequestController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\QcController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StaffController;
@@ -124,6 +125,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::patch('/{leaveRequest}/approve', [LeaveRequestController::class, 'approve'])->name('approve');
         Route::patch('/{leaveRequest}/deny', [LeaveRequestController::class, 'deny'])->name('deny');
         Route::patch('/{leaveRequest}/cancel', [LeaveRequestController::class, 'cancel'])->name('cancel');
+    });
+
+    /*
+    | Notifications. No permission gate: everybody has their own, and the
+    | controller only ever reaches the signed-in user's records.
+    */
+    Route::prefix('notifications')->name('notifications.')->group(function () {
+        Route::get('/', [NotificationController::class, 'index'])->name('index');
+        Route::get('/preferences', [NotificationController::class, 'preferences'])->name('preferences');
+        Route::put('/preferences', [NotificationController::class, 'updatePreferences'])->name('preferences.update');
+        Route::post('/read-all', [NotificationController::class, 'readAll'])->name('read-all');
+        Route::get('/{notification}', [NotificationController::class, 'read'])->name('read');
     });
 
     Route::prefix('reports')->name('reports.')->group(function () {
