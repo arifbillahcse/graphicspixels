@@ -29,6 +29,21 @@ proven.
 
 ## Installation
 
+**One command:**
+
+```bash
+bash tools/setup.sh
+```
+
+It checks your toolchain, scaffolds Laravel 11 + Breeze + Spatie around this
+overlay without overwriting any of it, configures SQLite and the queue,
+migrates, seeds the 15 staff accounts, then runs the test suite and every
+standalone check. Safe to re-run.
+
+The manual steps below are the same thing, spelled out.
+
+## Installation (manual)
+
 Run the scaffold steps **first**, then apply this overlay **last** so its files
 win (Breeze publishes its own `routes/web.php` and `layouts/app.blade.php`,
 which this overlay intentionally replaces).
@@ -297,7 +312,14 @@ php tools/verify-phase4-standalone.php   # 49 assertions
 php tools/verify-phase5-standalone.php   # 76 assertions
 php tools/verify-phase6-standalone.php   # 42 assertions
 php tools/check-blade.php                # directive balance + @include targets
+php tools/check-references.php           # route, view and policy references
 ```
+
+`check-references.php` walks the route files and then verifies every
+`route('…')`, `view('…')` and `Gate::authorize('…', Model::class)` in the
+codebase actually resolves — the class of typo that `php -l` cannot see and
+that only surfaces when somebody opens the page. It currently checks 297 route
+references, 26 views and 29 policy abilities across 58 defined routes.
 
 Once Laravel is installed, `php artisan test` supersedes them.
 
