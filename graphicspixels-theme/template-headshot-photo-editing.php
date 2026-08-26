@@ -590,7 +590,7 @@
                 </div>
                 <div class="form-row">
                     <input type="tel" placeholder="Phone*" required>
-                    <input type="url" placeholder="Website">
+                    <input type="url" placeholder="Website*" required>
                 </div>
                 <select required>
                     <option value="" disabled>Select The Service</option>

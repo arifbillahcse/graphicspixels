@@ -261,8 +261,8 @@ function gp_handle_trial_submission() {
 		'file_link' => gp_normalize_url( wp_unslash( $_POST['file_link'] ?? '' ) ),
 	);
 
-	if ( ! $fields['name'] || ! is_email( $fields['email'] ) ) {
-		wp_send_json_error( array( 'message' => 'Please provide your name and a valid email address.' ), 400 );
+	if ( ! $fields['name'] || ! is_email( $fields['email'] ) || ! $fields['website'] ) {
+		wp_send_json_error( array( 'message' => 'Please provide your name, a valid email address and your website.' ), 400 );
 	}
 
 	gp_save_submission( 'gp_trial', $fields, 'Free Trial Request' );
