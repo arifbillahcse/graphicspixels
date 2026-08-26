@@ -92,7 +92,7 @@
                 <p class="ds-lead">High-end 3D modeling and photorealistic rendering services for product visualization, architectural design, and brand presentations.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Get A Free Quote</a>
                 </div>
             </div>
         </div>

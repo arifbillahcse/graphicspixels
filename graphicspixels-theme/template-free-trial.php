@@ -106,7 +106,7 @@
                 <p>Send 1 to 5 images and receive professional, human-edited results within 24 hours. Unlimited revisions, NDA-compliant, zero obligation — try before you commit.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Start Your Free Trial</a>
-                    <a href="<?php echo esc_url( home_url('/pricing/') ); ?>" class="btn btn-outline-white">View Pricing</a>
+                    <a href="<?php echo esc_url( home_url('/pricing/') ); ?>" class="btn btn-outline">View Pricing</a>
                 </div>
             </div>
         </div>

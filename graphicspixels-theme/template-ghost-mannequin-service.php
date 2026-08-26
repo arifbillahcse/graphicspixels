@@ -128,7 +128,7 @@
                 <p>Apparel ghost mannequin service is very important for all e-commerce business. Our expertise will use the best tricks for providing eye-catchy ghost mannequin effect for your apparel items</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
         </div>
