@@ -170,7 +170,7 @@
                 </p>
                 <div class="hero-actions">
                     <a href="#portfolio" class="btn btn-primary">View Gallery</a>
-                    <a href="#free-trial" class="btn btn-outline-white">Start Free Trial</a>
+                    <a href="#free-trial" class="btn btn-outline">Start Free Trial</a>
                 </div>
             </div>
 

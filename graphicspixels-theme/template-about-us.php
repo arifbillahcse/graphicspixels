@@ -227,7 +227,7 @@
                 <p>We don't just edit images — we craft visual stories that sell.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Get A Free Quote</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Get A Free Quote</a>
                 </div>
             </div>
         </div>

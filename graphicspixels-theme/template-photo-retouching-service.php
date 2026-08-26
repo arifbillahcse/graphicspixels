@@ -133,7 +133,7 @@
 
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
         </div>

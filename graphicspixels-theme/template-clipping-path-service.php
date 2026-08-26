@@ -131,7 +131,7 @@
                 <p>We cover every complexity level, from simple shapes to intricate jewelry, from $0.39/image with 24–48 hour turnaround. Best for hard-edged products; for hair or fur, we recommend masking instead.</p>
                 <div class="ds-showcase-actions">
                     <a href="#free-trial" class="btn btn-primary">Get Free Trial</a>
-                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline-white">Learn More</a>
+                    <a href="<?php echo esc_url( home_url('/contact/') ); ?>" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
         </div>
