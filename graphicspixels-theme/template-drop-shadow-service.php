@@ -55,7 +55,7 @@
             color: #01015E; margin-bottom: 16px; line-height: 1.2;
         }
         .ds-showcase-content .ds-lead {
-            font-weight: 600; font-size: 15px;
+            font-weight: 600; font-size: 17px;
             color: #111;
             margin-bottom: 14px; line-height: 1.6;
         }
