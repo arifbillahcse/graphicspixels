@@ -128,7 +128,7 @@
             </div>
             <div class="form-row">
                 <input type="tel" name="phone" placeholder="Phone*" required>
-                <input type="text" name="website" placeholder="Website">
+                <input type="text" name="website" placeholder="Website*" required>
             </div>
             <select name="service" required>
                 <option value="" disabled selected>Select The Service</option>
