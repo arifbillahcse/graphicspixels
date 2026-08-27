@@ -773,7 +773,7 @@
                     <input type="email" placeholder="Add Email*" required>
                 </div>
                 <div class="form-row">
-                    <input type="tel" placeholder="Phone*" required>
+                    <?php gp_render_phone_field(); ?>
                     <input type="text" placeholder="Website*" required>
                 </div>
                 <select required>

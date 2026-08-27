@@ -7,8 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GP_THEME_VERSION', '1.5.3' );
+define( 'GP_THEME_VERSION', '1.6.0' );
 
+require get_template_directory() . '/inc/phone-country-codes.php';
 require get_template_directory() . '/inc/submissions.php';
 require get_template_directory() . '/inc/auto-pages.php';
 require get_template_directory() . '/inc/site-info.php';

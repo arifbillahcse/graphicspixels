@@ -136,7 +136,7 @@
                     <input type="email" placeholder="Email Address*" required>
                 </div>
                 <div class="form-row">
-                    <input type="tel" placeholder="Phone*" required>
+                    <?php gp_render_phone_field(); ?>
                     <input type="text" placeholder="Website*" required>
                 </div>
                 <select required>

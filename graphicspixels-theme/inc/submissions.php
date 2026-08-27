@@ -121,6 +121,15 @@ function gp_reject_as_spam( $success_message ) {
 	wp_send_json_success( array( 'message' => $success_message ) );
 }
 
+/**
+ * A phone number combined by wp-forms.js as "<dial code><digits>",
+ * e.g. "+8801890373731". Validates the overall shape, not any
+ * particular country's numbering plan.
+ */
+function gp_is_valid_phone( $phone ) {
+	return (bool) preg_match( '/^\+[1-9]\d{6,14}$/', $phone );
+}
+
 function gp_sanitized_field( $key ) {
 	return isset( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '';
 }
@@ -264,6 +273,9 @@ function gp_handle_trial_submission() {
 	if ( ! $fields['name'] || ! is_email( $fields['email'] ) || ! $fields['website'] ) {
 		wp_send_json_error( array( 'message' => 'Please provide your name, a valid email address and your website.' ), 400 );
 	}
+	if ( ! gp_is_valid_phone( $fields['phone'] ) ) {
+		wp_send_json_error( array( 'message' => 'Please provide a valid phone number with country code.' ), 400 );
+	}
 
 	gp_save_submission( 'gp_trial', $fields, 'Free Trial Request' );
 	wp_send_json_success( array( 'message' => 'Thank you! Your free trial request has been received. We will get back to you shortly.' ) );
@@ -287,6 +299,9 @@ function gp_handle_contact_submission() {
 
 	if ( ! $fields['name'] || ! is_email( $fields['email'] ) || ! $fields['message'] ) {
 		wp_send_json_error( array( 'message' => 'Please fill in your name, a valid email and a message.' ), 400 );
+	}
+	if ( $fields['phone'] && ! gp_is_valid_phone( $fields['phone'] ) ) {
+		wp_send_json_error( array( 'message' => 'Please provide a valid phone number with country code.' ), 400 );
 	}
 
 	gp_save_submission( 'gp_contact', $fields, 'Contact Message' );

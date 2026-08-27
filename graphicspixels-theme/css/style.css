@@ -442,6 +442,12 @@ img { max-width: 100%; display: block; }
 .free-trial-form input:focus, .free-trial-form select:focus, .free-trial-form textarea:focus {
     outline: none; border-color: var(--magenta); box-shadow: 0 0 0 3px rgba(195, 0, 157, 0.1);
 }
+.gp-phone-field { display: flex; gap: 8px; margin-bottom: 16px; }
+.gp-phone-field .gp-phone-cc { flex: 0 0 92px; padding-left: 8px; padding-right: 4px; margin-bottom: 0 !important; }
+.gp-phone-field input[type="tel"] { flex: 1; min-width: 0; margin-bottom: 0 !important; }
+@media (max-width: 480px) {
+    .gp-phone-field .gp-phone-cc { flex-basis: 78px; }
+}
 .file-upload { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
 .file-upload label {
     display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; background: var(--gradient-soft);

@@ -11,6 +11,7 @@
     /* Derive a field key for inputs that have no name attribute
        (the original static markup relied on placeholders only). */
     function fieldKey(el) {
+        if (el.name === 'phone_cc' || el.name === 'phone_number') return el.name;
         if (el.name) return el.name;
         var ph = (el.placeholder || '').toLowerCase();
         if (el.tagName === 'SELECT')   return 'service';
@@ -41,6 +42,16 @@
                 data.append(key, el.value);
             }
         });
+
+        /* Country-code select + number input -> single "phone" value */
+        var cc = data.get('phone_cc'), num = data.get('phone_number');
+        if (cc !== null || num !== null) {
+            data.delete('phone_cc');
+            data.delete('phone_number');
+            var digits = (num || '').replace(/[^0-9]/g, '');
+            data.append('phone', digits ? (cc || '') + digits : '');
+        }
+
         return data;
     }
 

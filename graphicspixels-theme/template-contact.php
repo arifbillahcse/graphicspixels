@@ -170,7 +170,10 @@
 
                         <div class="form-group" style="margin-bottom: 20px;">
                             <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--navy);">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+1 (234) 567-8900" style="width: 100%; padding: 12px 15px; border: 2px solid var(--border); border-radius: 8px; font-size: 16px; transition: border-color 0.3s ease;">
+                            <?php gp_render_phone_field( false, 'GB', array(
+                                'id'    => 'phone',
+                                'style' => 'width: 100%; padding: 12px 15px; border: 2px solid var(--border); border-radius: 8px; font-size: 16px; transition: border-color 0.3s ease;',
+                            ) ); ?>
                         </div>
 
                         <div class="form-group" style="margin-bottom: 20px;">
